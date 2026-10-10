@@ -2,8 +2,8 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current design: v0.8 — aerial manipulation, active data, and real-world validation
-- Earlier designs: `versions/v0.7/index.html` and `versions/v0.6/index.html`
+- Current design: v0.9 — aerial manipulation, active data, and real-world validation
+- Earlier designs: `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
 - Project: https://github.com/Zhangbt6/AirSpark (access required)
 
 ## Update
