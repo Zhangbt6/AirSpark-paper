@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AirSpark · 高保真模拟学院与策略持续进化 | CVPR 论文方案</title>
+<meta name="description" content="AirSpark：高保真视觉物理仿真、主动数据引擎、有记忆的多轮策略改进，以及真实场景迁移验证。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23183255'/%3E%3Cpath d='M7 24 16 7l9 17M11 18h10' fill='none' stroke='%2372dbce' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css?v=0.7">
+</head>
+<body>
+<a class="skip" href="#abstract">跳至正文</a>
+<aside><a class="brand" href="#abstract"><span class="mark">A</span><span>AirSpark<small>RESEARCH PAPER</small></span></a><div class="version">CVPR 论文方案 · v0.7<br>2026.10.10</div><nav aria-label="论文阅读顺序" id="nav"></nav><div class="side-note">具身模拟学院<br>平台 · 策略进化 · 实机验证</div><button class="print" onclick="window.print()">打印 / 保存 PDF</button></aside>
+<div class="main-shell"><header><span>AirSpark / <b id="chapter">摘要</b></span><span class="draft">论文方案</span></header><div class="progress" aria-hidden="true"><div id="progress"></div></div><main id="content"><section id="abstract" data-title="摘要"><div class="eyebrow">AIRSPARK / CVPR RESEARCH</div><h1>AirSpark</h1><p class="paper-subtitle">面向具身策略持续进化的<br>高保真模拟学院</p><p class="english-title">A High-Fidelity Simulation Academy for Continual Embodied Policy Improvement</p><div class="paper-keywords"><span>视觉—物理一致性</span><span>主动数据引擎</span><span>有记忆的研究 Harness</span><span>Sim-to-Real 验证</span></div><h2 class="abstract-heading">摘要</h2><div class="paper-copy"><p>具身模型的进步不仅取决于数据规模，还取决于能否持续获得针对当前能力缺口的有效交互经历。真实机器人上的重复试验受到环境复位、监督成本与物理执行条件的限制；静态数据集又难以随策略变化提供新的练习。自主研究代理具备组织实验的潜力，但需要一个能够生成经历、验证结果并积累长期证据的可执行环境。</p><p>本文提出 AirSpark，一套面向具身策略持续进化的高保真模拟学院。平台以 Unreal Engine 的视觉渲染和 MuJoCo 的动力学与接触仿真为基础，通过 URLab 等基础组件连接传感与控制，并组织参数化任务、自动采集、物理真值标注、训练适配与独立评测。SparkClaw 在统一研究 harness 上，将阶段能力诊断转化为采集计划，利用跨轮实验记忆追踪干预的收益与失效条件，驱动数据生成、策略更新和能力保持检验，形成受预算约束、可审计的多轮改进闭环。</p><p>本文以空中导航与空中接触操作为主要验证载体，评估视觉—物理一致性、自动数据生产效率及等预算下的多轮学习收益。进一步以真实场景重建的 3D Gaussian Splatting 视觉环境结合配准物理代理，检验学院内策略改进能否迁移到对应实机任务，并区分已重建场景适应与未见条件泛化。AirSpark 旨在将仿真从单次训练工具发展为持续组织学习经历、积累实验知识并验证策略进步的具身研究基础设施。</p></div><p class="caption">论文方案 v0.7 · 2026.10.10 · 系统设计与实验协议，尚不预设学习提升或实机结果。<a href="versions/v0.6/index.html">v0.6 双层教学方案 · 备选全文</a></p><div class="paper-overview"><div><small>SIMULATE</small><b>可控交互世界</b><span>视觉、动力学与接触</span></div><span class="arrow">→</span><div><small>IMPROVE</small><b>积累学习证据</b><span>诊断、数据、训练与记忆</span></div><span class="arrow">→</span><div><small>TRANSFER</small><b>验证真实收益</b><span>冻结策略、实机独立检验</span></div></div></section>
+
+
+</main><footer><button id="prev">上一节</button><span id="position"></span><button id="next">下一节</button></footer></div>
+<script src="chapters.js?v=0.7"></script><script src="app.js?v=0.7"></script>
+</body></html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AirSpark · 具身模拟学院与自主教学 | CVPR 论文方案</title>
+<meta name="description" content="AirSpark 具身模拟学院：可控视觉与物理、统一课程基础设施、SparkClaw 自主教学，以及学生与教师的双层改进评价。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23183255'/%3E%3Cpath d='M7 24 16 7l9 17M11 18h10' fill='none' stroke='%2372dbce' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css?v=0.6">
+</head>
+<body>
+<a class="skip" href="#abstract">跳至正文</a>
+<aside><a class="brand" href="#abstract"><span class="mark">A</span><span>AirSpark<small>RESEARCH PAPER</small></span></a><div class="version"><a href="../../index.html">← 当前主方案 v0.7</a><br>备选研究路线 · 历史快照<br>CVPR 论文方案 · v0.6<br>2026.10.09</div><nav aria-label="论文阅读顺序" id="nav"></nav><div class="side-note">具身模拟学院<br>平台 · 自主教学 · 双层评价</div><button class="print" onclick="window.print()">打印 / 保存 PDF</button></aside>
+<div class="main-shell"><header><span>AirSpark / <b id="chapter">摘要</b></span><span class="draft">论文方案</span></header><div class="progress" aria-hidden="true"><div id="progress"></div></div><main id="content"><section id="abstract" data-title="摘要"><div class="eyebrow">AIRSPARK / CVPR RESEARCH</div><h1>AirSpark</h1><p class="paper-subtitle">面向自主教学与双层改进的<br>具身模拟学院</p><p class="english-title">A Simulated Embodied Academy for Autonomous Teaching and Teacher Improvement</p><div class="paper-keywords"><span>可控视觉—物理仿真</span><span>具身教学基础设施</span><span>主动数据干预</span><span>学生与教师双层改进</span></div><h2 class="abstract-heading">摘要</h2><div class="paper-copy"><p>具身模型所需的学习经历随其能力与失败模式而变化。固定数据集难以持续覆盖新的能力缺口，而将交互反馈转化为有效训练数据，需要联合控制环境、任务、监督生成和独立评价。自动研究代理为这一过程提供了新的决策能力，但其教学效果取决于能否获得可执行、可复现、可检验的具身练习。</p><p>本文提出 AirSpark，一套面向自主教学的具身模拟学院。平台基于 Unreal Engine、MuJoCo 与 URLab 的视觉—物理基础，将参数化场景、异构机器人、传感观测、自动采集与标注、训练适配和独立考试组织为统一的课程单元。SparkClaw 作为学院教师，根据学生能力与历次教学反馈选择练习、生成监督并分配预算；研究 harness 负责执行教学计划、管理实验状态和记录可追溯证据。进一步将教师的选课、练习生成与预算分配策略纳入受控更新，使学生模型的学习与教学策略的改进形成两个可分别验证的层次。</p><p>本文以视觉语言导航和接触操作构建代表性课程，围绕学生在未见任务上的学习收益、更新后教师在新教学问题上的有效性，以及可控练习生成与自适应教学的协同作用设计实验。平台的传感一致性、交互质量、自动数据生产与运行成本作为支撑评价。通过共同教学接口与双层评价协议，AirSpark 将具身仿真组织为持续产生学习经历、检验教学效果并积累教学经验的研究基础设施。</p></div><p class="caption">论文方案 v0.6 · 2026.10.09。本文呈现系统与实验设计；已验证能力和待完成实验见“讨论与实现边界”，不预设实验结果。</p><div class="paper-overview"><div><small>ENVIRONMENT</small><b>练习可执行</b><span>可控视觉与物理交互</span></div><span class="arrow">→</span><div><small>ACADEMY</small><b>教学可组织</b><span>课程、监督、训练与考试</span></div><span class="arrow">→</span><div><small>SPARKCLAW</small><b>教法可检验</b><span>能力反馈与教学策略更新</span></div></div></section>
+
+
+</main><footer><button id="prev">上一节</button><span id="position"></span><button id="next">下一节</button></footer></div>
+<script src="chapters.js?v=0.6"></script><script src="app.js?v=0.6"></script>
+</body></html>
