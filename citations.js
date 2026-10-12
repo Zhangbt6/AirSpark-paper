@@ -11,7 +11,7 @@ const paperReferences = {
     title: 'AM-Bench: A Modular Simulation Suite and Benchmark for Aerial Manipulation Policy Learning',
     meta: 'Yutong Wang et al. · arXiv:2609.00641v1 · 2026',
     type: '预印本', url: 'https://arxiv.org/abs/2609.00641v1',
-    note: '本文优先承接的任务、策略实现和原生仿真评测。代码、数据与权重的可用性分别核查。',
+    note: '空中操作的模块化任务、策略实现与原生仿真评价。',
     links: [['项目', 'https://ambench.github.io/'], ['代码', 'https://github.com/ambench/ambench']]
   },
   'aeromanip': {
@@ -38,7 +38,7 @@ const paperReferences = {
     title: 'DART: Noise Injection for Robust Imitation Learning',
     meta: 'Michael Laskey et al. · CoRL · 2017',
     type: '会议论文', url: 'https://proceedings.mlr.press/v78/laskey17a.html',
-    note: '扰动专家与偏离理想轨迹后的监督；不能将普通噪声注入重新命名为原创。'
+    note: '通过扰动专家执行构造偏离理想轨迹后的监督。'
   },
   'enpire': {
     title: 'ENPIRE: Agentic Robot Policy Self-Improvement in the Real World',
@@ -51,34 +51,34 @@ const paperReferences = {
     title: 'EmbodiRSI: Recursive Self-Improvement for Data-Efficient Robot Adaptation',
     meta: 'Haoran Lang et al. · arXiv:2609.38905v3 · 2026',
     type: '预印本', url: 'https://arxiv.org/abs/2609.38905v3',
-    note: '反馈驱动的纠正与自适应采集、real-to-sim-to-real；比较时需对齐真实微调数据预算。'
+    note: '反馈驱动的纠正与自适应采集，以及 real-to-sim-to-real 策略适应。'
   },
   'rsi-anything': {
     title: 'RSI-Anything: Unlocking Recursive Self-Improvement with World Models',
     meta: 'Taoyong Cui et al. · Technical Report v1 · 2026-10',
     type: '技术报告', url: 'https://phai-labs.com/papers/rsi-anything/rsi-anything-technical-report-v1-2026-10.pdf',
-    note: '预测选择、外部反馈与组件兼容性检查。借鉴流程分工，不外推为空中机器人验证。',
+    note: '预测辅助的候选选择、外部反馈与更新后的组件兼容性检查。',
     links: [['官方说明', 'https://phai-labs.com/news/rsi-anything/']]
   },
   'air-vla': {
     title: 'AIR-VLA · Official Repository',
     meta: 'AIR-VLA authors · Isaac Sim implementation · 2026',
     type: '官方实现', url: 'https://github.com/SpencerSon2001/AIR-VLA',
-    note: '与 AirVLA、AeroManip-VLA 区分。代码执行方式不能被笼统概括为没有物理。',
+    note: '基于 Isaac Sim 的空中视觉语言操作实现。',
     links: [['论文', 'https://arxiv.org/abs/2601.21602']]
   },
   'airvla': {
     title: 'AirVLA: π, But Make It Fly',
     meta: 'AirVLA authors · arXiv:2603.25038 · 2026',
     type: '预印本 / 项目', url: 'https://airvla.github.io/',
-    note: '空中 VLA 与物理引导迁移的近邻；按控制与真实实验合同比较。',
+    note: '空中视觉语言动作策略与物理引导的迁移。',
     links: [['论文', 'https://arxiv.org/abs/2603.25038']]
   },
   'fsc': {
     title: 'Guiding Data Collection via Factored Scaling Curves',
     meta: 'Lihan Zha et al. · arXiv:2505.07728v1 · 2025',
     type: '预印本', url: 'https://arxiv.org/abs/2505.07728v1',
-    note: '因素化数据收益与采集预算分配；作为收益估计参照，不视为本方案已经复现。'
+    note: '利用因素化的数据收益估计指导采集预算分配。'
   },
   'aha': {
     title: 'AHA: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation',
@@ -102,7 +102,7 @@ const paperReferences = {
     title: 'AM-Bench · Reproduce Research Workflows',
     meta: 'AM-Bench official documentation · accessed 2026-10-12',
     type: '官方文档', url: 'https://github.com/ambench/ambench.github.io/blob/main/docs/evaluation/reproduce.md',
-    note: '来源版本、数据、动作语义、训练与评测记录；公开代码不等于配套数据和权重已就绪。',
+    note: '数据格式、训练入口与原生评价流程的官方复现文档。',
     links: [['数据合同', 'https://github.com/ambench/ambench.github.io/blob/main/docs/reference/dataset-format.md']]
   },
   'act': {

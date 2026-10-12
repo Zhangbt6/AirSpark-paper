@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AirSpark · 面向空中操作策略自进化的模拟学院 | CVPR 论文方案</title>
+<meta name="description" content="面向空中操作策略自进化的模拟学院：高保真视觉与物理交互、主动练习生成、闭环策略改进与真实迁移验证。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23183255'/%3E%3Cpath d='M7 24 16 7l9 17M11 18h10' fill='none' stroke='%2372dbce' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css?v=0.10">
+</head>
+<body>
+<a class="skip" href="#abstract">跳至正文</a>
+<aside><a class="brand" href="#abstract"><span class="mark">A</span><span>AirSpark<small>RESEARCH PAPER</small></span></a><div class="version">CVPR 论文方案 · v0.10<br>2026.10.12</div><nav aria-label="论文阅读顺序" id="nav"></nav><div class="side-note">空中操作模拟学院<br>模拟学院 · 策略改进 · 真实验证</div><button class="print" onclick="window.print()">打印 / 保存 PDF</button></aside>
+<div class="main-shell"><header><span>AirSpark / <b id="chapter">摘要</b></span><span class="draft">论文方案</span></header><div class="progress" aria-hidden="true"><div id="progress"></div></div><main id="content"><section id="abstract" data-title="摘要"><div class="eyebrow">AIRSPARK / CVPR RESEARCH</div><h1>AirSpark</h1><p class="paper-subtitle">面向空中操作策略自进化的<br>模拟学院</p><p class="english-title">A Simulated Academy for Self-Improving Aerial Manipulation</p><p class="academy-position">高保真视觉与物理交互、主动练习生成、闭环策略改进与真实迁移验证。</p><p class="academy-motto">让空中操作策略在仿真中练习，在反馈中改进，在真实世界中验证。</p><div class="paper-keywords"><span>视觉—物理一致性</span><span>主动练习生成</span><span>策略自进化</span><span>Sim-to-Real 验证</span></div><h2 class="abstract-heading">摘要</h2><div class="paper-copy">
+<p>空中操作使机器人能够在三维空间中完成自主交互，也将视觉判断、飞行稳定与接触动作耦合在一起。视觉动作策略与 VLA 为此提供了学习途径，但策略所需的经历并不止于理想示范：接近时的相对运动、抓持状态与负载接入可能改变同一动作的后果。真实采集难以低成本、反复覆盖这些条件，固定数据也难以随策略能力变化持续补足缺口。</p>
+<p>本文提出 AirSpark，一套面向空中操作策略自进化的模拟学院。平台整合 Unreal Engine 视觉渲染、MuJoCo 动力学与接触、可控任务、自动专家、标注和训练评测工具。SparkClaw 读取时间对齐的视觉与执行证据，通过受约束的练习计划组织数据再生成、固定配方训练和独立验证，并保留多轮干预记录。学院提供持续练习与反馈的条件，策略模型是被更新和检验的对象。</p>
+<p>研究以 AM-Bench 的任务、策略实现和原生评测协议为起点，将在 AirSpark 中更新的策略返回同一基准测试；再以真实场地的 3DGS 重建与显式物理代理构造对应练习环境，冻结更新后的策略进行实机比较。通过等预算采集对照、多轮模型回测与真实任务验证，检验模拟学院能否将策略暴露的交互缺口转化为可迁移的能力改进。</p>
+</div><p class="caption">论文方案 v0.10 · 2026.10.12 · 系统设计与实验协议，尚不预设学习提升或实机结果。<a href="../v0.9.1/index.html">v0.9.1 上期方案</a> · <a href="../v0.8/index.html">v0.8 空中操作方案</a> · <a href="../v0.7/index.html">v0.7 通用学院方案</a> · <a href="../v0.6/index.html">v0.6 双层教学备选</a></p><div class="paper-overview"><div><small>SIMULATE</small><b>空中交互经历</b><span>视觉、飞行与接触</span></div><span class="arrow">→</span><div><small>IMPROVE</small><b>多轮策略改进</b><span>执行证据、练习与训练</span></div><span class="arrow">→</span><div><small>TRANSFER</small><b>原基准与实机检验</b><span>冻结策略、独立比较</span></div></div></section>
+
+
+</main><footer><button id="prev">上一节</button><span id="position"></span><button id="next">下一节</button></footer></div>
+<script src="chapters.js?v=0.10"></script><script src="citations.js?v=0.10"></script><script src="app.js?v=0.10"></script>
+</body></html>

@@ -26,3 +26,30 @@ cite[data-ref]{font-style:normal;white-space:normal}
 code{overflow-wrap:anywhere}
 @media print{.ref-back{display:none!important}.citation{color:inherit}#reference-list li{break-inside:avoid}#reference-list li:target,.citation:target{outline:0;background:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#progress{transition:none}}
+
+/* Manuscript v0.11: chapter hierarchy and continuous paper prose. */
+html{scroll-padding-top:82px}
+section, h3[id], details[id], .citation, #reference-list li{scroll-margin-top:16px}
+section>p{line-height:1.95}
+section>h3{margin:32px 0 13px;font-size:20px}
+section>h2{margin-bottom:25px}
+.paper-copy{padding:0;border:0;font-size:16px;line-height:2}
+.paper-copy p{margin-bottom:0}
+.manuscript-status,.experiment-status{font-size:13px;color:var(--muted);line-height:1.8;padding:14px 0;border-top:1px solid var(--line);margin:24px 0 0}
+.experiment-status{margin:0 0 22px;padding:10px 14px;border:0;border-left:2px solid #aebfd3;background:#f5f8fc}
+.contribution-list{padding-left:24px;margin:15px 0 0}
+.contribution-list li{padding:4px 0 10px 5px;line-height:1.9}
+.architecture h4{margin:0;font-size:18px;line-height:1.5}
+table caption{text-align:left;color:var(--muted);font-size:13px;padding:0 0 12px;line-height:1.7}
+.paper-figure .paper-overview{margin-top:0}
+.editorial-note{margin-top:30px;background:#f7f9fc;border:1px solid var(--line);padding:18px 22px;border-radius:8px}
+.editorial-note summary{font-size:14px}.editorial-note table{background:white}
+nav a{gap:10px;padding:6px 9px;margin:2px 0;font-size:13px}
+nav a span{min-width:23px;text-align:left}
+nav .nav-child{margin-left:12px;font-size:12px;padding:4px 8px;color:#6a788b;line-height:1.7}
+nav .nav-child span{font-size:11px;min-width:26px}
+nav .nav-sub{border-left:1px solid var(--line);margin:3px 0 8px 17px}
+nav .chapter-active{color:var(--ink);font-weight:600}
+nav .nav-child.active{color:var(--blue)}
+@media(max-width:720px){.nav-group{flex-shrink:0}.nav-sub{display:none}section>h3{font-size:19px;margin-top:27px}.editorial-note{padding:14px}.paper-copy{font-size:15px}}
+@media print{.editorial-note{background:white;border:0;padding:0}.manuscript-status,.experiment-status{font-size:10px}.nav-group{display:none}table caption{break-after:avoid}section>h3{break-after:avoid}section>p{orphans:3;widows:3}}
