@@ -2,10 +2,11 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current manuscript: v0.11 — A Simulated Academy for Self-Improving Aerial Manipulation
+- Current manuscript: v0.12 — A Simulated Academy for Self-Improving Aerial Manipulation
 - Paper structure: abstract, introduction, related work, method, experiments, discussion, conclusion, references, appendix.
 - Evaluation: native AM-Bench return testing and paired real-scene experiments; stage-evidence-driven practice and bounded policy improvement.
-- Earlier designs: `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
+- Earlier designs: `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
+- v0.12 clarifies event-based phase evidence, task-matched contact semantics, bounded data selection, measured costs, and the native AM-Bench reproduction route. No new experimental results are claimed.
 - Project: https://github.com/Zhangbt6/AirSpark (access required)
 
 ## Update

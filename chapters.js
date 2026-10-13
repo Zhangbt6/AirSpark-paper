@@ -42,6 +42,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <h3 id="platform" data-nav="视觉—物理学院" data-number="3.2">3.2 视觉—物理学院</h3>
 <p>学院以 UE 的视觉渲染和 MuJoCo 的动力学与接触仿真为基础，复用 URLab 等基础组件，通过统一坐标、时间戳及实体标识连接机器人、相机和物体状态。<cite data-ref="urlab"></cite> 一次执行同时记录模型观测、策略命令、实际运动和物理事件，使动作偏差与其视觉后果能够在同一时间线上分析。任务参数化接口控制对象、布局、初态及合法物理条件，复位接口用于重新构造可比较的试验。</p>
 <p>监督由专家在选定任务条件下实际执行产生。数据记录包含 RGB、策略所需的本体与动作序列，以及用于质检和诊断的语义、接触与阶段标注。质量检查验证时间顺序、动作语义、完整终态和异常终止。训练导出仅保留学生协议允许的字段，并通过父任务标识维持划分与数据谱系。</p>
+<p>跨仿真对应不仅是场景外观的重建，还包括机器人形态、动作参考系、控制周期、执行器限制及接触规则。物理对齐以配对控制响应和任务事件检验，不假定两个求解器产生逐位相同的轨迹。抓取中的附着或约束须与原生任务定义一致并单独披露；非任务定义的吸附辅助不能用于证明真实接触抓取、抗滑落或载荷稳定能力。</p>
 <p>针对真实场景，学院采用 3DGS 表示静态外观，并将显式碰撞几何、可交互对象和语义实体配准到相同坐标系。<cite data-ref="3dgs"></cite> 可动物体由独立物理资产表示，以维持操作过程中的接触和遮挡关系。场景重建与机器人标定共同定义真实任务对应的训练环境；动力学和接触参数通过任务相关检查确定。</p>
 
 <h3 id="practice" data-nav="证据与练习生成" data-number="3.3">3.3 执行证据与主动练习生成</h3>
@@ -52,6 +53,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td>抬升与负载运动</td><td>离台事件、跟随偏差、抓持变化与掉落时刻。</td><td>合法负载范围内的抬升节奏、稳定保持和后续运输。</td></tr>
 </tbody></table></div>
 <p>选择器将阶段与少量可控因素组成条件集合。对每个条件统计到达次数、条件失败率、专家可行性和有效数据成本，保留固定比例预算用于覆盖探索，并依据缺口和成本安排剩余练习。具体因素范围、平滑规则和探索比例在开发阶段确定并固定。历史记录提供已验证条件、重复失败和实际收益信息，从而影响下一轮条件复用与重测。</p>
+<p>阶段边界由相对位姿、接触、抓持与释放等可验证事件确定，不按固定时间区间赋予“已接触”或“已抓取”标签。到达率与到达后的条件失败率分别报告：未到达下游阶段意味着证据不足，而非该阶段没有失败；“曾经达到”某条件也不等于当前仍满足。选择器据此区分上游瓶颈、可复现的操作偏差与不可执行条件。</p>
 <p>在选定条件下，专家通过完整动力学过程重新生成示范，使观测与动作标签对应同一次执行。该过程承接扰动专家示范的已有研究，<cite data-ref="dart"></cite> 进一步将扰动与当前学生的阶段偏差联系起来。若使用局部续行，恢复状态包括机体和物体速度、接触、执行器及观测历史；默认完整初态重执行保留相同的数据生成语义。</p>
 
 <h3 id="evolution" data-nav="多轮更新与记忆" data-number="3.4">3.4 多轮策略更新与实验记忆</h3>
@@ -62,6 +64,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <h3 id="harness" data-nav="研究工具与验证" data-number="3.5">3.5 研究工具与独立验证</h3>
 <p>研究 harness 将环境配置、执行、采集、质检、训练和评价暴露为结构化工具。SparkClaw 负责提出和调度有预算约束的实验，工具负责实际执行与产物检查，验证模块依据固定标准接纳或拒绝更新。这一组织方式借鉴自主机器人研究中的工具化反馈流程。<cite data-ref="enpire rsi-anything"></cite> 每次运行记录输入配置、状态、输出与失败原因，使中断恢复和重放依赖可核查的产物，而非代理的文字总结。</p>
 <p>方法区分候选筛选、实际执行和学习验证：可行性预测帮助选择值得尝试的条件，执行记录提供监督来源，训练后的独立评价衡量数据价值。模型观测、动作语义、归一化方案、低层控制和评分器在比较中固定。正式测试与代理记忆隔离，在全部闭环结束后统一回测保存的模型。</p>
+<p>首版代理的可变决策限定为冻结参数空间内的练习条件和预算分配，不修改专家、学生训练配方或评分代码。一个可恢复的执行器连接各阶段，以同一轮的配置、数据、模型和评价记录恢复中断工作；不为不同策略复制调度链。确定性计划器提供可运行的参考，代理决策的额外价值由独立消融检验，而非由聊天或工具调用次数推断。</p>
 </section>
 
 <section id="experiments" data-title="实验" data-number="4">
@@ -72,6 +75,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <h3 id="benchmark" data-nav="实验设置" data-number="4.1">4.1 实验设置</h3>
 <p><b>任务与环境。</b>仿真评价采用 AM-Bench 原生任务。<cite data-ref="ambench"></cite> 从能够在两种仿真环境中建立对应执行的任务中预先固定子集，覆盖接触和物体运输；Cabinet Pick-and-Place 与 Lemon Harvesting 为当前候选。AirSpark 用于练习生成和开发验证，正式成绩由原生完整终态计算。任务专用的接近、抓持和抬升指标用于诊断，保留完整任务结果。</p>
 <p><b>策略与训练。</b>复用 AM-Bench 支持的 ACT、Diffusion Policy 和 OpenPI 路径。<cite data-ref="act dp openpi ambench-docs"></cite> 一个可训练后端承担主矩阵，第二架构在代表任务上检验数据收益的适用性。任务专用 ACT / DP 用于视觉动作学习；语言能力评价采用实际语言条件化的策略，并在相同场景中配对改变指令。各比较组共享初始父代、学生输入、训练步数、优化器和 replay 配方。</p>
+<p><b>初始实施范围。</b>先复现官方 Diffusion Policy 路径，以 PressButton 验证真实飞行器下的专家采集、训练、保存重载和原生评价，再推进候选接触与运输任务。浮动末端模式只用于排查环境和任务逻辑，不计作飞行操作能力。该顺序是实施计划，不表示当前已有基线成绩；正式任务子集及训练配方在对照实验开始前冻结。</p>
 <p><b>划分与指标。</b>训练、开发和正式测试按原始任务组、物体实例及布局划分，派生轨迹继承父任务归属。主指标为统一初态下的完整成功率，辅以阶段到达数、条件成功率、掉落、碰撞、耗时和人工干预。所有终止均保留记录。独立训练 seed 和任务组作为统计单位报告不确定性。</p>
 
 <h3 id="comparison" data-nav="闭环学习对照" data-number="4.2">4.2 等预算闭环学习</h3>
@@ -83,6 +87,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td>AirSpark / SparkClaw</td><td>基于阶段证据、可行性和实验记忆安排练习。</td><td>与 B1 相同。</td></tr>
 </tbody></table></div>
 <p>主实验采用相同总采集预算及每轮训练步数，计入探针、复位、无效采集和代理推理，并报告有效监督量。在代表任务上另作等有效数据量比较，区分轨迹质量与采集效率。多轮曲线由研究配置冻结后对保存模型统一回测得到，分别展示相对于父代和同预算采集基线的收益。</p>
+<p>等预算约束施加于 B1、B2 与 SparkClaw 三条更新路线，冻结父代 B0 的零新增训练成本单独列出。成本来自实际运行记录，分别报告仿真时间、墙钟时间和计算资源；配置中的预估耗时不作为测量结果。未执行的评价记为缺失而非零分，只有实际完成的失败任务才进入失败统计。</p>
 
 <h3 id="external" data-nav="AM-Bench 原生回测" data-number="4.3">4.3 AM-Bench 原生回测</h3>
 <p>原生回测检验 AirSpark 产生的数据是否具有跨仿真效用。首先按公开配置取得或训练父代，并在原生环境建立参考成绩；随后将策略与数据接口接入 AirSpark，在固定训练条件下进行增量更新；最后将冻结后的各组模型返回原生环境。任务、机器人、控制器、扰动、观测与成功阈值均保持原配置。<cite data-ref="ambench-docs"></cite></p>
@@ -126,6 +131,18 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <h3 id="resources">A.2 运行产物与预算</h3>
 <p>每次闭环归档环境配置、任务组、专家和学生轨迹、质检结果、数据版本、训练配方、开发接纳记录及模型谱系。物理与任务真值保留在采集和评价侧；学生训练导出依据固定字段白名单生成。正式测试在研究冻结后执行。</p>
 <p>当前主矩阵规模为三条训练路线、三个 seed、三轮增量更新，共 27 次增量训练，另计父代训练。这是单个任务专用策略的计算量，多任务分别训练时按任务数增加。数据来源对照、第二架构和机制分析在代表任务展开。有效数据量与总采集成本分别核算，探针、失败尝试及代理计算均进入账本。</p>
+<h3 id="reproduction-plan" data-nav="复现路线与入口" data-number="A.3">A.3 最小复现路线与实现边界</h3>
+<p>研究实现使用 <code>codex/am-bench-research-v1</code> 分支的 <code>research/</code> 入口，与既有导航实验分开组织。目录划分不等于运行环境或平台裁剪已经完成。工程指南中的安装命令和完成声明须经实际核查，论文网页不以文件数量、脚本帮助页或占位产物作为阶段完成证据。</p>
+<div class="table-wrap"><table><caption>表 A1. 分阶段验证路线。各项均为进入后续研究的证据要求，不是已完成结果。</caption><thead><tr><th>阶段</th><th>交付范围</th><th>验收依据</th></tr></thead><tbody>
+<tr><td>准备</td><td>隔离环境与原生启动。</td><td>官方依赖链、源码版本和真实环境运行记录。</td></tr>
+<tr><td>原生基线</td><td>AM-Bench 专家数据、DP 训练与评价。</td><td>有效数据、真实 checkpoint、重载和完整 rollout 结果。</td></tr>
+<tr><td>物理对齐</td><td>单任务机器人、观测、动作、接触与复位对应。</td><td>预定义容差下的配对响应、接触和任务事件。</td></tr>
+<tr><td>数据往返</td><td>AirSpark 采集更新，返回原生环境。</td><td>同一冻结模型接口、原生评分及实际成本。</td></tr>
+<tr><td>研究对照</td><td>等预算更新、多 seed 与机制消融。</td><td>密封测试、区间估计和完整负结果。</td></tr>
+</tbody></table></div>
+<p>原生安装以 AM-Bench 官方维护路径为准，目前为 Linux、Isaac Sim 5.1 与 Python 3.11。<cite data-ref="ambench-install"></cite> 不直接套用旧导航环境或未验证的 Python 3.9 依赖模板。环境、模型与数据分别锁定版本；模拟器 timestep、控制周期、策略周期和数据采样率分别记录。</p>
+<p>2026-10-13 的工程核查已建立分支和文档入口；后续修订将未实现的采集、训练、评价阶段改为显式拒绝执行，不生成占位成绩。原生环境、完整训练评测和跨仿真收益仍待验收。该实现状态不改变本文“提出的方法与预定实验”的性质；实机与 3DGS 研究线在原生复现、物理对齐及数据往返验证后展开。</p>
+<p>工程资料：<a href="https://github.com/Zhangbt6/AirSpark/blob/codex/am-bench-research-v1/docs/wiki/Research-Branch-AM-Bench-v1.md">研究入口与核查</a>、<a href="https://github.com/Zhangbt6/AirSpark/blob/codex/am-bench-research-v1/research/docs/PAPER_HYPOTHESIS.md">实验协议</a>、<a href="https://github.com/Zhangbt6/AirSpark/blob/codex/am-bench-research-v1/research/docs/PHYSICS_VALIDATION.md">物理对齐清单</a>（工程仓库可能需要访问权限）。这些资料是复现导航，不是已发布的数据或模型。</p>
 <details class="editorial-note" id="version-history"><summary>版本记录与叙事演进</summary>
 <p>此记录用于保留研究稿的演进过程，不属于论文主文。</p>
 <div class="table-wrap"><table><thead><tr><th>版本</th><th>叙事中心</th><th>与当前稿的关系</th></tr></thead><tbody>
@@ -134,7 +151,8 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td><a href="versions/v0.8/index.html">v0.8</a></td><td>空中操作的数据需求、高保真仿真与真实迁移。</td><td>确立具体研究对象和已有平台积累。</td></tr>
 <tr><td><a href="versions/v0.9.1/index.html">v0.9.1</a></td><td>面向策略自进化的模拟学院，加入 AM-Bench 复用。</td><td>保留学院定位、策略改进目标与原生回测。</td></tr>
 <tr><td><a href="versions/v0.10/index.html">v0.10</a></td><td>阶段证据、等预算闭环、原生与真实评价及编号引用。</td><td>成为当前方法与实验协议的基础。</td></tr>
-<tr><td>v0.11 · 当前</td><td>空中学习需求 → 持续反馈 → 模拟学院 → 策略更新 → 外部验证。</td><td>按论文主文重组；实现安排与版本讨论移入附录。</td></tr>
+<tr><td><a href="versions/v0.11/index.html">v0.11</a></td><td>空中学习需求 → 持续反馈 → 模拟学院 → 策略更新 → 外部验证。</td><td>按论文主文重组；实现安排与版本讨论移入附录。</td></tr>
+<tr><td>v0.12 · 当前</td><td>事件阶段、物理对应、受限数据决策与原生复现。</td><td>纳入研究分支核查，区分拟议方法、实施路线与真实验收；未新增实验成绩。</td></tr>
 </tbody></table></div>
 </details>
 </section>

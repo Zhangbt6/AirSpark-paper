@@ -105,6 +105,12 @@ const paperReferences = {
     note: '数据格式、训练入口与原生评价流程的官方复现文档。',
     links: [['数据合同', 'https://github.com/ambench/ambench.github.io/blob/main/docs/reference/dataset-format.md']]
   },
+  'ambench-install': {
+    title: 'AM-Bench · Installation and Quick Start',
+    meta: 'AM-Bench official repository · accessed 2026-10-13',
+    type: '官方安装说明', url: 'https://github.com/ambench/ambench#installation',
+    note: '原生 Linux、Isaac Sim 5.1 与 Python 3.11 的维护路径；实际运行环境仍需独立验收。'
+  },
   'act': {
     title: 'Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware',
     meta: 'Tony Z. Zhao, Vikash Kumar, Sergey Levine, Chelsea Finn · RSS · 2023',
