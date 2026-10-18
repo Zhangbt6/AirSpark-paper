@@ -32,7 +32,7 @@ const paperReferences = {
     "title": "AM-Bench: A Modular Simulation Suite and Benchmark for Aerial Manipulation Policy Learning",
     "type": "预印本",
     "url": "https://arxiv.org/abs/2609.00641v1",
-    "note": "空中操作的模块化任务、策略实现与原生仿真评价。",
+    "note": "空中操作基准与原生学习接口。作者实验室公开列为 CoRL 2026；本轮未取得正式会录条目，保留 arXiv v1。录用来源和运行复现是不同证据。",
     "links": [
       [
         "项目",
@@ -41,6 +41,10 @@ const paperReferences = {
       [
         "代码",
         "https://github.com/ambench/ambench"
+      ],
+      [
+        "作者实验室发表记录",
+        "https://lecar-lab.github.io/publications.html"
       ]
     ],
     "verified": "2026-10-18",
@@ -163,11 +167,15 @@ const paperReferences = {
     "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World",
     "type": "预印本",
     "url": "https://arxiv.org/abs/2606.19980v2",
-    "note": "研究 harness 与真实机器人策略改进。arXiv v2 备注 CoRL 2026，本轮未核得正式会录条目，暂保留可核验的预印本记录。",
+    "note": "研究 harness 与真实机器人改进。作者实验室页面及 arXiv 备注 CoRL 2026；本轮未取得正式会录条目，保留 arXiv v2，不补造卷页。",
     "links": [
       [
         "项目与评测说明",
         "https://enpire-research.github.io/"
+      ],
+      [
+        "作者实验室发表记录",
+        "https://lecar-lab.github.io/publications.html"
       ]
     ],
     "verified": "2026-10-18",
@@ -201,7 +209,7 @@ const paperReferences = {
     "title": "EmbodiRSI: Recursive Self-Improvement for Data-Efficient Robot Adaptation",
     "type": "预印本",
     "url": "https://arxiv.org/abs/2609.38905v3",
-    "note": "反馈驱动的纠正与自适应采集，以及 real-to-sim-to-real 策略适应。",
+    "note": "v3 包含 CEC 中途纠正、ADC 自适应采集及策略更新，是直接学习型近邻。未核得正式会录，按预印本引用；B2 不是其复现。",
     "verified": "2026-10-18",
     "authors": [
       "Lang, Haoran",
@@ -225,7 +233,7 @@ const paperReferences = {
     "title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
     "type": "预印本",
     "url": "https://arxiv.org/abs/2610.13912v1",
-    "note": "预测辅助的候选选择、外部反馈与更新后的组件兼容性检查。",
+    "note": "通用研究编排的扩展阅读；本文未引入其世界模型，也不以通用 RSI 叙事承担主要创新论证。",
     "links": [
       [
         "官方代码",
@@ -317,7 +325,7 @@ const paperReferences = {
     "title": "Guiding Data Collection via Factored Scaling Curves",
     "type": "预印本",
     "url": "https://arxiv.org/abs/2505.07728v1",
-    "note": "利用因素化的数据收益估计指导采集预算分配。",
+    "note": "因素化数据收益指导采集；保留为扩展阅读。本轮未取得主会正式条目，不将 workshop 展示等同主会发表。",
     "verified": "2026-10-18",
     "authors": [
       "Zha, Lihan",
@@ -517,7 +525,7 @@ const paperReferences = {
     "sortKey": "LightOrigins |  | lightnav"
   },
   "fly-by-code": {
-    "note": "空中操作中的主动视觉、物理诊断与任务程序改进。",
+    "note": "主动 View / Probe 诊断与任务程序修订；程序可表示策略，本文区分其改进机制与学生参数训练。未核得正式会录，按 arXiv v1 引用。",
     "type": "预印本",
     "links": [
       [
@@ -612,5 +620,278 @@ const paperReferences = {
     "entryType": "inproceedings",
     "pages": "5026--5033",
     "sortKey": "Todorov, Emanuel | Erez, Tom | Tassa, Yuval | 2012 | mujoco"
+  },
+  "aerial-bench": {
+    "title": "Benchmarks for Aerial Manipulation",
+    "authors": [
+      "Suarez, Alejandro",
+      "Vega, Victor M.",
+      "Fernandez, Manuel",
+      "Heredia, Guillermo",
+      "Ollero, Anibal"
+    ],
+    "year": "2020",
+    "venue": "IEEE Robotics and Automation Letters",
+    "url": "https://doi.org/10.1109/LRA.2020.2972870",
+    "note": "实体空中操作的精度、时间和交互响应基准；原文与作者机构记录已核。",
+    "entryType": "article",
+    "type": "期刊论文",
+    "verified": "2026-10-18",
+    "volume": "5",
+    "number": "2",
+    "pages": "2650--2657",
+    "doi": "10.1109/LRA.2020.2972870",
+    "links": [
+      [
+        "作者机构全文",
+        "https://idus.us.es/bitstreams/45a9b76f-eb80-4e0c-b38f-8a89165d7ebe/download"
+      ]
+    ],
+    "sortKey": "Suarez, Alejandro | Vega, Victor M. | Fernandez, Manuel | Heredia, Guillermo | Ollero, Anibal | 2020 | aerial-bench"
+  },
+  "aerial-gym": {
+    "title": "Aerial Gym Simulator: A Framework for Highly Parallelized Simulation of Aerial Robots",
+    "authors": [
+      "Kulkarni, Mihir",
+      "Rehberg, Welf",
+      "Alexis, Kostas"
+    ],
+    "year": "2025",
+    "venue": "IEEE Robotics and Automation Letters",
+    "url": "https://doi.org/10.1109/LRA.2025.3548507",
+    "note": "动力学、并行控制、传感器渲染及学习接口；引用 RA-L 2025 扩展版而非早期预发布。",
+    "entryType": "article",
+    "type": "期刊论文",
+    "verified": "2026-10-18",
+    "volume": "10",
+    "number": "4",
+    "pages": "4093--4100",
+    "doi": "10.1109/LRA.2025.3548507",
+    "links": [
+      [
+        "官方代码与期刊书目",
+        "https://github.com/ntnu-arl/aerial_gym_simulator"
+      ],
+      [
+        "开放全文",
+        "https://arxiv.org/html/2503.01471v1"
+      ]
+    ],
+    "sortKey": "Kulkarni, Mihir | Rehberg, Welf | Alexis, Kostas | 2025 | aerial-gym"
+  },
+  "aerial-sliding": {
+    "title": "Learning Variable Impedance Control for Aerial Sliding on Uneven Heterogeneous Surfaces by Proprioceptive and Tactile Sensing",
+    "authors": [
+      "Zhang, Weixuan",
+      "Ott, Lionel",
+      "Tognon, Marco",
+      "Siegwart, Roland"
+    ],
+    "year": "2022",
+    "venue": "IEEE Robotics and Automation Letters",
+    "url": "https://doi.org/10.1109/LRA.2022.3194315",
+    "note": "空中接触控制的仿真学习与真实迁移；其本体/触觉输入和低层学习目标不同于本文视觉动作学生。",
+    "entryType": "article",
+    "type": "期刊论文",
+    "verified": "2026-10-18",
+    "volume": "7",
+    "number": "4",
+    "pages": "11275--11282",
+    "doi": "10.1109/LRA.2022.3194315",
+    "links": [
+      [
+        "作者公开记录",
+        "https://marco-tognon-robotics.com/content/learning-variable-impedance-control-aerial-sliding-uneven-heterogeneous-surfaces"
+      ],
+      [
+        "开放全文",
+        "https://arxiv.org/abs/2206.14122"
+      ]
+    ],
+    "sortKey": "Zhang, Weixuan | Ott, Lionel | Tognon, Marco | Siegwart, Roland | 2022 | aerial-sliding"
+  },
+  "sim-benchmark": {
+    "title": "Benchmarking Simulated Robotic Manipulation Through a Real World Dataset",
+    "authors": [
+      "Collins, Jack",
+      "McVicar, Jessie",
+      "Wedlock, David",
+      "Brown, Ross",
+      "Howard, David",
+      "Leitner, Jurgen"
+    ],
+    "year": "2020",
+    "venue": "IEEE Robotics and Automation Letters",
+    "url": "https://doi.org/10.1109/LRA.2019.2953663",
+    "note": "通过真实记录与协议评价模拟操作误差；2020 卷期，DOI 中的 2019 为在线出版年份。",
+    "entryType": "article",
+    "type": "期刊论文",
+    "verified": "2026-10-18",
+    "volume": "5",
+    "number": "1",
+    "pages": "250--257",
+    "doi": "10.1109/LRA.2019.2953663",
+    "links": [
+      [
+        "作者机构记录",
+        "https://research.monash.edu/en/publications/benchmarking-simulated-robotic-manipulation-through-a-real-world-/"
+      ]
+    ],
+    "sortKey": "Collins, Jack | McVicar, Jessie | Wedlock, David | Brown, Ross | Howard, David | Leitner, Jurgen | 2020 | sim-benchmark"
+  },
+  "sirius": {
+    "title": "Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment",
+    "authors": [
+      "Liu, Huihan",
+      "Nasiriany, Soroush",
+      "Zhang, Lance",
+      "Bao, Zhiyao",
+      "Zhu, Yuke"
+    ],
+    "year": "2023",
+    "venue": "Robotics: Science and Systems XIX",
+    "url": "https://www.roboticsproceedings.org/rss19/p005.html",
+    "note": "Sirius：部署、人工介入、样本加权与策略更新；正式 RSS 会录。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-18",
+    "doi": "10.15607/RSS.2023.XIX.005",
+    "sortKey": "Liu, Huihan | Nasiriany, Soroush | Zhang, Lance | Bao, Zhiyao | Zhu, Yuke | 2023 | sirius"
+  },
+  "thrifty": {
+    "title": "ThriftyDAgger: Budget-Aware Novelty and Risk Gating for Interactive Imitation Learning",
+    "authors": [
+      "Hoque, Ryan",
+      "Balakrishna, Ashwin",
+      "Novoseller, Ellen",
+      "Wilcox, Albert",
+      "Brown, Daniel S.",
+      "Goldberg, Ken"
+    ],
+    "year": "2022",
+    "venue": "Proceedings of the 5th Conference on Robot Learning",
+    "url": "https://proceedings.mlr.press/v164/hoque22a.html",
+    "note": "CoRL 2021 会议，PMLR 正式书目年份为 2022；预算下基于新颖性和风险的介入选择。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-18",
+    "volume": "164",
+    "pages": "598--608",
+    "series": "Proceedings of Machine Learning Research",
+    "sortKey": "Hoque, Ryan | Balakrishna, Ashwin | Novoseller, Ellen | Wilcox, Albert | Brown, Daniel S. | Goldberg, Ken | 2022 | thrifty"
+  },
+  "miles": {
+    "title": "MILES: Making Imitation Learning Easy with Self-Supervision",
+    "authors": [
+      "Papagiannis, Georgios",
+      "Johns, Edward"
+    ],
+    "year": "2025",
+    "venue": "Proceedings of The 8th Conference on Robot Learning",
+    "url": "https://proceedings.mlr.press/v270/papagiannis25a.html",
+    "note": "CoRL 2024 会议，PMLR 正式书目年份为 2025；单示范及单次复位约束下的自主经验扩充，非通用多轮 RSI。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-18",
+    "volume": "270",
+    "pages": "810--829",
+    "series": "Proceedings of Machine Learning Research",
+    "sortKey": "Papagiannis, Georgios | Johns, Edward | 2025 | miles"
+  },
+  "autonomous-cost": {
+    "title": "So You Think You Can Scale Up Autonomous Robot Data Collection?",
+    "authors": [
+      "Mirchandani, Suvir",
+      "Belkhale, Suneel",
+      "Hejna, Joey",
+      "Choi, Evelyn",
+      "Islam, Md Sazzad",
+      "Sadigh, Dorsa"
+    ],
+    "year": "2025",
+    "venue": "Proceedings of The 8th Conference on Robot Learning",
+    "url": "https://proceedings.mlr.press/v270/mirchandani25a.html",
+    "note": "CoRL 2024 / PMLR 2025。检验自主采集的环境维护、复位与数据收益；其负结果适用于所测设置，不推广为自动采集普遍无效。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-18",
+    "volume": "270",
+    "pages": "2791--2810",
+    "series": "Proceedings of Machine Learning Research",
+    "sortKey": "Mirchandani, Suvir | Belkhale, Suneel | Hejna, Joey | Choi, Evelyn | Islam, Md Sazzad | Sadigh, Dorsa | 2025 | autonomous-cost"
+  },
+  "robotwin": {
+    "title": "RoboTwin: Dual-Arm Robot Benchmark with Generative Digital Twins",
+    "authors": [
+      "Mu, Yao",
+      "Chen, Tianxing",
+      "Chen, Zanxin",
+      "Peng, Shijia",
+      "Lan, Zhiqian",
+      "Gao, Zeyu",
+      "Liang, Zhixuan",
+      "Yu, Qiaojun",
+      "Zou, Yude",
+      "Xu, Mingkun",
+      "Lin, Lunkai",
+      "Xie, Zhiqiang",
+      "Ding, Mingyu",
+      "Luo, Ping"
+    ],
+    "year": "2025",
+    "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Mu_RoboTwin_Dual-Arm_Robot_Benchmark_with_Generative_Digital_Twins_CVPR_2025_paper.html",
+    "note": "CVPR 2025 主会正式记录；生成式数字孪生、专家数据与双臂评价。引用 1.0 论文，不将其他版本成果混入。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-18",
+    "pages": "27649--27660",
+    "sortKey": "Mu, Yao | Chen, Tianxing | Chen, Zanxin | Peng, Shijia | Lan, Zhiqian | Gao, Zeyu | Liang, Zhixuan | Yu, Qiaojun | Zou, Yude | Xu, Mingkun | Lin, Lunkai | Xie, Zhiqiang | Ding, Mingyu | Luo, Ping | 2025 | robotwin"
+  },
+  "robosplat": {
+    "title": "Novel Demonstration Generation with Gaussian Splatting Enables Robust One-Shot Manipulation",
+    "authors": [
+      "Yang, Sizhe",
+      "Yu, Wenye",
+      "Zeng, Jia",
+      "Lv, Jun",
+      "Ren, Kerui",
+      "Lu, Cewu",
+      "Lin, Dahua",
+      "Pang, Jiangmiao"
+    ],
+    "year": "2025",
+    "venue": "Robotics: Science and Systems XXI",
+    "url": "https://www.roboticsproceedings.org/rss21/p146.html",
+    "note": "RoboSplat：直接编辑三维高斯扩展示范的视觉与几何条件；不能将该增强过程等同于接触动力学执行。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-18",
+    "doi": "10.15607/RSS.2025.XXI.146",
+    "sortKey": "Yang, Sizhe | Yu, Wenye | Zeng, Jia | Lv, Jun | Ren, Kerui | Lu, Cewu | Lin, Dahua | Pang, Jiangmiao | 2025 | robosplat"
+  },
+  "correctnav": {
+    "title": "CorrectNav: Self-Correction Flywheel Empowers Vision-Language-Action Navigation Model",
+    "authors": [
+      "Yu, Zhuoyuan",
+      "Long, Yuxing",
+      "Yang, Zihan",
+      "Zeng, Chengyan",
+      "Fan, Hongwei",
+      "Zhang, Jiyao",
+      "Dong, Hao"
+    ],
+    "year": "2026",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38942",
+    "note": "AAAI 2026 主会正式论文；训练集错误轨迹、纠正数据和多轮参数更新。导航与空中接触的专家、动作及评价不同。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-18",
+    "volume": "40",
+    "number": "22",
+    "pages": "18737--18745",
+    "doi": "10.1609/aaai.v40i22.38942",
+    "sortKey": "Yu, Zhuoyuan | Long, Yuxing | Yang, Zihan | Zeng, Chengyan | Fan, Hongwei | Zhang, Jiyao | Dong, Hao | 2026 | correctnav"
   }
 };

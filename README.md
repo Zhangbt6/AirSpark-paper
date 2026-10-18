@@ -2,11 +2,12 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current manuscript: v0.13 — A Simulated Academy for Self-Improving Aerial Manipulation
+- Current manuscript: v0.14 — A Simulated Academy for Self-Improving Aerial Manipulation
 - Paper structure: abstract, introduction, related work, method, experiments, discussion, conclusion, references, appendix.
 - Evaluation: native AM-Bench return testing and paired real-scene experiments; stage-evidence-driven practice and bounded policy improvement.
-- Earlier designs: `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
+- Earlier designs: `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
 - v0.13 specifies process-condition selection, physical prefixes, expert-only action supervision, C/V/T separation, and shared-tool collection controls. It adds Fly-by-Code, RialTo, MimicGen and MuJoCo; updates bibliographic metadata and exports BibTeX. No new experimental results are claimed.
+- v0.14 retains two contributions, unifies the paper name SparkMentor, distinguishes program refinement from parameter learning, and adds 11 verified formal publications. It strengthens the shared-tool recovery baseline and documents source-selection decisions in the appendix. Historical snapshots and engine interfaces are unchanged.
 - Project: https://github.com/Zhangbt6/AirSpark (access required)
 
 ## Update
@@ -20,3 +21,5 @@ The bibliography includes complete author metadata, publication types, source li
 The website describes proposed methods and experiments, not established experimental results. Do not add credentials, private logs, or simulation code to this public repository.
 
 Write main chapters as connected paper prose. Keep implementation schedules, resource checks, and editorial history in the appendix. Use `data-number` for chapter numbering and `data-nav` on subsection headings for the sidebar. Preserve existing section IDs when reorganizing so previously shared links still work.
+
+Publication checks prioritize original proceedings, publisher records and author-hosted manuscripts. Distinguish conference year from PMLR publication year. The literature map records reading priorities and deferred candidates; it is not a claim that all cited methods have been independently reproduced.
