@@ -53,3 +53,14 @@ nav .chapter-active{color:var(--ink);font-weight:600}
 nav .nav-child.active{color:var(--blue)}
 @media(max-width:720px){.nav-group{flex-shrink:0}.nav-sub{display:none}section>h3{font-size:19px;margin-top:27px}.editorial-note{padding:14px}.paper-copy{font-size:15px}}
 @media print{.editorial-note{background:white;border:0;padding:0}.manuscript-status,.experiment-status{font-size:10px}.nav-group{display:none}table caption{break-after:avoid}section>h3{break-after:avoid}section>p{orphans:3;widows:3}}
+
+/* Manuscript v0.13: compact paper-style references. */
+cite[data-ref]{font-size:.86em;color:var(--blue)}
+.citation{font-size:inherit;vertical-align:baseline;line-height:inherit;margin:0;padding:0 1px;font-weight:500}
+#reference-list{list-style:none;counter-reset:reference;padding-left:38px}
+#reference-list>li{position:relative;counter-increment:reference;padding:17px 0}
+#reference-list>li::before{content:'[' counter(reference) ']';position:absolute;left:-38px;top:18px;font-size:13px;color:var(--muted)}
+.ref-citation{font-size:14px;line-height:1.8;margin:0 0 7px}.ref-title{font-size:inherit;font-weight:500}
+.ref-details{border:0;padding:0;margin:6px 0}.ref-details summary{font-size:12px;font-weight:400;color:var(--muted)}
+.ref-details p{font-size:13px;line-height:1.7;margin:7px 0}.ref-backlinks{margin-top:7px}.reference-tools{font-size:13px}
+@media print{.ref-details,.ref-backlinks,.reference-tools{display:none!important}.ref-citation{font-size:10px}.citation{vertical-align:baseline}}

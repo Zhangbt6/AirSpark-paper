@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AirSpark · 面向空中操作策略自进化的模拟学院 | 论文正文</title>
+<meta name="description" content="面向空中操作策略自进化的模拟学院：高保真视觉与物理交互、主动练习生成、闭环策略改进与真实迁移验证。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23183255'/%3E%3Cpath d='M7 24 16 7l9 17M11 18h10' fill='none' stroke='%2372dbce' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css?v=0.11">
+</head>
+<body>
+<a class="skip" href="#abstract">跳至正文</a>
+<aside><a class="brand" href="#abstract"><span class="mark">A</span><span>AirSpark<small>RESEARCH PAPER</small></span></a><div class="version">论文正文 · v0.12<br>2026.10.13</div><nav aria-label="论文阅读顺序" id="nav"></nav><div class="side-note">空中操作模拟学院<br>模拟学院 · 策略改进 · 真实验证</div><button class="print" onclick="window.print()">打印 / 保存 PDF</button></aside>
+<div class="main-shell"><header><span>AirSpark / <b id="chapter">摘要</b></span><span class="draft">研究稿</span></header><div class="progress" aria-hidden="true"><div id="progress"></div></div><main id="content"><section id="abstract" data-title="摘要" data-number="—"><div class="eyebrow">AIRSPARK / RESEARCH MANUSCRIPT</div><h1>AirSpark</h1><p class="paper-subtitle">面向空中操作策略自进化的<br>模拟学院</p><p class="english-title">A Simulated Academy for Self-Improving Aerial Manipulation</p><div class="paper-keywords"><span>视觉—物理一致性</span><span>主动练习生成</span><span>策略自进化</span><span>Sim-to-Real 验证</span></div><h2 class="abstract-heading">摘要</h2><div class="paper-copy">
+<p>空中操作将视觉感知、飞行稳定与接触交互耦合在同一任务中，使学习策略既要适应不断变化的观测，也要处理自身动作引起的物理变化。获得覆盖这些条件的示范需要反复执行、复位和标注，而固定数据集难以持续覆盖策略更新后暴露的能力缺口。本文提出 AirSpark，一套面向空中操作策略自进化的模拟学院，将可控仿真、自动监督与多轮策略改进组织为统一框架。学院结合 Unreal Engine 的视觉渲染与 MuJoCo 的动力学和接触仿真，提供参数化任务、同步观测、专家示范和训练评测接口。SparkClaw 根据策略执行中的视觉与阶段证据选择练习条件，在完整物理执行中重新生成监督，并通过实验记忆连接后续采集、训练与验证。我们以 AM-Bench 的任务与策略为仿真研究基础，将学院内更新的模型返回原生环境评价；同时利用真实场景的 3D Gaussian Splatting 重建与物理代理建立对应训练环境，通过冻结策略的实机对照检验迁移。该研究围绕数据效率、多轮能力变化和外部任务表现，考察模拟学院如何将策略缺口转化为可迁移的学习收益。</p>
+</div><p class="manuscript-status">研究稿 v0.12 · 2026.10.13。方法为所提出的系统设计，实验章节给出预定评测协议；定量结果与实机结论尚待实验完成。<a href="#version-history">版本记录</a></p></section>
+
+
+</main><footer><button id="prev">上一节</button><span id="position"></span><button id="next">下一节</button></footer></div>
+<script src="chapters.js?v=0.11"></script><script src="citations.js?v=0.11"></script><script src="app.js?v=0.11"></script>
+</body></html>
