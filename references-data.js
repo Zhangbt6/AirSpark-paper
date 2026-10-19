@@ -167,7 +167,7 @@ const paperReferences = {
     "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World",
     "type": "预印本",
     "url": "https://arxiv.org/abs/2606.19980v2",
-    "note": "研究 harness 与真实机器人改进。作者实验室页面及 arXiv 备注 CoRL 2026；本轮未取得正式会录条目，保留 arXiv v2，不补造卷页。",
+    "note": "研究 harness 与真实机器人改进。作者实验室页面及 arXiv 备注 CoRL 2026；本轮未取得正式会录条目，保留 arXiv v2，不补造卷页。 v2 第 3.2、3.4 节涉及训练方法修订与研究经验复用。",
     "links": [
       [
         "项目与评测说明",
@@ -178,7 +178,7 @@ const paperReferences = {
         "https://lecar-lab.github.io/publications.html"
       ]
     ],
-    "verified": "2026-10-18",
+    "verified": "2026-10-19",
     "authors": [
       "Xiao, Wenli",
       "Xie, Jia",
@@ -209,8 +209,8 @@ const paperReferences = {
     "title": "EmbodiRSI: Recursive Self-Improvement for Data-Efficient Robot Adaptation",
     "type": "预印本",
     "url": "https://arxiv.org/abs/2609.38905v3",
-    "note": "v3 包含 CEC 中途纠正、ADC 自适应采集及策略更新，是直接学习型近邻。未核得正式会录，按预印本引用；B2 不是其复现。",
-    "verified": "2026-10-18",
+    "note": "v3 包含监测、CEC、ADC 及优势条件化训练；失败集中度是采集启发式，不估计配置特定学习收益。直接学习型近邻；按预印本引用，B2 不是其复现。",
+    "verified": "2026-10-19",
     "authors": [
       "Lang, Haoran",
       "Lu, Haotao",
@@ -928,5 +928,102 @@ const paperReferences = {
       ]
     ],
     "sortKey": "Wang, Yen-Jen | Jiang, Haozhe | Deng, Shuying | Xue, Haoru | Ye, Weirui | Duan, Rocky | Haghtalab, Nika | Sastry, S. Shankar | Abbeel, Pieter | Qi, Haozhi | 2026 | rpg"
+  },
+  "learning-to-teach": {
+    "title": "Learning to Teach",
+    "authors": [
+      "Fan, Yang",
+      "Tian, Fei",
+      "Qin, Tao",
+      "Li, Xiang-Yang",
+      "Liu, Tie-Yan"
+    ],
+    "year": "2018",
+    "venue": "International Conference on Learning Representations",
+    "url": "https://openreview.net/forum?id=HJewuJWCZ",
+    "links": [
+      [
+        "作者机构记录",
+        "https://www.microsoft.com/en-us/research/publication/learning-to-teach/"
+      ],
+      [
+        "正式论文",
+        "https://openreview.net/pdf?id=HJewuJWCZ"
+      ]
+    ],
+    "note": "ICLR 2018；学生反馈用于优化教学决策，作为教学自适应的已有基础。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-19",
+    "sortKey": "Fan, Yang | Tian, Fei | Qin, Tao | Li, Xiang-Yang | Liu, Tie-Yan | 2018 | learning-to-teach"
+  },
+  "alp-gmm": {
+    "title": "Teacher algorithms for curriculum learning of Deep RL in continuously parameterized environments",
+    "authors": [
+      "Portelas, Rémy",
+      "Colas, Cédric",
+      "Hofmann, Katja",
+      "Oudeyer, Pierre-Yves"
+    ],
+    "year": "2020",
+    "venue": "Proceedings of the Conference on Robot Learning",
+    "url": "https://proceedings.mlr.press/v100/portelas20a.html",
+    "pages": "835--853",
+    "volume": "100",
+    "series": "Proceedings of Machine Learning Research",
+    "note": "CoRL 2019，PMLR 会录出版年 2020。ALP-GMM 基于绝对学习进展生成课程；本文借鉴调度思想，不声称复现其 RL 算法。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-19",
+    "sortKey": "Portelas, Rémy | Colas, Cédric | Hofmann, Katja | Oudeyer, Pierre-Yves | 2020 | alp-gmm"
+  },
+  "multitask-dagger": {
+    "title": "Data-Efficient Multitask DAgger",
+    "authors": [
+      "Fu, Haotian",
+      "Gong, Ran",
+      "Zhang, Xiaohan",
+      "Minniti, Maria Vittoria",
+      "Patel, Jigarkumar",
+      "Schmeckpeper, Karl"
+    ],
+    "year": "2025",
+    "venue": "arXiv",
+    "url": "https://arxiv.org/abs/2509.25466v1",
+    "eprint": "2509.25466",
+    "version": "v1",
+    "entryType": "misc",
+    "type": "预印本",
+    "links": [
+      [
+        "方法全文",
+        "https://arxiv.org/html/2509.25466v1"
+      ]
+    ],
+    "note": "分别研究成功率驱动的 Task Need 与模仿损失下降驱动的 Performance Gain 调度；PG 不等同于完整任务学习收益。未核得正式会录，保留预印本状态。",
+    "verified": "2026-10-19",
+    "sortKey": "Fu, Haotian | Gong, Ran | Zhang, Xiaohan | Minniti, Maria Vittoria | Patel, Jigarkumar | Schmeckpeper, Karl | 2025 | multitask-dagger"
+  },
+  "eureka": {
+    "title": "Eureka: Human-Level Reward Design via Coding Large Language Models",
+    "authors": [
+      "Ma, Yecheng Jason",
+      "Liang, William",
+      "Wang, Guanzhi",
+      "Huang, De-An",
+      "Bastani, Osbert",
+      "Jayaraman, Dinesh",
+      "Zhu, Yuke",
+      "Fan, Linxi",
+      "Anandkumar, Anima"
+    ],
+    "year": "2024",
+    "venue": "International Conference on Learning Representations",
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/70c26937fbf3d4600b69a129031b66ec-Abstract-Conference.html",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "note": "ICLR 2024 正式会议记录；利用训练反馈迭代奖励代码，支撑学习信号改进已有研究基础。AirSpark 本轮不新增奖励搜索实验。",
+    "verified": "2026-10-19",
+    "sortKey": "Ma, Yecheng Jason | Liang, William | Wang, Guanzhi | Huang, De-An | Bastani, Osbert | Jayaraman, Dinesh | Zhu, Yuke | Fan, Linxi | Anandkumar, Anima | 2024 | eureka"
   }
 };

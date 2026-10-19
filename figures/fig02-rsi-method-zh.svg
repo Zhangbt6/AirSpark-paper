@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
-<title id="title">反馈驱动的策略自进化方法</title><desc id="desc">根据执行反馈与跨轮记忆选择采集内容，通过训练将能力保留在学生策略中。 本图为研究设计示意，非实测结果。</desc>
+<title id="title">反馈驱动的策略自进化方法</title><desc id="desc">执行反馈引导主动练习，学习反馈与跨轮记忆支持有限的方案调整。 本图为研究设计示意，非实测结果。</desc>
 <defs>
 <marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183255" /></marker>
 <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087f75" /></marker>
@@ -9,7 +9,7 @@
 <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94601b" /></marker>
 </defs><g font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif"><rect width="1440" height="100%" fill="white" />
 <text x="44" y="45" fill="#183255" font-size="29" font-weight="700" text-anchor="start">反馈驱动的策略自进化方法</text>
-<text x="44" y="82" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">根据执行反馈与跨轮记忆选择采集内容，通过训练将能力保留在学生策略中。</text>
+<text x="44" y="82" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">执行反馈引导主动练习，学习反馈与跨轮记忆支持有限的方案调整。</text>
 <rect x="364" y="118" width="1052" height="280" rx="5" fill="#fafbfc" stroke="#d2dde8" stroke-width="1.7" stroke-dasharray="8 6" />
 <text x="384" y="148" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">SparkMentor：诊断、记忆与练习决策</text>
 <rect x="44" y="170" width="280" height="200" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7" />
@@ -23,15 +23,15 @@
 <text x="404" y="274" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">条件出现频率 ρ̂z</text>
 <text x="404" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">失败率 f̂z 与经验成本 ĉz</text>
 <rect x="724" y="170" width="340" height="200" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7" />
-<text x="744" y="207" fill="#183255" font-size="23" font-weight="600" text-anchor="start">3  决定下一轮练习</text>
-<text x="744" y="244" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">可辨识 / 可达 / 可监督</text>
-<text x="744" y="274" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">q(z) = ρ̂z · f̂z / ĉz</text>
-<text x="744" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">选择条件并分配采集预算</text>
+<text x="744" y="207" fill="#183255" font-size="23" font-weight="600" text-anchor="start">3  制定练习计划</text>
+<text x="744" y="244" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">q(z) = ρ̂z · f̂z / ĉz</text>
+<text x="744" y="274" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">当前方案 ηᵣ 与预算 Bᵣ</text>
+<text x="744" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">经验生成与数据使用</text>
 <rect x="1124" y="170" width="272" height="200" rx="5" fill="#f1eef8" stroke="#7552a5" stroke-width="1.7" />
 <text x="1144" y="207" fill="#183255" font-size="23" font-weight="600" text-anchor="start">跨轮记忆 Mᵣ</text>
-<text x="1144" y="244" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">历史练习与实际成本</text>
-<text x="1144" y="274" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">数据与模型版本</text>
-<text x="1144" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">开发验收摘要</text>
+<text x="1144" y="244" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">干预方案与学习结果</text>
+<text x="1144" y="274" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">学生、数据与方案版本</text>
+<text x="1144" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">实际成本与不确定性</text>
 <path d="M324 270 H384" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
 <path d="M664 270 H724" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
 <text x="694" y="251" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Eᵣ</text>
@@ -44,22 +44,32 @@
 <rect x="384" y="540" width="280" height="200" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7" />
 <text x="404" y="577" fill="#183255" font-size="23" font-weight="600" text-anchor="start">5  更新学生参数</text>
 <text x="404" y="614" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">新增数据 Dᵣ + 历史回放</text>
-<text x="404" y="644" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">固定训练配方</text>
+<text x="404" y="644" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">固定基础学习算法</text>
 <text x="404" y="674" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">候选策略参数 θ′</text>
 <rect x="44" y="540" width="280" height="200" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
 <text x="64" y="577" fill="#183255" font-size="23" font-weight="600" text-anchor="start">6  开发验收</text>
 <text x="64" y="614" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">开发验收任务 V</text>
-<text x="64" y="644" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">完整任务表现与退化检查</text>
+<text x="64" y="644" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">任务收益与已有能力保留</text>
 <text x="64" y="674" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">按规则接纳或保留当前策略</text>
 <path d="M894 370 V540" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
-<text x="915" y="459" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">练习计划（预算 Bᵣ 约束）</text>
+<text x="915" y="482" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">练习计划</text>
 <path d="M724 640 H664" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
 <path d="M384 640 H324" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
 <path d="M184 540 V370" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
 <text x="205" y="451" fill="#087f75" font-size="19" font-weight="400" text-anchor="start">下一轮学生策略</text>
 <text x="205" y="482" fill="#087f75" font-size="24" font-weight="600" text-anchor="start">πᵣ₊₁</text>
-<path d="M184 740 V803 H1260 V370" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)" />
-<rect x="432" y="781" width="603" height="42" rx="3" fill="white" stroke="white" stroke-width="1.7" />
-<text x="733" y="810" fill="#7552a5" font-size="20" font-weight="500" text-anchor="middle">记录全部尝试、实际成本与开发验收结果</text>
-<text x="44" y="865" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">在预算与轮数限制内重复学习；结束后冻结学生策略，另行进行独立测试。</text>
+<rect x="1124" y="480" width="272" height="260" rx="5" fill="#fcf8f1" stroke="#94601b" stroke-width="1.7" stroke-dasharray="8 6" />
+<text x="1144" y="518" fill="#183255" font-size="23" font-weight="600" text-anchor="start">有限方案调整</text>
+<text x="1144" y="558" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">比较候选练习方案</text>
+<text x="1144" y="590" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">保留有证据支持的修改</text>
+<text x="1144" y="622" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">预设选项与预算上限</text>
+<text x="1144" y="654" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">代表任务补充分析（§4.6）</text>
+<path d="M1260 370 V480" fill="none" stroke="#94601b" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-amber)" stroke-dasharray="8 6" />
+<path d="M1124 590 H1092 V415 H1000 V370" fill="none" stroke="#94601b" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-amber)" stroke-dasharray="8 6" />
+<text x="1015" y="447" fill="#94601b" font-size="21" font-weight="400" text-anchor="start">ηᵣ₊₁</text>
+<path d="M184 740 V803 H1416 V400 H1260 V370" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)" />
+<rect x="386" y="781" width="710" height="42" rx="3" fill="white" stroke="white" stroke-width="1.7" />
+<text x="741" y="810" fill="#7552a5" font-size="20" font-weight="500" text-anchor="middle">学习反馈 Fᵣ：任务表现变化、能力保留与实际成本</text>
+<text x="44" y="850" fill="#94601b" font-size="19" font-weight="400" text-anchor="start">虚线：有限方案调整；基础 B1–B3 对照保持各自既定规则与训练配方。</text>
+<text x="44" y="883" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">在预算内重复学习；闭环结束后冻结学生，另行开展封存测试。</text>
 </g></svg>

@@ -1,4 +1,4 @@
-AirSpark paper figures · v0.17 · 2026-10-19
+AirSpark paper figures · v0.18 · 2026-10-19
 
 论文主图：图 1 学院平台；图 2 RSI 方法；图 3 实验流程。
 附录：图 A1 执行链路；图 A2 专家延续。
@@ -8,7 +8,7 @@ fig01-academy-overview
 图 1. AirSpark 模拟学院平台架构。视觉仿真、物理仿真与场景任务共同支撑任务执行、同步记录、监督生成、训练与评价工具。学生策略、采集专家和 SparkMentor 通过共享接口调用这些能力。图 2 进一步描述运行在学院设施上的策略自进化方法。
 
 fig02-rsi-method
-图 2. 反馈驱动的策略自进化方法。第 r 轮执行当前学生策略，识别过程条件上的能力缺口；SparkMentor 结合执行证据 Eᵣ、实验记忆 Mᵣ 和预算 Bᵣ 决定后续采集。参考选择器按条件频率、转换失败率和实测经验成本分配练习。学院通过物理前缀、专家延续与质检生成数据，再训练候选策略并在开发任务 V 上验收。下一轮使用验收后的策略，全部尝试、成本和验收结果写入记忆。
+图 2. 反馈驱动的策略自进化方法。执行反馈 Eᵣ 引导能力诊断与主动采集；学院通过物理前缀、专家延续与质检产生数据，再训练并验收学生。学习反馈 Fᵣ 将任务表现变化、能力保留和成本写入跨轮记忆 Mᵣ。虚线支路表示在预设范围内比较和调整练习方案 ηᵣ，作为基础闭环的补充分析；B1–B3 保持各自既定规则与训练配方。最终测试在闭环之外进行。
 
 fig04-evaluation-protocol
 图 3. 实验流程。首先使用 AM-Bench 的示范数据与训练配置建立初始策略，再在 AirSpark 中根据执行反馈采集专家数据并更新策略。最后冻结模型，在原生 AM-Bench 和对应的真实任务中比较改进前后的表现。各采集方法的对照设置见表 2。
@@ -23,3 +23,5 @@ Rebuild: python scripts/build-figures.py
 Localize: python scripts/localize-figures.py
 Export: node scripts/export-figures.cjs (requires sharp)
 Keep scripts/ and figures/ as sibling directories.
+
+本轮仅更新图 2：学习反馈 Fᵣ、干预记忆 Mᵣ 与虚线方案调整支路。其余图内容保留。虚线支路属于代表任务上的补充研究设计，基础 B1–B3 配方保持固定。

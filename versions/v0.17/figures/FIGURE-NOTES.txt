@@ -1,0 +1,25 @@
+AirSpark paper figures · v0.17 · 2026-10-19
+
+论文主图：图 1 学院平台；图 2 RSI 方法；图 3 实验流程。
+附录：图 A1 执行链路；图 A2 专家延续。
+均为研究设计，非实测结果。中文文件以 -zh 结尾；英文原文件名保留。SVG 可编辑；PNG 宽度 2880 像素。
+
+fig01-academy-overview
+图 1. AirSpark 模拟学院平台架构。视觉仿真、物理仿真与场景任务共同支撑任务执行、同步记录、监督生成、训练与评价工具。学生策略、采集专家和 SparkMentor 通过共享接口调用这些能力。图 2 进一步描述运行在学院设施上的策略自进化方法。
+
+fig02-rsi-method
+图 2. 反馈驱动的策略自进化方法。第 r 轮执行当前学生策略，识别过程条件上的能力缺口；SparkMentor 结合执行证据 Eᵣ、实验记忆 Mᵣ 和预算 Bᵣ 决定后续采集。参考选择器按条件频率、转换失败率和实测经验成本分配练习。学院通过物理前缀、专家延续与质检生成数据，再训练候选策略并在开发任务 V 上验收。下一轮使用验收后的策略，全部尝试、成本和验收结果写入记忆。
+
+fig04-evaluation-protocol
+图 3. 实验流程。首先使用 AM-Bench 的示范数据与训练配置建立初始策略，再在 AirSpark 中根据执行反馈采集专家数据并更新策略。最后冻结模型，在原生 AM-Bench 和对应的真实任务中比较改进前后的表现。各采集方法的对照设置见表 2。
+
+fig02-visual-physical-contract
+图 A1. 视觉与物理执行细节。3DGS 提供静态场景外观，显式物理资产承担碰撞、接触与载荷；MuJoCo 状态驱动 UE 动态资产。适配器统一坐标、时间和动作语义，并区分学生输入、特权诊断与专家监督。
+
+fig03-process-experience
+图 A2. RSI 经验生成步骤的展开。从合法初态实际执行前缀，在目标过程条件上采集专家延续；每条分支是独立的物理执行。前缀提供允许的历史上下文，动作监督仅来自通过质检的专家区间。轨迹为方法示意，非实测结果。
+
+Rebuild: python scripts/build-figures.py
+Localize: python scripts/localize-figures.py
+Export: node scripts/export-figures.cjs (requires sharp)
+Keep scripts/ and figures/ as sibling directories.
