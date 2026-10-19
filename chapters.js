@@ -3,7 +3,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <div class="eyebrow">INTRODUCTION</div><h2>1. 引言</h2>
 <p>空中操作使机器人能够在不同高度和受限空间中执行抓取、运输与接触作业。与固定基座操作相比，飞行运动、机械臂动作和环境反作用共同影响末端执行；接触与载荷转换还会改变后续运动的条件。空中机器人综述与实体基准已将运动精度、交互响应和执行能力确立为重要评价维度。<cite data-ref="aerial-survey aerial-bench"></cite> 学习型接触控制、视觉动作策略与空中操作基准进一步推动了自主执行，也使学习所需的动态交互经验成为关键问题。<cite data-ref="aerial-sliding ambench airvla"></cite></p>
 <p>空中操作的学习不仅需要数据，还需要将场景构造、物理执行、任务复位、监督生成与训练评价连接起来。数据需求随学生能力变化：DAgger 和部署中学习研究利用策略自身访问的状态及纠正经验进行后续更新；自主采集研究也指出，复位、成功判断和数据质量可能限制学习收益。<cite data-ref="dagger sirius autonomous-cost"></cite> 因此，支持持续学习的设施需要同时保证经验可生成、过程可追溯和收益可检验。空中接触与载荷变化提供了具体研究情境：几何位置相近的状态可能需要不同后续动作，而这些差异还须能由学生实际使用的观测辨识。<cite data-ref="aerial-sliding contact-survey"></cite></p>
-<p>自动示范扩展和数字孪生为持续提供练习建立了基础。MimicGen 与 RoboTwin 支持生成操作示范，RialTo 研究重建环境中的策略改进与真实迁移。<cite data-ref="mimicgen robotwin rialto"></cite> 反馈驱动学习也已有明确先例：CorrectNav 将导航错误转化为纠正数据并迭代训练，近期 EmbodiRSI 将执行监测、中途纠正和自适应采集连接到操作策略更新。<cite data-ref="correctnav embodirsi"></cite> 本文在这些基础上研究面向空中操作的模拟学院：如何以一致的执行、监督与评价协议组织完整学习过程，使不同练习方法能够复用同一设施，并检验其对学生独立任务表现的作用？</p>
+<p>自动示范扩展和数字孪生为持续提供练习建立了基础。MimicGen 与 RoboTwin 支持生成操作示范，RialTo 研究重建环境中的策略改进与真实迁移。<cite data-ref="mimicgen robotwin rialto"></cite> 反馈驱动学习也已有明确先例：CorrectNav 将导航错误转化为纠正数据并迭代训练，近期 EmbodiRSI 将执行监测、中途纠正和自适应采集连接到操作策略更新。<cite data-ref="correctnav embodirsi"></cite> RPG 进一步将数据集引导的仿真练习、共享技能改进与真实部署连接起来。<cite data-ref="rpg"></cite> 本文在这些基础上研究面向空中操作的模拟学院：如何以一致的执行、监督与评价协议组织完整学习过程，使不同练习方法能够复用同一设施，并检验其对学生独立任务表现的作用？</p>
 <p>为此，本文提出 <b>AirSpark：面向空中操作策略自进化的模拟学院</b>。平台基础设施连接 UE 视觉、MuJoCo 物理、场景与任务、自动采集与标注、训练和评测；SparkMentor 依据执行证据与跨轮记录组织学习；练习决策方法在统一工具和预算约束下选择采集内容。本文采用过程条件分配作为参考实现，从合法初态执行物理前缀并获取专家延续。平台的任务与产物协议保持稳定，练习方法可以替换，学习结果通过学生参数更新保留。</p>
 <p>本文将策略自进化限定为执行反馈影响后续学习数据、学生权重跨轮更新并接受独立评价的过程。验证分为平台、学习与迁移三个层面：先检查视觉—动作时序、复位、监督质量与运行恢复，再以共享工具的等预算实验比较练习方法，最后将更新后的模型返回原生 AM-Bench 并在对应真实场景中冻结执行。平台支持能力与具体方法收益分别报告，共同检验模拟学院能否持续服务于空中操作策略的学习。</p>
 <h3 id="contributions">本文的主要贡献</h3>
@@ -26,6 +26,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p>CorrectNav 在导航任务中识别错误轨迹，生成动作与感知纠正数据并多轮训练，是反馈驱动参数更新的正式发表近邻；其任务与监督机制不等同于空中接触操作。<cite data-ref="correctnav"></cite> AHA 提供操作失败检测与解释的方法基础。<cite data-ref="aha"></cite> Mirchandani 等对自主采集的研究则表明，环境复位、成功检测和所采数据的效用需要单独审查。<cite data-ref="autonomous-cost"></cite> 本文据此分别报告诊断证据、合格监督成本与独立学生收益，不将诊断正确或数据量增加直接解释为学习有效。</p>
 <h3 id="related-feedback" data-nav="程序改进与策略自进化" data-number="2.4">2.4 主动诊断、程序改进与策略自进化</h3>
 <p>Fly-by-Code 通过 View 与 Probe 主动获取视觉及物理诊断证据，用于任务判断和程序修订；修订程序在环境复位后重新执行。其改进对象是表达机器人行为的可执行程序，核心实验检验主动诊断对程序改进的作用。<cite data-ref="fly-by-code"></cite> 程序同样可以表示策略，但这一路线与通过训练更新学生权重具有不同机制。本文将其作为空中主动诊断的近邻，而不把它描述为学生参数训练方法。</p>
+<p>RPG 从离线数据构造相关仿真练习，通过执行诊断修订共享技能代码与系统提示，并在跨任务验证后保留修改，再将冻结系统部署到实机；模型权重保持不变。其 Reconstruct 构造能力相关的任务，不要求复原源场景。<cite data-ref="rpg"></cite> 因而，仿真练习、跨轮能力保留与真实部署已有直接先例。AirSpark 的本文方案以可训练学生为改进对象，研究空中操作的经验设施及参数更新收益；更新对象的区别限定比较机制，平台价值仍需由运行与学习证据支撑。</p>
 <p>ENPIRE 为真实机器人改进提供环境、执行和验证工具；EmbodiRSI 则是更直接的学习型策略近邻：其 CEC 从策略到达的失败状态产生纠正轨迹，ADC 根据弱项安排示范采集，再更新策略并重复执行。<cite data-ref="enpire embodirsi"></cite> 在这些反馈机制的基础上，本文组织空中操作的环境、经验和训练评价设施，研究其运行可靠性、合格监督成本与学生完整任务表现，并以过程经验分配检验一种具体的教学方法。多轮实验记忆服务于这一学习过程，教师算法自修改不属于本文主张。</p>
 </section>
 
@@ -136,7 +137,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 
 <section id="references" data-title="参考文献" data-number="R">
 <div class="eyebrow">REFERENCES</div><h2>参考文献</h2>
-<p class="caption">按作者姓氏或机构名称排序，使用方括号数字引用；条目包含作者、题名、出版物与年份。来源类型与核查备注可展开查看；正式出版、作者报告的录用、预印本和软件文档分别记录。元数据核查：2026.10.18。</p>
+<p class="caption">按作者姓氏或机构名称排序，使用方括号数字引用；条目包含作者、题名、出版物与年份。来源类型与核查备注可展开查看；正式出版、作者报告的录用、预印本和软件文档分别记录。基础文献核查：2026.10.18；RPG 补充核查：2026.10.19。</p>
 <p class="reference-tools"><a href="references.bib" download>下载 BibTeX 文献库</a> · <a href="#literature-map">文献证据与阅读路线</a> · <a href="#citation-protocol">引用规范与核查记录</a></p>
 <ol class="ref-list" id="reference-list"></ol>
 </section>
@@ -176,9 +177,11 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td>So You Think You Can Scale Up Autonomous Robot Data Collection? · CoRL 2024 / PMLR 2025<cite data-ref="autonomous-cost"></cite></td><td>自主采集的限制与成本。</td><td>必读；将环境维护、成功判断和学习收益分别计量。</td></tr>
 <tr><td>RoboTwin · CVPR 2025；RialTo · RSS 2024；RoboSplat · RSS 2025<cite data-ref="robotwin rialto robosplat"></cite></td><td>数字孪生、示范生成、视觉增强与真实迁移。</td><td>必读平台近邻；区分外观扩充、物理执行和策略学习。</td></tr>
 <tr><td>CorrectNav · AAAI 2026 主会<cite data-ref="correctnav"></cite></td><td>纠正数据驱动的多轮参数训练。</td><td>必读飞轮近邻；导航的轨迹纠正不能直接充当接触专家。</td></tr>
+<tr><td>RPG · arXiv v1（2026-10-01）<cite data-ref="rpg"></cite></td><td>仿真练习与真实部署的直接系统近邻；持续改进共享技能与提示。</td><td>组会重点对比。固定权重的执行系统改进与学生参数训练分别讨论，不把两者的绝对成绩直接比较。</td></tr>
 <tr><td>EmbodiRSI · arXiv v3；Fly-by-Code · arXiv v1<cite data-ref="embodirsi fly-by-code"></cite></td><td>分别对应学生参数更新与主动诊断、程序修订。</td><td>保留直接近邻；不把 B2 称为 EmbodiRSI，也不混同程序与参数更新。</td></tr>
 <tr><td>AM-Bench / ENPIRE<cite data-ref="ambench enpire"></cite></td><td>原生基准与研究工具。</td><td>作者实验室公开列为 CoRL 2026；本轮未核得正式会录条目，保留可查 arXiv 版本并记录作者声明。</td></tr>
 </tbody></table></div>
+<p><b>RPG 的证据边界。</b>原文第 III–IV 节与附录说明：报告的 15 轮曲线来自一次改进运行，各轮并非等计算预算；封存的是评价初态，部分不产生直接改进反馈的任务仍参与开发回归验证。实机定量结果为三任务共 30 次，不能由此推出广泛真实场景泛化。<cite data-ref="rpg"></cite> AirSpark 保留自己的 C/V/T 分组、成本记录与多 seed 评价。RPG 提供协议借鉴；是否加入定量基线取决于代码发布及任务接口、观测和预算能否匹配。</p>
 <p><b>保留但降低叙事权重。</b>FSC 与因素化预算选择相关，RSI-Anything 与通用研究编排相关；二者保留为扩展阅读，当前主文不依靠它们证明学院或教学机制的新颖性。<cite data-ref="fsc rsi-anything"></cite> AIR-VLA、AirVLA、AeroManip-VLA 作为直接空中模型近邻保留，按当前核得的预印本记录引用。</p>
 <p><b>本轮检索储备。</b><a href="https://github.com/InternRobotics/Re3Sim">Re3Sim 官方项目</a>标注 ICRA 2026，涉及 3DGS、物理仿真及示范生成；本轮未取得正式出版条目，列为后续精读，不补造 DOI。<a href="https://ojs.aaai.org/index.php/AAAI/article/view/28897">DexFuncGrasp（AAAI 2024）</a>的抓取标注系统可供工具设计参考，但与本文闭环主问题较远，不为补齐会议名称而加入主文。<a href="https://ira.lib.polyu.edu.hk/handle/10397/120405?mode=simple">Aerial-Balance-Bench（RA-L 2026）</a>有受约束无人机—球平衡任务及模型接口，列为动态交互评价储备，不替代原生 AM-Bench 主实验。<a href="https://jiang-yufei.github.io/">Aerial Manipulation in the Wild with Onboard Perception…</a>的作者页标注 IROS 2026 MoMA workshop，不能写成 IROS 主会论文。</p>
 <p><b>取舍原则。</b>正文使用与论断对应的最少充分引用。近期工作按公开版本讨论；作者报告录用与正式论文集分开标识。无需为每篇引用增加一组实验：基础文献用于说明假设，直接方法近邻用于限定主张；只有实际适配且信息、预算可匹配的方法才作为定量基线。</p>
@@ -204,7 +207,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <div class="table-wrap"><table><thead><tr><th>页次与主题</th><th>核心表达</th><th>展示材料</th></tr></thead><tbody>
 <tr><td>1 · 研究定位</td><td>面向空中操作策略自进化的模拟学院。</td><td>平台主视觉与一句研究目标。</td></tr>
 <tr><td>2 · 问题与动机</td><td>持续学习需要环境、复位、监督和评价共同支持。</td><td>一个空中操作任务及数据获取流程。</td></tr>
-<tr><td>3 · 相关工作与增量</td><td>承接空中操作、数字孪生和反馈学习；明确平台与参考方法的关系。</td><td>少量关键文献及差异表；标注发表状态。</td></tr>
+<tr><td>3 · 相关工作与增量</td><td>承接空中操作、数字孪生和反馈学习；明确平台与参考方法的关系。</td><td>以 RPG、EmbodiRSI、Fly-by-Code 对比持久改进对象、平台作用与评价边界；标注发表状态。</td></tr>
 <tr><td>4 · 学院全貌</td><td>基础设施、SparkMentor、可替换练习方法共同服务于学生。</td><td>三层框架与学生更新闭环图。</td></tr>
 <tr><td>5 · 平台与工程证据</td><td>视觉物理、任务复位、采集标注、训练评测如何连接。</td><td>带日期的实际画面、运行产物和能力清单；已实现、待验收、规划分别标注。</td></tr>
 <tr><td>6 · 参考闭环</td><td>执行反馈 → 练习计划 → 经验 → 学生更新 → 独立评价。</td><td>一条任务轨迹上的过程条件示意；示意与实测明确区分。</td></tr>
@@ -228,9 +231,10 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td><a href="versions/v0.12/index.html">v0.12</a></td><td>事件阶段、物理对应、受限数据决策与原生复现。</td><td>纳入研究分支核查，区分拟议方法、实施路线与真实验收；未新增实验成绩。</td></tr>
 <tr><td><a href="versions/v0.13/index.html">v0.13</a></td><td>过程条件 → 物理重现 → 有效监督 → 独立学生收益。</td><td>保留学院主线；明确条件选择、C/V/T、监督边界与同成本对照，补全近邻文献和标准引用。</td></tr>
 <tr><td><a href="versions/v0.14/index.html">v0.14</a></td><td>空中交互学习设施 → 反馈驱动策略更新 → 独立能力验证。</td><td>统一 SparkMentor；补充正式发表的基础与直接近邻，区分程序和参数改进，保留两项贡献并加强恢复监督基线。</td></tr>
-<tr><td>v0.15 · 当前</td><td>模拟学院平台 → 共享学习工具与编排 → 参考练习方法 → 独立验证。</td><td>突出平台定位，明确方法可替换；单列平台支持能力评价，保留现有学习对照与真实验证，补充组会提纲。</td></tr>
+<tr><td><a href="versions/v0.15/index.html">v0.15</a></td><td>模拟学院平台 → 共享学习工具与编排 → 参考练习方法 → 独立验证。</td><td>突出平台定位，明确方法可替换；单列平台支持能力评价，保留现有学习对照与真实验证，补充组会提纲。</td></tr>
+<tr><td>v0.15.1 · 当前</td><td>保持学院平台定位，补充仿真练习与真实部署的直接近邻。</td><td>加入 RPG 正文引用、书目与组会比较；区分技能和提示修订、学生参数更新及场景重建，未扩展主实验矩阵。</td></tr>
 </tbody></table></div>
-<p>v0.14 起统一论文中的 SparkMentor 命名，工程中的旧 sparkclaw 路径暂作兼容名称。v0.15 完善平台、编排与方法的层次，沿用 2026-10-18 文献核查；本轮未迁移工程接口，也未新增实验结果。</p>
+<p>v0.14 起统一论文中的 SparkMentor 命名，工程中的旧 sparkclaw 路径暂作兼容名称。v0.15 完善平台、编排与方法的层次；v0.15.1 补充 2026-10-19 的 RPG 核查，保留其他文献原核查日期。本轮未迁移工程接口，也未新增实验结果。</p>
 </details>
 </section>
 `);

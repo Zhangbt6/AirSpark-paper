@@ -893,5 +893,40 @@ const paperReferences = {
     "pages": "18737--18745",
     "doi": "10.1609/aaai.v40i22.38942",
     "sortKey": "Yu, Zhuoyuan | Long, Yuxing | Yang, Zihan | Zeng, Chengyan | Fan, Hongwei | Zhang, Jiyao | Dong, Hao | 2026 | correctnav"
+  },
+  "rpg": {
+    "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
+    "authors": [
+      "Wang, Yen-Jen",
+      "Jiang, Haozhe",
+      "Deng, Shuying",
+      "Xue, Haoru",
+      "Ye, Weirui",
+      "Duan, Rocky",
+      "Haghtalab, Nika",
+      "Sastry, S. Shankar",
+      "Abbeel, Pieter",
+      "Qi, Haozhi"
+    ],
+    "year": "2026",
+    "venue": "arXiv",
+    "entryType": "misc",
+    "type": "预印本",
+    "eprint": "2610.02204",
+    "version": "v1",
+    "url": "https://arxiv.org/abs/2610.02204v1",
+    "verified": "2026-10-19",
+    "note": "RPG：数据集引导的仿真练习、跨任务技能库与系统提示修订、冻结后的真实部署；模型权重不更新。2026-10-01 公开 v1，本轮未核得正式会录；官方项目页仍标注 Code coming soon。",
+    "links": [
+      [
+        "论文全文",
+        "https://arxiv.org/html/2610.02204v1"
+      ],
+      [
+        "官方项目",
+        "https://rpg-robot.github.io/"
+      ]
+    ],
+    "sortKey": "Wang, Yen-Jen | Jiang, Haozhe | Deng, Shuying | Xue, Haoru | Ye, Weirui | Duan, Rocky | Haghtalab, Nika | Sastry, S. Shankar | Abbeel, Pieter | Qi, Haozhi | 2026 | rpg"
   }
 };
