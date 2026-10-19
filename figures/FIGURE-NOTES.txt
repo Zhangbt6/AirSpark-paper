@@ -1,0 +1,22 @@
+AirSpark paper figures · v0.16 · 2026-10-19
+
+Research design illustrations, not measured results.
+SVG: editable text and vector geometry. PNG: 2880 pixels wide.
+
+fig01-academy-overview
+图 1. AirSpark 模拟学院总览。可替换的练习方法由 SparkMentor 编排，共享执行、采集、质检、训练及开发验收工具；跨轮能力保存在学生参数中。采集池 C 与开发池 V 支持学习闭环，封存测试 T 不向练习决策反馈。
+
+fig02-visual-physical-contract
+图 2. 视觉—物理执行与数据合同。3DGS 提供场景外观，显式物理资产承担碰撞、接触与载荷；MuJoCo 状态驱动 UE 动态场景。观测与动作适配器统一坐标、时间和执行语义，学生输入与特权诊断、专家监督分开管理。
+
+fig03-process-experience
+图 3. 过程经验生成参考方法。执行证据用于选择条件，从合法初态执行前缀后获取多条专家延续；各分支代表独立的物理执行，不表示任意瞬移或已验证的状态恢复。前缀仅提供允许的历史上下文，动作监督来自合格专家区间。图中轨迹为机制示意，非实测结果。
+
+fig04-evaluation-protocol
+图 4. 平台、学习与迁移的验证协议。B1–B3 使用共享工具、相同采集预算和训练配方，B0 为冻结父代参照。各组按预定 V 池规则验收；研究配置冻结后返回原生 AM-Bench，并在对应真实任务中测试。3DGS 场景准备属于训练环境构造，真实测试反馈不进入闭环。
+
+Rebuild from repository root: python scripts/build-figures.py
+Then: node scripts/export-figures.cjs (requires sharp)
+In this bundle, keep scripts/ and figures/ as sibling directories.
+Use SVG in vector editors or PowerPoint; use PNG if SVG rendering is unavailable.
+All art is original schematic geometry; no third-party figures are reproduced.

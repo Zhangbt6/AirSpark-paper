@@ -96,3 +96,30 @@ window.addEventListener('beforeprint', () => {
 window.addEventListener('afterprint', () => {
   printDetails.forEach(([item, open]) => { item.open = open; });
 });
+
+// Native dialog provides keyboard focus management and Escape-to-close.
+const figureDialog = document.getElementById('figure-dialog');
+const figureImage = document.getElementById('figure-dialog-image');
+let figureTrigger;
+document.querySelectorAll('[data-figure-src]').forEach(button => {
+  button.addEventListener('click', () => {
+    figureTrigger = button;
+    figureImage.src = button.dataset.figureSrc;
+    figureImage.alt = button.dataset.figureTitle;
+    document.getElementById('figure-dialog-title').textContent = button.dataset.figureTitle;
+    document.getElementById('figure-original').href = button.dataset.figureSrc;
+    figureDialog.showModal();
+    document.body.classList.add('figure-modal-open');
+  });
+});
+document.getElementById('figure-close').addEventListener('click', () => figureDialog.close());
+figureDialog.addEventListener('close', () => {
+  document.body.classList.remove('figure-modal-open');
+  figureTrigger?.focus({ preventScroll: true });
+});
+figureDialog.addEventListener('click', event => {
+  if (event.target !== figureDialog) return;
+  const bounds = figureDialog.getBoundingClientRect();
+  if (event.clientX < bounds.left || event.clientX > bounds.right
+      || event.clientY < bounds.top || event.clientY > bounds.bottom) figureDialog.close();
+});

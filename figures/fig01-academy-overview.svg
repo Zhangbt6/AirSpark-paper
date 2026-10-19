@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc">
+<title id="title">An academy for persistent policy improvement</title><desc id="desc">Shared facilities support different practice methods; learned capability is retained in the student.. Proposed research design, not measured results.</desc>
+<defs>
+<marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183255"/></marker>
+<marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087f75"/></marker>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#215cce"/></marker>
+<marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7552a5"/></marker>
+<marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94601b"/></marker>
+</defs><g font-family="Arial, Helvetica, sans-serif"><rect width="1440" height="100%" fill="white"/>
+<text x="44" y="39" fill="#087f75" font-size="17" font-weight="700" text-anchor="start">AIRSPARK   /   FIGURE 01</text>
+<text x="1396" y="39" fill="#52657b" font-size="16" font-weight="400" text-anchor="end">RESEARCH DESIGN  ·  v0.16</text>
+<text x="44" y="81" fill="#183255" font-size="31" font-weight="700" text-anchor="start">An academy for persistent policy improvement</text>
+<text x="44" y="112" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Shared facilities support different practice methods; learned capability is retained in the student.</text>
+<path d="M44 130 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="44" y="158" width="354" height="158" rx="14" fill="#f1eef8" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M62 182 v24" stroke="#7552a5" stroke-width="4"/>
+<text x="76" y="202" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Practice methods</text>
+<text x="68" y="241" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Coverage / terminal feedback</text>
+<text x="68" y="272" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Process-condition allocation</text>
+<rect x="450" y="158" width="560" height="158" rx="14" fill="#eaf6f3" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M468 182 v24" stroke="#087f75" stroke-width="4"/>
+<text x="482" y="202" fill="#183255" font-size="24" font-weight="700" text-anchor="start">SparkMentor</text>
+<text x="474" y="241" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Diagnose → plan → invoke tools → record</text>
+<text x="474" y="272" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Budgeted rounds and restartable execution</text>
+<rect x="1062" y="158" width="334" height="158" rx="14" fill="#f6f8fb" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M1080 182 v24" stroke="#087f75" stroke-width="4"/>
+<text x="1094" y="202" fill="#183255" font-size="23" font-weight="700" text-anchor="start">Experiment memory</text>
+<text x="1086" y="241" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Evidence, costs, data lineage</text>
+<text x="1086" y="272" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Models and validation logs</text>
+<path d="M398 231 H450" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<path d="M1010 218 H1062" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<path d="M1062 257 H1010" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<rect x="44" y="357" width="1352" height="61" rx="9" fill="#183255" stroke="#183255" stroke-width="1.7"/>
+<text x="720" y="396" fill="white" font-size="22" font-weight="600" text-anchor="middle">SHARED TOOL CONTRACT   ·   task → rollout → practice plan → dataset → checkpoint → report</text>
+<path d="M730 316 V357" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<path d="M790 357 V316" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<path d="M202 418 V471" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<path d="M548 418 V471" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<path d="M894 418 V471" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<path d="M1240 418 V471" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<rect x="44" y="471" width="316" height="199" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M62 495 v24" stroke="#215cce" stroke-width="4"/>
+<text x="76" y="515" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Simulate &amp; execute</text>
+<text x="68" y="554" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">UE visuals + MuJoCo</text>
+<text x="68" y="585" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Tasks, reset and control</text>
+<text x="68" y="616" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Student / expert rollouts</text>
+<rect x="390" y="471" width="316" height="199" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M408 495 v24" stroke="#215cce" stroke-width="4"/>
+<text x="422" y="515" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Capture &amp; qualify</text>
+<text x="414" y="554" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Synchronized observations</text>
+<text x="414" y="585" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Expert action labels</text>
+<text x="414" y="616" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Quality and cost records</text>
+<rect x="736" y="471" width="316" height="199" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M754 495 v24" stroke="#215cce" stroke-width="4"/>
+<text x="768" y="515" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Train the student</text>
+<text x="760" y="554" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">ACT / DP / VLA backend</text>
+<text x="760" y="585" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Qualified data + replay</text>
+<text x="760" y="616" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Candidate parameters θ′</text>
+<rect x="1082" y="471" width="314" height="199" rx="14" fill="#f1eef8" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M1100 495 v24" stroke="#7552a5" stroke-width="4"/>
+<text x="1114" y="515" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Validate on V</text>
+<text x="1106" y="554" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Fixed acceptance rules</text>
+<text x="1106" y="585" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Accept / retain incumbent</text>
+<text x="1106" y="616" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Record every candidate</text>
+<path d="M360 570 H390" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M706 570 H736" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M1052 570 H1082" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M1240 670 V728 H202 V670" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<rect x="430" y="704" width="586" height="44" rx="5" fill="white" stroke="white" stroke-width="1.7"/>
+<text x="723" y="733" fill="#087f75" font-size="22" font-weight="600" text-anchor="middle">Accepted student θ → next collection round in C</text>
+<path d="M1360 670 V795" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<rect x="44" y="795" width="1352" height="128" rx="14" fill="#fbf7ef" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M62 819 v24" stroke="#94601b" stroke-width="4"/>
+<text x="76" y="839" fill="#183255" font-size="25" font-weight="700" text-anchor="start">Independent evaluation after the research configuration is frozen</text>
+<text x="68" y="878" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Saved students → native AM-Bench and real tasks · no teacher intervention · no test feedback to practice</text>
+<text x="57" y="764" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">C: collection pool   ·   V: development acceptance pool   ·   T: sealed evaluation pool</text>
+<path d="M44 951 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="44" y="978" fill="#52657b" font-size="16" font-weight="400" text-anchor="start">AirSpark  ·  A Simulated Academy for Self-Improving Aerial Manipulation</text>
+<text x="1396" y="978" fill="#52657b" font-size="14" font-weight="400" text-anchor="end">SCHEMATIC / NOT TO SCALE</text>
+</g></svg>
