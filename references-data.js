@@ -1027,25 +1027,30 @@ const paperReferences = {
     "sortKey": "Ma, Yecheng Jason | Liang, William | Wang, Guanzhi | Huang, De-An | Bastani, Osbert | Jayaraman, Dinesh | Zhu, Yuke | Fan, Linxi | Anandkumar, Anima | 2024 | eureka"
   },
   "feedback-systems": {
-    "title": "Feedback Systems: An Introduction for Scientists and Engineers — Second-Edition Online Resources",
+    "title": "Feedback Systems: An Introduction for Scientists and Engineers",
     "authors": [
       "Åström, Karl J.",
       "Murray, Richard M."
     ],
-    "entryType": "misc",
-    "type": "教材与作者资源",
-    "venue": "Author-maintained FBSwiki",
+    "entryType": "book",
+    "type": "学术专著",
+    "year": "2021",
+    "edition": "2",
+    "publisher": "Princeton University Press",
+    "venue": "Princeton University Press",
     "url": "https://fbswiki.org/wiki/index.php/FBS",
     "links": [
       [
-        "作者机构镜像",
-        "https://www.cds.caltech.edu/~murray/FBS/Second_Edition.html"
+        "作者维护的教材资源",
+        "https://fbswiki.org/wiki/index.php/FBS"
+      ],
+      [
+        "作者机构版次书目",
+        "https://www.cds.caltech.edu/~murray/books/AM08/pdf/obc-backmatter_20Feb2023.pdf"
       ]
     ],
-    "note": "引用作者维护的第二版在线资源；推荐第 1–3 章。页面列出 2020-07-24 电子稿，此处不据此推定纸本出版年份。用于参考目标、测量、被调节过程与反馈的基础概念，不作为 AirSpark 稳定性证明。",
-    "accessed": "2026-10-19",
-    "verified": "2026-10-19",
-    "howpublished": "Author-maintained textbook resources",
-    "sortKey": "Astrom, Karl J. | Murray, Richard M. | feedback-systems"
+    "note": "书籍主引用：第二版，Princeton University Press，2021。作者机构书目列明版次与出版年；在线资源另提供公开章节。用于反馈系统基本概念，不作为本方法的稳定性证明。",
+    "verified": "2026-10-20",
+    "sortKey": "Astrom, Karl J. | Murray, Richard M. | 2021 | feedback-systems"
   }
 };

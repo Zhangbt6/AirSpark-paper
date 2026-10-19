@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 NS = 'http://www.w3.org/2000/svg'
 ET.register_namespace('', NS)
 TRANSLATIONS = {
+ 'Deployment-matched interfaces; shared adaptation across all comparison groups.': '采用与部署本体匹配的策略接口；各比较组共享相同适配。',
  'Execution feedback guides practice; learning outcomes inform bounded plan adjustments.': '执行反馈引导主动练习，学习反馈与跨轮记忆支持有限的方案调整。',
  '3  Practice planning': '3  制定练习计划',
  'practice plan': '练习计划',
@@ -73,10 +74,10 @@ TRANSLATIONS = {
  '2  Gap diagnosis': '2  识别能力缺口',
  'Stage reach and failure': '阶段到达与转换失败',
  'Condition frequency ρ̂z': '条件出现频率 ρ̂z',
- 'Failure f̂z and cost ĉz': '失败率 f̂z 与经验成本 ĉz',
+ 'Failure f̂z and cost κ̂z': '失败率 f̂z 与经验成本 κ̂z',
  '3  Practice selection': '3  决定下一轮练习',
  'Observable and reachable?': '可辨识 / 可达 / 可监督',
- 'q(z) = ρ̂z · f̂z / ĉz': 'q(z) = ρ̂z · f̂z / ĉz',
+ 'q(z) = ρ̂z · f̂z / κ̂z': 'q(z) = ρ̂z · f̂z / κ̂z',
  'Conditions and budget allocation': '选择条件并分配采集预算',
  'Memory Mᵣ': '跨轮记忆 Mᵣ',
  'Past practice and costs': '历史练习与实际成本',
@@ -119,7 +120,7 @@ TRANSLATIONS = {
  'data': '数据',
  'πᵣ₊₁': 'πᵣ₊₁',
  'Freeze policies for evaluation': '冻结模型，统一测试',
- 'Initial π₀ and updated πᴿ': '初始策略 π₀ 与更新后的策略 πᴿ',
+ 'Initial π₀ and retained πᴿ': '初始策略 π₀ 与保留的策略 πᴿ',
  'updated policy': '更新后的策略',
  'AM-Bench evaluation': 'AM-Bench 仿真测试',
  'Original tasks and scoring': '使用原生任务和评分标准',

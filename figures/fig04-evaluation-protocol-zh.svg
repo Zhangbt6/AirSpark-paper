@@ -43,7 +43,7 @@
 <text x="484" y="353" fill="#087f75" font-size="20" font-weight="400" text-anchor="end">πᵣ₊₁</text>
 <rect x="500" y="570" width="475" height="100" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7" />
 <text x="737.5" y="609" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">冻结模型，统一测试</text>
-<text x="737.5" y="643" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">初始策略 π₀ 与更新后的策略 πᴿ</text>
+<text x="737.5" y="643" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">初始策略 π₀ 与保留的策略 πᴿ</text>
 <path d="M330 385 V620 H500" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" stroke-dasharray="8 6" />
 <path d="M503 490 V544 H738 V570" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
 <text x="757" y="552" fill="#087f75" font-size="18" font-weight="400" text-anchor="start">更新后的策略</text>
@@ -55,5 +55,6 @@
 <text x="1238.0" y="483" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">执行对应的空中操作任务</text>
 <path d="M975 620 H1040 V265 H1080" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" />
 <path d="M1040 470 H1080" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" />
-<text x="44" y="710" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">在相同测试条件下，比较策略改进前后的完整任务成功率。</text>
+<text x="44" y="700" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">采用与部署本体匹配的策略接口；各比较组共享相同适配。</text>
+<text x="44" y="728" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">在相同测试条件下，比较策略改进前后的完整任务成功率。</text>
 </g></svg>

@@ -8,12 +8,12 @@ INK, MUTED, TEAL, BLUE, PURPLE, LINE = '#183255', '#52657b', '#087f75', '#215cce
 STRINGS = {
     'title': ('Learning as a feedback process', '学习过程的闭环反馈表述'),
     'subtitle': ('Fixed objectives, measured capabilities, bounded interventions and verified updates.', '固定目标、能力测量、有限干预与更新验证。'),
-    'goal': ('Reference objectives', '参考目标'),
-    'goal1': ('Capability targets c*', '能力目标 c*'),
+    'goal': ('Reference objectives', '目标与评价协议'),
+    'goal1': ('Report targets c*', '能力报告目标 c*'),
     'goal2': ('Task groups and retention', '固定任务分组与能力保留'),
-    'goal3': ('Resource budget', '资源预算'),
+    'goal3': ('Fixed task-group budgets', '固定任务组预算'),
     'decision': ('SparkMentor  μ', 'SparkMentor  μ'),
-    'decision1': ('Gaps eᵣ + evidence Eᵣ', '能力差距 eᵣ 与证据 Eᵣ'),
+    'decision1': ('Evidence Eᵣ and outcomes Fᵣ', '执行证据 Eᵣ 与学习反馈 Fᵣ'),
     'decision2': ('Intervention memory Mᵣ', '跨轮干预记忆 Mᵣ'),
     'decision3': ('Choose a practice plan Aᵣ', '选择练习计划 Aᵣ'),
     'process': ('Academy execution and student learning  U', '学院执行与学生学习 U'),
@@ -40,7 +40,7 @@ STRINGS = {
     'record': ('Fᵣ + decision', 'Fᵣ 与接纳结果'),
     'caption': ('U is an executed learning process; H is a measurement, not an outcome predictor.', 'U 是实际学习过程；H 是执行后的测量，未引入学习收益预测器。'),
     'test': ('Sealed testing T: freeze the student → native benchmark and real tasks; no feedback to this loop.', '封存测试 T：冻结学生 → 原生基准与真实任务；结果不回流当前闭环。'),
-    'scope': ('Diagram A3 explains the feedback roles in Figure 2; it does not establish convergence or stability.', '图 A3 解释图 2 的反馈关系，不代表已证明收敛或稳定性。'),
+    'scope': ('Targets support reporting and planned checks; group budgets and the baseline selector remain fixed.', '能力目标用于报告和预定检查；基础组的任务预算与分配规则固定。'),
 }
 
 def draw(zh=False):

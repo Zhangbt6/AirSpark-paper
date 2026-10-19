@@ -38,31 +38,22 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p>AirSpark 的系统设计将平台基础设施、学习编排和练习决策方法分层组织。基础设施提供可执行的环境与学习工具；SparkMentor 维护实验状态并编排闭环；练习方法决定下一轮采集什么，跨轮记录支持检查学习效果并调整经验生成与使用方案。学生策略参数保留最终学习能力。图 1 描述学院提供的公共设施，图 2 描述基于这些设施的策略自进化方法，图 3 给出实验流程。视觉—物理执行链路和专家延续细节见附录图 A1–A2。</p>
 <figure class="paper-figure diagram-figure" id="figure-1">
 <div class="diagram-heading"><b>图 1 · 学院平台架构</b><span>研究设计示意</span></div>
-<button class="diagram-open" type="button" data-figure-src="figures/fig01-academy-overview-zh.svg?v=0.19" data-figure-title="图 1 · 学院平台架构" aria-label="放大图 1：学院平台架构"><img src="figures/fig01-academy-overview-zh.svg?v=0.19" alt="图 1. AirSpark 模拟学院平台架构。视觉仿真、物理仿真与场景任务共同支撑任务执行、同步记录、监督生成、训练与评价工具。学生策略、采集专家和 SparkMentor 通过共享接口调用这些能力。图 2 进一步描述运行在学院设施上的策略自进化方法。" width="1440" height="870" loading="lazy"></button>
+<button class="diagram-open" type="button" data-figure-src="figures/fig01-academy-overview-zh.svg?v=0.20" data-figure-title="图 1 · 学院平台架构" aria-label="放大图 1：学院平台架构"><img src="figures/fig01-academy-overview-zh.svg?v=0.20" alt="图 1. AirSpark 模拟学院平台架构。视觉仿真、物理仿真与场景任务共同支撑任务执行、同步记录、监督生成、训练与评价工具。学生策略、采集专家和 SparkMentor 通过共享接口调用这些能力。图 2 进一步描述运行在学院设施上的策略自进化方法。" width="1440" height="870" loading="lazy"></button>
 <figcaption>图 1. AirSpark 模拟学院平台架构。视觉仿真、物理仿真与场景任务共同支撑任务执行、同步记录、监督生成、训练与评价工具。学生策略、采集专家和 SparkMentor 通过共享接口调用这些能力。图 2 进一步描述运行在学院设施上的策略自进化方法。</figcaption>
-<div class="figure-tools"><button type="button" data-figure-src="figures/fig01-academy-overview-zh.svg?v=0.19" data-figure-title="图 1 · 学院平台架构">放大查看</button><a href="figures/fig01-academy-overview-zh.svg?v=0.19" download>中文 SVG</a><a href="figures/fig01-academy-overview-zh.png?v=0.19" download>中文 PNG</a><a href="figures/fig01-academy-overview.svg?v=0.19" download>英文 SVG</a><a href="figures/fig01-academy-overview.png?v=0.19" download>英文 PNG</a></div>
+<div class="figure-tools"><button type="button" data-figure-src="figures/fig01-academy-overview-zh.svg?v=0.20" data-figure-title="图 1 · 学院平台架构">放大查看</button><a href="figures/fig01-academy-overview-zh.svg?v=0.20" download>中文 SVG</a><a href="figures/fig01-academy-overview-zh.png?v=0.20" download>中文 PNG</a><a href="figures/fig01-academy-overview.svg?v=0.20" download>英文 SVG</a><a href="figures/fig01-academy-overview.png?v=0.20" download>英文 PNG</a></div>
 </figure>
 
 <h3 id="scope" data-nav="问题定义" data-number="3.1">3.1 问题定义</h3>
 <p>设任务条件为 ξ，其中包含场景、目标、初始状态和物理参数。策略 π<sub>θ</sub> 根据观测历史 h<sub>t</sub>、可用本体状态 p<sub>t</sub> 及语言指令 ℓ 生成动作 u<sub>t</sub>，低层控制器 K 将动作转换为机器人执行。任务专用策略可省略语言输入。给定初始策略 θ<sub>0</sub> 和总预算 B，我们研究如何通过 R 轮数据采集与更新，提高策略在独立任务分布上的完整成功率。</p>
-<div class="equation" aria-label="策略更新目标">u<sub>t</sub> = π<sub>θ</sub>(h<sub>t</sub>, p<sub>t</sub>, ℓ)<br>最大化 J<sub>test</sub>(θ<sub>R</sub>)，满足 ∑<sub>r=0</sub><sup>R−1</sup> Cost<sub>r</sub> ≤ B</div>
-<p>测试表现 J<sub>test</sub> 是最终评价目标。任务组预先划分为采集池 C、开发验收池 V 和封存测试池 T；诊断与专家延续来自 C，V 用于预定的模型验收，并向方案调整提供预先允许的汇总反馈；其轨迹及由轨迹派生的训练样本不进入学生训练。T 在研究配置冻结后统一评价，不向闭环提供反馈。闭环选择仅读取 C 的过程证据及预先允许的开发验收摘要。目标位置、接触真值及专家信息用于诊断、采集和标注，学生输入由部署协议固定。我们将“策略自进化”定义为执行与学习反馈影响后续练习、训练更新跨轮次保留的有界过程，不要求各轮性能单调提高。过程条件分配构成基础闭环；有限的方案调整补充跨轮适应能力，二者的实验效果分别评价。正式评价冻结学生参数，不使用教师临场纠错或测试时程序修订；评价中的人工接管单独记录。该定义区分学习阶段的反馈闭环与执行阶段的任务求解。</p>
+<div class="equation" aria-label="目标任务分布上的策略性能">u<sub>t</sub> = π<sub>θ</sub>(h<sub>t</sub>, p<sub>t</sub>, ℓ)<br>J<sub>𝒟</sub>(θ) = 𝔼<sub>ξ∼𝒟</sub>[Success(π<sub>θ</sub>, ξ)]<br>最大化 J<sub>𝒟</sub>(θ<sub>R</sub>)，满足 ∑<sub>r</sub> Cost<sub>r</sub> ≤ B</div>
+<p>𝒟 是目标任务分布，封存测试 T 用于估计最终策略的 J<sub>𝒟</sub>，不参与干预选择。预算按预先指定的资源分量分别检查。任务组预先划分为采集池 C、开发验收池 V 和封存测试池 T；诊断与专家延续来自 C，V 用于预定的模型验收，并向方案调整提供预先允许的汇总反馈；其轨迹及由轨迹派生的训练样本不进入学生训练。T 在研究配置冻结后统一评价，不向闭环提供反馈。闭环选择仅读取 C 的过程证据及预先允许的开发验收摘要。目标位置、接触真值及专家信息用于诊断、采集和标注，学生输入由部署协议固定。我们将“策略自进化”定义为执行与学习反馈影响后续练习、训练更新跨轮次保留的有界过程，不要求各轮性能单调提高。过程条件分配构成基础闭环；有限的方案调整补充跨轮适应能力，二者的实验效果分别评价。正式评价冻结学生参数，不使用教师临场纠错或测试时程序修订；评价中的人工接管单独记录。该定义区分学习阶段的反馈闭环与执行阶段的任务求解。</p>
 
-<h4 id="feedback-principle">学习过程的闭环反馈表述</h4>
-<p>AirSpark 将跨轮策略学习表述为一个具有随机性、测量误差和更新滞后的反馈过程。被调节的是学生的学习状态，包括参数、优化器状态和已有训练数据；学院负责实际执行经验生成与训练，SparkMentor 依据测得的能力缺口选择干预。评价器按照固定任务协议测量结果，与负责选择干预的决策模块分开。这一表述借用反馈系统的参考目标、测量、决策和被调节过程等基本关系，明确各模块的输入与作用。<cite data-ref="feedback-systems"></cite> 机器人执行时的低层控制器 K 与跨轮学习决策 μ 属于不同时间尺度；后者不直接调节电机或接触力。附录<a href="#figure-a3">图 A3</a>给出模块对应。</p>
-<p><b>能力画像与目标。</b>固定任务条件分组及其评价分布，将学生在各组上的完整任务成功率组成能力画像 c(θ)。各分量不要求和为 1，因此不用概率分布之间的距离描述目标。预先指定的 c* 表示各组期望达到的水平，权重反映目标任务构成；能力差距用于安排练习，并与已有能力保留和总预算共同约束决策。目标水平不代表必然可达。阶段到达率、条件转换率与失败事件用于解释缺口；它们与完整任务成功率分别报告，未到达阶段记为证据不足。</p>
-<div class="equation" aria-label="学习反馈系统的定义">ĉ<sub>r</sub> = H<sub>V</sub>(x<sub>r</sub>)，e<sub>r</sub> = [c* − ĉ<sub>r</sub>]<sub>+</sub><br>A<sub>r</sub> = μ<sub>ηr</sub>(E<sub>r</sub>, e<sub>r</sub>, M<sub>r</sub>, B<sub>r</sub>)<br>x′<sub>r+1</sub> = U(x<sub>r</sub>, A<sub>r</sub>; ω<sub>r</sub>)</div>
-<p>x 是可恢复的学习状态；H<sub>V</sub> 是固定开发协议下的经验测量，ĉ 带有有限样本不确定性；[·]<sub>+</sub> 按分量保留正差距。A 包含采集条件、监督起点、经验构成及允许的数据使用配置；U 表示真实执行的采集与训练过程，ω 概括采样和优化随机性。能力画像是用于决策的摘要，不假定它足以完整预测下一轮学习结果。候选状态 x′ 经开发验收后进入下一轮，未通过则保留当前学生，并记录此次干预。</p>
-<div class="table-wrap compact-table"><table><caption>反馈原理与学院模块的对应。</caption><thead><tr><th>角色</th><th>在 AirSpark 中的具体含义</th></tr></thead><tbody>
-<tr><td>参考目标</td><td>固定任务分组、能力目标、能力保留要求与资源预算。</td></tr>
-<tr><td>测量与诊断</td><td>C 池提供执行证据 E；V 池按固定协议测量能力变化并形成学习反馈 F。</td></tr>
-<tr><td>学习决策 μ</td><td>SparkMentor 结合缺口、干预记忆和预算提出下一次练习计划。</td></tr>
-<tr><td>被调节过程 U</td><td>学院中的经验生成与学生训练；学生参数是跨轮保留能力的主要载体。</td></tr>
-<tr><td>比较、接纳与记忆</td><td>比较候选与父模型，记录收益、副作用和成本，保留得到支持的更新。</td></tr>
-<tr><td>最终检验</td><td>冻结后的 T 池、原生回测与实机评价，不向当前闭环回传反馈。</td></tr>
-</tbody></table></div>
-<p><b>反馈为何有用。</b>学生更新会改变其访问状态和暴露出的缺口，因此执行证据用于修正后续经验的覆盖；一次补采是否有效又取决于可观测性、专家监督和训练过程，学习反馈据此检查干预效果。DAgger 对学习者诱导的状态分布给出了明确的在线学习分析，ALP-GMM 以学习进展组织课程，分别为这两种反馈提供已有方法基础。<cite data-ref="dagger alp-gmm"></cite> AirSpark 的部分观测、有限专家与筛选式采集并不自动满足 DAgger 的理论条件，本文不直接继承其性能界。</p>
-<p><b>预测、测量与证明。</b>RSI-Anything 用预测模型估计候选行动的结果，再以外部执行反馈检查和修订系统。<cite data-ref="rsi-anything"></cite> 当前 AirSpark 的 H 是执行后的测量，U 是实际学习过程，均不称为学习收益预测器；记忆和优先级规则也不等同于世界模型。未来若引入预测器，应独立检验其对未尝试干预的预测与排序质量。闭环描述说明信息如何形成可执行决策，不能单凭反馈箭头推出稳定、收敛或持续提升；可行性、学习效用与迁移仍由对应实验建立。开发接纳可支持的条件性结论见<a href="#feedback-assumptions">附录 A.6</a>。</p>
+<h4 id="feedback-principle">闭环学习建模与设计依据</h4>
+<p>AirSpark 将跨轮学习表示为具有随机性与更新滞后的反馈过程。学习状态 x<sub>r</sub> = (θ<sub>r</sub>, ψ<sub>r</sub>, D<sub>r</sub><sup>acc</sup>) 包含学生参数、可恢复训练状态与已接纳训练数据清单；ψ 包含优化器、学习率调度、适用时的混合精度状态及训练采样随机状态。评价器 H<sub>V</sub> 测量表现，SparkMentor 的 μ 选择采集和数据使用配置，学院执行实际更新 U。机器人低层控制 K 在执行周期内工作，μ 在训练轮次间工作。该划分采用反馈系统中目标、测量、决策与被调节过程的基本关系。<cite data-ref="feedback-systems"></cite></p>
+<p><b>能力画像与目标的用途。</b>ĉ<sub>r</sub> 汇总固定任务组的完整成功率；c* 是预先指定的报告目标，差距 e 用于能力报告，并在补充研究的预定检查点定位需要复查的任务组。基础 B1–B3 的任务组预算比例固定，组内分别按覆盖、终态或过程证据分配；不额外乘入 e 或临时改变组间权重。阶段到达率与转换结果用于解释画像，未到达阶段记为证据不足。</p>
+<div class="equation" aria-label="闭环学习状态、测量与更新">ĉ<sub>r</sub> = H<sub>V</sub>(x<sub>r</sub>)，e<sub>r</sub> = [c* − ĉ<sub>r</sub>]<sub>+</sub><br>A<sub>r</sub> = μ<sub>ηr</sub>(E<sub>r</sub>, M<sub>r</sub>, B<sub>r</sub>)<br>x′<sub>r+1</sub> = U(x<sub>r</sub>, A<sub>r</sub>; ω<sub>r</sub>)</div>
+<p>E 来自采集池 C 的执行诊断，F 来自开发池 V 的父代—候选比较，并写入记忆 M。ω 表示采样和优化随机性；ĉ 是带有限样本误差的测量摘要。A 明确采集条件、监督起点、示范构成与允许的回放配置，η 是这些配置的版本。算法 1 及状态处理表定义候选如何进入下一轮，图 A3 说明各角色的关系。</p>
+<p><b>设计依据。</b>执行反馈覆盖当前学生访问的状态，学习反馈检验新增经验是否转化为完整任务收益。DAgger 的学习者状态监督与 ALP-GMM 的学习进展课程分别提供相关基础。<cite data-ref="dagger alp-gmm"></cite> H 是执行后的测量，U 是实际采集和训练；RSI-Anything 所用的行动结果预测器属于另一种明确建模的模块。<cite data-ref="rsi-anything"></cite> 本文的适用条件与接纳说明集中于<a href="#feedback-assumptions">附录 A.6</a>。</p>
 
 <h3 id="platform" data-nav="平台与共享接口" data-number="3.2">3.2 模拟学院基础设施与共享接口</h3>
 <p>学院以 UE 的视觉渲染和 MuJoCo 的动力学与接触仿真为基础，复用 URLab 等基础组件，通过统一坐标、时间戳及实体标识连接机器人、相机和物体状态。<cite data-ref="mujoco urlab"></cite> 一次执行同时记录模型观测、策略命令、实际运动和物理事件，使动作偏差与其视觉后果能够在同一时间线上分析（附录图 A1）。任务参数化接口控制对象、布局、初态及合法物理条件，复位接口用于重新构造可比较的试验。</p>
@@ -78,9 +69,9 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p>在学院设施之上，本文以执行反馈驱动后续经验采集，并通过训练更新学生策略（图 2）。一次学习迭代包含执行、能力缺口诊断、练习决策、经验生成、参数更新和开发验收。SparkMentor 利用当前证据和跨轮记录组织这些步骤；学生参数保留学习结果，实验记忆保留已尝试的练习、成本及验收结果。下文以过程条件分配作为练习决策的参考实现。充分覆盖、终态反馈和过程条件方法共用采集、专家、训练与验收工具，仅改变选择依据。第 3.4 节进一步描述学习反馈与有限的方案调整，其作用在代表任务上单独分析。</p>
 <figure class="paper-figure diagram-figure" id="figure-2">
 <div class="diagram-heading"><b>图 2 · RSI 策略方法</b><span>研究设计示意</span></div>
-<button class="diagram-open" type="button" data-figure-src="figures/fig02-rsi-method-zh.svg?v=0.19" data-figure-title="图 2 · RSI 策略方法" aria-label="放大图 2：RSI 策略方法"><img src="figures/fig02-rsi-method-zh.svg?v=0.19" alt="图 2. 反馈驱动的策略自进化方法。执行反馈 Eᵣ 引导能力诊断与主动采集；学院通过物理前缀、专家延续与质检产生数据，再训练并验收学生。学习反馈 Fᵣ 将任务表现变化、能力保留和成本写入跨轮记忆 Mᵣ。虚线支路表示在预设范围内比较和调整练习方案 ηᵣ，作为基础闭环的补充分析；B1–B3 保持各自既定规则与训练配方。最终测试在闭环之外进行。" width="1440" height="900" loading="lazy"></button>
+<button class="diagram-open" type="button" data-figure-src="figures/fig02-rsi-method-zh.svg?v=0.20" data-figure-title="图 2 · RSI 策略方法" aria-label="放大图 2：RSI 策略方法"><img src="figures/fig02-rsi-method-zh.svg?v=0.20" alt="图 2. 反馈驱动的策略自进化方法。执行反馈 Eᵣ 引导能力诊断与主动采集；学院通过物理前缀、专家延续与质检产生数据，再训练并验收学生。学习反馈 Fᵣ 将任务表现变化、能力保留和成本写入跨轮记忆 Mᵣ。虚线支路表示在预设范围内比较和调整练习方案 ηᵣ，作为基础闭环的补充分析；B1–B3 保持各自既定规则与训练配方。最终测试在闭环之外进行。" width="1440" height="900" loading="lazy"></button>
 <figcaption>图 2. 反馈驱动的策略自进化方法。执行反馈 Eᵣ 引导能力诊断与主动采集；学院通过物理前缀、专家延续与质检产生数据，再训练并验收学生。学习反馈 Fᵣ 将任务表现变化、能力保留和成本写入跨轮记忆 Mᵣ。虚线支路表示在预设范围内比较和调整练习方案 ηᵣ，作为基础闭环的补充分析；B1–B3 保持各自既定规则与训练配方。最终测试在闭环之外进行。</figcaption>
-<div class="figure-tools"><button type="button" data-figure-src="figures/fig02-rsi-method-zh.svg?v=0.19" data-figure-title="图 2 · RSI 策略方法">放大查看</button><a href="figures/fig02-rsi-method-zh.svg?v=0.19" download>中文 SVG</a><a href="figures/fig02-rsi-method-zh.png?v=0.19" download>中文 PNG</a><a href="figures/fig02-rsi-method.svg?v=0.19" download>英文 SVG</a><a href="figures/fig02-rsi-method.png?v=0.19" download>英文 PNG</a></div>
+<div class="figure-tools"><button type="button" data-figure-src="figures/fig02-rsi-method-zh.svg?v=0.20" data-figure-title="图 2 · RSI 策略方法">放大查看</button><a href="figures/fig02-rsi-method-zh.svg?v=0.20" download>中文 SVG</a><a href="figures/fig02-rsi-method-zh.png?v=0.20" download>中文 PNG</a><a href="figures/fig02-rsi-method.svg?v=0.20" download>英文 SVG</a><a href="figures/fig02-rsi-method.png?v=0.20" download>英文 PNG</a></div>
 </figure>
 <p><b>过程条件。</b>我们以事件转换及少量可控变量组成条件 z，例如接近接触时的相对速度、抓持中的滑移和离开支撑面时的载荷变化。阶段边界依据相对位姿、接触、抓持和释放事件确定。条件描述当前仍成立的状态；到达次数与到达后的失败率分别统计，未到达下游阶段视为证据不足。表 1 中的条件是待验证的练习假设。</p>
 <div class="table-wrap"><table><caption>表 1. 候选过程条件、执行证据与专家延续。</caption><thead><tr><th>交互转换</th><th>需要辨识的差异</th><th>候选训练经历</th></tr></thead><tbody>
@@ -99,9 +90,10 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td>新条件改善、原有能力下降</td><td>检查数据集中与训练干扰；在预设范围内比较回放覆盖及混合比例。</td></tr>
 <tr><td>跨轮变化小于评价不确定性</td><td>按预定复验预算补充证据或保持当前方案；不将随机波动直接解释为教学失败。</td></tr>
 </tbody></table></div>
-<p><b>诊断与分配。</b>每轮在 C 中使用预定的诊断分布执行当前学生，估计条件出现频率 ρ̂<sub>z</sub> 及进入条件后的转换失败率 f̂<sub>z</sub>。每条轨迹对同一条件按预定事件规则计数，避免驻留时间或帧率放大频率。定向采集得到的命中分布不用于估计 ρ̂<sub>z</sub>。对已有足够证据且通过可行性检查的条件，采用风险与成本启发式分配优先级：</p>
-<div class="equation" aria-label="过程经验采集优先级">q(z) = ρ̂<sub>z</sub> · f̂<sub>z</sub> / ĉ<sub>z</sub></div>
-<p>ĉ<sub>z</sub> 表示获得一份合格经验的实测平均成本，包含前缀执行、未命中、专家失败、复位和质检。主成本口径为固定硬件与并行设置下采集工作进程的占用时间，另报告仿真时间、GPU 用量及代理调用。初始成本由共享试采获得；零合格样本和稀疏条件进入有界探索，不以零分母计算优先级。平滑、最小计数和探索比例在先导实验后固定。该规则用于分配资源，不将失败率解释为确定原因或预期学习收益。</p>
+<p><b>诊断与分配。</b>每轮在 C 的固定诊断分布中执行 N 条轨迹。每条轨迹对条件 z 仅记录首次进入；n<sub>z</sub> 为进入轨迹数，m<sub>z</sub> 为对应转换窗口内未完成预定目标的轨迹数。事件谓词、转换窗口与终止规则在先导后冻结，驻留帧数和定向采集的命中分布不参与频率估计。基础参考规则使用原始计数：</p>
+<div class="equation" aria-label="过程经验采集优先级">ρ̂<sub>z</sub> = n<sub>z</sub>/N，f̂<sub>z</sub> = m<sub>z</sub>/n<sub>z</sub><br>q(z) = ρ̂<sub>z</sub> · f̂<sub>z</sub> / κ̂<sub>z</sub> = m<sub>z</sub>/(N · κ̂<sub>z</sub>)</div>
+<p>κ̂<sub>z</sub> 是获得一份合格专家经验的实测平均成本，包括前缀、未命中、专家失败、复位与质检；主口径为固定硬件与并行设置下采集工作进程的占用时间，其他资源分别报告。q 优先处理诊断分布中失败发生量较高、合格监督成本较低的条件。条件可以重叠，因此它是排序权重，不是互斥失败概率或学习收益预测。</p>
+<p>达到最小诊断计数、通过可行性检查且已有有限正成本估计的条件进入 q 分配。预定探索份额按固定覆盖规则试采稀疏或成本未知条件；剩余预算按归一化 q 分配，所有权重为零时返回覆盖规则。零合格产出记为成本未定义，进入受限试采或暂缓，不以零成本排序。基础规则不使用额外平滑；探索比例、最小计数及试采上限见配置表。</p>
 <p><b>物理前缀与专家延续。</b>学院从合法初态出发，使用当前学生或预先规定的扰动前缀实际进入目标条件，再由固定专家继续执行。前缀未命中、接管失败及完整终态失败均记录并计费。重执行保留速度、控制器、接触及观测历史；使用状态快照须先验证这些状态的恢复一致性。附录图 A2 展开这一经验生成步骤。全过程承接学习者状态监督与扰动专家示范的思想。<cite data-ref="dagger dart"></cite></p>
 <p><b>监督起点的候选调整。</b>对于接触失稳、滑移或载荷转换相关的失败，可在少量预定事件时刻重执行物理前缀，并使用同一专家检查延续产出。这里得到的是给定专家、约束与预算下可产生有效监督的候选时刻，不是系统的绝对可恢复域；不假定越早接管越好或恢复能力随时间单调变化。起点调整作为第 3.4 节的可选经验生成方式，与固定接管规则比较，全部试探计入成本。最终价值由学生完整任务表现检验。</p>
 <h4 id="aerial-case">空中操作案例：从终态失败定位监督时段</h4>
@@ -118,11 +110,31 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 
 
 <h3 id="evolution" data-nav="多轮更新与记忆" data-number="3.4">3.4 多轮策略更新、学习反馈与实验记忆</h3>
-<p>图 2 中，第 r 轮在采集池 C 执行当前学生，形成过程证据 E<sub>r</sub>。SparkMentor 结合记忆 M<sub>r</sub>、剩余预算 B<sub>r</sub> 和当前练习方案 η<sub>r</sub> 提出计划 A<sub>r</sub>。计划包含经验生成请求与数据使用配置；学院生成通过质检的数据，训练工具更新候选学生，再由 V 池按固定规则验收。基础 B1–B3 对照固定各自的分配规则、监督生成约定和训练配方。方案 η 的调整在补充实验中启用，不改变基础对照的解释。</p>
-<div class="equation" aria-label="闭环更新与学习反馈">A<sub>r</sub> = Select(E<sub>r</sub>, M<sub>r</sub>, B<sub>r</sub>; η<sub>r</sub>)<br>D<sub>r</sub> = QC(Collect(A<sub>r</sub><sup>gen</sup>))<br>θ′<sub>r+1</sub> = Train(θ<sub>r</sub>, D<sub>r</sub>, D<sub>replay</sub>; A<sub>r</sub><sup>use</sup>)<br>F<sub>r</sub> = Evaluate<sub>V</sub>(θ′<sub>r+1</sub>, θ<sub>r</sub>)<br>(θ<sub>r+1</sub>, M<sub>r+1</sub>) = ValidateAndRecord(θ′<sub>r+1</sub>, θ<sub>r</sub>, M<sub>r</sub>, A<sub>r</sub>, F<sub>r</sub>)</div>
-<p><b>两类反馈。</b>E<sub>r</sub> 描述学生在何种过程条件下失败；F<sub>r</sub> 描述干预前后的完整任务与阶段表现、已有能力保留及估计不确定性。训练损失和专家延续成功率用于辅助诊断，不能代替学生执行评价。采集、训练及验证的实际成本与 F<sub>r</sub> 共同记录，使后续计划能够检查哪些投入尚未转化为能力。</p>
-<p><b>干预记忆。</b>每条记录关联父模型与训练状态、任务条件和证据、方案版本与实际改动、数据和模型产物、学习响应及各项成本。无效或有副作用的候选同样保留；经验附带学生版本、适用条件及预定重测规则。混合条件训练的总收益只归属于该次整体干预，不重复分摊给每个条件。审计日志保证可追溯，决策模块是否读取历史效果则由记忆对照决定。</p>
-<h4 id="evolution-priorities">进化手段与实施优先级</h4>
+<p>图 2 的基础闭环使用固定采集规则和训练配方。F 记录完整任务收益、旧能力变化及不确定性；采集成本与专家产出作为辅助诊断。每次干预关联父训练状态、配置、数据、候选模型、评价和资源记录。收益归属于整次干预，不按混合训练中的条件重复分摊。</p>
+<figure class="algorithm" id="closed-loop-algorithm" aria-labelledby="algorithm-title">
+<figcaption id="algorithm-title"><b>算法 1 · 预算约束下的反馈驱动策略更新</b></figcaption>
+<p><b>输入：</b>初始学习状态 x<sub>0</sub>，隔离的 C/V/T，实验组 g，冻结配置 P，资源预算 B。<b>输出：</b>各轮保留状态、全部候选产物及成本记录。</p>
+<ol class="algorithm-steps">
+<li>检查 P 的必填项、任务划分与版本；参数未冻结时停止主对照。初始化记忆 M 与成本账本。</li>
+<li>在轮数和预算允许时，保存当前父状态 x<sub>r</sub>、方案 η<sub>r</sub> 及数据清单。</li>
+<li>在 C 执行固定诊断任务并形成 E<sub>r</sub>；记录全部成本。按诊断分流处理，平台错误暂停运行。</li>
+<li>按 g 选择条件及预算：B1 使用覆盖规则，B2 使用终态失败统计，B3 使用 q；B2 的分配器不读取阶段统计。</li>
+<li>基础组仅生成当前配置的一个计划。仅在“B3＋方案调整”的预定检查点，按允许选项产生当前计划及不超过 K<sub>alt</sub> 个候选；历史读取权限由记忆对照固定。</li>
+<li>为候选采集、固定步数训练和完整开发评价预留资源，并设置阶段上限；预算不足时停止新比较，执行中达到上限的候选按不完整产物归档。</li>
+<li>每个候选从同一父状态与已接纳数据出发，实际执行前缀、专家延续和质检；不足以训练的数据或异常产物记为无效候选。</li>
+<li>使用该候选的合格新增数据和既有回放训练 x′；不同分支隔离模型、优化器和新增数据，使用预先登记的随机种子。</li>
+<li>在相同的 V 任务初态列表上比较父代与候选，得到 F、差值区间及成本；同一轮可复用完全相同父状态的评价，成本只计一次。</li>
+<li>按下述经验接纳规则筛选。若有多个通过者，保留完整任务均值最高者；并列时优先当前方案，再按固定配置 ID 决定。</li>
+<li>有通过者则提交其模型、训练状态、数据清单及允许的方案变更；否则恢复父状态。候选数据与失败产物按状态处理表归档。</li>
+<li>将所有候选、F、决定及实际成本写入 M 和账本；即使拒绝，本轮计数与全局采集随机流仍推进。到达轮数、资源或固定停止条件后退出。</li>
+</ol>
+<p class="caption">B0 直接保留初始策略。封存测试 T 在研究配置冻结后统一评价保存模型，反馈不回流。算法为研究协议，工程实现及具体参数须在主实验前验收。</p>
+</figure>
+<h4 id="candidate-acceptance">开发接纳规则</h4>
+<p>本版采用经验接纳：产物有效、规定评价全部完成且成本合规的候选，还须达到开发总体收益门槛，并满足所有预定旧能力组的容差。总体均值按固定任务权重计算；阈值与评价次数在主实验前冻结。</p>
+<div class="equation" aria-label="经验接纳规则">Accept = Valid ∧ Complete ∧ WithinBudget<br>∧ (ΔĴ<sub>V</sub> ≥ δ<sub>J</sub>) ∧ (对所有 j：Δĉ<sub>j</sub> ≥ −ε<sub>j</sub>)</div>
+<p>Ĵ<sub>V</sub> 是开发评价估计量，区别于总体目标 J<sub>𝒟</sub>。不完整评价记为缺失并暂不接纳；数据质检和候选接纳是两个不同步骤。差值区间通过按任务组配对初态重采样估计，训练 seed 结果分别报告；区间用于不确定性报告，不将经验门槛描述为置信下界保证。</p>
+<details class="editorial-note" id="evolution-priorities"><summary>研究实施计划：进化手段与优先级</summary>
 <p>学生参数始终是主要更新对象。框架首先开放与现有采集和训练工具直接相连的干预，再逐步研究更广的决策空间。优先级表限定本版实施范围，各层不构成必须同时完成的实验矩阵。</p>
 <div class="table-wrap compact-table"><table><caption>优先级与允许的修改。</caption><thead><tr><th>层级</th><th>允许改变的对象与验证范围</th></tr></thead><tbody>
 <tr><td>先完成基础闭环</td><td>过程条件与采集预算；在 B1–B3 中比较覆盖、终态反馈和过程反馈，其余生成约定及训练配方固定。</td></tr>
@@ -131,19 +143,47 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td>独立研究路线</td><td>新奖励或损失、策略结构、世界模型、残差控制及执行时规划器；不纳入本版闭环完成条件。</td></tr>
 </tbody></table></div>
 <p>采集保留预定的覆盖与探索份额，并保留关键成功经验。反复低产出或无收益的条件可以暂缓，记录其原因及重测条件；学生版本或相关设施改变后再检查。暂停补采是一项资源决策，不代表该条件已解决或永远不可学习。历史反馈用于选择干预，跨学生可复用的教学能力仍需另行验证。</p>
-<p id="practice-adaptation"><b>有限的方案调整。</b>在预定检查点，或符合预定样本量与不确定性要求的停滞、退化信号出现时，SparkMentor 可提出下一版方案。允许的修改限于候选监督起点、完整示范与局部延续的构成，以及预设的新旧数据混合选项。过程条件分配保留为初始参考规则，方案版本 η 是配置与决策约定，不要求新增教师网络。关键候选从相同父模型、优化器状态及已有数据出发，按匹配预算比较；未获支持的修改不自动推广。基础学习算法、学生接口和评价标准保持固定。</p>
+</details>
+<p id="practice-adaptation"><b>有限的方案调整。</b>“B3＋方案调整”仅在配置登记的检查轮次比较下一版方案；能力画像用于定位需要复查的任务组，当前证据和历史干预结果用于提出候选。允许的修改限于候选监督起点、完整示范与局部延续的构成，以及预设的新旧数据混合选项。过程条件分配保留为初始参考规则，方案版本 η 是配置与决策约定，不要求新增教师网络。关键候选从相同父模型、优化器状态及已有数据出发，按匹配预算比较；未获支持的修改不自动推广。基础学习算法、学生接口和评价标准保持固定。</p>
 <div class="table-wrap"><table><caption>多轮反馈与候选调整。下列关联是待检验的教学假设。</caption><thead><tr><th>跨轮观察</th><th>需要检查的解释</th><th>允许比较的调整</th></tr></thead><tbody>
 <tr><td>专家延续产出低，重复补采收益有限。</td><td>起点是否过晚，或当前专家难以完成该条件。</td><td>比较预定事件前后的监督起点。</td></tr>
 <tr><td>局部恢复改善，完整任务表现不变。</td><td>前置行为或阶段衔接是否仍有缺口。</td><td>增加衔接过程与完整任务经验。</td></tr>
 <tr><td>新条件改善，原有能力退步。</td><td>经验集中或更新干扰是否导致能力损失。</td><td>比较预设的回放覆盖与混合比例。</td></tr>
 </tbody></table></div>
-<p>连续数轮无提升仅触发检查；评价噪声、专家不足、观测缺失和控制限制都可能产生相似现象。语言反思用于提出候选解释，实际比较决定是否保留修改。历史条件化选择、方案修订与可迁移的教学能力是不同强度的主张；本文将前两者作为闭环机制分析，跨学生或跨任务的教学能力提升留待独立验证。</p>
+<p>语言模块提出候选解释；候选配置通过同父模型、匹配预算的分支比较，由固定接纳规则决定是否保留。无历史组仍保留审计记录，但决策模块不读取此前的干预结果。</p>
 
 <h3 id="harness" data-nav="研究工具与验证" data-number="3.5">3.5 研究工具与独立验证</h3>
 <p>研究 harness 将环境配置、执行、采集、质检、训练和评价暴露为结构化工具。SparkMentor 负责提出和调度有预算约束的实验，工具负责实际执行与产物检查，验证模块依据固定标准接纳或拒绝更新。这一组织方式借鉴自主机器人研究中的工具化反馈流程。<cite data-ref="enpire"></cite> 每次运行记录输入配置、状态、输出与失败原因，使中断恢复和重放依赖可核查的产物，而非代理的文字总结。</p>
-<p>方法区分候选筛选、实际执行和学习验证：可行性预测帮助选择值得尝试的条件，执行记录提供监督来源，训练后的独立评价衡量数据价值。学生架构、观测历史、动作语义、归一化方案、专家、低层控制和评分器在比较中固定；学生权重随各轮训练更新。正式测试与代理记忆隔离，在全部闭环结束后统一回测保存的模型。</p>
-<p>一次运行须覆盖证据不足、条件不可行、监督不合格、候选无收益与预算耗尽等退出路径。诊断分流可以暂停采集并提交平台检查；修复环境、观测接口或控制器后建立新的配置版本，重新确认基线，相关收益与策略学习分开报告。这里的流程完整性指每类运行结果都有处理与记录，不宣称任意任务都能恢复或最终学会。</p>
+<p>可行性检查与先导执行筛除不适合当前学生、专家或执行系统的条件；实际采集提供监督，训练后的独立评价检验经验价值。学生架构、观测历史、动作语义、归一化方案、专家、低层控制和评分器在比较中固定；学生权重随各轮训练更新。正式测试与代理记忆隔离，在全部闭环结束后统一回测保存的模型。</p>
+<p>一次运行须覆盖证据不足、条件不可行、监督不合格、候选无收益与预算耗尽等退出路径。诊断分流可以暂停采集并提交平台检查；修复环境、观测接口或控制器后建立新的配置版本，重新确认基线，相关收益与策略学习分开报告。各类退出均保留状态、原因与成本，使用同一轮配置和产物清单恢复工作。</p>
 <p>B1–B3 的可变决策限定为条件和预算分配，学生训练配方固定。补充分析进一步开放预定的经验生成与使用配置，但固定学生架构、输入历史、动作接口、专家、低层控制、主要损失、优化器及总训练预算；候选方案及其比较次数有预设上限。SparkMentor 将决策连接到采集、训练与验收工具，不修改成功标准或封存测试。一个可恢复的执行器连接各阶段，以同一轮的配置、数据、模型和评价记录恢复中断工作；不为不同策略复制调度链。确定性计划器提供可运行的参考，代理决策的额外价值由独立消融检验，而非由聊天或工具调用次数推断。</p>
+<h4 id="candidate-state">候选接纳、拒绝与中断后的状态处理</h4>
+<div class="table-wrap state-table"><table><caption>表 3. 单次干预后的状态归属。</caption><thead><tr><th>对象</th><th>接纳候选</th><th>拒绝、无效或证据不足</th></tr></thead><tbody>
+<tr><td>模型与训练状态</td><td>提交 θ′ 与对应 ψ′，用于下一轮。</td><td>继续使用父状态 θ、ψ；不沿用候选优化器动量或训练进度。</td></tr>
+<tr><td>训练与回放数据</td><td>仅将被选候选的合格新增数据加入已接纳清单。</td><td>已接纳清单保持不变；候选数据归档，不自动进入后续回放。</td></tr>
+<tr><td>方案版本 η</td><td>基础组保持固定版本；补充组提交通过比较的允许配置。</td><td>保留当前版本，记录未采用的候选及原因。</td></tr>
+<tr><td>产物与干预记忆</td><td colspan="2">所有尝试均保存配置、父状态、数据来源、质检、评价和结果；平台异常另标，不伪装为策略任务失败。</td></tr>
+<tr><td>成本、轮次与随机流</td><td colspan="2">按实际消耗扣减预算；拒绝也推进尝试轮次、全局采集随机流和任务 ID。父训练随机状态的恢复仅用于隔离训练分支。</td></tr>
+<tr><td>运行中断</td><td colspan="2">依据阶段完成标记、产物哈希和账本恢复；完整产物可复用，不完整阶段按登记的重试上限处理。同一实际执行不重复计费，新执行继续计费。</td></tr>
+</tbody></table></div>
+<p>归档数据的重新使用必须由主实验前冻结的数据规则决定；本版默认不自动重用未被选候选的数据。跨实验复用需单列数据与历史成本。平台修复或观测接口变化建立新配置，重新确认基线。</p>
+<details class="editorial-note" id="protocol-configuration"><summary>表 4 · 算法配置与冻结清单</summary>
+<p>下表区分已明确的协议与待先导确定的数值。待定项不能当作已运行设置；主对照须填齐对应实验组的必填项、生成配置哈希并冻结。<a href="protocol/closed-loop-config.template.json" download>下载配置模板</a>。</p>
+<div class="table-wrap state-table"><table><thead><tr><th>配置项</th><th>固定协议</th><th>待先导冻结／发布值</th></tr></thead><tbody>
+<tr><td>任务与版本</td><td>C/V/T 按父任务划分；实例、布局与派生数据继承归属。</td><td>任务子集、环境／专家／学生版本、划分清单及哈希。</td></tr>
+<tr><td>任务权重与目标</td><td>任务组预算权重固定；c* 用于报告和补充检查。</td><td>组权重、能力报告目标、旧能力保留组。</td></tr>
+<tr><td>诊断与事件</td><td>同轨迹同条件首次进入计一次；原始计数，无额外平滑。</td><td>N、事件谓词、条件区间、转换窗口与超时。</td></tr>
+<tr><td>分配与探索</td><td>可行条件按 q；稀疏／未知成本条件走覆盖试采；q 全零则覆盖。</td><td>最小计数、探索份额、覆盖规则参数和确定性排序。</td></tr>
+<tr><td>试采、暂缓与重测</td><td>零产出不定义有限成本；达到上限后暂缓，按登记条件重测。</td><td>试采次数上限、暂缓条件、重测检查点。</td></tr>
+<tr><td>基础采集配置</td><td>B1–B3 使用相同前缀、专家、监督起点与质检。</td><td>起点、前缀扰动、专家版本与质检阈值。</td></tr>
+<tr><td>训练与轮次</td><td>基础组共享训练步数、优化器和回放；计划先一轮、再三轮、三个 seed。</td><td>实际步数、回放比例、seed ID、轮次与保存清单。</td></tr>
+<tr><td>方案调整</td><td>仅 B3＋方案调整开放；原方案与候选从同父状态比较。</td><td>检查轮次、K<sub>alt</sub>、监督起点列表、经验构成与回放选项。</td></tr>
+<tr><td>开发评价</td><td>父代和候选使用配对初态；任务组权重固定。</td><td>V 初态列表、各组次数、配对重采样次数及区间水平。</td></tr>
+<tr><td>候选接纳</td><td>使用经验差值门槛；缺失评价暂不接纳。</td><td>δ<sub>J</sub>、各组 ε<sub>j</sub>、规定评价样本量与候选并列顺序。</td></tr>
+<tr><td>预算与恢复</td><td>采集、训练、评价、代理分别记账；重试有上限。</td><td>各资源上限、每轮预留预算、重试次数与停止条件。</td></tr>
+</tbody></table></div>
+<p>模板记录研究协议，未代表仿真、训练、评价执行器已完成。实际使用参数随结果一并发布；基础组和补充组分别保存配置。</p>
+</details>
 </section>
 
 <section id="experiments" data-title="实验" data-number="4">
@@ -154,7 +194,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <h3 id="benchmark" data-nav="实验设置" data-number="4.1">4.1 实验设置</h3>
 <p><b>任务与环境。</b>仿真评价采用 AM-Bench 原生任务。<cite data-ref="ambench"></cite> 从能够在两种仿真环境中建立对应执行的任务中预先固定子集，覆盖接触和物体运输；Cabinet Pick-and-Place 与 Lemon Harvesting 为当前候选。AirSpark 的 C 池用于练习生成，隔离的 V 池用于开发验收，正式成绩由原生完整终态计算。任务专用的接近、抓持和抬升指标用于诊断，保留完整任务结果。</p>
 <p><b>策略与训练。</b>复用 AM-Bench 支持的 ACT、Diffusion Policy 和 OpenPI 路径。<cite data-ref="act dp openpi ambench-docs"></cite> 一个可训练后端承担主矩阵，第二架构在代表任务上检验数据收益的适用性。任务专用 ACT / DP 用于视觉动作学习；语言能力评价采用实际语言条件化的策略，并在相同场景中配对改变指令。B1–B3 共享初始父代、学生输入、训练步数、优化器和 replay 配方。第 4.6 节的方案调整分析仅放开预定的数据构成与使用选项，并匹配总采集及训练预算。</p>
-<p><b>初始实施范围。</b>先复现官方 Diffusion Policy 路径，以 PressButton 验证具有飞行动力学的仿真机器人上的专家采集、训练、保存重载和原生评价，再以一个“接近接触时的相对速度”条件完成一轮机制实验，通过后展开完整抓取运输、多轮和真实对应任务。浮动末端模式只用于排查环境和任务逻辑，不计作飞行操作能力。该顺序是实施计划，不表示当前已有基线成绩；正式任务子集及训练配方在对照实验开始前冻结。</p>
+<details class="editorial-note" id="implementation-order"><summary>研究实施顺序（非论文主文）</summary><p><b>初始实施范围。</b>先复现官方 Diffusion Policy 路径，以 PressButton 验证具有飞行动力学的仿真机器人上的专家采集、训练、保存重载和原生评价，再以一个“接近接触时的相对速度”条件完成一轮机制实验，通过后展开完整抓取运输、多轮和真实对应任务。浮动末端模式只用于排查环境和任务逻辑，不计作飞行操作能力。该顺序是实施计划，不表示当前已有基线成绩；正式任务子集及训练配方在对照实验开始前冻结。</p></details>
 <p><b>划分与指标。</b>C、V、T 按原始任务组、物体实例及布局划分，派生轨迹继承父任务归属。主指标为统一初态下的完整成功率，辅以阶段到达数、条件成功率、掉落、碰撞、耗时和人工干预。所有终止均保留记录。独立训练 seed 和任务组作为统计单位报告不确定性。</p>
 
 <h3 id="platform-evaluation" data-nav="平台支持能力" data-number="4.2">4.2 平台支持能力与运行可靠性</h3>
@@ -170,22 +210,23 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td>B2 · 终态条件分配</td><td>按任务 / 条件的终态失败率分配采集预算。</td><td>与 B1 相同。</td></tr>
 <tr><td>B3 · 过程条件分配</td><td>按转换条件的频率、失败率和经验成本安排练习。</td><td>与 B1 相同。</td></tr>
 </tbody></table></div>
+<p>结果表、图注及模型清单使用 B0、B1、B2、B3 标识具体配置。SparkMentor 是共享编排模块，不用作独立实验组名称；方案调整的两个补充变体按完整名称单列，基础 B3 不包含额外候选搜索。</p>
 <p>覆盖基线包含学习者状态上的恢复监督，而非仅在理想专家轨迹周围增加数据；这一设置承接交互式监督和部署中学习的思想。<cite data-ref="dagger dart sirius"></cite> B1–B3 是共享协议下的机制对照，不等同于对这些论文完整算法的复现。对已有方法的优越性结论需要另行适配原方法，不能由终态信息对照替代。</p>
 <p>主实验采用相同总采集预算及每轮训练步数，计入诊断、前缀、未命中、专家失败、复位、质检和代理推理，并同时报告合格轨迹数、专家监督时长与训练动作块数。在代表任务上另作等有效数据量比较，区分轨迹质量与采集效率。多轮曲线由研究配置冻结后对保存模型统一回测得到，分别展示相对于父代和同预算采集基线的收益。</p>
 <p>等预算约束施加于 B1、B2 与 B3 三条更新路线，冻结父代 B0 的零新增训练成本单独列出。成本来自实际运行记录，分别报告仿真时间、墙钟时间和计算资源；配置中的预估耗时不作为测量结果。未执行的评价记为缺失而非零分，只有实际完成的失败任务才进入失败统计。</p>
 
 <h3 id="external" data-nav="AM-Bench 原生回测" data-number="4.4">4.4 AM-Bench 原生回测</h3>
-<p>我们将更新后的策略返回原生 AM-Bench，评价 AirSpark 中采集的数据能否改善模型在原基准上的表现。实验先按公开配置训练或载入初始策略，在 AirSpark 中采集新增示范并训练，再将初始模型与各组更新模型冻结后统一测试（图 3）。原生测试保留相同的任务、机器人、控制器、扰动、观测和成功阈值。<cite data-ref="ambench-docs"></cite></p>
+<p>原生基准评价检验 AirSpark 经验的外部学习效用。各采集方法从相同初始策略出发，使用共享学生接口、专家和训练设置完成预算匹配的更新。闭环结束后，冻结初始策略与各轮保留模型，按未修改的 AM-Bench 任务和评分协议统一评价（图 3）。固定清单指定任务子集、机器人、控制器、扰动、观测、动作及成功条件；修改这些条件的实验独立列为衍生设置。<cite data-ref="ambench-docs"></cite></p>
 <figure class="paper-figure diagram-figure" id="figure-3"><span id="figure-4" aria-hidden="true"></span>
 <div class="diagram-heading"><b>图 3 · 实验流程</b><span>研究设计示意</span></div>
-<button class="diagram-open" type="button" data-figure-src="figures/fig04-evaluation-protocol-zh.svg?v=0.19" data-figure-title="图 3 · 实验流程" aria-label="放大图 3：实验流程"><img src="figures/fig04-evaluation-protocol-zh.svg?v=0.19" alt="图 3. 实验流程。首先使用 AM-Bench 的示范数据与训练配置建立初始策略，再在 AirSpark 中根据执行反馈采集专家数据并更新策略。最后冻结模型，在原生 AM-Bench 和对应的真实任务中比较改进前后的表现。各采集方法的对照设置见表 2。" width="1440" height="740" loading="lazy"></button>
-<figcaption>图 3. 实验流程。首先使用 AM-Bench 的示范数据与训练配置建立初始策略，再在 AirSpark 中根据执行反馈采集专家数据并更新策略。最后冻结模型，在原生 AM-Bench 和对应的真实任务中比较改进前后的表现。各采集方法的对照设置见表 2。</figcaption>
-<div class="figure-tools"><button type="button" data-figure-src="figures/fig04-evaluation-protocol-zh.svg?v=0.19" data-figure-title="图 3 · 实验流程">放大查看</button><a href="figures/fig04-evaluation-protocol-zh.svg?v=0.19" download>中文 SVG</a><a href="figures/fig04-evaluation-protocol-zh.png?v=0.19" download>中文 PNG</a><a href="figures/fig04-evaluation-protocol.svg?v=0.19" download>英文 SVG</a><a href="figures/fig04-evaluation-protocol.png?v=0.19" download>英文 PNG</a></div>
+<button class="diagram-open" type="button" data-figure-src="figures/fig04-evaluation-protocol-zh.svg?v=0.20" data-figure-title="图 3 · 实验流程" aria-label="放大图 3：实验流程"><img src="figures/fig04-evaluation-protocol-zh.svg?v=0.20" alt="图 3. 从初始策略出发，各组在 AirSpark 中采集经验并更新，再冻结保留模型进行原生评价与真实任务比较。实机线使用与部署本体匹配的策略接口，形态适配在各组间共享。基础组与 B3＋方案调整分别报告。" width="1440" height="740" loading="lazy"></button>
+<figcaption>图 3. 从初始策略出发，各组在 AirSpark 中采集经验并更新，再冻结保留模型进行原生评价与真实任务比较。实机线使用与部署本体匹配的策略接口，形态适配在各组间共享。基础组与 B3＋方案调整分别报告。</figcaption>
+<div class="figure-tools"><button type="button" data-figure-src="figures/fig04-evaluation-protocol-zh.svg?v=0.20" data-figure-title="图 3 · 实验流程">放大查看</button><a href="figures/fig04-evaluation-protocol-zh.svg?v=0.20" download>中文 SVG</a><a href="figures/fig04-evaluation-protocol-zh.png?v=0.20" download>中文 PNG</a><a href="figures/fig04-evaluation-protocol.svg?v=0.20" download>英文 SVG</a><a href="figures/fig04-evaluation-protocol.png?v=0.20" download>英文 PNG</a></div>
 </figure>
 <p>代表任务同时比较使用同一选择器在原生 AM-Bench 和 AirSpark 中补采的结果，以分析新增数据来源的作用。该比较匹配任务因素、专家能力与预算，并与闭环选择对照分别报告。跨模拟器结果首先解释为整套数据来源的差异，不单独归因于渲染引擎或物理求解器；无法匹配的控制、专家与观测差异必须披露。主表注明所用任务子集；改变机器人、观测或评分条件的实验独立列为衍生设置。</p>
 
 <h3 id="realworld" data-nav="真实场景迁移" data-number="4.5">4.5 真实场景迁移</h3>
-<p>真实实验采用可重复布置的场地，通过多视角采集建立 3DGS 外观，并配准碰撞几何、可交互物体、相机和机器人。策略在对应的学院环境中完成更新后冻结，返回真实场景执行相同任务目标。比较包含父代、按开发指标预先选定的最强采集基线子代，以及 SparkMentor 子代，三者使用相同标定、观测和低层控制。</p>
+<p>真实实验采用可重复布置的场地，通过多视角采集建立 3DGS 外观，并配准碰撞几何、可交互物体、相机和机器人。策略在对应的学院环境中完成更新后冻结，返回真实场景执行相同任务目标。比较包含 B0 初始策略、按开发指标预先选定的 B1/B2 最强基线更新策略，以及 B3 更新策略，使用相同标定、观测和低层控制。“B3＋方案调整”若参与实机评价，单独列组并记录额外成本。</p>
 <p>评价分别覆盖已重建场景内的对应任务，以及预留物体或布局条件。前者衡量场景适应后的迁移，后者衡量未见条件表现。测试采用配对初态与随机化执行顺序，报告完整成功、阶段结果、接管、掉落和耗时。正式测试影像与反馈不进入训练；真实示范或微调如被使用，其预算在所有组间一致并单独报告。</p>
 <p>实机目标与仿真任务按语义和交互阶段对应。机器人形态不一致时，实机线使用匹配本体的初始策略，各组共享适配过程。抓取—抬升子任务与完整运输—放置分别报告；跨场景泛化由独立于重建和开发的新场地评价。</p>
 
@@ -193,9 +234,9 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p><b>从条件到学习的证据链。</b>机制实验分别报告：匹配几何后不同运动条件的转换风险；目标条件命中数 / 全部前缀尝试数；合格专家延续数 / 命中数及每份经验成本；固定训练后在独立完整任务上的成功率变化。前三项衡量经验设施，第四项检验学习价值。风险差异是条件关联，只有预定的随机化干预才用于因果解释。所有分母与失败尝试均保留。</p>
 <p><b>案例的最小验证。</b>在代表任务内先检查固定规则下各候选时点的条件命中与专家产出，再按预算选择少量方案进行训练比较；不对所有时点、回放比例和任务做笛卡尔积。接近速度等条件通过合法初态和实际运动产生。专家延续成功与学生完整任务改善分别报告，固定减速／等待对照检验收益是否仅来自更保守的执行。抓持与载荷研究仅在任务物理足以支持相应现象时开展。</p>
 <p><b>必要对照。</b>在一个代表任务上匹配扰动幅度与成本，对比通用扰动和过程条件采集；固定减速或等待策略同时报告成功率与耗时。学生可观测性检查使用其实际输入的时间窗口，在保持当前观测近似一致时检验历史线索是否支持不同后续动作。历史窗口长度作为单独消融，各主比较组使用相同输入。</p>
-<p id="teaching-analysis"><b>学习反馈、记忆与方案调整。</b>核心 B1–B3 对照完成后，在一个代表任务和学生后端上补充比较：先导阶段确定的固定方案；可调整方案但仅使用当前执行与学习反馈；可调整方案并读取历史干预结果。可调整组共享候选起点、经验构成、回放选项和预算上限；无历史组每轮不读取此前干预效果与方案修订记录，但保留完整审计日志。主指标为完整任务表现随累计资源投入的变化，辅以旧能力保留、有效监督产出和无效尝试成本。</p>
-<p>关键调整采用同父模型的小规模分支比较；试探、被拒绝方案、额外训练和开发验证均计入总预算。若进一步主张 Agent 推理具有独立收益，增加共享动作空间的简单学习进展选择器，规则借鉴课程学习，但不称为原算法复现。<cite data-ref="alp-gmm multitask-dagger"></cite> 方案调整和记忆的对照只在代表任务展开，不与任务、学生架构及实机设置全面交叉。</p>
-<p>为检查闭环各环节，复用同一批运行记录报告诊断分流、条件命中、监督产出、训练后变化及保留结果。对关键改动使用同父模型的匹配比较；若声称某次接纳具有统计保证，须采用候选固定后的独立验收样本及预定的多次比较控制，具体条件见附录 A.6。一般开发集上的“最佳结果”不能自动获得这一保证。</p>
+<p id="teaching-analysis"><b>学习反馈、记忆与方案调整。</b>在一个代表任务和学生后端上，将 B3 固定方案作为参照，补充“B3＋方案调整（当前反馈）”与“B3＋方案调整（历史反馈）”。前者只读取当前执行与学习结果，后者进一步读取跨轮干预记录。可调整组共享候选起点、经验构成、回放选项和预算上限；无历史组每轮不读取此前干预效果与方案修订记录，但保留完整审计日志。主指标为完整任务表现随累计资源投入的变化，辅以旧能力保留、有效监督产出和无效尝试成本。</p>
+<p>关键调整采用同父模型的小规模分支比较；试探、被拒绝方案、额外训练和开发验证均计入总预算。补充组的候选分支占用同一训练预算，相应减少剩余更新机会；比较按累计资源投入对齐，轮数作为上限。若进一步主张 Agent 推理具有独立收益，增加共享动作空间的简单学习进展选择器，规则借鉴课程学习，但不称为原算法复现。<cite data-ref="alp-gmm multitask-dagger"></cite> 方案调整和记忆的对照只在代表任务展开，不与任务、学生架构及实机设置全面交叉。</p>
+<p>复用同一批记录报告诊断分流、条件命中、监督产出、训练后变化及接纳结果。所有组使用算法 1 的相同经验接纳程序，报告候选表现与保留曲线；额外候选比较、被拒绝方案及开发评价均计入对应组预算。</p>
 <p>开发池 V 的重复反馈用于方法开发，其最佳成绩不能作为泛化结论；最终结论来自冻结后的 T 池评价。只有另行比较初始方案与历史经验支持的方案从相同新学生起点开始的学习效果，才能主张教学能力可复用提升；该扩展须单列形成历史经验的成本，不作为当前主实验的完成前提。</p>
 <p><b>3DGS 外观作用。</b>平台可靠性由第 4.2 节检验。3DGS 默认用于真实场景外观对应；若进一步主张其独立学习贡献，则在代表任务上保持几何、物理与预算一致，仅改变外观表示进行对照。跨模拟器数据来源比较不能替代这一归因实验。</p>
 </section>
@@ -205,7 +246,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p>AirSpark 的平台贡献在于连接空中操作的环境执行、经验生成和训练评价，使反馈驱动学习能够在统一协议下运行与检验。SparkMentor 维护实验连续性，练习方法决定设施如何服务于当前学生。过程条件分配是本文的参考实现，学习反馈支持在预定范围内调整练习方案。两者共同服务于学生策略改进，但相应收益分别检验；平台可靠性、方法收益与迁移表现分别提供证据。</p>
 <p>框架依赖可用的专家、足够的学生观测以及任务相关的仿真准确性。控制故障与不可达动作不能仅靠新增示范解决；视觉不可辨识的隐藏状态也可能限制监督的有效性。过程证据提供练习假设，不能替代因果识别；成本优先级也不保证最大化学习收益。仅由真值区分、学生输入无法辨识的条件可能无法通过监督学习修复。接触、负载和相机时延的误差仍可能影响真实迁移。</p>
 <p>本文以单一空中机器人平台、固定任务子集和有限轮次建立证据。共享接口为后续诊断方法、练习策略和训练后端的接入提供设计基础；更长时间的持续改进、其他机器人形态和开放场景作为未来扩展，需重新验证观测动作及物理协议。本文不据接口设计宣称这些扩展已完成。3DGS 对应场景迁移与未见场景泛化分别评价；教师算法自修改不属于本版实验。</p>
-<p>闭环反馈表述明确了目标、测量、干预和学习响应，但学习过程的有效动态未知且受观测、专家及优化限制。本文不据框图宣称可控、全局稳定、收敛或保证持续进步；固定评价、受限干预、完整成本与独立回测提供的是可检验的运行与效果依据。</p>
+<p>闭环中的学习动态受观测、专家和优化限制。经验接纳与开发集选择可能产生选择偏差，开发保留曲线不代表封存任务上的单调改善；完整成本、固定协议和最终回测共同限定结论。附录的条件性接纳说明也不保证候选存在、长期收敛或真实迁移。</p>
 <p>教学自适应、反思与经验复用均有已有研究基础。本方案的研究范围是固定学习接口下的有界调整，其适用性取决于专家、学生观测、任务条件及评价样本。有限轮次的改进不能推出长期持续收益；原生回测和真实迁移仍是学院中所学能力的独立检验。</p>
 </section>
 
@@ -216,7 +257,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 
 <section id="references" data-title="参考文献" data-number="R">
 <div class="eyebrow">REFERENCES</div><h2>参考文献</h2>
-<p class="caption">按作者姓氏或机构名称排序，使用方括号数字引用；条目包含作者、题名、出版物与年份。来源类型与核查备注可展开查看；正式出版、作者报告的录用、预印本和软件文档分别记录。基础文献核查：2026.10.18；RPG、学习反馈与原理文献补充核查：2026.10.19。</p>
+<p class="caption">按作者姓氏或机构名称排序，使用方括号数字引用；条目包含作者、题名、出版物与年份。来源类型与核查备注可展开查看；正式出版、作者报告的录用、预印本和软件文档分别记录。基础文献核查：2026.10.18；RPG、学习反馈与原理文献补充核查：2026.10.19；教材书目修订：2026.10.20。</p>
 <p class="reference-tools"><a href="references.bib" download>下载 BibTeX 文献库</a> · <a href="#literature-map">文献证据与阅读路线</a> · <a href="#citation-protocol">引用规范与核查记录</a></p>
 <ol class="ref-list" id="reference-list"></ol>
 </section>
@@ -246,32 +287,32 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p>跨轮干预记录另含方案版本、选择依据、生成与使用配置、父模型及优化器状态、前后开发评价与不确定性、候选接受结果和完整成本。V 池仅返回预先允许的摘要，T 池结果不写回决策记忆；“无历史”分析屏蔽决策读取，保留审计记录。</p>
 <h3 id="figure-library" data-nav="论文框图与下载" data-number="A.5">A.5 论文框图与汇报素材</h3>
 <p>正文以两张方法主图组织平台与算法：图 1 展示学院设施，图 2 展示 RSI 的反馈、决策与参数更新；图 3 描述实验流程。附录图 A1–A2 分别展开执行接口和专家延续，图 A3 说明闭环反馈原理。网页默认使用中文，下载提供中英文 SVG 与高清 PNG。</p>
-<p class="reference-tools"><a href="figures/AirSpark-Figures-v0.19.zip" download>下载中英文框图与绘图源文件</a> · <a href="figures/FIGURE-NOTES.txt?v=0.19">图注与使用说明</a></p>
-<div class="figure-gallery"><a href="#figure-1"><img src="figures/fig01-academy-overview-zh.svg?v=0.19" alt="图 1：学院平台架构" width="1440" height="870" loading="lazy"><b>图 1 · 学院平台架构</b><span>跳转正文与下载</span></a><a href="#figure-2"><img src="figures/fig02-rsi-method-zh.svg?v=0.19" alt="图 2：RSI 策略方法" width="1440" height="900" loading="lazy"><b>图 2 · RSI 策略方法</b><span>跳转正文与下载</span></a><a href="#figure-3"><img src="figures/fig04-evaluation-protocol-zh.svg?v=0.19" alt="图 3：实验流程" width="1440" height="740" loading="lazy"><b>图 3 · 实验流程</b><span>跳转正文与下载</span></a><a href="#figure-a1"><img src="figures/fig02-visual-physical-contract-zh.svg?v=0.19" alt="图 A1：视觉与物理执行链路" width="1440" height="1020" loading="lazy"><b>图 A1 · 视觉与物理执行链路</b><span>跳转正文与下载</span></a><a href="#figure-a2"><img src="figures/fig03-process-experience-zh.svg?v=0.19" alt="图 A2：过程条件与专家延续" width="1440" height="1030" loading="lazy"><b>图 A2 · 过程条件与专家延续</b><span>跳转正文与下载</span></a></div><p class="caption"><a href="#figure-a3">图 A3：闭环反馈原理与下载</a>。组会主讲使用图 1、图 2 和图 3；执行链路及专家监督细节作为备份材料。所有图均为当前研究设计，不代表实现和实验已经完成。</p>
+<p class="reference-tools"><a href="figures/AirSpark-Figures-v0.20.zip" download>下载中英文框图与绘图源文件</a> · <a href="figures/FIGURE-NOTES.txt?v=0.20">图注与使用说明</a></p>
+<div class="figure-gallery"><a href="#figure-1"><img src="figures/fig01-academy-overview-zh.svg?v=0.20" alt="图 1：学院平台架构" width="1440" height="870" loading="lazy"><b>图 1 · 学院平台架构</b><span>跳转正文与下载</span></a><a href="#figure-2"><img src="figures/fig02-rsi-method-zh.svg?v=0.20" alt="图 2：RSI 策略方法" width="1440" height="900" loading="lazy"><b>图 2 · RSI 策略方法</b><span>跳转正文与下载</span></a><a href="#figure-3"><img src="figures/fig04-evaluation-protocol-zh.svg?v=0.20" alt="图 3：实验流程" width="1440" height="740" loading="lazy"><b>图 3 · 实验流程</b><span>跳转正文与下载</span></a><a href="#figure-a1"><img src="figures/fig02-visual-physical-contract-zh.svg?v=0.20" alt="图 A1：视觉与物理执行链路" width="1440" height="1020" loading="lazy"><b>图 A1 · 视觉与物理执行链路</b><span>跳转正文与下载</span></a><a href="#figure-a2"><img src="figures/fig03-process-experience-zh.svg?v=0.20" alt="图 A2：过程条件与专家延续" width="1440" height="1030" loading="lazy"><b>图 A2 · 过程条件与专家延续</b><span>跳转正文与下载</span></a></div><p class="caption"><a href="#figure-a3">图 A3：闭环反馈原理与下载</a>。组会主讲使用图 1、图 2 和图 3；执行链路及专家监督细节作为备份材料。所有图均为当前研究设计，不代表实现和实验已经完成。</p>
 <details class="editorial-note" id="implementation-figures"><summary>平台执行与经验生成细节（附录图 A1–A2）</summary><figure class="paper-figure diagram-figure" id="figure-a1">
 <div class="diagram-heading"><b>图 A1 · 视觉与物理执行链路</b><span>研究设计示意</span></div>
-<button class="diagram-open" type="button" data-figure-src="figures/fig02-visual-physical-contract-zh.svg?v=0.19" data-figure-title="图 A1 · 视觉与物理执行链路" aria-label="放大图 A1：视觉与物理执行链路"><img src="figures/fig02-visual-physical-contract-zh.svg?v=0.19" alt="图 A1. 视觉与物理执行细节。3DGS 提供静态场景外观，显式物理资产承担碰撞、接触与载荷；MuJoCo 状态驱动 UE 动态资产。适配器统一坐标、时间和动作语义，并区分学生输入、特权诊断与专家监督。" width="1440" height="1020" loading="lazy"></button>
+<button class="diagram-open" type="button" data-figure-src="figures/fig02-visual-physical-contract-zh.svg?v=0.20" data-figure-title="图 A1 · 视觉与物理执行链路" aria-label="放大图 A1：视觉与物理执行链路"><img src="figures/fig02-visual-physical-contract-zh.svg?v=0.20" alt="图 A1. 视觉与物理执行细节。3DGS 提供静态场景外观，显式物理资产承担碰撞、接触与载荷；MuJoCo 状态驱动 UE 动态资产。适配器统一坐标、时间和动作语义，并区分学生输入、特权诊断与专家监督。" width="1440" height="1020" loading="lazy"></button>
 <figcaption>图 A1. 视觉与物理执行细节。3DGS 提供静态场景外观，显式物理资产承担碰撞、接触与载荷；MuJoCo 状态驱动 UE 动态资产。适配器统一坐标、时间和动作语义，并区分学生输入、特权诊断与专家监督。</figcaption>
-<div class="figure-tools"><button type="button" data-figure-src="figures/fig02-visual-physical-contract-zh.svg?v=0.19" data-figure-title="图 A1 · 视觉与物理执行链路">放大查看</button><a href="figures/fig02-visual-physical-contract-zh.svg?v=0.19" download>中文 SVG</a><a href="figures/fig02-visual-physical-contract-zh.png?v=0.19" download>中文 PNG</a><a href="figures/fig02-visual-physical-contract.svg?v=0.19" download>英文 SVG</a><a href="figures/fig02-visual-physical-contract.png?v=0.19" download>英文 PNG</a></div>
+<div class="figure-tools"><button type="button" data-figure-src="figures/fig02-visual-physical-contract-zh.svg?v=0.20" data-figure-title="图 A1 · 视觉与物理执行链路">放大查看</button><a href="figures/fig02-visual-physical-contract-zh.svg?v=0.20" download>中文 SVG</a><a href="figures/fig02-visual-physical-contract-zh.png?v=0.20" download>中文 PNG</a><a href="figures/fig02-visual-physical-contract.svg?v=0.20" download>英文 SVG</a><a href="figures/fig02-visual-physical-contract.png?v=0.20" download>英文 PNG</a></div>
 </figure><figure class="paper-figure diagram-figure" id="figure-a2">
 <div class="diagram-heading"><b>图 A2 · 过程条件与专家延续</b><span>研究设计示意</span></div>
-<button class="diagram-open" type="button" data-figure-src="figures/fig03-process-experience-zh.svg?v=0.19" data-figure-title="图 A2 · 过程条件与专家延续" aria-label="放大图 A2：过程条件与专家延续"><img src="figures/fig03-process-experience-zh.svg?v=0.19" alt="图 A2. RSI 经验生成步骤的展开。从合法初态实际执行前缀，在目标过程条件上采集专家延续；每条分支是独立的物理执行。前缀提供允许的历史上下文，动作监督仅来自通过质检的专家区间。轨迹为方法示意，非实测结果。" width="1440" height="1030" loading="lazy"></button>
+<button class="diagram-open" type="button" data-figure-src="figures/fig03-process-experience-zh.svg?v=0.20" data-figure-title="图 A2 · 过程条件与专家延续" aria-label="放大图 A2：过程条件与专家延续"><img src="figures/fig03-process-experience-zh.svg?v=0.20" alt="图 A2. RSI 经验生成步骤的展开。从合法初态实际执行前缀，在目标过程条件上采集专家延续；每条分支是独立的物理执行。前缀提供允许的历史上下文，动作监督仅来自通过质检的专家区间。轨迹为方法示意，非实测结果。" width="1440" height="1030" loading="lazy"></button>
 <figcaption>图 A2. RSI 经验生成步骤的展开。从合法初态实际执行前缀，在目标过程条件上采集专家延续；每条分支是独立的物理执行。前缀提供允许的历史上下文，动作监督仅来自通过质检的专家区间。轨迹为方法示意，非实测结果。</figcaption>
-<div class="figure-tools"><button type="button" data-figure-src="figures/fig03-process-experience-zh.svg?v=0.19" data-figure-title="图 A2 · 过程条件与专家延续">放大查看</button><a href="figures/fig03-process-experience-zh.svg?v=0.19" download>中文 SVG</a><a href="figures/fig03-process-experience-zh.png?v=0.19" download>中文 PNG</a><a href="figures/fig03-process-experience.svg?v=0.19" download>英文 SVG</a><a href="figures/fig03-process-experience.png?v=0.19" download>英文 PNG</a></div>
+<div class="figure-tools"><button type="button" data-figure-src="figures/fig03-process-experience-zh.svg?v=0.20" data-figure-title="图 A2 · 过程条件与专家延续">放大查看</button><a href="figures/fig03-process-experience-zh.svg?v=0.20" download>中文 SVG</a><a href="figures/fig03-process-experience-zh.png?v=0.20" download>中文 PNG</a><a href="figures/fig03-process-experience.svg?v=0.20" download>英文 SVG</a><a href="figures/fig03-process-experience.png?v=0.20" download>英文 PNG</a></div>
 </figure></details>
 
 <h3 id="feedback-assumptions" data-nav="原理与证据边界" data-number="A.6">A.6 反馈原理、条件与接纳依据</h3>
 <p>这一节区分系统定义、已有理论和本研究待验证的机制。反馈表述说明闭环如何运行；物理与监督可行性由平台实验检验；方案的学习收益由对照实验检验。当前没有覆盖全部 AirSpark 设置的收敛定理。</p>
 <p><b>必要条件。</b>相关差异需在学生允许的输入中留下线索；采集设施和专家需产生合法监督；学生与固定学习算法需能够利用这些经验；测量需与目标任务一致并量化不确定性。这些是方法适用性的要求，不是只要同时满足就必然提升的充分条件。</p>
-<p><b>开发接纳的条件性说明。</b>设 ΔJ 是候选相对父模型在固定开发分布上的真实完整任务收益，Δc<sub>j</sub> 是预定旧能力组的变化。若某次验收得到同时有效的下置信界 L<sub>J</sub>、L<sub>j</sub>，覆盖概率至少为 1−α，则采用下述规则：</p>
-<div class="equation" aria-label="候选接纳的条件">L<sub>J</sub> ≥ δ，且对所有预定保留组 j：L<sub>j</sub> ≥ −ε<sub>j</sub></div>
-<p>在这些下界共同有效的事件上，任何按该规则接纳的候选满足 ΔJ ≥ δ 且 Δc<sub>j</sub> ≥ −ε<sub>j</sub>；这是由下界定义直接得到的局部结论。δ、ε 和比较范围在评价前固定。条件要求候选固定后的独立验收样本，以及覆盖多个组、候选和轮次的有效统计控制；反复在同一开发记录上挑选最佳方案，不能直接套用单次区间。本文不将该说明作为新的学习定理，也不由此保证一定存在可接纳候选、长期收敛或真实迁移。基础实验仍报告全部候选和不确定性，有限样本不足时允许保留当前学生。</p>
+<p><b>附加统计主张的适用条件。</b>算法 1 使用经验门槛，以下仅解释另行主张下置信界保证所需的条件，不作为基础算法新增步骤。设 ΔJ 是候选相对父模型在固定开发分布上的真实完整任务收益，Δc<sub>j</sub> 是预定旧能力组的变化。若某次验收得到同时有效的下置信界 L<sub>J</sub>、L<sub>j</sub>，覆盖概率至少为 1−α，则采用下述加强接纳规则：</p>
+<div class="equation" aria-label="候选接纳的条件">L<sub>J</sub> ≥ δ<sub>J</sub>，且对所有预定保留组 j：L<sub>j</sub> ≥ −ε<sub>j</sub></div>
+<p>在这些下界共同有效的事件上，任何按该规则接纳的候选满足 ΔJ ≥ δ<sub>J</sub> 且 Δc<sub>j</sub> ≥ −ε<sub>j</sub>；这是由下界定义直接得到的局部结论。δ<sub>J</sub>、ε<sub>j</sub> 和比较范围在评价前固定。条件要求候选固定后的独立验收样本，以及覆盖多个组、候选和轮次的有效统计控制；反复在同一开发记录上挑选最佳方案，不能直接套用单次区间。本文不将该说明作为新的学习定理，也不由此保证一定存在可接纳候选、长期收敛或真实迁移。基础实验仍报告全部候选和不确定性，有限样本不足时允许保留当前学生。</p>
 <p><b>与已有理论的关系。</b>DAgger 将学习者状态上的监督聚合与无遗憾在线学习联系起来，并在特定损失、专家和采样假设下给出策略性能界；其结论并非逐轮单调提升。<cite data-ref="dagger"></cite> AirSpark 的局部专家延续、质量筛选和部分观测改变了这些条件，引用它用于解释覆盖学习者状态的依据，不声称已证明同样的界。学习反馈与课程选择的合理性还可参考 ALP-GMM；其学习进展目标不等于本文完整任务收益保证。<cite data-ref="alp-gmm"></cite></p>
 <figure class="paper-figure diagram-figure" id="figure-a3">
 <div class="diagram-heading"><b>图 A3 · 学习过程的闭环反馈表述</b><span>原理说明</span></div>
-<button class="diagram-open" type="button" data-figure-src="figures/fig05-learning-feedback-zh.svg?v=0.19" data-figure-title="图 A3 · 学习过程的闭环反馈表述" aria-label="放大图 A3：学习过程的闭环反馈表述"><img src="figures/fig05-learning-feedback-zh.svg?v=0.19" alt="固定能力目标引导 SparkMentor 选择干预，学院采集与训练改变学生，开发测量和验收形成学习反馈并进入记忆；封存测试不回流。此图说明信息关系，不表示已有收敛保证。" width="1440" height="810" loading="lazy"></button>
+<button class="diagram-open" type="button" data-figure-src="figures/fig05-learning-feedback-zh.svg?v=0.20" data-figure-title="图 A3 · 学习过程的闭环反馈表述" aria-label="放大图 A3：学习过程的闭环反馈表述"><img src="figures/fig05-learning-feedback-zh.svg?v=0.20" alt="固定能力目标引导 SparkMentor 选择干预，学院采集与训练改变学生，开发测量和验收形成学习反馈并进入记忆；封存测试不回流。此图说明信息关系，不表示已有收敛保证。" width="1440" height="810" loading="lazy"></button>
 <figcaption>图 A3. 图 2 的反馈原理解释。学习状态 x 与能力测量 ĉ 分开，学习决策 μ 与机器人低层控制 K 分开。U 表示实际采集和训练，H 表示评价测量，未引入学习收益预测器。最终测试不进入反馈闭环。</figcaption>
-<div class="figure-tools"><button type="button" data-figure-src="figures/fig05-learning-feedback-zh.svg?v=0.19" data-figure-title="图 A3 · 学习过程的闭环反馈表述">放大查看</button><a href="figures/fig05-learning-feedback-zh.svg?v=0.19" download>中文 SVG</a><a href="figures/fig05-learning-feedback-zh.png?v=0.19" download>中文 PNG</a><a href="figures/fig05-learning-feedback.svg?v=0.19" download>英文 SVG</a><a href="figures/fig05-learning-feedback.png?v=0.19" download>英文 PNG</a></div>
+<div class="figure-tools"><button type="button" data-figure-src="figures/fig05-learning-feedback-zh.svg?v=0.20" data-figure-title="图 A3 · 学习过程的闭环反馈表述">放大查看</button><a href="figures/fig05-learning-feedback-zh.svg?v=0.20" download>中文 SVG</a><a href="figures/fig05-learning-feedback-zh.png?v=0.20" download>中文 PNG</a><a href="figures/fig05-learning-feedback.svg?v=0.20" download>英文 SVG</a><a href="figures/fig05-learning-feedback.png?v=0.20" download>英文 PNG</a></div>
 </figure>
 
 <details class="editorial-note" id="principle-reading"><summary>原理阅读路线：系统组织、学习依据与反馈概念</summary>
@@ -296,7 +337,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td>CorrectNav · AAAI 2026 主会<cite data-ref="correctnav"></cite></td><td>纠正数据驱动的多轮参数训练。</td><td>必读飞轮近邻；导航的轨迹纠正不能直接充当接触专家。</td></tr>
 <tr><td>RPG · arXiv v1（2026-10-01）<cite data-ref="rpg"></cite></td><td>仿真练习与真实部署的直接系统近邻；持续改进共享技能与提示。</td><td>组会重点对比。固定权重的执行系统改进与学生参数训练分别讨论，不把两者的绝对成绩直接比较。</td></tr>
 <tr><td>EmbodiRSI · arXiv v3；Fly-by-Code · arXiv v1<cite data-ref="embodirsi fly-by-code"></cite></td><td>分别对应学生参数更新与主动诊断、程序修订。</td><td>保留直接近邻；不把 B2 称为 EmbodiRSI，也不混同程序与参数更新。</td></tr>
-<tr><td>反馈系统作者资源；DAgger · AISTATS 2011<cite data-ref="feedback-systems dagger"></cite></td><td>反馈结构与学习者状态监督的原理依据。</td><td>分别学习模块定义与带假设的性能分析，不将已有定理自动套用到学院。</td></tr>
+<tr><td>Feedback Systems · 第二版 2021；DAgger · AISTATS 2011<cite data-ref="feedback-systems dagger"></cite></td><td>反馈结构与学习者状态监督的原理依据。</td><td>分别学习模块定义与带假设的性能分析，不将已有定理自动套用到学院。</td></tr>
 <tr><td>Learning to Teach · ICLR 2018；ALP-GMM · CoRL 2019 / PMLR 2020<cite data-ref="learning-to-teach alp-gmm"></cite></td><td>学生反馈驱动教学决策与课程调整。</td><td>作为学习反馈机制的基础，不能将“教师调整教学”本身宣称为首创。</td></tr>
 <tr><td>Eureka · ICLR 2024<cite data-ref="eureka"></cite></td><td>根据训练反馈搜索奖励代码。</td><td>说明改进学习信号已有先例；本文不因此新增奖励搜索实验。</td></tr>
 <tr><td>Data-Efficient Multitask DAgger · arXiv v1<cite data-ref="multitask-dagger"></cite></td><td>任务需求和模仿损失进展驱动数据调度。</td><td>直接方法近邻；PG 是损失下降信号，不等同于独立完整任务收益；未核得正式会录。</td></tr>
@@ -360,9 +401,10 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td>v0.16.2</td><td>以常规论文流程图呈现实验设计。</td><td>图 4 简化为初始策略、闭环改进与仿真 / 实机评价；图注和正文同步改写。</td></tr>
 <tr><td><a href="versions/v0.17/index.html">v0.17</a></td><td>学院平台架构与 RSI 策略方法分别作为主图。</td><td>重绘图 1，新增完整 RSI 方法图 2，实验流程编号为图 3；原执行链路与专家延续图移入附录。</td></tr>
 <tr><td><a href="versions/v0.18/index.html">v0.18</a></td><td>保持模拟学院与反馈自进化主线，补充学习反馈及跨轮方案调整。</td><td>保留两项贡献和 B0–B3；扩充干预记忆、有限调整、图 2 与代表任务分析；新增四篇课程与学习反馈文献。</td></tr>
-<tr><td>v0.19 · 当前</td><td>明确反馈原理与可执行干预，保持平台和策略自进化定位。</td><td>补充能力画像、优先级、空中案例、诊断分流及原理附录；主贡献与实验矩阵不变。</td></tr>
+<tr><td><a href="versions/v0.19/index.html">v0.19</a></td><td>明确反馈原理与可执行干预，保持平台和策略自进化定位。</td><td>补充能力画像、优先级、空中案例、诊断分流及原理附录；主贡献与实验矩阵不变。</td></tr>
+<tr><td>v0.20 · 当前</td><td>论文化精修与可复现协议补全。</td><td>压缩摘要，统一目标与成本符号，补算法、配置和状态处理，统一实验组名；贡献和方法范围不变。</td></tr>
 </tbody></table></div>
-<p>v0.14 起统一论文中的 SparkMentor 命名，工程中的旧 sparkclaw 路径暂作兼容名称。v0.15 完善平台、编排与方法的层次；v0.15.1 补充 2026-10-19 的 RPG 核查，保留其他文献原核查日期。v0.18 的变更见<a href="#revision-v018">前轮修改对照</a>；v0.19 见<a href="#revision-v019">本轮修改对照</a>。本轮未迁移工程接口，也未新增实验结果。</p>
+<p>本轮 v0.20 的逐项修改见<a href="#revision-v020">修改对照</a>。v0.14 起统一论文中的 SparkMentor 命名，工程中的旧 sparkclaw 路径暂作兼容名称。v0.15 完善平台、编排与方法的层次；v0.15.1 补充 2026-10-19 的 RPG 核查，保留其他文献原核查日期。v0.18 的变更见<a href="#revision-v018">前轮修改对照</a>；v0.19 见<a href="#revision-v019">前轮修改对照</a>。本轮未迁移工程接口，也未新增实验结果。</p>
 </details>
 
 <details class="editorial-note" id="revision-v018"><summary>v0.18 修改对照：保留主线，补充闭环机制</summary>
@@ -386,6 +428,18 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td>§3.4 优先级</td><td>明确基础闭环、代表任务补充、后续诊断扩展及独立学习路线；增加探索、暂缓与重测约定。</td></tr>
 <tr><td>§3.5 与 §4.6</td><td>补足运行退出路径、最小案例验证和环节证据；不增加全面交叉实验或控制器自修改。</td></tr>
 <tr><td>附录与引用</td><td>新增图 A3、条件性接纳说明和原理阅读路线；细化 RSI-Anything、DAgger 的适用边界，新增反馈系统作者资源。</td></tr>
+</tbody></table></div>
+</details>
+<details class="editorial-note" id="revision-v020"><summary>v0.20 修改对照：算法、配置、状态与论文表述</summary>
+<p>本轮依据核查意见精修 <a href="versions/v0.19/index.html">v0.19</a>。标题与两项贡献保持，未增加任务、模型或进化手段；参数和效果继续按研究设计状态呈现。</p>
+<div class="table-wrap compact-table"><table><thead><tr><th>位置</th><th>具体修改</th></tr></thead><tbody>
+<tr><td>摘要与正文</td><td>摘要压缩为问题、学院能力、反馈学习及验证协议；精简重复边界说明，实施优先级与路线折叠保留。</td></tr>
+<tr><td>§3.1 符号</td><td>以总体性能 J𝒟 替代 Jtest；能力 c 与成本 κ 分开；c* 用于报告及预定补充检查，不新增误差加权分配。</td></tr>
+<tr><td>§3.3 分配规则</td><td>明确首次进入计数、原始频率与失败统计、q 的失败负担／成本含义及稀疏条件覆盖处理。</td></tr>
+<tr><td>§3.4 算法与验收</td><td>新增算法 1，定义候选产生、同父分支、经验接纳、并列处理和预算停止；下置信界说明留作附录条件性解释。</td></tr>
+<tr><td>§3.5 复现协议</td><td>新增表 3 状态处理与表 4 配置清单，提供 JSON 模板；拒绝不回滚成本和记忆，候选数据不自动进入回放。</td></tr>
+<tr><td>§4 与图件</td><td>统一 B0–B3 及 B3＋方案调整的当前／历史反馈变体；图 2 同步 κ，图 3 增加部署接口与共享适配说明，图 A3 同步目标用途。</td></tr>
+<tr><td>引用与版本</td><td>Feedback Systems 改为第二版、Princeton University Press、2021 的书籍主引用；保留作者资源，补全书籍导出格式，完整归档 v0.19。</td></tr>
 </tbody></table></div>
 </details>
 </section>

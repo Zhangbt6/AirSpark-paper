@@ -95,3 +95,15 @@ section>h4{font-size:16px;line-height:1.6;margin:30px 0 12px;scroll-margin-top:9
 .compact-table th:first-child,.compact-table td:first-child{width:29%}
 .compact-table td,.compact-table th{overflow-wrap:anywhere}
 @media(max-width:720px){.compact-table th,.compact-table td{padding:10px 8px;font-size:12px}.compact-table th:first-child,.compact-table td:first-child{width:30%}}
+
+/* v0.20: paper algorithm and compact protocol tables. */
+.algorithm{border:1px solid var(--line);background:#f8fafc;border-radius:8px;padding:18px 22px;margin:24px 0;scroll-margin-top:90px}
+.algorithm figcaption{margin:0 0 12px;color:var(--ink);font-size:15px}
+.algorithm p{font-size:13px;line-height:1.8;margin:10px 0}
+.algorithm-steps{padding-left:27px;margin:12px 0;font-size:13px;line-height:1.9}
+.algorithm-steps li{padding:5px 0 5px 5px}
+.state-table table{width:100%;min-width:0;table-layout:fixed}
+.state-table td,.state-table th{overflow-wrap:anywhere}
+.state-table th:first-child,.state-table td:first-child{width:22%}
+@media(max-width:720px){.algorithm{padding:14px}.algorithm-steps{padding-left:22px}.state-table td,.state-table th{font-size:12px;padding:9px 7px}}
+@media print{.algorithm{background:white;break-inside:auto}.algorithm-steps li{break-inside:avoid}.algorithm-steps,.algorithm p{font-size:10px}}

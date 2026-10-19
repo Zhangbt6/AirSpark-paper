@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc"><title id="title">学习过程的闭环反馈表述</title><desc id="desc">图 A3 解释图 2 的反馈关系，不代表已证明收敛或稳定性。</desc><defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc"><title id="title">学习过程的闭环反馈表述</title><desc id="desc">能力目标用于报告和预定检查；基础组的任务预算与分配规则固定。</desc><defs>
 <marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#183255"/></marker>
 <marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#087f75"/></marker>
 <marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7552a5"/></marker>
@@ -6,13 +6,13 @@
 <text x="44" y="46" fill="#183255" font-size="29" font-weight="700" text-anchor="start">学习过程的闭环反馈表述</text>
 <text x="44" y="83" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">固定目标、能力测量、有限干预与更新验证。</text>
 <rect x="44" y="150" width="270" height="180" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7"/>
-<text x="62" y="187" fill="#183255" font-size="23" font-weight="600" text-anchor="start">参考目标</text>
-<text x="62" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">能力目标 c*</text>
+<text x="62" y="187" fill="#183255" font-size="23" font-weight="600" text-anchor="start">目标与评价协议</text>
+<text x="62" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">能力报告目标 c*</text>
 <text x="62" y="256" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">固定任务分组与能力保留</text>
-<text x="62" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">资源预算</text>
+<text x="62" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">固定任务组预算</text>
 <rect x="374" y="150" width="290" height="180" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
 <text x="392" y="187" fill="#183255" font-size="23" font-weight="600" text-anchor="start">SparkMentor  μ</text>
-<text x="392" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">能力差距 eᵣ 与证据 Eᵣ</text>
+<text x="392" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">执行证据 Eᵣ 与学习反馈 Fᵣ</text>
 <text x="392" y="256" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">跨轮干预记忆 Mᵣ</text>
 <text x="392" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">选择练习计划 Aᵣ</text>
 <rect x="724" y="150" width="672" height="225" rx="5" fill="#f7f9fc" stroke="#d2dde8" stroke-width="1.7"/>
@@ -51,5 +51,5 @@
 <text x="44" y="693" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">U 是实际学习过程；H 是执行后的测量，未引入学习收益预测器。</text>
 <rect x="44" y="722" width="1352" height="48" rx="5" fill="#f7f9fc" stroke="#d2dde8" stroke-width="1.7"/>
 <text x="62" y="753" fill="#183255" font-size="20" font-weight="400" text-anchor="start">封存测试 T：冻结学生 → 原生基准与真实任务；结果不回流当前闭环。</text>
-<text x="44" y="799" fill="#52657b" font-size="16" font-weight="400" text-anchor="start">图 A3 解释图 2 的反馈关系，不代表已证明收敛或稳定性。</text>
+<text x="44" y="799" fill="#52657b" font-size="16" font-weight="400" text-anchor="start">能力目标用于报告和预定检查；基础组的任务预算与分配规则固定。</text>
 </g></svg>

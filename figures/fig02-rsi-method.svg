@@ -20,10 +20,10 @@
 <text x="404" y="207" fill="#183255" font-size="23" font-weight="600" text-anchor="start">2  Gap diagnosis</text>
 <text x="404" y="244" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Stage reach and failure</text>
 <text x="404" y="274" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Condition frequency ρ̂z</text>
-<text x="404" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Failure f̂z and cost ĉz</text>
+<text x="404" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Failure f̂z and cost κ̂z</text>
 <rect x="724" y="170" width="340" height="200" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
 <text x="744" y="207" fill="#183255" font-size="23" font-weight="600" text-anchor="start">3  Practice planning</text>
-<text x="744" y="244" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">q(z) = ρ̂z · f̂z / ĉz</text>
+<text x="744" y="244" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">q(z) = ρ̂z · f̂z / κ̂z</text>
 <text x="744" y="274" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Plan ηᵣ and budget Bᵣ</text>
 <text x="744" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Generation and data use</text>
 <rect x="1124" y="170" width="272" height="200" rx="5" fill="#f1eef8" stroke="#7552a5" stroke-width="1.7"/>

@@ -42,6 +42,7 @@
       if (ref.volume) publication += `, volume ${ref.volume}${ref.series ? ' of ' + ref.series : ''}`;
       if (ref.pages) publication += ', pages ' + ref.pages.replace(/--/g, '–');
     }
+    if (ref.entryType === 'book' && ref.edition) publication += `, ${ref.edition === '2' ? '2nd' : ref.edition} edition`;
     if (ref.year) publication += `, ${ref.year}`;
     if (ref.accessed) publication += `. Accessed ${ref.accessed}`;
     citation.append(document.createTextNode(publication + '.'));

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc"><title id="title">Learning as a feedback process</title><desc id="desc">Diagram A3 explains the feedback roles in Figure 2; it does not establish convergence or stability.</desc><defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc"><title id="title">Learning as a feedback process</title><desc id="desc">Targets support reporting and planned checks; group budgets and the baseline selector remain fixed.</desc><defs>
 <marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#183255"/></marker>
 <marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#087f75"/></marker>
 <marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7552a5"/></marker>
@@ -7,12 +7,12 @@
 <text x="44" y="83" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Fixed objectives, measured capabilities, bounded interventions and verified updates.</text>
 <rect x="44" y="150" width="270" height="180" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7"/>
 <text x="62" y="187" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Reference objectives</text>
-<text x="62" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Capability targets c*</text>
+<text x="62" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Report targets c*</text>
 <text x="62" y="256" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Task groups and retention</text>
-<text x="62" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Resource budget</text>
+<text x="62" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Fixed task-group budgets</text>
 <rect x="374" y="150" width="290" height="180" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
 <text x="392" y="187" fill="#183255" font-size="23" font-weight="600" text-anchor="start">SparkMentor  μ</text>
-<text x="392" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Gaps eᵣ + evidence Eᵣ</text>
+<text x="392" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Evidence Eᵣ and outcomes Fᵣ</text>
 <text x="392" y="256" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Intervention memory Mᵣ</text>
 <text x="392" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Choose a practice plan Aᵣ</text>
 <rect x="724" y="150" width="672" height="225" rx="5" fill="#f7f9fc" stroke="#d2dde8" stroke-width="1.7"/>
@@ -51,5 +51,5 @@
 <text x="44" y="693" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">U is an executed learning process; H is a measurement, not an outcome predictor.</text>
 <rect x="44" y="722" width="1352" height="48" rx="5" fill="#f7f9fc" stroke="#d2dde8" stroke-width="1.7"/>
 <text x="62" y="753" fill="#183255" font-size="20" font-weight="400" text-anchor="start">Sealed testing T: freeze the student → native benchmark and real tasks; no feedback to this loop.</text>
-<text x="44" y="799" fill="#52657b" font-size="16" font-weight="400" text-anchor="start">Diagram A3 explains the feedback roles in Figure 2; it does not establish convergence or stability.</text>
+<text x="44" y="799" fill="#52657b" font-size="16" font-weight="400" text-anchor="start">Targets support reporting and planned checks; group budgets and the baseline selector remain fixed.</text>
 </g></svg>

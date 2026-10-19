@@ -18,7 +18,7 @@ const output = entries.map(([key, ref]) => {
   if (ref.year) fields.year = ref.year;
   if (ref.howpublished) fields.howpublished = tex(ref.howpublished);
   if (ref.accessed && !ref.corporate) fields.note = `Accessed ${ref.accessed}`;
-  for (const field of ['volume', 'number', 'pages', 'series', 'doi']) if (ref[field]) fields[field] = tex(ref[field]);
+  for (const field of ['volume', 'number', 'pages', 'series', 'doi', 'publisher', 'edition']) if (ref[field]) fields[field] = tex(ref[field]);
   if (ref.eprint) {
     // ieeenat_fullname does not print eprint, so retain it in howpublished.
     fields.howpublished = `arXiv preprint arXiv:${ref.eprint}`;
