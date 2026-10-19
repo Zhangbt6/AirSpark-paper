@@ -127,8 +127,8 @@ const paperReferences = {
     "title": "A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning",
     "type": "会议论文",
     "url": "https://proceedings.mlr.press/v15/ross11a.html",
-    "note": "DAgger：策略诱导分布上的交互式数据聚合。",
-    "verified": "2026-10-18",
+    "note": "AISTATS 2011。学习者诱导状态上的监督聚合及无遗憾在线学习分析；性能界依赖其专家、损失和采样条件，不保证每轮单调提升，不自动适用于 AirSpark。",
+    "verified": "2026-10-19",
     "authors": [
       "Stephane Ross",
       "Geoffrey Gordon",
@@ -233,7 +233,7 @@ const paperReferences = {
     "title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
     "type": "预印本",
     "url": "https://arxiv.org/abs/2610.13912v1",
-    "note": "通用研究编排的扩展阅读；本文未引入其世界模型，也不以通用 RSI 叙事承担主要创新论证。",
+    "note": "v1 第 2 节区分行动结果预测、外部反馈、更新对象和保留规则；表 4 说明各应用启用的路径。作为框架组织参考，不将其描述为通用收敛定理；AirSpark 本版不引入学习收益预测器。",
     "links": [
       [
         "官方代码",
@@ -258,7 +258,7 @@ const paperReferences = {
     "entryType": "misc",
     "eprint": "2610.13912",
     "version": "v1",
-    "verified": "2026-10-18",
+    "verified": "2026-10-19",
     "sortKey": "Cui, Taoyong | Zeng, Pinxian | Xu, Wanghan | Xiao, Hao | Xue, Shuhan | Gao, Qiang | Ouyang, Wanli | Heng, Pheng Ann | Yin, Zhenfei | Wu, Yingcheng | Yang, Ling | 2026 | rsi-anything"
   },
   "air-vla": {
@@ -1025,5 +1025,27 @@ const paperReferences = {
     "note": "ICLR 2024 正式会议记录；利用训练反馈迭代奖励代码，支撑学习信号改进已有研究基础。AirSpark 本轮不新增奖励搜索实验。",
     "verified": "2026-10-19",
     "sortKey": "Ma, Yecheng Jason | Liang, William | Wang, Guanzhi | Huang, De-An | Bastani, Osbert | Jayaraman, Dinesh | Zhu, Yuke | Fan, Linxi | Anandkumar, Anima | 2024 | eureka"
+  },
+  "feedback-systems": {
+    "title": "Feedback Systems: An Introduction for Scientists and Engineers — Second-Edition Online Resources",
+    "authors": [
+      "Åström, Karl J.",
+      "Murray, Richard M."
+    ],
+    "entryType": "misc",
+    "type": "教材与作者资源",
+    "venue": "Author-maintained FBSwiki",
+    "url": "https://fbswiki.org/wiki/index.php/FBS",
+    "links": [
+      [
+        "作者机构镜像",
+        "https://www.cds.caltech.edu/~murray/FBS/Second_Edition.html"
+      ]
+    ],
+    "note": "引用作者维护的第二版在线资源；推荐第 1–3 章。页面列出 2020-07-24 电子稿，此处不据此推定纸本出版年份。用于参考目标、测量、被调节过程与反馈的基础概念，不作为 AirSpark 稳定性证明。",
+    "accessed": "2026-10-19",
+    "verified": "2026-10-19",
+    "howpublished": "Author-maintained textbook resources",
+    "sortKey": "Astrom, Karl J. | Murray, Richard M. | feedback-systems"
   }
 };

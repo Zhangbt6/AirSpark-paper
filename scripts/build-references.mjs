@@ -7,6 +7,7 @@ const refs = vm.runInNewContext(fs.readFileSync(path.join(root, 'references-data
 function tex(text) {
   return String(text).replace(/&/g, '\\&').replace(/_/g, '\\_').replace(/%/g, '\\%')
     .replace(/π/g, '$\\pi$').replace(/₀/g, '0').replace(/₅/g, '5')
+    .replace(/Å/g, "{\\AA}").replace(/ö/g, '{\\"o}')
     .replace(/č/g, "{\\v c}").replace(/í/g, "{\\'i}").replace(/é/g, "{\\'e}");
 }
 const entries = Object.entries(refs).sort(([, a], [, b]) => a.sortKey.localeCompare(b.sortKey, 'en'));
@@ -15,6 +16,8 @@ const output = entries.map(([key, ref]) => {
   if (ref.entryType === 'inproceedings') fields.booktitle = tex(ref.venue);
   if (ref.entryType === 'article') fields.journal = tex(ref.venue);
   if (ref.year) fields.year = ref.year;
+  if (ref.howpublished) fields.howpublished = tex(ref.howpublished);
+  if (ref.accessed && !ref.corporate) fields.note = `Accessed ${ref.accessed}`;
   for (const field of ['volume', 'number', 'pages', 'series', 'doi']) if (ref[field]) fields[field] = tex(ref[field]);
   if (ref.eprint) {
     // ieeenat_fullname does not print eprint, so retain it in howpublished.

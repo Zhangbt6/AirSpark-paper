@@ -88,3 +88,10 @@ cite[data-ref]{font-size:.86em;color:var(--blue)}
 .figure-modal-open{overflow:hidden}
 @media(max-width:720px){.diagram-figure{margin:22px -12px;padding:10px}.diagram-heading{font-size:13px;align-items:flex-start}.figure-gallery{grid-template-columns:1fr}#figure-dialog{width:calc(100vw - 12px);height:calc(100dvh - 12px)}.figure-dialog-toolbar{padding:10px;font-size:13px}.figure-dialog-toolbar>div{gap:10px}.figure-dialog-toolbar button{font-size:12px;padding:6px 10px}.figure-dialog-body{padding:6px}.figure-dialog-body img{min-width:1100px}}
 @media print{.figure-tools,.diagram-heading>span,#figure-dialog{display:none!important}.diagram-figure{break-inside:avoid;padding:0;border:0;border-radius:0}.diagram-open{border:0}.diagram-figure figcaption{font-size:10px}.figure-gallery{display:none}.figure-modal-open{overflow:visible}}
+
+/* v0.19: compact two-column method explanations. */
+section>h4{font-size:16px;line-height:1.6;margin:30px 0 12px;scroll-margin-top:90px;color:var(--ink)}
+.compact-table table{min-width:0;width:100%;table-layout:fixed}
+.compact-table th:first-child,.compact-table td:first-child{width:29%}
+.compact-table td,.compact-table th{overflow-wrap:anywhere}
+@media(max-width:720px){.compact-table th,.compact-table td{padding:10px 8px;font-size:12px}.compact-table th:first-child,.compact-table td:first-child{width:30%}}

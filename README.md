@@ -2,10 +2,10 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current manuscript: v0.18 — A Simulated Academy for Self-Improving Aerial Manipulation
+- Current manuscript: v0.19 — A Simulated Academy for Self-Improving Aerial Manipulation
 - Paper structure: abstract, introduction, related work, method, experiments, discussion, conclusion, references, appendix.
 - Evaluation: native AM-Bench return testing and paired real-scene experiments; stage-evidence-driven practice and bounded policy improvement.
-- Earlier designs: `versions/v0.17/index.html`, `versions/v0.15.1/index.html`, `versions/v0.15/index.html`, `versions/v0.14/index.html`, `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
+- Earlier designs: `versions/v0.18/index.html`, `versions/v0.17/index.html`, `versions/v0.15.1/index.html`, `versions/v0.15/index.html`, `versions/v0.14/index.html`, `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
 - v0.13 specifies process-condition selection, physical prefixes, expert-only action supervision, C/V/T separation, and shared-tool collection controls. It adds Fly-by-Code, RialTo, MimicGen and MuJoCo; updates bibliographic metadata and exports BibTeX. No new experimental results are claimed.
 - v0.14 retains two contributions, unifies the paper name SparkMentor, distinguishes program refinement from parameter learning, and adds 11 verified formal publications. It strengthens the shared-tool recovery baseline and documents source-selection decisions in the appendix. Historical snapshots and engine interfaces are unchanged.
 - v0.15 foregrounds the academy platform, separates shared infrastructure, SparkMentor orchestration and interchangeable practice methods, and adds platform reliability evaluation using the main experiment tasks. The appendix includes a 10-slide group-meeting outline for 2026-10-20; this is not a finished deck. No new implementation or experimental completion is claimed.
@@ -44,3 +44,8 @@ The v0.17 figure organization separates the academy platform (Figure 1) from the
 Retains the academy title, both contribution headings, the process-condition reference method, B0–B3, native AM-Bench testing and real-scene transfer. Adds learning-response records, intervention memory and bounded practice-plan adaptation as supporting mechanisms. The representative-task analysis separates fixed plans, current feedback and historical intervention feedback; it does not replace the main experiment matrix or claim a first teaching-evolution algorithm.
 
 Only Figure 2 is revised: execution feedback, learning feedback and a dashed bounded-adjustment branch. Figure 1, Figure 3 and A1/A2 retain their contents. Current bilingual bundle: `figures/AirSpark-Figures-v0.18.zip`. Full v0.17 text and figures are archived under `versions/v0.17/`. The appendix anchor `#revision-v018` lists exactly what changed. Four references and BibTeX entries add the curriculum/learning-feedback context. No new implementation or measured results are claimed.
+
+
+## v0.19 — feedback principles and concrete interventions
+
+Retains the academy positioning, both contributions, all existing figures and the B0–B3/native/real evaluation matrix. Adds a learning-feedback formulation separating capability profiles, fixed objectives, measurements, intervention decisions and the actual training process; no learned predictor or convergence guarantee is claimed. Documents intervention priorities, an aerial takeover-timing case, diagnostic routing and bounded exit paths. Appendix A.6 gives a conditional acceptance statement, its statistical assumptions and a reading route. New bilingual Figure A3 explains the feedback roles without replacing the three main figures. Full v0.18 is archived. See `#revision-v019` for the exact change list. No new implementation or empirical result is claimed.

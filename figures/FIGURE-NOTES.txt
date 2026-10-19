@@ -1,7 +1,7 @@
-AirSpark paper figures · v0.18 · 2026-10-19
+AirSpark paper figures · v0.19 · 2026-10-19
 
 论文主图：图 1 学院平台；图 2 RSI 方法；图 3 实验流程。
-附录：图 A1 执行链路；图 A2 专家延续。
+附录：图 A1 执行链路；图 A2 专家延续；图 A3 闭环反馈原理。
 均为研究设计，非实测结果。中文文件以 -zh 结尾；英文原文件名保留。SVG 可编辑；PNG 宽度 2880 像素。
 
 fig01-academy-overview
@@ -24,4 +24,8 @@ Localize: python scripts/localize-figures.py
 Export: node scripts/export-figures.cjs (requires sharp)
 Keep scripts/ and figures/ as sibling directories.
 
-本轮仅更新图 2：学习反馈 Fᵣ、干预记忆 Mᵣ 与虚线方案调整支路。其余图内容保留。虚线支路属于代表任务上的补充研究设计，基础 B1–B3 配方保持固定。
+本轮保留全部既有图件，新增图 A3 的中英文 SVG / PNG。图 A3 定义目标、测量、决策、实际学习过程与反馈来源，不代表稳定性或收敛证明。
+
+fig05-learning-feedback
+图 A3. 图 2 的反馈原理解释。学习状态与能力测量、学习决策与低层控制分别定义；U 是实际学习过程，H 是测量，未引入学习收益预测器。
+Rebuild A3: python scripts/build-feedback-figure.py
