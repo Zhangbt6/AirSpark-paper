@@ -122,12 +122,12 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p>等预算约束施加于 B1、B2 与 B3 三条更新路线，冻结父代 B0 的零新增训练成本单独列出。成本来自实际运行记录，分别报告仿真时间、墙钟时间和计算资源；配置中的预估耗时不作为测量结果。未执行的评价记为缺失而非零分，只有实际完成的失败任务才进入失败统计。</p>
 
 <h3 id="external" data-nav="AM-Bench 原生回测" data-number="4.4">4.4 AM-Bench 原生回测</h3>
-<p>原生回测检验 AirSpark 产生的数据是否具有跨仿真效用。首先按公开配置取得或训练父代，并在原生环境建立参考成绩；随后将策略与数据接口接入 AirSpark，在固定训练条件下进行增量更新；最后将冻结后的各组模型返回原生环境。任务、机器人、控制器、扰动、观测与成功阈值均保持原配置。<cite data-ref="ambench-docs"></cite></p>
+<p>我们将更新后的策略返回原生 AM-Bench，评价 AirSpark 中采集的数据能否改善模型在原基准上的表现。实验先按公开配置训练或载入初始策略，在 AirSpark 中采集新增示范并训练，再将初始模型与各组更新模型冻结后统一测试（图 4）。原生测试保留相同的任务、机器人、控制器、扰动、观测和成功阈值。<cite data-ref="ambench-docs"></cite></p>
 <figure class="paper-figure diagram-figure" id="figure-4">
-<div class="diagram-heading"><b>图 4 · 仿真与真实验证协议</b><span>研究设计示意</span></div>
-<button class="diagram-open" type="button" data-figure-src="figures/fig04-evaluation-protocol-zh.svg" data-figure-title="图 4 · 仿真与真实验证协议" aria-label="放大图 4：仿真与真实验证协议"><img src="figures/fig04-evaluation-protocol-zh.svg" alt="图 4. 平台、学习与迁移的验证协议。B1–B3 使用共享工具、相同采集预算和训练配方，B0 为冻结父代参照。各组按预定 V 池规则验收；研究配置冻结后返回原生 AM-Bench，并在对应真实任务中测试。3DGS 场景准备属于训练环境构造，真实测试反馈不进入闭环。" width="1440" height="1120" loading="lazy"></button>
-<figcaption>图 4. 平台、学习与迁移的验证协议。B1–B3 使用共享工具、相同采集预算和训练配方，B0 为冻结父代参照。各组按预定 V 池规则验收；研究配置冻结后返回原生 AM-Bench，并在对应真实任务中测试。3DGS 场景准备属于训练环境构造，真实测试反馈不进入闭环。</figcaption>
-<div class="figure-tools"><button type="button" data-figure-src="figures/fig04-evaluation-protocol-zh.svg" data-figure-title="图 4 · 仿真与真实验证协议">放大查看</button><a href="figures/fig04-evaluation-protocol-zh.svg" download>中文 SVG</a><a href="figures/fig04-evaluation-protocol-zh.png" download>中文 PNG</a><a href="figures/fig04-evaluation-protocol.svg" download>英文 SVG</a><a href="figures/fig04-evaluation-protocol.png" download>英文 PNG</a></div>
+<div class="diagram-heading"><b>图 4 · 实验流程</b><span>研究设计示意</span></div>
+<button class="diagram-open" type="button" data-figure-src="figures/fig04-evaluation-protocol-zh.svg" data-figure-title="图 4 · 实验流程" aria-label="放大图 4：实验流程"><img src="figures/fig04-evaluation-protocol-zh.svg" alt="图 4. 实验流程。首先使用 AM-Bench 的示范数据与训练配置建立初始策略，再在 AirSpark 中根据执行反馈采集专家数据并更新策略。最后冻结模型，在原生 AM-Bench 和对应的真实任务中比较改进前后的表现。各采集方法的对照设置见表 2。" width="1440" height="740" loading="lazy"></button>
+<figcaption>图 4. 实验流程。首先使用 AM-Bench 的示范数据与训练配置建立初始策略，再在 AirSpark 中根据执行反馈采集专家数据并更新策略。最后冻结模型，在原生 AM-Bench 和对应的真实任务中比较改进前后的表现。各采集方法的对照设置见表 2。</figcaption>
+<div class="figure-tools"><button type="button" data-figure-src="figures/fig04-evaluation-protocol-zh.svg" data-figure-title="图 4 · 实验流程">放大查看</button><a href="figures/fig04-evaluation-protocol-zh.svg" download>中文 SVG</a><a href="figures/fig04-evaluation-protocol-zh.png" download>中文 PNG</a><a href="figures/fig04-evaluation-protocol.svg" download>英文 SVG</a><a href="figures/fig04-evaluation-protocol.png" download>英文 PNG</a></div>
 </figure>
 <p>代表任务同时比较使用同一选择器在原生 AM-Bench 和 AirSpark 中补采的结果，以分析新增数据来源的作用。该比较匹配任务因素、专家能力与预算，并与闭环选择对照分别报告。跨模拟器结果首先解释为整套数据来源的差异，不单独归因于渲染引擎或物理求解器；无法匹配的控制、专家与观测差异必须披露。主表注明所用任务子集；改变机器人、观测或评分条件的实验独立列为衍生设置。</p>
 
@@ -186,7 +186,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p>经验记录包含父任务组与 C/V/T 归属、条件定义版本、事件时间、前缀策略与随机种子、速度和控制器状态、学生观测历史、接管边界、动作来源掩码、条件命中、专家终态、质量检查、各类成本以及数据—模型谱系。恢复与追加采集均继承父任务划分。标注字段可以多于学生输入，但训练导出必须保持部署输入白名单。</p>
 <h3 id="figure-library" data-nav="论文框图与下载" data-number="A.5">A.5 论文框图与汇报素材</h3>
 <p>四张框图对应整体架构、平台执行、经验生成和实验协议。网页默认展示中文框图，同时保留英文素材供论文写作使用；均为当前研究设计的矢量示意，不代表工程或实验已完成。点击图片可放大，SVG 保留可编辑的文字、形状和连线；PNG 宽度为 2880 像素，可直接插入汇报。</p>
-<p class="reference-tools"><a href="figures/AirSpark-Figures-v0.16.1.zip" download>下载中英文框图与绘图源文件</a> · <a href="figures/FIGURE-NOTES.txt">图注与使用说明</a></p><div class="figure-gallery"><a href="#figure-1"><img src="figures/fig01-academy-overview-zh.svg" alt="图 1：学院整体架构" width="1440" height="1000" loading="lazy"><b>图 1 · 学院整体架构</b><span>跳转正文与下载</span></a><a href="#figure-2"><img src="figures/fig02-visual-physical-contract-zh.svg" alt="图 2：视觉与物理执行链路" width="1440" height="1020" loading="lazy"><b>图 2 · 视觉与物理执行链路</b><span>跳转正文与下载</span></a><a href="#figure-3"><img src="figures/fig03-process-experience-zh.svg" alt="图 3：过程条件与专家延续" width="1440" height="1030" loading="lazy"><b>图 3 · 过程条件与专家延续</b><span>跳转正文与下载</span></a><a href="#figure-4"><img src="figures/fig04-evaluation-protocol-zh.svg" alt="图 4：仿真与真实验证协议" width="1440" height="1120" loading="lazy"><b>图 4 · 仿真与真实验证协议</b><span>跳转正文与下载</span></a></div>
+<p class="reference-tools"><a href="figures/AirSpark-Figures-v0.16.2.zip" download>下载中英文框图与绘图源文件</a> · <a href="figures/FIGURE-NOTES.txt">图注与使用说明</a></p><div class="figure-gallery"><a href="#figure-1"><img src="figures/fig01-academy-overview-zh.svg" alt="图 1：学院整体架构" width="1440" height="1000" loading="lazy"><b>图 1 · 学院整体架构</b><span>跳转正文与下载</span></a><a href="#figure-2"><img src="figures/fig02-visual-physical-contract-zh.svg" alt="图 2：视觉与物理执行链路" width="1440" height="1020" loading="lazy"><b>图 2 · 视觉与物理执行链路</b><span>跳转正文与下载</span></a><a href="#figure-3"><img src="figures/fig03-process-experience-zh.svg" alt="图 3：过程条件与专家延续" width="1440" height="1030" loading="lazy"><b>图 3 · 过程条件与专家延续</b><span>跳转正文与下载</span></a><a href="#figure-4"><img src="figures/fig04-evaluation-protocol-zh.svg" alt="图 4：实验流程" width="1440" height="740" loading="lazy"><b>图 4 · 实验流程</b><span>跳转正文与下载</span></a></div>
 <p class="caption">组会建议：图 1 用于学院全貌，图 2 用于平台设施，图 3 用于参考闭环，图 4 用于实验设计。后续论文主视觉与实机任务图应补入经核查的平台截图和机器人照片；结果曲线、成功率及成本图待真实实验产物形成后绘制。</p>
 
 <details class="editorial-note" id="literature-map"><summary>文献证据与阅读路线（研究核查，不属于论文主文）</summary>
@@ -259,7 +259,8 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td><a href="versions/v0.15/index.html">v0.15</a></td><td>模拟学院平台 → 共享学习工具与编排 → 参考练习方法 → 独立验证。</td><td>突出平台定位，明确方法可替换；单列平台支持能力评价，保留现有学习对照与真实验证，补充组会提纲。</td></tr>
 <tr><td><a href="versions/v0.15.1/index.html">v0.15.1</a></td><td>保持学院平台定位，补充仿真练习与真实部署的直接近邻。</td><td>加入 RPG 正文引用、书目与组会比较；区分技能和提示修订、学生参数更新及场景重建，未扩展主实验矩阵。</td></tr>
 <tr><td>v0.16</td><td>保持学院主线，形成架构、执行、经验与验证四张论文框图。</td><td>新增可放大的矢量图、高清导出、绘图源文件与汇报索引；保持现有方法和实验矩阵，未新增结果。</td></tr>
-<tr><td>v0.16.1 · 当前</td><td>网页默认使用中文框图。</td><td>保留英文原图，新增中英文 SVG / PNG 下载及双语素材包；研究内容不变。</td></tr>
+<tr><td>v0.16.1</td><td>网页默认使用中文框图。</td><td>保留英文原图，新增中英文 SVG / PNG 下载及双语素材包；研究内容不变。</td></tr>
+<tr><td>v0.16.2 · 当前</td><td>以常规论文流程图呈现实验设计。</td><td>图 4 简化为初始策略、闭环改进与仿真 / 实机评价；图注和正文同步改写。</td></tr>
 </tbody></table></div>
 <p>v0.14 起统一论文中的 SparkMentor 命名，工程中的旧 sparkclaw 路径暂作兼容名称。v0.15 完善平台、编排与方法的层次；v0.15.1 补充 2026-10-19 的 RPG 核查，保留其他文献原核查日期。本轮未迁移工程接口，也未新增实验结果。</p>
 </details>

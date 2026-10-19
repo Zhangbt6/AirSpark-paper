@@ -15,14 +15,19 @@ LINE = '#d2dde8'
 
 
 class Figure:
-    def __init__(self, number, title, subtitle, height=940):
+    def __init__(self, number, title, subtitle, height=940, paper=False):
         self.height = height
+        self.paper = paper
         self.parts = [f'''<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="{height}" viewBox="0 0 1440 {height}" role="img" aria-labelledby="title desc">
 <title id="title">{escape(title)}</title><desc id="desc">{escape(subtitle)}. Proposed research design, not measured results.</desc>
 <defs>''']
         for name, color in [('ink', INK), ('teal', TEAL), ('blue', BLUE), ('purple', PURPLE), ('amber', AMBER)]:
             self.parts.append(f'<marker id="arrow-{name}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="{color}"/></marker>')
         self.parts.append('</defs><g font-family="Arial, Helvetica, sans-serif"><rect width="1440" height="100%" fill="white"/>')
+        if paper:
+            self.text(44, 45, title, 29, INK, 700)
+            self.text(44, 82, subtitle, 21, MUTED)
+            return
         self.text(44, 39, f'AIRSPARK   /   FIGURE {number:02}', 17, TEAL, 700)
         self.text(1396, 39, 'RESEARCH DESIGN  ·  v0.16', 16, MUTED, anchor='end')
         self.text(44, 81, title, 31, INK, 700)
@@ -54,9 +59,10 @@ class Figure:
         self.parts.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="white" stroke="{color}" stroke-width="3"/>')
 
     def save(self, name):
-        self.path(f'M44 {self.height-49} H1396', LINE, 1, False)
-        self.text(44, self.height-22, 'AirSpark  ·  A Simulated Academy for Self-Improving Aerial Manipulation', 16, MUTED)
-        self.text(1396, self.height-22, 'SCHEMATIC / NOT TO SCALE', 14, MUTED, anchor='end')
+        if not self.paper:
+            self.path(f'M44 {self.height-49} H1396', LINE, 1, False)
+        if not self.paper: self.text(44, self.height-22, 'AirSpark  ·  A Simulated Academy for Self-Improving Aerial Manipulation', 16, MUTED)
+        if not self.paper: self.text(1396, self.height-22, 'SCHEMATIC / NOT TO SCALE', 14, MUTED, anchor='end')
         self.parts.append('</g></svg>')
         (OUT / f'{name}.svg').write_text('\n'.join(self.parts), encoding='utf-8')
 
@@ -162,39 +168,44 @@ f.text(356,885,'Expert action chunks must stay within the accepted expert-contro
 f.text(68,924,'Count prefix misses, failed continuations, reset and quality checks in the collection budget.',22,MUTED)
 f.save('fig03-process-experience')
 
-# 4. Keep the collection feedback loop separate from final testing.
-f = Figure(4,'Test the facility, the learning gain, and real transfer',
-           'Predefine task groups and protocols; all branches share student interfaces and matched controls.', 1120)
-f.box(44,170,315,166,'Native AM-Bench', ['Reproduce parent θ₀', 'Lock task / robot / scoring', 'Record original performance'], '#eef4fd', BLUE)
-f.rect(409,170,590,462,'#eaf6f3',TEAL)
-f.text(433,212,'AirSpark: collection pool C',26,INK,700)
-f.text(433,248,'Shared expert, reset, prefix tools and QC',22,MUTED)
-for y,title,sub in [(278,'B1  Coverage','Cover permitted visual and physical factors'),(379,'B2  Terminal feedback','Allocate by task / condition terminal failure'),(480,'B3  Process conditions','Allocate by transition evidence and cost')]:
-    f.rect(433,y,542,87,'white',LINE,10)
-    f.text(451,y+33,title,23,INK,700)
-    f.text(451,y+64,sub,21,MUTED)
-f.text(433,604,'Matched acquisition budget + training recipe',22,TEAL,600)
-f.path('M359 278 H409',BLUE)
-f.box(44,397,315,235,'B0  Frozen parent',['No new collection or training', 'Reference capability only', '', 'Not an equal-cost', 'training arm'], '#f6f8fb',BLUE,23)
-f.path('M201 336 V397',BLUE)
-f.box(409,682,590,133,'Development pool V', ['Predefined acceptance → next collection round', 'Allowed summaries only; no V trajectories in training'], '#f1eef8', PURPLE)
-f.path('M703 632 V682',PURPLE)
-f.path('M409 752 H383 V360 H409',PURPLE)
-f.rect(1049,170,347,645,'#fbf7ef',AMBER,14,True)
-f.text(1073,213,'Sealed evaluation T',25,INK,700)
-f.lines(1073,260,['Freeze research configuration', 'and saved student checkpoints.'],21,MUTED,31)
-f.box(1071,356,303,169,'Native return test',['Original task + controller', 'Original success rules', 'Held-out initial conditions'],'white',AMBER,22)
-f.box(1071,559,303,169,'Frozen real execution',['Parent / baseline / B3', 'Shared calibration + control', 'Paired task conditions'],'white',AMBER,22)
-f.text(1073,776,'No test-to-practice feedback',21,AMBER,600)
-f.path('M999 731 H1049',PURPLE)
-f.path('M201 632 V658 H70 V838 H1024 V313 H1071',BLUE,2.5,True,True)
-f.text(100,738,'Frozen-parent route',20,BLUE)
-f.text(100,772,'Independent final testing',19,MUTED)
-f.rect(44,872,1352,151,'#f6f8fb')
-f.text(68,910,'Real-scene preparation',24,INK,700)
-f.text(68,949,'Scene capture → 3DGS appearance + physical assets → matched simulation practice',23,TEAL)
-f.text(68,988,'Separate scene-matched transfer from held-out layouts / objects; real test feedback is excluded.',21,MUTED)
-f.text(44,1053,'Report: facility reliability & cost   |   full-task success & uncertainty   |   real failures, drops & interventions',21,INK)
+# 4. Standard experimental pipeline: initialize, improve, evaluate.
+f = Figure(4, 'Experimental pipeline',
+           'Initialize a policy, improve it in AirSpark, and evaluate the initial and updated policies.', 740, paper=True)
+f.text(44,135,'(a) Policy initialization',24,INK,700)
+f.text(365,135,'(b) Improvement in AirSpark',24,INK,700)
+f.text(1080,135,'(c) Evaluation',24,INK,700)
+
+def node(x,y,w,h,title,subtitle=None,fill='white',accent=LINE):
+    f.rect(x,y,w,h,fill,accent,5)
+    f.text(x+w/2,y+39,title,21,INK,600,'middle')
+    if subtitle: f.text(x+w/2,y+73,subtitle,18,MUTED,anchor='middle')
+
+node(44,185,256,112,'AM-Bench data','Original training recipe')
+f.path('M172 297 V345',INK)
+node(44,345,256,80,'Initial policy π₀',fill='#eef4fd',accent=BLUE)
+f.rect(355,164,650,360,'#f9fafb',LINE,5)
+node(375,205,255,100,'Policy rollout','Execute the current policy')
+node(710,205,275,100,'Practice selection','Analyze execution feedback')
+node(710,390,275,100,'Expert data collection','Generate demonstrations')
+node(375,390,255,100,'Policy training','New data + replay',fill='#eaf6f3',accent=TEAL)
+f.path('M300 385 H330 V255 H375',INK)
+f.path('M630 255 H710',INK)
+f.text(670,237,'feedback',17,MUTED,anchor='middle')
+f.path('M848 305 V390',INK)
+f.text(868,353,'plan',17,MUTED)
+f.path('M710 440 H630',INK)
+f.text(670,422,'data',17,MUTED,anchor='middle')
+f.path('M503 390 V305',TEAL)
+f.text(484,353,'πᵣ₊₁',20,TEAL,anchor='end')
+node(500,570,475,100,'Freeze policies for evaluation','Initial π₀ and updated πᴿ',fill='#eef4fd',accent=BLUE)
+f.path('M330 385 V620 H500',INK,2.5,True,True)
+f.path('M503 490 V544 H738 V570',TEAL)
+f.text(757,552,'updated policy',18,TEAL)
+node(1080,205,316,120,'AM-Bench evaluation','Original tasks and scoring')
+node(1080,410,316,120,'Real-world evaluation','Corresponding physical tasks')
+f.path('M975 620 H1040 V265 H1080',BLUE)
+f.path('M1040 470 H1080',BLUE)
+f.text(44,710,'Compare complete-task success before and after improvement under the same evaluation conditions.',21,MUTED)
 f.save('fig04-evaluation-protocol')
 
 print(f'Built 4 SVG figures in {OUT}')

@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1120" viewBox="0 0 1440 1120" role="img" aria-labelledby="title desc">
-<title id="title">Test the facility, the learning gain, and real transfer</title><desc id="desc">Predefine task groups and protocols; all branches share student interfaces and matched controls.. Proposed research design, not measured results.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="740" viewBox="0 0 1440 740" role="img" aria-labelledby="title desc">
+<title id="title">Experimental pipeline</title><desc id="desc">Initialize a policy, improve it in AirSpark, and evaluate the initial and updated policies.. Proposed research design, not measured results.</desc>
 <defs>
 <marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183255"/></marker>
 <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087f75"/></marker>
@@ -7,74 +7,52 @@
 <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7552a5"/></marker>
 <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94601b"/></marker>
 </defs><g font-family="Arial, Helvetica, sans-serif"><rect width="1440" height="100%" fill="white"/>
-<text x="44" y="39" fill="#087f75" font-size="17" font-weight="700" text-anchor="start">AIRSPARK   /   FIGURE 04</text>
-<text x="1396" y="39" fill="#52657b" font-size="16" font-weight="400" text-anchor="end">RESEARCH DESIGN  ·  v0.16</text>
-<text x="44" y="81" fill="#183255" font-size="31" font-weight="700" text-anchor="start">Test the facility, the learning gain, and real transfer</text>
-<text x="44" y="112" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Predefine task groups and protocols; all branches share student interfaces and matched controls.</text>
-<path d="M44 130 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
-<rect x="44" y="170" width="315" height="166" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7"/>
-<path d="M62 194 v24" stroke="#215cce" stroke-width="4"/>
-<text x="76" y="214" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Native AM-Bench</text>
-<text x="68" y="253" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Reproduce parent θ₀</text>
-<text x="68" y="284" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Lock task / robot / scoring</text>
-<text x="68" y="315" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Record original performance</text>
-<rect x="409" y="170" width="590" height="462" rx="14" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
-<text x="433" y="212" fill="#183255" font-size="26" font-weight="700" text-anchor="start">AirSpark: collection pool C</text>
-<text x="433" y="248" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Shared expert, reset, prefix tools and QC</text>
-<rect x="433" y="278" width="542" height="87" rx="10" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="451" y="311" fill="#183255" font-size="23" font-weight="700" text-anchor="start">B1  Coverage</text>
-<text x="451" y="342" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Cover permitted visual and physical factors</text>
-<rect x="433" y="379" width="542" height="87" rx="10" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="451" y="412" fill="#183255" font-size="23" font-weight="700" text-anchor="start">B2  Terminal feedback</text>
-<text x="451" y="443" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Allocate by task / condition terminal failure</text>
-<rect x="433" y="480" width="542" height="87" rx="10" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="451" y="513" fill="#183255" font-size="23" font-weight="700" text-anchor="start">B3  Process conditions</text>
-<text x="451" y="544" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Allocate by transition evidence and cost</text>
-<text x="433" y="604" fill="#087f75" font-size="22" font-weight="600" text-anchor="start">Matched acquisition budget + training recipe</text>
-<path d="M359 278 H409" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
-<rect x="44" y="397" width="315" height="235" rx="14" fill="#f6f8fb" stroke="#d2dde8" stroke-width="1.7"/>
-<path d="M62 421 v24" stroke="#215cce" stroke-width="4"/>
-<text x="76" y="441" fill="#183255" font-size="23" font-weight="700" text-anchor="start">B0  Frozen parent</text>
-<text x="68" y="480" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">No new collection or training</text>
-<text x="68" y="511" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Reference capability only</text>
-<text x="68" y="542" fill="#52657b" font-size="22" font-weight="400" text-anchor="start"></text>
-<text x="68" y="573" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Not an equal-cost</text>
-<text x="68" y="604" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">training arm</text>
-<path d="M201 336 V397" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
-<rect x="409" y="682" width="590" height="133" rx="14" fill="#f1eef8" stroke="#d2dde8" stroke-width="1.7"/>
-<path d="M427 706 v24" stroke="#7552a5" stroke-width="4"/>
-<text x="441" y="726" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Development pool V</text>
-<text x="433" y="765" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Predefined acceptance → next collection round</text>
-<text x="433" y="796" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Allowed summaries only; no V trajectories in training</text>
-<path d="M703 632 V682" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
-<path d="M409 752 H383 V360 H409" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
-<rect x="1049" y="170" width="347" height="645" rx="14" fill="#fbf7ef" stroke="#94601b" stroke-width="1.7" stroke-dasharray="8 6"/>
-<text x="1073" y="213" fill="#183255" font-size="25" font-weight="700" text-anchor="start">Sealed evaluation T</text>
-<text x="1073" y="260" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Freeze research configuration</text>
-<text x="1073" y="291" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">and saved student checkpoints.</text>
-<rect x="1071" y="356" width="303" height="169" rx="14" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<path d="M1089 380 v24" stroke="#94601b" stroke-width="4"/>
-<text x="1103" y="400" fill="#183255" font-size="22" font-weight="700" text-anchor="start">Native return test</text>
-<text x="1095" y="439" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Original task + controller</text>
-<text x="1095" y="470" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Original success rules</text>
-<text x="1095" y="501" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Held-out initial conditions</text>
-<rect x="1071" y="559" width="303" height="169" rx="14" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<path d="M1089 583 v24" stroke="#94601b" stroke-width="4"/>
-<text x="1103" y="603" fill="#183255" font-size="22" font-weight="700" text-anchor="start">Frozen real execution</text>
-<text x="1095" y="642" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Parent / baseline / B3</text>
-<text x="1095" y="673" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Shared calibration + control</text>
-<text x="1095" y="704" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Paired task conditions</text>
-<text x="1073" y="776" fill="#94601b" font-size="21" font-weight="600" text-anchor="start">No test-to-practice feedback</text>
-<path d="M999 731 H1049" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
-<path d="M201 632 V658 H70 V838 H1024 V313 H1071" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" stroke-dasharray="8 6"/>
-<text x="100" y="738" fill="#215cce" font-size="20" font-weight="400" text-anchor="start">Frozen-parent route</text>
-<text x="100" y="772" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Independent final testing</text>
-<rect x="44" y="872" width="1352" height="151" rx="14" fill="#f6f8fb" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="68" y="910" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Real-scene preparation</text>
-<text x="68" y="949" fill="#087f75" font-size="23" font-weight="400" text-anchor="start">Scene capture → 3DGS appearance + physical assets → matched simulation practice</text>
-<text x="68" y="988" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Separate scene-matched transfer from held-out layouts / objects; real test feedback is excluded.</text>
-<text x="44" y="1053" fill="#183255" font-size="21" font-weight="400" text-anchor="start">Report: facility reliability &amp; cost   |   full-task success &amp; uncertainty   |   real failures, drops &amp; interventions</text>
-<path d="M44 1071 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="44" y="1098" fill="#52657b" font-size="16" font-weight="400" text-anchor="start">AirSpark  ·  A Simulated Academy for Self-Improving Aerial Manipulation</text>
-<text x="1396" y="1098" fill="#52657b" font-size="14" font-weight="400" text-anchor="end">SCHEMATIC / NOT TO SCALE</text>
+<text x="44" y="45" fill="#183255" font-size="29" font-weight="700" text-anchor="start">Experimental pipeline</text>
+<text x="44" y="82" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Initialize a policy, improve it in AirSpark, and evaluate the initial and updated policies.</text>
+<text x="44" y="135" fill="#183255" font-size="24" font-weight="700" text-anchor="start">(a) Policy initialization</text>
+<text x="365" y="135" fill="#183255" font-size="24" font-weight="700" text-anchor="start">(b) Improvement in AirSpark</text>
+<text x="1080" y="135" fill="#183255" font-size="24" font-weight="700" text-anchor="start">(c) Evaluation</text>
+<rect x="44" y="185" width="256" height="112" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="172.0" y="224" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">AM-Bench data</text>
+<text x="172.0" y="258" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Original training recipe</text>
+<path d="M172 297 V345" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+<rect x="44" y="345" width="256" height="80" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7"/>
+<text x="172.0" y="384" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Initial policy π₀</text>
+<rect x="355" y="164" width="650" height="360" rx="5" fill="#f9fafb" stroke="#d2dde8" stroke-width="1.7"/>
+<rect x="375" y="205" width="255" height="100" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="502.5" y="244" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Policy rollout</text>
+<text x="502.5" y="278" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Execute the current policy</text>
+<rect x="710" y="205" width="275" height="100" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="847.5" y="244" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Practice selection</text>
+<text x="847.5" y="278" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Analyze execution feedback</text>
+<rect x="710" y="390" width="275" height="100" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="847.5" y="429" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Expert data collection</text>
+<text x="847.5" y="463" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Generate demonstrations</text>
+<rect x="375" y="390" width="255" height="100" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
+<text x="502.5" y="429" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Policy training</text>
+<text x="502.5" y="463" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">New data + replay</text>
+<path d="M300 385 H330 V255 H375" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+<path d="M630 255 H710" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+<text x="670" y="237" fill="#52657b" font-size="17" font-weight="400" text-anchor="middle">feedback</text>
+<path d="M848 305 V390" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+<text x="868" y="353" fill="#52657b" font-size="17" font-weight="400" text-anchor="start">plan</text>
+<path d="M710 440 H630" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+<text x="670" y="422" fill="#52657b" font-size="17" font-weight="400" text-anchor="middle">data</text>
+<path d="M503 390 V305" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<text x="484" y="353" fill="#087f75" font-size="20" font-weight="400" text-anchor="end">πᵣ₊₁</text>
+<rect x="500" y="570" width="475" height="100" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7"/>
+<text x="737.5" y="609" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Freeze policies for evaluation</text>
+<text x="737.5" y="643" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Initial π₀ and updated πᴿ</text>
+<path d="M330 385 V620 H500" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" stroke-dasharray="8 6"/>
+<path d="M503 490 V544 H738 V570" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<text x="757" y="552" fill="#087f75" font-size="18" font-weight="400" text-anchor="start">updated policy</text>
+<rect x="1080" y="205" width="316" height="120" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="1238.0" y="244" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">AM-Bench evaluation</text>
+<text x="1238.0" y="278" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Original tasks and scoring</text>
+<rect x="1080" y="410" width="316" height="120" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="1238.0" y="449" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Real-world evaluation</text>
+<text x="1238.0" y="483" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Corresponding physical tasks</text>
+<path d="M975 620 H1040 V265 H1080" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M1040 470 H1080" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<text x="44" y="710" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Compare complete-task success before and after improvement under the same evaluation conditions.</text>
 </g></svg>

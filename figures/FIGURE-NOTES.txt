@@ -1,4 +1,4 @@
-AirSpark paper figures · v0.16.1 · 2026-10-19
+AirSpark paper figures · v0.16.2 · 2026-10-19
 
 Research design illustrations, not measured results.
 SVG: editable text and vector geometry. PNG: 2880 pixels wide.
@@ -13,7 +13,7 @@ fig03-process-experience
 图 3. 过程经验生成参考方法。执行证据用于选择条件，从合法初态执行前缀后获取多条专家延续；各分支代表独立的物理执行，不表示任意瞬移或已验证的状态恢复。前缀仅提供允许的历史上下文，动作监督来自合格专家区间。图中轨迹为机制示意，非实测结果。
 
 fig04-evaluation-protocol
-图 4. 平台、学习与迁移的验证协议。B1–B3 使用共享工具、相同采集预算和训练配方，B0 为冻结父代参照。各组按预定 V 池规则验收；研究配置冻结后返回原生 AM-Bench，并在对应真实任务中测试。3DGS 场景准备属于训练环境构造，真实测试反馈不进入闭环。
+图 4. 实验流程。首先使用 AM-Bench 的示范数据与训练配置建立初始策略，再在 AirSpark 中根据执行反馈采集专家数据并更新策略。最后冻结模型，在原生 AM-Bench 和对应的真实任务中比较改进前后的表现。各采集方法的对照设置见表 2。
 
 Rebuild from repository root: python scripts/build-figures.py
 Then: node scripts/export-figures.cjs (requires sharp)

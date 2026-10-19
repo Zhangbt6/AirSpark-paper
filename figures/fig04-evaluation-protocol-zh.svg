@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1120" viewBox="0 0 1440 1120" role="img" aria-labelledby="title desc">
-<title id="title">分别检验平台能力、学习收益与真实迁移</title><desc id="desc">预先固定任务组与评价协议，各组共享学生接口并匹配控制条件。 本图为研究设计示意，非实测结果。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="740" viewBox="0 0 1440 740" role="img" aria-labelledby="title desc">
+<title id="title">实验流程</title><desc id="desc">建立初始策略，在 AirSpark 中采集数据与训练，再分别进行仿真和实机测试。 本图为研究设计示意，非实测结果。</desc>
 <defs>
 <marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183255" /></marker>
 <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087f75" /></marker>
@@ -8,74 +8,52 @@
 <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7552a5" /></marker>
 <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94601b" /></marker>
 </defs><g font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif"><rect width="1440" height="100%" fill="white" />
-<text x="44" y="39" fill="#087f75" font-size="17" font-weight="700" text-anchor="start">AIRSPARK / 图 04</text>
-<text x="1396" y="39" fill="#52657b" font-size="16" font-weight="400" text-anchor="end">研究设计 · v0.16.1</text>
-<text x="44" y="81" fill="#183255" font-size="31" font-weight="700" text-anchor="start">分别检验平台能力、学习收益与真实迁移</text>
-<text x="44" y="112" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">预先固定任务组与评价协议，各组共享学生接口并匹配控制条件。</text>
-<path d="M44 130 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
-<rect x="44" y="170" width="315" height="166" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M62 194 v24" stroke="#215cce" stroke-width="4" />
-<text x="76" y="214" fill="#183255" font-size="24" font-weight="700" text-anchor="start">原生 AM-Bench</text>
-<text x="68" y="253" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">复现父代策略 θ₀</text>
-<text x="68" y="284" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">固定任务、机器人与评分</text>
-<text x="68" y="315" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">记录原生基线表现</text>
-<rect x="409" y="170" width="590" height="462" rx="14" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7" />
-<text x="433" y="212" fill="#183255" font-size="26" font-weight="700" text-anchor="start">AirSpark：采集池 C</text>
-<text x="433" y="248" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">共享专家、复位、前缀执行与质检工具</text>
-<rect x="433" y="278" width="542" height="87" rx="10" fill="white" stroke="#d2dde8" stroke-width="1.7" />
-<text x="451" y="311" fill="#183255" font-size="23" font-weight="700" text-anchor="start">B1  充分覆盖采集</text>
-<text x="451" y="342" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">覆盖允许的视觉与物理条件</text>
-<rect x="433" y="379" width="542" height="87" rx="10" fill="white" stroke="#d2dde8" stroke-width="1.7" />
-<text x="451" y="412" fill="#183255" font-size="23" font-weight="700" text-anchor="start">B2  终态反馈分配</text>
-<text x="451" y="443" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">根据任务 / 条件的终态失败率分配</text>
-<rect x="433" y="480" width="542" height="87" rx="10" fill="white" stroke="#d2dde8" stroke-width="1.7" />
-<text x="451" y="513" fill="#183255" font-size="23" font-weight="700" text-anchor="start">B3  过程条件分配</text>
-<text x="451" y="544" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">根据阶段转换证据与经验成本分配</text>
-<text x="433" y="604" fill="#087f75" font-size="22" font-weight="600" text-anchor="start">相同采集预算 + 相同训练配方</text>
-<path d="M359 278 H409" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" />
-<rect x="44" y="397" width="315" height="235" rx="14" fill="#f6f8fb" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M62 421 v24" stroke="#215cce" stroke-width="4" />
-<text x="76" y="441" fill="#183255" font-size="23" font-weight="700" text-anchor="start">B0  冻结父代</text>
-<text x="68" y="480" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">无新增采集或训练</text>
-<text x="68" y="511" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">仅作为初始能力参照</text>
-<text x="68" y="542" fill="#52657b" font-size="22" font-weight="400" text-anchor="start" />
-<text x="68" y="573" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">不列入等成本训练组</text>
-<text x="68" y="604" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">单独报告零新增训练成本</text>
-<path d="M201 336 V397" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" />
-<rect x="409" y="682" width="590" height="133" rx="14" fill="#f1eef8" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M427 706 v24" stroke="#7552a5" stroke-width="4" />
-<text x="441" y="726" fill="#183255" font-size="24" font-weight="700" text-anchor="start">开发验收池 V</text>
-<text x="433" y="765" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">按预定规则验收 → 下一轮采集</text>
-<text x="433" y="796" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">仅返回允许的验收摘要；V 池轨迹不用于训练</text>
-<path d="M703 632 V682" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)" />
-<path d="M409 752 H383 V360 H409" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)" />
-<rect x="1049" y="170" width="347" height="645" rx="14" fill="#fbf7ef" stroke="#94601b" stroke-width="1.7" stroke-dasharray="8 6" />
-<text x="1073" y="213" fill="#183255" font-size="25" font-weight="700" text-anchor="start">封存测试池 T</text>
-<text x="1073" y="260" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">冻结研究配置</text>
-<text x="1073" y="291" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">及保存的学生模型版本</text>
-<rect x="1071" y="356" width="303" height="169" rx="14" fill="white" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M1089 380 v24" stroke="#94601b" stroke-width="4" />
-<text x="1103" y="400" fill="#183255" font-size="22" font-weight="700" text-anchor="start">返回原生基准测试</text>
-<text x="1095" y="439" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">原生任务与控制器</text>
-<text x="1095" y="470" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">原生成功判定规则</text>
-<text x="1095" y="501" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">独立预留测试初态</text>
-<rect x="1071" y="559" width="303" height="169" rx="14" fill="white" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M1089 583 v24" stroke="#94601b" stroke-width="4" />
-<text x="1103" y="603" fill="#183255" font-size="22" font-weight="700" text-anchor="start">冻结策略的实机测试</text>
-<text x="1095" y="642" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">父代 / 采集基线 / B3</text>
-<text x="1095" y="673" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">相同标定与底层控制</text>
-<text x="1095" y="704" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">配对任务条件</text>
-<text x="1073" y="776" fill="#94601b" font-size="21" font-weight="600" text-anchor="start">测试反馈不进入练习闭环</text>
-<path d="M999 731 H1049" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)" />
-<path d="M201 632 V658 H70 V838 H1024 V313 H1071" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" stroke-dasharray="8 6" />
-<text x="100" y="738" fill="#215cce" font-size="20" font-weight="400" text-anchor="start">冻结父代直接测试</text>
-<text x="100" y="772" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">统一进行独立最终评价</text>
-<rect x="44" y="872" width="1352" height="151" rx="14" fill="#f6f8fb" stroke="#d2dde8" stroke-width="1.7" />
-<text x="68" y="910" fill="#183255" font-size="24" font-weight="700" text-anchor="start">真实场景准备</text>
-<text x="68" y="949" fill="#087f75" font-size="23" font-weight="400" text-anchor="start">场景采集 → 3DGS 外观 + 显式物理资产 → 对应仿真环境中的练习</text>
-<text x="68" y="988" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">分别评价对应场景迁移与预留布局 / 物体表现；真实测试反馈不进入训练。</text>
-<text x="44" y="1053" fill="#183255" font-size="21" font-weight="400" text-anchor="start">报告：平台可靠性与成本 | 完整任务成功率与不确定性 | 实机失败、掉落与人工接管</text>
-<path d="M44 1071 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
-<text x="44" y="1098" fill="#52657b" font-size="16" font-weight="400" text-anchor="start">AirSpark · 面向空中操作策略自进化的模拟学院</text>
-<text x="1396" y="1098" fill="#52657b" font-size="14" font-weight="400" text-anchor="end">机制示意 / 非按比例绘制</text>
+<text x="44" y="45" fill="#183255" font-size="29" font-weight="700" text-anchor="start">实验流程</text>
+<text x="44" y="82" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">建立初始策略，在 AirSpark 中采集数据与训练，再分别进行仿真和实机测试。</text>
+<text x="44" y="135" fill="#183255" font-size="24" font-weight="700" text-anchor="start">（a）初始策略</text>
+<text x="365" y="135" fill="#183255" font-size="24" font-weight="700" text-anchor="start">（b）AirSpark 内策略改进</text>
+<text x="1080" y="135" fill="#183255" font-size="24" font-weight="700" text-anchor="start">（c）测试</text>
+<rect x="44" y="185" width="256" height="112" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="172.0" y="224" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">AM-Bench 示范数据</text>
+<text x="172.0" y="258" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">采用原生训练配置</text>
+<path d="M172 297 V345" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<rect x="44" y="345" width="256" height="80" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7" />
+<text x="172.0" y="384" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">初始策略 π₀</text>
+<rect x="355" y="164" width="650" height="360" rx="5" fill="#f9fafb" stroke="#d2dde8" stroke-width="1.7" />
+<rect x="375" y="205" width="255" height="100" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="502.5" y="244" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">策略执行</text>
+<text x="502.5" y="278" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">运行当前策略</text>
+<rect x="710" y="205" width="275" height="100" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="847.5" y="244" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">选择采集任务</text>
+<text x="847.5" y="278" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">分析执行反馈</text>
+<rect x="710" y="390" width="275" height="100" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="847.5" y="429" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">专家数据采集</text>
+<text x="847.5" y="463" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">生成训练示范</text>
+<rect x="375" y="390" width="255" height="100" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7" />
+<text x="502.5" y="429" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">策略训练</text>
+<text x="502.5" y="463" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">新增数据 + 历史回放</text>
+<path d="M300 385 H330 V255 H375" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M630 255 H710" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<text x="670" y="237" fill="#52657b" font-size="17" font-weight="400" text-anchor="middle">反馈</text>
+<path d="M848 305 V390" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<text x="868" y="353" fill="#52657b" font-size="17" font-weight="400" text-anchor="start">计划</text>
+<path d="M710 440 H630" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<text x="670" y="422" fill="#52657b" font-size="17" font-weight="400" text-anchor="middle">数据</text>
+<path d="M503 390 V305" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
+<text x="484" y="353" fill="#087f75" font-size="20" font-weight="400" text-anchor="end">πᵣ₊₁</text>
+<rect x="500" y="570" width="475" height="100" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7" />
+<text x="737.5" y="609" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">冻结模型，统一测试</text>
+<text x="737.5" y="643" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">初始策略 π₀ 与更新后的策略 πᴿ</text>
+<path d="M330 385 V620 H500" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" stroke-dasharray="8 6" />
+<path d="M503 490 V544 H738 V570" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
+<text x="757" y="552" fill="#087f75" font-size="18" font-weight="400" text-anchor="start">更新后的策略</text>
+<rect x="1080" y="205" width="316" height="120" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="1238.0" y="244" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">AM-Bench 仿真测试</text>
+<text x="1238.0" y="278" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">使用原生任务和评分标准</text>
+<rect x="1080" y="410" width="316" height="120" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="1238.0" y="449" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">真实机器人测试</text>
+<text x="1238.0" y="483" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">执行对应的空中操作任务</text>
+<path d="M975 620 H1040 V265 H1080" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" />
+<path d="M1040 470 H1080" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" />
+<text x="44" y="710" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">在相同测试条件下，比较策略改进前后的完整任务成功率。</text>
 </g></svg>
