@@ -35,9 +35,9 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p>AirSpark 的系统设计将平台基础设施、学习编排和练习决策方法分层组织。基础设施提供可执行的环境与学习工具；SparkMentor 维护实验状态并编排闭环；练习方法决定下一轮采集什么。学生策略是这一学习过程的更新对象。图 1 给出三层关系及独立评价边界；图 2–4 分别展开执行链路、经验生成和实验协议。</p>
 <figure class="paper-figure diagram-figure" id="figure-1">
 <div class="diagram-heading"><b>图 1 · 学院整体架构</b><span>研究设计示意</span></div>
-<button class="diagram-open" type="button" data-figure-src="figures/fig01-academy-overview.svg" data-figure-title="图 1 · 学院整体架构" aria-label="放大图 1：学院整体架构"><img src="figures/fig01-academy-overview.svg" alt="图 1. AirSpark 模拟学院总览。可替换的练习方法由 SparkMentor 编排，共享执行、采集、质检、训练及开发验收工具；跨轮能力保存在学生参数中。采集池 C 与开发池 V 支持学习闭环，封存测试 T 不向练习决策反馈。" width="1440" height="1000" loading="lazy"></button>
+<button class="diagram-open" type="button" data-figure-src="figures/fig01-academy-overview-zh.svg" data-figure-title="图 1 · 学院整体架构" aria-label="放大图 1：学院整体架构"><img src="figures/fig01-academy-overview-zh.svg" alt="图 1. AirSpark 模拟学院总览。可替换的练习方法由 SparkMentor 编排，共享执行、采集、质检、训练及开发验收工具；跨轮能力保存在学生参数中。采集池 C 与开发池 V 支持学习闭环，封存测试 T 不向练习决策反馈。" width="1440" height="1000" loading="lazy"></button>
 <figcaption>图 1. AirSpark 模拟学院总览。可替换的练习方法由 SparkMentor 编排，共享执行、采集、质检、训练及开发验收工具；跨轮能力保存在学生参数中。采集池 C 与开发池 V 支持学习闭环，封存测试 T 不向练习决策反馈。</figcaption>
-<div class="figure-tools"><button type="button" data-figure-src="figures/fig01-academy-overview.svg" data-figure-title="图 1 · 学院整体架构">放大查看</button><a href="figures/fig01-academy-overview.svg" download>SVG 矢量图</a><a href="figures/fig01-academy-overview.png" download>高清 PNG</a></div>
+<div class="figure-tools"><button type="button" data-figure-src="figures/fig01-academy-overview-zh.svg" data-figure-title="图 1 · 学院整体架构">放大查看</button><a href="figures/fig01-academy-overview-zh.svg" download>中文 SVG</a><a href="figures/fig01-academy-overview-zh.png" download>中文 PNG</a><a href="figures/fig01-academy-overview.svg" download>英文 SVG</a><a href="figures/fig01-academy-overview.png" download>英文 PNG</a></div>
 </figure>
 
 <h3 id="scope" data-nav="问题定义" data-number="3.1">3.1 问题定义</h3>
@@ -55,9 +55,9 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 
 <figure class="paper-figure diagram-figure" id="figure-2">
 <div class="diagram-heading"><b>图 2 · 视觉与物理执行链路</b><span>研究设计示意</span></div>
-<button class="diagram-open" type="button" data-figure-src="figures/fig02-visual-physical-contract.svg" data-figure-title="图 2 · 视觉与物理执行链路" aria-label="放大图 2：视觉与物理执行链路"><img src="figures/fig02-visual-physical-contract.svg" alt="图 2. 视觉—物理执行与数据合同。3DGS 提供场景外观，显式物理资产承担碰撞、接触与载荷；MuJoCo 状态驱动 UE 动态场景。观测与动作适配器统一坐标、时间和执行语义，学生输入与特权诊断、专家监督分开管理。" width="1440" height="1020" loading="lazy"></button>
+<button class="diagram-open" type="button" data-figure-src="figures/fig02-visual-physical-contract-zh.svg" data-figure-title="图 2 · 视觉与物理执行链路" aria-label="放大图 2：视觉与物理执行链路"><img src="figures/fig02-visual-physical-contract-zh.svg" alt="图 2. 视觉—物理执行与数据合同。3DGS 提供场景外观，显式物理资产承担碰撞、接触与载荷；MuJoCo 状态驱动 UE 动态场景。观测与动作适配器统一坐标、时间和执行语义，学生输入与特权诊断、专家监督分开管理。" width="1440" height="1020" loading="lazy"></button>
 <figcaption>图 2. 视觉—物理执行与数据合同。3DGS 提供场景外观，显式物理资产承担碰撞、接触与载荷；MuJoCo 状态驱动 UE 动态场景。观测与动作适配器统一坐标、时间和执行语义，学生输入与特权诊断、专家监督分开管理。</figcaption>
-<div class="figure-tools"><button type="button" data-figure-src="figures/fig02-visual-physical-contract.svg" data-figure-title="图 2 · 视觉与物理执行链路">放大查看</button><a href="figures/fig02-visual-physical-contract.svg" download>SVG 矢量图</a><a href="figures/fig02-visual-physical-contract.png" download>高清 PNG</a></div>
+<div class="figure-tools"><button type="button" data-figure-src="figures/fig02-visual-physical-contract-zh.svg" data-figure-title="图 2 · 视觉与物理执行链路">放大查看</button><a href="figures/fig02-visual-physical-contract-zh.svg" download>中文 SVG</a><a href="figures/fig02-visual-physical-contract-zh.png" download>中文 PNG</a><a href="figures/fig02-visual-physical-contract.svg" download>英文 SVG</a><a href="figures/fig02-visual-physical-contract.png" download>英文 PNG</a></div>
 </figure>
 
 <h3 id="practice" data-nav="参考练习方法" data-number="3.3">3.3 参考方法：过程条件与主动练习生成</h3>
@@ -77,9 +77,9 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 
 <figure class="paper-figure diagram-figure" id="figure-3">
 <div class="diagram-heading"><b>图 3 · 过程条件与专家延续</b><span>研究设计示意</span></div>
-<button class="diagram-open" type="button" data-figure-src="figures/fig03-process-experience.svg" data-figure-title="图 3 · 过程条件与专家延续" aria-label="放大图 3：过程条件与专家延续"><img src="figures/fig03-process-experience.svg" alt="图 3. 过程经验生成参考方法。执行证据用于选择条件，从合法初态执行前缀后获取多条专家延续；各分支代表独立的物理执行，不表示任意瞬移或已验证的状态恢复。前缀仅提供允许的历史上下文，动作监督来自合格专家区间。图中轨迹为机制示意，非实测结果。" width="1440" height="1030" loading="lazy"></button>
+<button class="diagram-open" type="button" data-figure-src="figures/fig03-process-experience-zh.svg" data-figure-title="图 3 · 过程条件与专家延续" aria-label="放大图 3：过程条件与专家延续"><img src="figures/fig03-process-experience-zh.svg" alt="图 3. 过程经验生成参考方法。执行证据用于选择条件，从合法初态执行前缀后获取多条专家延续；各分支代表独立的物理执行，不表示任意瞬移或已验证的状态恢复。前缀仅提供允许的历史上下文，动作监督来自合格专家区间。图中轨迹为机制示意，非实测结果。" width="1440" height="1030" loading="lazy"></button>
 <figcaption>图 3. 过程经验生成参考方法。执行证据用于选择条件，从合法初态执行前缀后获取多条专家延续；各分支代表独立的物理执行，不表示任意瞬移或已验证的状态恢复。前缀仅提供允许的历史上下文，动作监督来自合格专家区间。图中轨迹为机制示意，非实测结果。</figcaption>
-<div class="figure-tools"><button type="button" data-figure-src="figures/fig03-process-experience.svg" data-figure-title="图 3 · 过程条件与专家延续">放大查看</button><a href="figures/fig03-process-experience.svg" download>SVG 矢量图</a><a href="figures/fig03-process-experience.png" download>高清 PNG</a></div>
+<div class="figure-tools"><button type="button" data-figure-src="figures/fig03-process-experience-zh.svg" data-figure-title="图 3 · 过程条件与专家延续">放大查看</button><a href="figures/fig03-process-experience-zh.svg" download>中文 SVG</a><a href="figures/fig03-process-experience-zh.png" download>中文 PNG</a><a href="figures/fig03-process-experience.svg" download>英文 SVG</a><a href="figures/fig03-process-experience.png" download>英文 PNG</a></div>
 </figure>
 
 <h3 id="evolution" data-nav="多轮更新与记忆" data-number="3.4">3.4 多轮策略更新与实验记忆</h3>
@@ -125,9 +125,9 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p>原生回测检验 AirSpark 产生的数据是否具有跨仿真效用。首先按公开配置取得或训练父代，并在原生环境建立参考成绩；随后将策略与数据接口接入 AirSpark，在固定训练条件下进行增量更新；最后将冻结后的各组模型返回原生环境。任务、机器人、控制器、扰动、观测与成功阈值均保持原配置。<cite data-ref="ambench-docs"></cite></p>
 <figure class="paper-figure diagram-figure" id="figure-4">
 <div class="diagram-heading"><b>图 4 · 仿真与真实验证协议</b><span>研究设计示意</span></div>
-<button class="diagram-open" type="button" data-figure-src="figures/fig04-evaluation-protocol.svg" data-figure-title="图 4 · 仿真与真实验证协议" aria-label="放大图 4：仿真与真实验证协议"><img src="figures/fig04-evaluation-protocol.svg" alt="图 4. 平台、学习与迁移的验证协议。B1–B3 使用共享工具、相同采集预算和训练配方，B0 为冻结父代参照。各组按预定 V 池规则验收；研究配置冻结后返回原生 AM-Bench，并在对应真实任务中测试。3DGS 场景准备属于训练环境构造，真实测试反馈不进入闭环。" width="1440" height="1120" loading="lazy"></button>
+<button class="diagram-open" type="button" data-figure-src="figures/fig04-evaluation-protocol-zh.svg" data-figure-title="图 4 · 仿真与真实验证协议" aria-label="放大图 4：仿真与真实验证协议"><img src="figures/fig04-evaluation-protocol-zh.svg" alt="图 4. 平台、学习与迁移的验证协议。B1–B3 使用共享工具、相同采集预算和训练配方，B0 为冻结父代参照。各组按预定 V 池规则验收；研究配置冻结后返回原生 AM-Bench，并在对应真实任务中测试。3DGS 场景准备属于训练环境构造，真实测试反馈不进入闭环。" width="1440" height="1120" loading="lazy"></button>
 <figcaption>图 4. 平台、学习与迁移的验证协议。B1–B3 使用共享工具、相同采集预算和训练配方，B0 为冻结父代参照。各组按预定 V 池规则验收；研究配置冻结后返回原生 AM-Bench，并在对应真实任务中测试。3DGS 场景准备属于训练环境构造，真实测试反馈不进入闭环。</figcaption>
-<div class="figure-tools"><button type="button" data-figure-src="figures/fig04-evaluation-protocol.svg" data-figure-title="图 4 · 仿真与真实验证协议">放大查看</button><a href="figures/fig04-evaluation-protocol.svg" download>SVG 矢量图</a><a href="figures/fig04-evaluation-protocol.png" download>高清 PNG</a></div>
+<div class="figure-tools"><button type="button" data-figure-src="figures/fig04-evaluation-protocol-zh.svg" data-figure-title="图 4 · 仿真与真实验证协议">放大查看</button><a href="figures/fig04-evaluation-protocol-zh.svg" download>中文 SVG</a><a href="figures/fig04-evaluation-protocol-zh.png" download>中文 PNG</a><a href="figures/fig04-evaluation-protocol.svg" download>英文 SVG</a><a href="figures/fig04-evaluation-protocol.png" download>英文 PNG</a></div>
 </figure>
 <p>代表任务同时比较使用同一选择器在原生 AM-Bench 和 AirSpark 中补采的结果，以分析新增数据来源的作用。该比较匹配任务因素、专家能力与预算，并与闭环选择对照分别报告。跨模拟器结果首先解释为整套数据来源的差异，不单独归因于渲染引擎或物理求解器；无法匹配的控制、专家与观测差异必须披露。主表注明所用任务子集；改变机器人、观测或评分条件的实验独立列为衍生设置。</p>
 
@@ -185,8 +185,8 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <h3 id="experience-record">A.4 过程经验与划分记录</h3>
 <p>经验记录包含父任务组与 C/V/T 归属、条件定义版本、事件时间、前缀策略与随机种子、速度和控制器状态、学生观测历史、接管边界、动作来源掩码、条件命中、专家终态、质量检查、各类成本以及数据—模型谱系。恢复与追加采集均继承父任务划分。标注字段可以多于学生输入，但训练导出必须保持部署输入白名单。</p>
 <h3 id="figure-library" data-nav="论文框图与下载" data-number="A.5">A.5 论文框图与汇报素材</h3>
-<p>四张框图对应整体架构、平台执行、经验生成和实验协议。图内使用英文术语，正文提供中文图注；均为当前研究设计的矢量示意，不代表工程或实验已完成。点击图片可放大，SVG 保留可编辑的文字、形状和连线；PNG 宽度为 2880 像素，可直接插入汇报。</p>
-<p class="reference-tools"><a href="figures/AirSpark-Figures-v0.16.zip" download>下载全部框图与绘图源文件</a> · <a href="figures/FIGURE-NOTES.txt">图注与使用说明</a></p><div class="figure-gallery"><a href="#figure-1"><img src="figures/fig01-academy-overview.svg" alt="图 1：学院整体架构" width="1440" height="1000" loading="lazy"><b>图 1 · 学院整体架构</b><span>跳转正文与下载</span></a><a href="#figure-2"><img src="figures/fig02-visual-physical-contract.svg" alt="图 2：视觉与物理执行链路" width="1440" height="1020" loading="lazy"><b>图 2 · 视觉与物理执行链路</b><span>跳转正文与下载</span></a><a href="#figure-3"><img src="figures/fig03-process-experience.svg" alt="图 3：过程条件与专家延续" width="1440" height="1030" loading="lazy"><b>图 3 · 过程条件与专家延续</b><span>跳转正文与下载</span></a><a href="#figure-4"><img src="figures/fig04-evaluation-protocol.svg" alt="图 4：仿真与真实验证协议" width="1440" height="1120" loading="lazy"><b>图 4 · 仿真与真实验证协议</b><span>跳转正文与下载</span></a></div>
+<p>四张框图对应整体架构、平台执行、经验生成和实验协议。网页默认展示中文框图，同时保留英文素材供论文写作使用；均为当前研究设计的矢量示意，不代表工程或实验已完成。点击图片可放大，SVG 保留可编辑的文字、形状和连线；PNG 宽度为 2880 像素，可直接插入汇报。</p>
+<p class="reference-tools"><a href="figures/AirSpark-Figures-v0.16.1.zip" download>下载中英文框图与绘图源文件</a> · <a href="figures/FIGURE-NOTES.txt">图注与使用说明</a></p><div class="figure-gallery"><a href="#figure-1"><img src="figures/fig01-academy-overview-zh.svg" alt="图 1：学院整体架构" width="1440" height="1000" loading="lazy"><b>图 1 · 学院整体架构</b><span>跳转正文与下载</span></a><a href="#figure-2"><img src="figures/fig02-visual-physical-contract-zh.svg" alt="图 2：视觉与物理执行链路" width="1440" height="1020" loading="lazy"><b>图 2 · 视觉与物理执行链路</b><span>跳转正文与下载</span></a><a href="#figure-3"><img src="figures/fig03-process-experience-zh.svg" alt="图 3：过程条件与专家延续" width="1440" height="1030" loading="lazy"><b>图 3 · 过程条件与专家延续</b><span>跳转正文与下载</span></a><a href="#figure-4"><img src="figures/fig04-evaluation-protocol-zh.svg" alt="图 4：仿真与真实验证协议" width="1440" height="1120" loading="lazy"><b>图 4 · 仿真与真实验证协议</b><span>跳转正文与下载</span></a></div>
 <p class="caption">组会建议：图 1 用于学院全貌，图 2 用于平台设施，图 3 用于参考闭环，图 4 用于实验设计。后续论文主视觉与实机任务图应补入经核查的平台截图和机器人照片；结果曲线、成功率及成本图待真实实验产物形成后绘制。</p>
 
 <details class="editorial-note" id="literature-map"><summary>文献证据与阅读路线（研究核查，不属于论文主文）</summary>
@@ -258,7 +258,8 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td><a href="versions/v0.14/index.html">v0.14</a></td><td>空中交互学习设施 → 反馈驱动策略更新 → 独立能力验证。</td><td>统一 SparkMentor；补充正式发表的基础与直接近邻，区分程序和参数改进，保留两项贡献并加强恢复监督基线。</td></tr>
 <tr><td><a href="versions/v0.15/index.html">v0.15</a></td><td>模拟学院平台 → 共享学习工具与编排 → 参考练习方法 → 独立验证。</td><td>突出平台定位，明确方法可替换；单列平台支持能力评价，保留现有学习对照与真实验证，补充组会提纲。</td></tr>
 <tr><td><a href="versions/v0.15.1/index.html">v0.15.1</a></td><td>保持学院平台定位，补充仿真练习与真实部署的直接近邻。</td><td>加入 RPG 正文引用、书目与组会比较；区分技能和提示修订、学生参数更新及场景重建，未扩展主实验矩阵。</td></tr>
-<tr><td>v0.16 · 当前</td><td>保持学院主线，形成架构、执行、经验与验证四张论文框图。</td><td>新增可放大的矢量图、高清导出、绘图源文件与汇报索引；保持现有方法和实验矩阵，未新增结果。</td></tr>
+<tr><td>v0.16</td><td>保持学院主线，形成架构、执行、经验与验证四张论文框图。</td><td>新增可放大的矢量图、高清导出、绘图源文件与汇报索引；保持现有方法和实验矩阵，未新增结果。</td></tr>
+<tr><td>v0.16.1 · 当前</td><td>网页默认使用中文框图。</td><td>保留英文原图，新增中英文 SVG / PNG 下载及双语素材包；研究内容不变。</td></tr>
 </tbody></table></div>
 <p>v0.14 起统一论文中的 SparkMentor 命名，工程中的旧 sparkclaw 路径暂作兼容名称。v0.15 完善平台、编排与方法的层次；v0.15.1 补充 2026-10-19 的 RPG 核查，保留其他文献原核查日期。本轮未迁移工程接口，也未新增实验结果。</p>
 </details>

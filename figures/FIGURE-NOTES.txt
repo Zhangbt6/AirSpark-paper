@@ -1,4 +1,4 @@
-AirSpark paper figures · v0.16 · 2026-10-19
+AirSpark paper figures · v0.16.1 · 2026-10-19
 
 Research design illustrations, not measured results.
 SVG: editable text and vector geometry. PNG: 2880 pixels wide.
@@ -20,3 +20,7 @@ Then: node scripts/export-figures.cjs (requires sharp)
 In this bundle, keep scripts/ and figures/ as sibling directories.
 Use SVG in vector editors or PowerPoint; use PNG if SVG rendering is unavailable.
 All art is original schematic geometry; no third-party figures are reproduced.
+
+中文版文件名以 -zh 结尾；英文原图保留原文件名。网页默认展示中文，所有图均提供中英文 SVG / PNG 下载。
+生成中文 SVG：python scripts/localize-figures.py
+导出中文 PNG：node scripts/export-figures.cjs --zh
