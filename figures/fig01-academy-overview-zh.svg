@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img" aria-labelledby="title desc">
-<title id="title">面向策略持续改进的模拟学院</title><desc id="desc">共享设施支撑不同练习方法，学习所得能力保留在学生策略中。 本图为研究设计示意，非实测结果。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="870" viewBox="0 0 1440 870" role="img" aria-labelledby="title desc">
+<title id="title">AirSpark 模拟学院平台架构</title><desc id="desc">在统一接口下连接视觉与物理仿真、经验生成、策略训练和评价。 本图为研究设计示意，非实测结果。</desc>
 <defs>
 <marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183255" /></marker>
 <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087f75" /></marker>
@@ -8,74 +8,68 @@
 <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7552a5" /></marker>
 <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94601b" /></marker>
 </defs><g font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif"><rect width="1440" height="100%" fill="white" />
-<text x="44" y="39" fill="#087f75" font-size="17" font-weight="700" text-anchor="start">AIRSPARK / 图 01</text>
-<text x="1396" y="39" fill="#52657b" font-size="16" font-weight="400" text-anchor="end">研究设计 · v0.16.1</text>
-<text x="44" y="81" fill="#183255" font-size="31" font-weight="700" text-anchor="start">面向策略持续改进的模拟学院</text>
-<text x="44" y="112" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">共享设施支撑不同练习方法，学习所得能力保留在学生策略中。</text>
-<path d="M44 130 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
-<rect x="44" y="158" width="354" height="158" rx="14" fill="#f1eef8" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M62 182 v24" stroke="#7552a5" stroke-width="4" />
-<text x="76" y="202" fill="#183255" font-size="24" font-weight="700" text-anchor="start">练习决策方法</text>
-<text x="68" y="241" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">充分覆盖 / 终态反馈</text>
-<text x="68" y="272" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">过程条件分配</text>
-<rect x="450" y="158" width="560" height="158" rx="14" fill="#eaf6f3" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M468 182 v24" stroke="#087f75" stroke-width="4" />
-<text x="482" y="202" fill="#183255" font-size="24" font-weight="700" text-anchor="start">SparkMentor</text>
-<text x="474" y="241" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">诊断 → 计划 → 调用工具 → 记录</text>
-<text x="474" y="272" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">预算约束下的多轮学习与中断恢复</text>
-<rect x="1062" y="158" width="334" height="158" rx="14" fill="#f6f8fb" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M1080 182 v24" stroke="#087f75" stroke-width="4" />
-<text x="1094" y="202" fill="#183255" font-size="23" font-weight="700" text-anchor="start">跨轮实验记忆</text>
-<text x="1086" y="241" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">执行证据、成本、数据谱系</text>
-<text x="1086" y="272" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">模型版本与验收记录</text>
-<path d="M398 231 H450" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)" />
-<path d="M1010 218 H1062" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
-<path d="M1062 257 H1010" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
-<rect x="44" y="357" width="1352" height="61" rx="9" fill="#183255" stroke="#183255" stroke-width="1.7" />
-<text x="720" y="396" fill="white" font-size="22" font-weight="600" text-anchor="middle">共享工具协议 · 任务 → 执行记录 → 练习计划 → 数据集 → 模型版本 → 评价报告</text>
-<path d="M730 316 V357" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
-<path d="M790 357 V316" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
-<path d="M202 418 V471" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
-<path d="M548 418 V471" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
-<path d="M894 418 V471" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
-<path d="M1240 418 V471" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
-<rect x="44" y="471" width="316" height="199" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M62 495 v24" stroke="#215cce" stroke-width="4" />
-<text x="76" y="515" fill="#183255" font-size="24" font-weight="700" text-anchor="start">仿真与执行</text>
-<text x="68" y="554" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">UE 视觉 + MuJoCo 物理</text>
-<text x="68" y="585" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">任务、复位与控制</text>
-<text x="68" y="616" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">学生 / 专家实际执行</text>
-<rect x="390" y="471" width="316" height="199" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M408 495 v24" stroke="#215cce" stroke-width="4" />
-<text x="422" y="515" fill="#183255" font-size="24" font-weight="700" text-anchor="start">采集与质检</text>
-<text x="414" y="554" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">同步观测与执行记录</text>
-<text x="414" y="585" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">专家动作监督</text>
-<text x="414" y="616" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">质量检查与成本记录</text>
-<rect x="736" y="471" width="316" height="199" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M754 495 v24" stroke="#215cce" stroke-width="4" />
-<text x="768" y="515" fill="#183255" font-size="24" font-weight="700" text-anchor="start">训练学生策略</text>
-<text x="760" y="554" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">ACT / DP / VLA 后端</text>
-<text x="760" y="585" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">合格数据 + 历史回放</text>
-<text x="760" y="616" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">候选策略参数 θ′</text>
-<rect x="1082" y="471" width="314" height="199" rx="14" fill="#f1eef8" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M1100 495 v24" stroke="#7552a5" stroke-width="4" />
-<text x="1114" y="515" fill="#183255" font-size="24" font-weight="700" text-anchor="start">开发池 V 验收</text>
-<text x="1106" y="554" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">固定模型接纳规则</text>
-<text x="1106" y="585" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">接纳候选 / 保留当前策略</text>
-<text x="1106" y="616" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">保留所有候选及其记录</text>
-<path d="M360 570 H390" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" />
-<path d="M706 570 H736" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" />
-<path d="M1052 570 H1082" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" />
-<path d="M1240 670 V728 H202 V670" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
-<rect x="430" y="704" width="586" height="44" rx="5" fill="white" stroke="white" stroke-width="1.7" />
-<text x="723" y="733" fill="#087f75" font-size="22" font-weight="600" text-anchor="middle">验收后的学生 θ → 采集池 C 中的下一轮练习</text>
-<path d="M1360 670 V795" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)" />
-<rect x="44" y="795" width="1352" height="128" rx="14" fill="#fbf7ef" stroke="#d2dde8" stroke-width="1.7" />
-<path d="M62 819 v24" stroke="#94601b" stroke-width="4" />
-<text x="76" y="839" fill="#183255" font-size="25" font-weight="700" text-anchor="start">研究配置冻结后的独立评价</text>
-<text x="68" y="878" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">保存的学生策略 → 原生 AM-Bench 与真实任务 · 无教师临场纠错 · 测试反馈不进入练习</text>
-<text x="57" y="764" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">C：采集池 · V：开发验收池 · T：封存测试池</text>
-<path d="M44 951 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
-<text x="44" y="978" fill="#52657b" font-size="16" font-weight="400" text-anchor="start">AirSpark · 面向空中操作策略自进化的模拟学院</text>
-<text x="1396" y="978" fill="#52657b" font-size="14" font-weight="400" text-anchor="end">机制示意 / 非按比例绘制</text>
+<text x="44" y="45" fill="#183255" font-size="29" font-weight="700" text-anchor="start">AirSpark 模拟学院平台架构</text>
+<text x="44" y="82" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">在统一接口下连接视觉与物理仿真、经验生成、策略训练和评价。</text>
+<rect x="44" y="135" width="420" height="160" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7" />
+<text x="64" y="172" fill="#183255" font-size="23" font-weight="600" text-anchor="start">视觉仿真</text>
+<text x="64" y="209" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">UE 渲染与标定相机</text>
+<text x="64" y="239" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">RGB、深度与语义观测</text>
+<text x="64" y="269" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">3DGS 场景外观</text>
+<rect x="510" y="135" width="420" height="160" rx="5" fill="#f1eef8" stroke="#7552a5" stroke-width="1.7" />
+<text x="530" y="172" fill="#183255" font-size="23" font-weight="600" text-anchor="start">物理仿真</text>
+<text x="530" y="209" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">MuJoCo 飞行与机械臂动力学</text>
+<text x="530" y="239" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">接触、滑移与载荷变化</text>
+<text x="530" y="269" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">显式碰撞几何与可动物体</text>
+<rect x="976" y="135" width="420" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="996" y="172" fill="#183255" font-size="23" font-weight="600" text-anchor="start">场景与任务</text>
+<text x="996" y="209" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">物体、布局与初始状态</text>
+<text x="996" y="239" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">任务定义与成功判定</text>
+<text x="996" y="269" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">真实场景与基准任务对应</text>
+<rect x="44" y="325" width="1352" height="48" rx="4" fill="#f6f8fb" stroke="#d2dde8" stroke-width="1.7" />
+<text x="720" y="356" fill="#183255" font-size="22" font-weight="500" text-anchor="middle">统一坐标系、时间戳与实体标识</text>
+<path d="M254 295 V325" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M720 295 V325" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M1186 295 V325" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M202 373 V409" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M548 373 V409" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M894 373 V409" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M1240 373 V409" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<rect x="44" y="409" width="316" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="64" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">任务执行</text>
+<text x="64" y="483" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">任务复位与参数配置</text>
+<text x="64" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">策略与控制器执行</text>
+<text x="64" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">合法物理前缀重执行</text>
+<rect x="390" y="409" width="316" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="410" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">执行记录</text>
+<text x="410" y="483" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">同步观测</text>
+<text x="410" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">记录命令与实际运动</text>
+<text x="410" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">标注阶段与事件</text>
+<rect x="736" y="409" width="316" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="756" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">监督生成工具</text>
+<text x="756" y="483" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">专家示范采集</text>
+<text x="756" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">数据质检与导出</text>
+<text x="756" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">统计实际采集成本</text>
+<rect x="1082" y="409" width="314" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="1102" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">训练与评价工具</text>
+<text x="1102" y="483" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">策略训练与模型加载</text>
+<text x="1102" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">开发验收与独立测试</text>
+<text x="1102" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">数据及模型版本管理</text>
+<rect x="44" y="615" width="1352" height="56" rx="4" fill="#183255" stroke="#183255" stroke-width="1.7" />
+<text x="720" y="651" fill="white" font-size="23" font-weight="500" text-anchor="middle">共享接口：执行 / 采集 / 标注 / 训练 / 评价 / 记录</text>
+<path d="M202 615 V569" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M548 615 V569" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M894 615 V569" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M1240 615 V569" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<rect x="44" y="730" width="420" height="100" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7" />
+<text x="64" y="767" fill="#183255" font-size="23" font-weight="600" text-anchor="start">学生策略</text>
+<text x="64" y="804" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">ACT / Diffusion Policy / VLA</text>
+<rect x="510" y="730" width="420" height="100" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
+<text x="530" y="767" fill="#183255" font-size="23" font-weight="600" text-anchor="start">采集专家</text>
+<text x="530" y="804" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">固定专家策略或控制器</text>
+<rect x="976" y="730" width="420" height="100" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7" />
+<text x="996" y="767" fill="#183255" font-size="23" font-weight="600" text-anchor="start">SparkMentor / RSI</text>
+<text x="996" y="804" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">选择练习并组织多轮学习</text>
+<path d="M254 730 V671" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M720 730 V671" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
+<path d="M1186 730 V671" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" />
 </g></svg>

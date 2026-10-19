@@ -28,7 +28,7 @@ class Figure:
             self.text(44, 45, title, 29, INK, 700)
             self.text(44, 82, subtitle, 21, MUTED)
             return
-        self.text(44, 39, f'AIRSPARK   /   FIGURE {number:02}', 17, TEAL, 700)
+        self.text(44, 39, 'AIRSPARK   /   FIGURE ' + (f'{number:02}' if isinstance(number, int) else str(number)), 17, TEAL, 700)
         self.text(1396, 39, 'RESEARCH DESIGN  ·  v0.16', 16, MUTED, anchor='end')
         self.text(44, 81, title, 31, INK, 700)
         self.text(44, 112, subtitle, 20, MUTED)
@@ -67,38 +67,37 @@ class Figure:
         (OUT / f'{name}.svg').write_text('\n'.join(self.parts), encoding='utf-8')
 
 
-# 1. An academy, a replaceable decision rule, and a trainable student.
-f = Figure(1, 'An academy for persistent policy improvement',
-           'Shared facilities support different practice methods; learned capability is retained in the student.', 1000)
-f.box(44,158,354,158,'Practice methods', ['Coverage / terminal feedback', 'Process-condition allocation'], '#f1eef8', PURPLE)
-f.box(450,158,560,158,'SparkMentor', ['Diagnose → plan → invoke tools → record', 'Budgeted rounds and restartable execution'], '#eaf6f3', TEAL)
-f.box(1062,158,334,158,'Experiment memory', ['Evidence, costs, data lineage', 'Models and validation logs'], '#f6f8fb', TEAL, 23)
-f.path('M398 231 H450',PURPLE)
-f.path('M1010 218 H1062',TEAL)
-f.path('M1062 257 H1010',TEAL)
-f.rect(44,357,1352,61,'#183255',INK,9)
-f.text(720,396,'SHARED TOOL CONTRACT   ·   task → rollout → practice plan → dataset → checkpoint → report',22,'white',600,'middle')
-f.path('M730 316 V357',TEAL)
-f.path('M790 357 V316',TEAL)
-for x in [202,548,894,1240]:
-    f.path(f'M{x} 418 V471',TEAL)
-f.box(44,471,316,199,'Simulate & execute', ['UE visuals + MuJoCo', 'Tasks, reset and control', 'Student / expert rollouts'], '#eef4fd', BLUE)
-f.box(390,471,316,199,'Capture & qualify', ['Synchronized observations', 'Expert action labels', 'Quality and cost records'], '#eef4fd', BLUE)
-f.box(736,471,316,199,'Train the student', ['ACT / DP / VLA backend', 'Qualified data + replay', 'Candidate parameters θ′'], '#eef4fd', BLUE)
-f.box(1082,471,314,199,'Validate on V', ['Fixed acceptance rules', 'Accept / retain incumbent', 'Record every candidate'], '#f1eef8', PURPLE)
-for a,b in [(360,390),(706,736),(1052,1082)]:
-    f.path(f'M{a} 570 H{b}', BLUE)
-f.path('M1240 670 V728 H202 V670',TEAL)
-f.rect(430,704,586,44,'white','white',5)
-f.text(723,733,'Accepted student θ → next collection round in C',22,TEAL,600,'middle')
-f.path('M1360 670 V795',PURPLE)
-f.box(44,795,1352,128,'Independent evaluation after the research configuration is frozen',
-      ['Saved students → native AM-Bench and real tasks · no teacher intervention · no test feedback to practice'], '#fbf7ef', AMBER, 25)
-f.text(57,764,'C: collection pool   ·   V: development acceptance pool   ·   T: sealed evaluation pool',19,MUTED)
+# 1. Platform capabilities, independent of the practice-selection method.
+f = Figure(1, 'AirSpark academy platform',
+           'Simulation, experience generation, and policy learning share the same execution interfaces.', 870, paper=True)
+
+def panel(x,y,w,h,title,rows,fill='white',accent=LINE):
+    f.rect(x,y,w,h,fill,accent,5)
+    f.text(x+20,y+37,title,23,INK,600)
+    f.lines(x+20,y+74,rows,20,MUTED,30)
+
+panel(44,135,420,160,'Visual simulation',['UE rendering and calibrated cameras', 'RGB, depth and semantic observations', '3DGS scene appearance'],'#eef4fd',BLUE)
+panel(510,135,420,160,'Physical simulation',['MuJoCo flight and arm dynamics', 'Contact, slip and payload changes', 'Explicit collision and movable assets'],'#f1eef8',PURPLE)
+panel(976,135,420,160,'Scenes and tasks',['Objects, layouts and initial conditions', 'Task definitions and success criteria', 'Real-scene and benchmark alignment'])
+f.rect(44,325,1352,48,'#f6f8fb',LINE,4)
+f.text(720,356,'Shared coordinates, timestamps and entity identities',22,INK,500,'middle')
+for x in [254,720,1186]:f.path(f'M{x} 295 V325',INK)
+for x in [202,548,894,1240]:f.path(f'M{x} 373 V409',INK)
+panel(44,409,316,160,'Task execution',['Reset and parameterize tasks', 'Run policies and controllers', 'Replay valid physical prefixes'])
+panel(390,409,316,160,'Execution records',['Synchronize observations', 'Record actions and motion', 'Label stages and events'])
+panel(736,409,316,160,'Supervision tools',['Expert demonstrations', 'Data checks and export', 'Measure acquisition cost'])
+panel(1082,409,314,160,'Learning tools',['Train and reload policies', 'Run validation and tests', 'Track data and checkpoints'])
+f.rect(44,615,1352,56,'#183255',INK,4)
+f.text(720,651,'Shared interfaces: execute / collect / label / train / evaluate / record',23,'white',500,'middle')
+for x in [202,548,894,1240]:f.path(f'M{x} 615 V569',INK)
+panel(44,730,420,100,'Student policies',['ACT / Diffusion Policy / VLA'],'#eef4fd',BLUE)
+panel(510,730,420,100,'Collection experts',['Fixed expert policy or controller'])
+panel(976,730,420,100,'SparkMentor / RSI',['Select practice and organize rounds'],'#eaf6f3',TEAL)
+for x in [254,720,1186]:f.path(f'M{x} 730 V671',INK)
 f.save('fig01-academy-overview')
 
 # 2. Visual and physical worlds have explicit, distinct responsibilities.
-f = Figure(2,'One execution, aligned visual and physical evidence',
+f = Figure('A1','One execution, aligned visual and physical evidence',
            'Appearance, collision geometry and control share entity identities, coordinates and time.', 1020)
 f.box(44,160,304,216,'Scene appearance', ['Multi-view scene capture', '3DGS static appearance', 'Camera calibration'], '#eaf6f3', TEAL)
 f.box(44,448,304,231,'Physical assets', ['Collision geometry', 'Movable objects + joints', 'Mass, friction and actuation', 'Task semantics'], '#f1eef8', PURPLE)
@@ -124,8 +123,37 @@ for x in [202,620,1151]:
     f.path(f'M{x} 679 V750',INK,dashed=True)
 f.save('fig02-visual-physical-contract')
 
+# 2. The method: evidence and memory determine the next learning experience.
+f = Figure(2, 'Feedback-driven policy self-improvement',
+           'Execution feedback and experiment memory guide data acquisition; training updates the student policy.', 900, paper=True)
+f.rect(364,118,1052,280,'#fafbfc',LINE,5,True)
+f.text(384,148,'SparkMentor: diagnosis, memory and practice planning',19,MUTED)
+panel(44,170,280,200,'1  Student rollout',['Current policy πᵣ', 'Diagnostic tasks from C', 'Observations and actions'],'#eef4fd',BLUE)
+panel(384,170,280,200,'2  Gap diagnosis',['Stage reach and failure', 'Condition frequency ρ̂z', 'Failure f̂z and cost ĉz'])
+panel(724,170,340,200,'3  Practice selection',['Observable and reachable?', 'q(z) = ρ̂z · f̂z / ĉz', 'Conditions and budget allocation'],'#eaf6f3',TEAL)
+panel(1124,170,272,200,'Memory Mᵣ',['Past practice and costs', 'Data / model versions', 'Validation summaries'],'#f1eef8',PURPLE)
+f.path('M324 270 H384',INK)
+f.path('M664 270 H724',INK)
+f.text(694,251,'Eᵣ',18,MUTED,anchor='middle')
+f.path('M1124 270 H1064',PURPLE)
+panel(724,540,340,200,'4  Collect experience',['Valid initial state → prefix', 'Expert continuation + QC', 'Qualified dataset Dᵣ'])
+panel(384,540,280,200,'5  Train student',['New data Dᵣ + replay', 'Fixed training recipe', 'Candidate parameters θ′'],'#eaf6f3',TEAL)
+panel(44,540,280,200,'6  Validate update',['Validation tasks V', 'Full-task performance', 'Accept or retain policy'])
+f.path('M894 370 V540',INK)
+f.text(915,459,'plan within budget Bᵣ',20,MUTED)
+f.path('M724 640 H664',INK)
+f.path('M384 640 H324',INK)
+f.path('M184 540 V370',TEAL)
+f.text(205,451,'next-round policy',19,TEAL)
+f.text(205,482,'πᵣ₊₁',24,TEAL,600)
+f.path('M184 740 V803 H1260 V370',PURPLE)
+f.rect(432,781,603,42,'white','white',3)
+f.text(733,810,'Record all attempts, costs and validation outcomes',20,PURPLE,500,'middle')
+f.text(44,865,'Repeat until the acquisition budget or round limit is reached; evaluate frozen policies separately.',21,MUTED)
+f.save('fig02-rsi-method')
+
 # 3. Intermediate practice is produced by real physics and expert execution.
-f = Figure(3,'From execution gaps to trainable experience',
+f = Figure('A2','From execution gaps to trainable experience',
            'A reference practice method on shared academy tools; the learning benefit remains an experimental question.', 1030)
 f.rect(44,162,330,649,'#f6f8fb')
 f.rect(414,162,596,649,'#f6f8fb')
@@ -208,4 +236,4 @@ f.path('M1040 470 H1080',BLUE)
 f.text(44,710,'Compare complete-task success before and after improvement under the same evaluation conditions.',21,MUTED)
 f.save('fig04-evaluation-protocol')
 
-print(f'Built 4 SVG figures in {OUT}')
+print(f'Built 3 main and 2 supplementary SVG figures in {OUT}')

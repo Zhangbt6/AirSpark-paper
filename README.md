@@ -2,7 +2,7 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current manuscript: v0.16.2 — A Simulated Academy for Self-Improving Aerial Manipulation
+- Current manuscript: v0.17 — A Simulated Academy for Self-Improving Aerial Manipulation
 - Paper structure: abstract, introduction, related work, method, experiments, discussion, conclusion, references, appendix.
 - Evaluation: native AM-Bench return testing and paired real-scene experiments; stage-evidence-driven practice and bounded policy improvement.
 - Earlier designs: `versions/v0.15.1/index.html`, `versions/v0.15/index.html`, `versions/v0.14/index.html`, `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
@@ -35,3 +35,5 @@ Edit `scripts/build-figures.py` and run it with Python 3. Export PNG with `node 
 The v0.16.1 website displays Chinese figures by default. English SVG/PNG assets and the v0.16 English bundle are retained unchanged. Run `python scripts/localize-figures.py` after building the English SVGs, then `node scripts/export-figures.cjs --zh` to export Chinese PNGs. The v0.16.1 ZIP includes both languages and all three source scripts.
 
 The v0.16.2 revision redraws Figure 4 as a three-part experimental pipeline (initialization, AirSpark improvement, simulation/real evaluation). English and Chinese variants, figure dimensions, caption and native-evaluation prose are synchronized. The detailed B0–B3 comparison remains in the experiment table.
+
+The v0.17 figure organization separates the academy platform (Figure 1) from the RSI method (Figure 2), followed by the experimental pipeline (Figure 3). Execution alignment and expert-continuation details are supplementary Figures A1/A2. Chinese is the default display language; English vector/PNG files are retained. The RSI selector is the current process-condition reference method, not a claim of recursive teacher self-modification.
