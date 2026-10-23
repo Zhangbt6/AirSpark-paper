@@ -2,7 +2,7 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current Chinese manuscript: v0.27 — A Simulated Academy for Self-Improving Aerial Manipulation
+- Current Chinese manuscript: v0.28 — A Simulated Academy for Self-Improving Aerial Manipulation
 - Paper structure: abstract, introduction, related work, method, experiments, discussion, conclusion, references, appendix.
 - Evaluation: native AM-Bench return testing and paired real-scene experiments; stage-evidence-driven practice and bounded policy improvement.
 - Earlier designs: `versions/v0.20/index.html`, `versions/v0.19/index.html`, `versions/v0.18/index.html`, `versions/v0.17/index.html`, `versions/v0.15.1/index.html`, `versions/v0.15/index.html`, `versions/v0.14/index.html`, `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
@@ -95,3 +95,7 @@ Rewrites the Chinese abstract and introduction, retains the three related-work s
 ## v0.27 — compact abstract and narrative alignment
 
 Restores the full progression from aerial capability challenges through feedback improvement and real-to-sim-to-real opportunities to the academy. The introduction follows that progression. Resource budgets remain controlled-experiment and termination conditions, with the existing equations, algorithm, and comparisons preserved. Contributions and all experiment definitions are unchanged; the appendix records the consistency review. English synchronization remains deferred.
+
+## v0.28 — accepted abstract and stable research narrative
+
+Adopts the user-approved Chinese abstract verbatim. Keeps the aerial dynamic-interaction challenge, learner-state experience gaps, feedback improvement and real-to-sim-to-real opportunities, academy, and independent capability evaluation. The introduction clarifies velocity/timing and learner-state coverage, and specifies stage-based diagnosis. The appendix records a full-paper narrative audit at #narrative-contract. Both contribution statements, six-stage method, figures, protocol, references and experiment definitions remain unchanged. English LaTeX and PDF remain at v0.23 pending synchronization. The exact public v0.27 is archived. No new results are asserted.
