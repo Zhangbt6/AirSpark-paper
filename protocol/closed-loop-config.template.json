@@ -1,5 +1,5 @@
 {
-  "protocol_version": "v0.21",
+  "protocol_version": "v0.22",
   "status": "pilot_pending",
   "frozen": false,
   "scope": "Research protocol template; not an implemented simulator/trainer or a result.",
@@ -15,7 +15,11 @@
     ],
     "adaptation_enabled": false,
     "group_budget_weights": null,
-    "capability_report_targets": null
+    "capability_report_targets": null,
+    "group_display_names": {
+      "B3": "fixed_experience_configuration_with_feedback_condition_allocation",
+      "B3+adapt-current": "latest_feedback_without_earlier_explicit_intervention_history"
+    }
   },
   "versions": {
     "environment": null,
@@ -232,5 +236,13 @@
       "held_out_object_or_layout"
     ],
     "new_site_claim_requires_independent_site": true
+  },
+  "feedback_timing": {
+    "plan_at_round_r": "read_E_r_and_prior_M_r_plus_accepted_eta_r_and_budget",
+    "learning_feedback_F_r": "measured_after_intervention_r_and_stored_in_M_r_plus_1",
+    "cannot_read_future_feedback": true,
+    "eta": "accepted_experience_configuration_version_not_teacher_weights",
+    "A": "proposed_executable_practice_plan",
+    "mu_g": "fixed_decision_rule_and_information_permissions_for_group_g"
   }
 }

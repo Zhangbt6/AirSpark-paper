@@ -1,50 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img"><title>反馈驱动的策略自进化方法</title><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#426281"/></marker></defs><rect width="1440" height="900" fill="white"/><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#172c47}.title{font-size:28px;font-weight:700}.head{font-size:23px;font-weight:650}.body{font-size:20px}.small{font-size:18px;fill:#506781}</style>
-<text x="40" y="47" class="title" text-anchor="start">反馈驱动的策略自进化</text>
-<text x="40" y="82" class="small" text-anchor="start">学生参数更新与有界练习计划修订；两种反馈进入同一闭环</text>
-<rect x="40" y="120" width="390" height="165" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="60" y="155" class="head" text-anchor="start">当前学生执行</text>
-<text x="60" y="190" class="body" text-anchor="start">固定采集池 C 与部署输入</text>
-<text x="60" y="219" class="body" text-anchor="start">命令、运动、阶段事件与失败</text>
-<text x="60" y="248" class="body" text-anchor="start">Eᵣ：当前执行诊断</text>
-<rect x="490" y="120" width="910" height="165" rx="12" fill="#e9f7f2" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="510" y="155" class="head" text-anchor="start">SparkMentor · 有界练习决策</text>
-<text x="510" y="190" class="body" text-anchor="start">输入：Eᵣ、允许的学习反馈／记忆、当前方案 ηᵣ 与剩余预算</text>
-<text x="510" y="219" class="body" text-anchor="start">动作：监督起点、局部／完整经验构成、预设回放选项</text>
-<text x="510" y="248" class="body" text-anchor="start">固定 B3 ｜规则修订｜当前反馈 Agent｜历史反馈 Agent</text>
-<polyline points="430,201 480,201" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="40" y="350" width="390" height="165" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="60" y="385" class="head" text-anchor="start">学院：实际经验生成</text>
-<text x="60" y="420" class="body" text-anchor="start">合法物理前缀 → 固定专家延续</text>
-<text x="60" y="449" class="body" text-anchor="start">时间／动作／完整终态质检</text>
-<text x="60" y="478" class="body" text-anchor="start">输出：合格数据与实际成本</text>
-<rect x="490" y="350" width="390" height="165" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="510" y="385" class="head" text-anchor="start">候选学生训练</text>
-<text x="510" y="420" class="body" text-anchor="start">同一父状态与已接纳数据</text>
-<text x="510" y="449" class="body" text-anchor="start">共享优化算法与候选步数</text>
-<text x="510" y="478" class="body" text-anchor="start">候选分支隔离并全部计费</text>
-<rect x="940" y="350" width="460" height="165" rx="12" fill="#fff5e5" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="960" y="385" class="head" text-anchor="start">开发评价与接纳</text>
-<text x="960" y="420" class="body" text-anchor="start">V：完整任务收益、能力保留</text>
-<text x="960" y="449" class="body" text-anchor="start">配对初态、固定评分与经验门槛</text>
-<text x="960" y="478" class="body" text-anchor="start">Fᵣ：学习反馈，不回流 V 训练样本</text>
-<polyline points="940,285 940,317 235,317 235,340" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<polyline points="430,430 480,430" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<polyline points="880,430 930,430" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="40" y="580" width="840" height="155" rx="12" fill="#e9f7f2" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="60" y="615" class="head" text-anchor="start">跨轮干预记忆 Mᵣ₊₁</text>
-<text x="60" y="650" class="body" text-anchor="start">父代 → 方案 → 数据 → 候选 → 评价 → 接纳／拒绝 → 成本</text>
-<text x="60" y="679" class="body" text-anchor="start">规则组与历史 Agent 同证据；当前组仅最近一次 F</text>
-<text x="60" y="708" class="body" text-anchor="start">拒绝仍保留失败证据与支出；下次检查可提出新方案</text>
-<rect x="940" y="580" width="460" height="155" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="960" y="615" class="head" text-anchor="start">下一轮保留状态</text>
-<text x="960" y="650" class="body" text-anchor="start">接纳：提交 θ、训练状态、数据和 η</text>
-<text x="960" y="679" class="body" text-anchor="start">拒绝：保留父代与当前方案</text>
-<text x="960" y="708" class="body" text-anchor="start">尝试轮次、成本与采集随机流推进</text>
-<polyline points="1170,515 1170,570" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<polyline points="940,657 890,657" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<polyline points="460,580 460,303 675,303 675,295" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<text x="475" y="560" class="small" text-anchor="start">Fᵣ 与全部尝试写入记忆</text>
-<polyline points="1400,655 1420,655 1420,105 235,105 235,110" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<text x="40" y="800" class="small" text-anchor="start">固定约束：学生接口、专家、低层控制、优化算法、任务权重与验收标准</text>
-<text x="40" y="836" class="small" text-anchor="start">所有诊断、失败、候选训练与复验计入相同资源上限；反思文本不等于学习收益</text>
-<text x="40" y="872" class="small" text-anchor="start">封存测试 T 与真实最终测试在闭环外执行，反馈不得进入修订决策</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="950" viewBox="0 0 1640 950" role="img" aria-labelledby="title desc">
+<title id="title">执行与学习反馈驱动的策略自进化</title>
+<desc id="desc">六步主循环：策略执行、交互过程诊断、反馈驱动练习规划、专家监督生成、学生策略更新、学习评估与接纳。执行证据进入规划，学习结果写入干预记忆供后续轮次读取。</desc>
+<defs>
+<marker id="arrow-main" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#183255"/></marker>
+<marker id="arrow-exec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#087f75"/></marker>
+<marker id="arrow-memory" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7552a5"/></marker>
+</defs><rect width="1640" height="950" fill="white"/>
+<g font-family="Microsoft YaHei,Noto Sans CJK SC,Arial,sans-serif" fill="#183255">
+<text x="45" y="45" font-size="31" font-weight="700" fill="#183255" text-anchor="start">执行与学习反馈驱动的策略自进化</text>
+<text x="45" y="84" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">六步学习循环；跨轮干预记录支持后续练习修订</text>
+<rect x="45" y="165" width="335" height="235" rx="7" fill="#eef4fd" stroke="#c9d5e2" stroke-width="1.8"/>
+<text x="64" y="208" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">1</text>
+<text x="96" y="208" font-size="27" font-weight="650" fill="#183255" text-anchor="start">策略执行</text>
+<text x="66" y="284" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">采集池 C：学生策略 π<tspan baseline-shift="sub" font-size="75%">θᵣ</tspan></text>
+<text x="66" y="319" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">观测历史与动作命令</text>
+<text x="66" y="354" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">实际运动与任务结果</text>
+<rect x="440" y="165" width="335" height="235" rx="7" fill="white" stroke="#c9d5e2" stroke-width="1.8"/>
+<text x="459" y="208" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">2</text>
+<text x="491" y="208" font-size="27" font-weight="650" fill="#183255" text-anchor="start">交互过程诊断</text>
+<text x="461" y="284" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">阶段到达与转换失败</text>
+<text x="461" y="319" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">可观测性、可达性检查</text>
+<text x="461" y="354" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">频率、失败率与经验成本</text>
+<rect x="845" y="165" width="355" height="235" rx="7" fill="#eaf6f3" stroke="#087f75" stroke-width="1.8"/>
+<text x="864" y="208" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">3</text>
+<text x="896" y="208" font-size="27" font-weight="650" fill="#183255" text-anchor="start">反馈驱动练习规划</text>
+<text x="896" y="239" font-size="27" font-weight="650" fill="#183255" text-anchor="start">SparkMentor</text>
+<text x="866" y="284" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">条件预算 q(z)</text>
+<text x="866" y="319" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">监督起点与示范构成</text>
+<text x="866" y="354" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">经验回放选项</text>
+<rect x="845" y="520" width="355" height="235" rx="7" fill="white" stroke="#c9d5e2" stroke-width="1.8"/>
+<text x="864" y="563" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">4</text>
+<text x="896" y="563" font-size="27" font-weight="650" fill="#183255" text-anchor="start">专家监督生成</text>
+<text x="866" y="639" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">合法物理前缀</text>
+<text x="866" y="674" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">固定专家执行延续</text>
+<text x="866" y="709" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">监督质检与数据导出</text>
+<rect x="440" y="520" width="335" height="235" rx="7" fill="#eef4fd" stroke="#c9d5e2" stroke-width="1.8"/>
+<text x="459" y="563" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">5</text>
+<text x="491" y="563" font-size="27" font-weight="650" fill="#183255" text-anchor="start">学生策略更新</text>
+<text x="461" y="639" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">新增数据与接纳回放</text>
+<text x="461" y="674" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">固定基础学习算法</text>
+<text x="461" y="709" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">按计划训练候选学生</text>
+<rect x="45" y="520" width="335" height="235" rx="7" fill="#f4f7fa" stroke="#c9d5e2" stroke-width="1.8"/>
+<text x="64" y="563" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">6</text>
+<text x="96" y="563" font-size="27" font-weight="650" fill="#183255" text-anchor="start">学习评估与接纳</text>
+<text x="66" y="639" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">开发池 V：父代／候选</text>
+<text x="66" y="674" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">完整任务收益与能力保留</text>
+<text x="66" y="709" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">接纳更新或保留父代</text>
+<path d="M380 282 H430" fill="none" stroke="#183255" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-main)"/>
+<path d="M775 282 H835" fill="none" stroke="#087f75" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-exec)"/>
+<text x="805" y="255" font-size="24" font-weight="600" fill="#087f75" text-anchor="middle">Eᵣ</text>
+<path d="M1022 400 V510" fill="none" stroke="#183255" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-main)"/>
+<text x="1042" y="459" font-size="23" font-weight="400" fill="#087f75" text-anchor="start">练习计划 Aᵣ</text>
+<path d="M845 637 H785" fill="none" stroke="#183255" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-main)"/>
+<text x="810" y="611" font-size="23" font-weight="400" fill="#52657b" text-anchor="middle">Dᵣ</text>
+<path d="M440 637 H390" fill="none" stroke="#183255" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-main)"/>
+<text x="412" y="611" font-size="24" font-weight="400" fill="#52657b" text-anchor="middle">θ′</text>
+<path d="M212 520 V410" fill="none" stroke="#183255" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-main)"/>
+<text x="230" y="453" font-size="23" font-weight="400" fill="#087f75" text-anchor="start">保留策略</text>
+<text x="230" y="486" font-size="24" font-weight="600" fill="#087f75" text-anchor="start">π<tspan baseline-shift="sub" font-size="75%">θᵣ₊₁</tspan></text>
+<rect x="1260" y="165" width="335" height="590" rx="7" fill="#f3f0f8" stroke="#7552a5" stroke-width="1.8"/>
+<text x="1280" y="208" font-size="27" font-weight="650" fill="#183255" text-anchor="start">跨轮干预记忆</text>
+<text x="1280" y="251" font-size="28" font-weight="600" fill="#7552a5" text-anchor="start">Mᵣ → Mᵣ₊₁</text>
+<text x="1280" y="327" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">已尝试的练习方案</text>
+<text x="1280" y="376" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">生成数据与学生版本</text>
+<text x="1280" y="425" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">学习效果与能力保留</text>
+<text x="1280" y="474" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">实际成本与不确定性</text>
+<text x="1280" y="523" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">接纳与拒绝均记录</text>
+<text x="1280" y="655" font-size="22" font-weight="600" fill="#7552a5" text-anchor="start">学习反馈支持后续修订</text>
+<text x="1280" y="691" font-size="23" font-weight="400" fill="#7552a5" text-anchor="start">供后续轮次读取</text>
+<path d="M1260 282 H1210" fill="none" stroke="#7552a5" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-memory)"/>
+<text x="1230" y="255" font-size="20" font-weight="400" fill="#7552a5" text-anchor="middle">历史</text>
+<path d="M212 755 V815 H1428 V765" fill="none" stroke="#7552a5" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-memory)"/>
+<rect x="340" y="790" width="770" height="45" fill="white"/>
+<text x="725" y="821" font-size="24" font-weight="500" fill="#7552a5" text-anchor="middle">学习反馈 Fᵣ：任务收益、能力保留与实际成本</text>
+<text x="45" y="888" font-size="23" font-weight="400" fill="#52657b" text-anchor="start">第 r 轮：Eᵣ 与既往 Mᵣ → 练习 Aᵣ → 学生更新 → Fᵣ 写入 Mᵣ₊₁</text>
+<text x="45" y="930" font-size="23" font-weight="400" fill="#52657b" text-anchor="start">封存评价位于学习闭环之外：冻结学生 → 原生基准与物理实机；测试反馈不参与修订</text>
+</g></svg>

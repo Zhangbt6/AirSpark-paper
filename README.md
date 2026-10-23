@@ -2,7 +2,7 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current manuscript: v0.21 — A Simulated Academy for Self-Improving Aerial Manipulation
+- Current manuscript: v0.22 — A Simulated Academy for Self-Improving Aerial Manipulation
 - Paper structure: abstract, introduction, related work, method, experiments, discussion, conclusion, references, appendix.
 - Evaluation: native AM-Bench return testing and paired real-scene experiments; stage-evidence-driven practice and bounded policy improvement.
 - Earlier designs: `versions/v0.20/index.html`, `versions/v0.19/index.html`, `versions/v0.18/index.html`, `versions/v0.17/index.html`, `versions/v0.15.1/index.html`, `versions/v0.15/index.html`, `versions/v0.14/index.html`, `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
@@ -63,3 +63,12 @@ Retains the academy platform and feedback-driven policy self-improvement contrib
 At least one main task crosses native/academy collection with coverage/history-informed revision, addressing the value of academy data over direct native collection. Parent provenance, native task/robot/action/scoring correspondence, practical effects, power/precision and sample counts must be frozen after pilots. Report absolute changes from B0 as well as matched-budget contrasts. Physical-real testing means a frozen student runs on actual hardware, with real-scene appearance reconstruction and explicit physical/robot registration. A different embodiment requires a matching parent and separately charged minimal loop. No quantitative result is asserted.
 
 Figures 2 and 3 and the shared JSON protocol are updated. To rebuild current figures, run the original generators/localization/feedback builder, then `python scripts/build-study-figures-v021.py` before PNG export; earlier generators otherwise overwrite the new diagrams. Current bilingual bundle: `figures/AirSpark-Figures-v0.21.zip`. Full v0.20 is archived; `#revision-v021` lists exact changes.
+
+
+## v0.22 — clarify the learning cycle and feedback semantics
+
+Figure 2 returns to six numbered stages: policy rollout, interaction diagnosis, feedback-guided practice planning, expert supervision generation, student policy update, and learning evaluation/acceptance. Intervention memory sits outside the main cycle. E_r and prior M_r guide the current plan A_r; learning feedback F_r is stored in M_(r+1) for subsequent decisions. Plan/configuration/decision-rule notation is disambiguated; no teacher network or new search space is added.
+
+The abstract and introduction focus on why generated experience need not improve the current student. Contribution definitions describe facilities and mechanism, with group counts retained in experiments. Fixed experience B3 still reallocates conditions from execution feedback; the current variant retains its current plan/latest feedback and is not memory-free. Frozen physical deployment is distinguished from an unperformed real-failure-return loop. Main comparisons and budgets remain unchanged.
+
+Rebuild the original generators, localization, feedback figure, and v0.21 study figures first, then run `python scripts/build-rsi-figure-v022.py` before PNG export. The current editable bilingual bundle is `figures/AirSpark-Figures-v0.22.zip`. Full v0.21 is archived; `#revision-v022` and `#rsi-module-contract` record changes and module semantics.

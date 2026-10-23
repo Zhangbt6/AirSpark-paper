@@ -1,0 +1,236 @@
+{
+  "protocol_version": "v0.21",
+  "status": "pilot_pending",
+  "frozen": false,
+  "scope": "Research protocol template; not an implemented simulator/trainer or a result.",
+  "method": {
+    "group": null,
+    "allowed_groups": [
+      "B1",
+      "B2",
+      "B3",
+      "B3+adapt-rule",
+      "B3+adapt-current",
+      "B3+adapt-history"
+    ],
+    "adaptation_enabled": false,
+    "group_budget_weights": null,
+    "capability_report_targets": null
+  },
+  "versions": {
+    "environment": null,
+    "expert": null,
+    "student": null,
+    "initial_checkpoint": null,
+    "split_manifest": null
+  },
+  "diagnostics": {
+    "episodes_per_round": null,
+    "event_predicates": null,
+    "transition_windows": null,
+    "counting": "first_entry_per_condition_per_episode",
+    "smoothing": "none",
+    "minimum_condition_count": null
+  },
+  "allocation": {
+    "exploration_fraction": null,
+    "coverage_rule": null,
+    "condition_tie_order": null,
+    "zero_q": "coverage",
+    "unknown_cost": "bounded_pilot_or_pause",
+    "pilot_attempt_limit": null,
+    "retest_schedule": null
+  },
+  "collection": {
+    "prefix_configuration": null,
+    "takeover_rule": null,
+    "quality_thresholds": null,
+    "minimum_training_data": null
+  },
+  "training": {
+    "steps_per_candidate": null,
+    "optimizer_recipe": null,
+    "replay_ratio": null,
+    "seed_ids": null,
+    "round_limit": null
+  },
+  "adaptation": {
+    "check_rounds": null,
+    "max_alternative_plans": null,
+    "takeover_options": null,
+    "data_composition_options": null,
+    "replay_options": null,
+    "read_historical_interventions": null,
+    "history_access": {
+      "B3": "none_for_revision",
+      "B3+adapt-rule": "same_structured_E_and_full_prior_M_as_history_agent",
+      "B3+adapt-current": "current_E_and_most_recent_F_only_plus_current_plan_and_budget",
+      "B3+adapt-history": "current_E_and_all_prior_interventions"
+    },
+    "rule_baseline": {
+      "trigger_thresholds": null,
+      "priority_order": null,
+      "tie_order": null,
+      "same_tools_action_space_history_and_caps": true
+    },
+    "count_all_branches_and_rejections": true,
+    "agent_configuration": {
+      "model_version": null,
+      "prompt_hash": null,
+      "tool_schema_hash": null,
+      "memory_schema": null,
+      "decision_sampling": null,
+      "per_check_call_cap": null,
+      "same_structured_input_schema_as_rule": true
+    }
+  },
+  "validation": {
+    "paired_initial_conditions": null,
+    "episodes_per_group": null,
+    "group_weights": null,
+    "retention_groups": null,
+    "interval_method": "paired_resampling_within_task_group",
+    "resamples": null,
+    "confidence_level": null
+  },
+  "acceptance": {
+    "rule": "valid_and_complete_and_within_budget_and_empirical_gain_and_retention",
+    "minimum_mean_gain": null,
+    "retention_tolerances": null,
+    "tie_break": [
+      "highest_validation_mean",
+      "prefer_current_plan",
+      "configuration_id"
+    ],
+    "statistical_lower_bound_guarantee": false
+  },
+  "on_rejection": {
+    "model": "restore_parent",
+    "training_state": "restore_parent",
+    "accepted_data": "unchanged",
+    "candidate_data": "archive_only_no_automatic_replay",
+    "plan_version": "retain_current",
+    "memory": "append_all_attempts",
+    "cost": "keep_actual_spend",
+    "global_attempt_counter": "advance",
+    "global_collection_rng": "advance",
+    "next_revision": "may_use_appended_failure_memory_at_next_registered_check_without_committing_rejected_candidate"
+  },
+  "budgets": {
+    "collection_worker_time": null,
+    "training_compute": null,
+    "evaluation_rollouts": null,
+    "agent_calls": null,
+    "per_candidate_reservation": null,
+    "retry_limit": null
+  },
+  "freeze_requirements": {
+    "required": "Resolve applicable null fields, validate split and versions, save a manifest hash before main comparisons.",
+    "adaptation_fields": "Required only for the adaptation variants.",
+    "measured_results": false,
+    "statistics_and_contracts": "Freeze statistical power/precision design, native task correspondence, parent provenance and real embodiment choice before main comparisons."
+  },
+  "study_design": {
+    "hypotheses": [
+      "H1_infrastructure",
+      "H2_matched_budget_plan_revision",
+      "H3_frozen_native_and_physical_real"
+    ],
+    "minimum_distinct_main_tasks": 2,
+    "minimum_ordered_intervention_opportunities": 3,
+    "primary_groups": [
+      "B0",
+      "B3",
+      "B3+adapt-rule",
+      "B3+adapt-current",
+      "B3+adapt-history"
+    ],
+    "supporting_groups": [
+      "B1",
+      "B2"
+    ],
+    "student_backends_required": 1,
+    "primary_contrasts": [
+      [
+        "B3+adapt-history",
+        "B3"
+      ],
+      [
+        "B3+adapt-history",
+        "B3+adapt-rule"
+      ]
+    ],
+    "history_contrast": [
+      "B3+adapt-history",
+      "B3+adapt-current"
+    ],
+    "absolute_change_from_B0_required": true
+  },
+  "statistics": {
+    "minimum_relevant_effect": null,
+    "alpha": null,
+    "target_power": null,
+    "independent_training_seeds": null,
+    "development_episodes_per_group": null,
+    "sealed_test_episodes_per_group": null,
+    "multiplicity_rule": null,
+    "pilot_variance_manifest": null,
+    "uncertainty": "hierarchical_over_training_seeds_and_paired_initial_states",
+    "three_seeds_sufficient_by_default": false
+  },
+  "native_return": {
+    "official_source_commit": "60bf5b73041df4eab571f7d9f0a297aeecbf2e0d",
+    "task_candidates": [
+      "LemonHarvesting",
+      "CabinetPickPlace"
+    ],
+    "runtime_correspondence_verified": false,
+    "task_contract_manifest": null,
+    "B0_data_and_training_provenance": null,
+    "checkpoint_hash": null,
+    "minimum_source_control_main_tasks": 1,
+    "source_control": {
+      "sources": [
+        "native_AMBench",
+        "AirSpark"
+      ],
+      "strategies": [
+        "B1",
+        "B3+adapt-history"
+      ]
+    },
+    "changed_contract_label": "derived_setting",
+    "report_absolute_and_relative_changes": true,
+    "contract_fields": [
+      "environment_id",
+      "embodiment",
+      "controller",
+      "action_frame_units_rate",
+      "observations",
+      "normalization",
+      "reset",
+      "attachment_and_detachment",
+      "termination_and_success",
+      "expert",
+      "data_and_checkpoint_provenance"
+    ]
+  },
+  "real_transfer": {
+    "means": "frozen_student_executed_on_physical_robot",
+    "same_embodiment_contract_verified": false,
+    "deployment_contract": null,
+    "reconstruction_and_physical_registration_manifest": null,
+    "if_embodiment_differs": "declare_matching_parent_and_repeat_minimal_loop_on_one_task_with_separate_cost",
+    "groups": [
+      "B0",
+      "strongest_fixed_or_rule_selected_on_V",
+      "B3+adapt-history"
+    ],
+    "runtime_Mentor_correction": false,
+    "evaluation_scene_splits": [
+      "reconstructed_corresponding",
+      "held_out_object_or_layout"
+    ],
+    "new_site_claim_requires_independent_site": true
+  }
+}
