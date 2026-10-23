@@ -2,7 +2,7 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current Chinese manuscript: v0.26 — A Simulated Academy for Self-Improving Aerial Manipulation
+- Current Chinese manuscript: v0.27 — A Simulated Academy for Self-Improving Aerial Manipulation
 - Paper structure: abstract, introduction, related work, method, experiments, discussion, conclusion, references, appendix.
 - Evaluation: native AM-Bench return testing and paired real-scene experiments; stage-evidence-driven practice and bounded policy improvement.
 - Earlier designs: `versions/v0.20/index.html`, `versions/v0.19/index.html`, `versions/v0.18/index.html`, `versions/v0.17/index.html`, `versions/v0.15.1/index.html`, `versions/v0.15/index.html`, `versions/v0.14/index.html`, `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
@@ -91,3 +91,7 @@ Clarifies how aerial motion, onboard vision, and contact create coordination dem
 ## v0.26 — formal manuscript prose
 
 Rewrites the Chinese abstract and introduction, retains the three related-work sections, and replaces conversational commentary with technical positioning and evaluation statements. Method and experiment prose is edited without changing algorithms, equations, tables, figures, or protocol. Contributions are verbatim preserved. Discussion is consolidated; no experimental findings are added. English LaTeX remains at v0.23 pending coordinated translation. The v0.25 site is archived.
+
+## v0.27 — compact abstract and narrative alignment
+
+Restores the full progression from aerial capability challenges through feedback improvement and real-to-sim-to-real opportunities to the academy. The introduction follows that progression. Resource budgets remain controlled-experiment and termination conditions, with the existing equations, algorithm, and comparisons preserved. Contributions and all experiment definitions are unchanged; the appendix records the consistency review. English synchronization remains deferred.
