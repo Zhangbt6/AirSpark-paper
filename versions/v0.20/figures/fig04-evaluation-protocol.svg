@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="740" viewBox="0 0 1440 740" role="img" aria-labelledby="title desc">
+<title id="title">Experimental pipeline</title><desc id="desc">Initialize a policy, improve it in AirSpark, and evaluate the initial and updated policies.. Proposed research design, not measured results.</desc>
+<defs>
+<marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183255"/></marker>
+<marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087f75"/></marker>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#215cce"/></marker>
+<marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7552a5"/></marker>
+<marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94601b"/></marker>
+</defs><g font-family="Arial, Helvetica, sans-serif"><rect width="1440" height="100%" fill="white"/>
+<text x="44" y="45" fill="#183255" font-size="29" font-weight="700" text-anchor="start">Experimental pipeline</text>
+<text x="44" y="82" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Initialize a policy, improve it in AirSpark, and evaluate the initial and updated policies.</text>
+<text x="44" y="135" fill="#183255" font-size="24" font-weight="700" text-anchor="start">(a) Policy initialization</text>
+<text x="365" y="135" fill="#183255" font-size="24" font-weight="700" text-anchor="start">(b) Improvement in AirSpark</text>
+<text x="1080" y="135" fill="#183255" font-size="24" font-weight="700" text-anchor="start">(c) Evaluation</text>
+<rect x="44" y="185" width="256" height="112" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="172.0" y="224" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">AM-Bench data</text>
+<text x="172.0" y="258" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Original training recipe</text>
+<path d="M172 297 V345" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+<rect x="44" y="345" width="256" height="80" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7"/>
+<text x="172.0" y="384" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Initial policy π₀</text>
+<rect x="355" y="164" width="650" height="360" rx="5" fill="#f9fafb" stroke="#d2dde8" stroke-width="1.7"/>
+<rect x="375" y="205" width="255" height="100" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="502.5" y="244" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Policy rollout</text>
+<text x="502.5" y="278" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Execute the current policy</text>
+<rect x="710" y="205" width="275" height="100" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="847.5" y="244" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Practice selection</text>
+<text x="847.5" y="278" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Analyze execution feedback</text>
+<rect x="710" y="390" width="275" height="100" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="847.5" y="429" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Expert data collection</text>
+<text x="847.5" y="463" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Generate demonstrations</text>
+<rect x="375" y="390" width="255" height="100" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
+<text x="502.5" y="429" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Policy training</text>
+<text x="502.5" y="463" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">New data + replay</text>
+<path d="M300 385 H330 V255 H375" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+<path d="M630 255 H710" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+<text x="670" y="237" fill="#52657b" font-size="17" font-weight="400" text-anchor="middle">feedback</text>
+<path d="M848 305 V390" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+<text x="868" y="353" fill="#52657b" font-size="17" font-weight="400" text-anchor="start">plan</text>
+<path d="M710 440 H630" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
+<text x="670" y="422" fill="#52657b" font-size="17" font-weight="400" text-anchor="middle">data</text>
+<path d="M503 390 V305" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<text x="484" y="353" fill="#087f75" font-size="20" font-weight="400" text-anchor="end">πᵣ₊₁</text>
+<rect x="500" y="570" width="475" height="100" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7"/>
+<text x="737.5" y="609" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Freeze policies for evaluation</text>
+<text x="737.5" y="643" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Initial π₀ and retained πᴿ</text>
+<path d="M330 385 V620 H500" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" stroke-dasharray="8 6"/>
+<path d="M503 490 V544 H738 V570" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<text x="757" y="552" fill="#087f75" font-size="18" font-weight="400" text-anchor="start">updated policy</text>
+<rect x="1080" y="205" width="316" height="120" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="1238.0" y="244" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">AM-Bench evaluation</text>
+<text x="1238.0" y="278" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Original tasks and scoring</text>
+<rect x="1080" y="410" width="316" height="120" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="1238.0" y="449" fill="#183255" font-size="21" font-weight="600" text-anchor="middle">Real-world evaluation</text>
+<text x="1238.0" y="483" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Corresponding physical tasks</text>
+<path d="M975 620 H1040 V265 H1080" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M1040 470 H1080" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<text x="44" y="700" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Deployment-matched interfaces; shared adaptation across all comparison groups.</text>
+<text x="44" y="728" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Compare complete-task success before and after improvement under the same evaluation conditions.</text>
+</g></svg>

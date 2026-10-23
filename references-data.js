@@ -1052,5 +1052,42 @@ const paperReferences = {
     "note": "书籍主引用：第二版，Princeton University Press，2021。作者机构书目列明版次与出版年；在线资源另提供公开章节。用于反馈系统基本概念，不作为本方法的稳定性证明。",
     "verified": "2026-10-20",
     "sortKey": "Astrom, Karl J. | Murray, Richard M. | 2021 | feedback-systems"
+  },
+  "agentic-robots-survey": {
+    "title": "Towards Agentic Robots: Model, Data, Environment, and Harness",
+    "authors": [
+      "Qin, Chonghan",
+      "Wu, Dongming",
+      "Feng, Kaituo",
+      "Wang, Jiaxu",
+      "Yu, Xinlei",
+      "Sun, Peiwen",
+      "Fan, Yijia",
+      "He, Xilin",
+      "Chen, Bingao",
+      "Lian, Weitong",
+      "Ji, Ryan",
+      "Ren, Wenqi",
+      "Hu, Xiaobin",
+      "Lin, Dahua",
+      "Jiang, Yu-Gang",
+      "Yue, Xiangyu"
+    ],
+    "year": "2026",
+    "venue": "arXiv",
+    "entryType": "misc",
+    "type": "综述预印本",
+    "eprint": "2610.20442",
+    "version": "1",
+    "url": "https://arxiv.org/abs/2610.20442v1",
+    "links": [
+      [
+        "作者维护的文献目录",
+        "https://github.com/chonghanqin/Awesome-Agentic-Robots"
+      ]
+    ],
+    "note": "2026-10-14 公开的综述 v1；本轮核查未列正式会议或期刊发表信息。按模型、数据、环境和 Harness 四个功能域组织 Agentic Robotics，兼顾任务执行与能力发展。用于系统背景与功能边界，不作为 AirSpark 方法原创性、学习增益或收敛的证明。",
+    "verified": "2026-10-23",
+    "sortKey": "Qin, Chonghan | Wu, Dongming | Feng, Kaituo | Wang, Jiaxu | Yu, Xinlei | Sun, Peiwen | Fan, Yijia | He, Xilin | Chen, Bingao | Lian, Weitong | Ji, Ryan | Ren, Wenqi | Hu, Xiaobin | Lin, Dahua | Jiang, Yu-Gang | Yue, Xiangyu | 2026 | agentic-robots-survey"
   }
 };

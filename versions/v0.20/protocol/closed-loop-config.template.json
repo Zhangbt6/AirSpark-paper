@@ -1,0 +1,108 @@
+{
+  "protocol_version": "v0.20",
+  "status": "pilot_pending",
+  "frozen": false,
+  "scope": "Research protocol template; not an implemented simulator/trainer or a result.",
+  "method": {
+    "group": null,
+    "allowed_groups": [
+      "B1",
+      "B2",
+      "B3",
+      "B3+adapt-current",
+      "B3+adapt-history"
+    ],
+    "adaptation_enabled": false,
+    "group_budget_weights": null,
+    "capability_report_targets": null
+  },
+  "versions": {
+    "environment": null,
+    "expert": null,
+    "student": null,
+    "initial_checkpoint": null,
+    "split_manifest": null
+  },
+  "diagnostics": {
+    "episodes_per_round": null,
+    "event_predicates": null,
+    "transition_windows": null,
+    "counting": "first_entry_per_condition_per_episode",
+    "smoothing": "none",
+    "minimum_condition_count": null
+  },
+  "allocation": {
+    "exploration_fraction": null,
+    "coverage_rule": null,
+    "condition_tie_order": null,
+    "zero_q": "coverage",
+    "unknown_cost": "bounded_pilot_or_pause",
+    "pilot_attempt_limit": null,
+    "retest_schedule": null
+  },
+  "collection": {
+    "prefix_configuration": null,
+    "takeover_rule": null,
+    "quality_thresholds": null,
+    "minimum_training_data": null
+  },
+  "training": {
+    "steps_per_candidate": null,
+    "optimizer_recipe": null,
+    "replay_ratio": null,
+    "seed_ids": null,
+    "round_limit": null
+  },
+  "adaptation": {
+    "check_rounds": null,
+    "max_alternative_plans": null,
+    "takeover_options": null,
+    "data_composition_options": null,
+    "replay_options": null,
+    "read_historical_interventions": null
+  },
+  "validation": {
+    "paired_initial_conditions": null,
+    "episodes_per_group": null,
+    "group_weights": null,
+    "retention_groups": null,
+    "interval_method": "paired_resampling_within_task_group",
+    "resamples": null,
+    "confidence_level": null
+  },
+  "acceptance": {
+    "rule": "valid_and_complete_and_within_budget_and_empirical_gain_and_retention",
+    "minimum_mean_gain": null,
+    "retention_tolerances": null,
+    "tie_break": [
+      "highest_validation_mean",
+      "prefer_current_plan",
+      "configuration_id"
+    ],
+    "statistical_lower_bound_guarantee": false
+  },
+  "on_rejection": {
+    "model": "restore_parent",
+    "training_state": "restore_parent",
+    "accepted_data": "unchanged",
+    "candidate_data": "archive_only_no_automatic_replay",
+    "plan_version": "retain_current",
+    "memory": "append_all_attempts",
+    "cost": "keep_actual_spend",
+    "global_attempt_counter": "advance",
+    "global_collection_rng": "advance"
+  },
+  "budgets": {
+    "collection_worker_time": null,
+    "training_compute": null,
+    "evaluation_rollouts": null,
+    "agent_calls": null,
+    "per_candidate_reservation": null,
+    "retry_limit": null
+  },
+  "freeze_requirements": {
+    "required": "Resolve applicable null fields, validate split and versions, save a manifest hash before main comparisons.",
+    "adaptation_fields": "Required only for the adaptation variants.",
+    "measured_results": false
+  }
+}

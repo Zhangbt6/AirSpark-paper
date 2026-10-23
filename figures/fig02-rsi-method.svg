@@ -1,74 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
-<title id="title">Feedback-driven policy self-improvement</title><desc id="desc">Execution feedback guides practice; learning outcomes inform bounded plan adjustments.. Proposed research design, not measured results.</desc>
-<defs>
-<marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183255"/></marker>
-<marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087f75"/></marker>
-<marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#215cce"/></marker>
-<marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7552a5"/></marker>
-<marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94601b"/></marker>
-</defs><g font-family="Arial, Helvetica, sans-serif"><rect width="1440" height="100%" fill="white"/>
-<text x="44" y="45" fill="#183255" font-size="29" font-weight="700" text-anchor="start">Feedback-driven policy self-improvement</text>
-<text x="44" y="82" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Execution feedback guides practice; learning outcomes inform bounded plan adjustments.</text>
-<rect x="364" y="118" width="1052" height="280" rx="5" fill="#fafbfc" stroke="#d2dde8" stroke-width="1.7" stroke-dasharray="8 6"/>
-<text x="384" y="148" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">SparkMentor: diagnosis, memory and practice planning</text>
-<rect x="44" y="170" width="280" height="200" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7"/>
-<text x="64" y="207" fill="#183255" font-size="23" font-weight="600" text-anchor="start">1  Student rollout</text>
-<text x="64" y="244" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Current policy πᵣ</text>
-<text x="64" y="274" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Diagnostic tasks from C</text>
-<text x="64" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Observations and actions</text>
-<rect x="384" y="170" width="280" height="200" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="404" y="207" fill="#183255" font-size="23" font-weight="600" text-anchor="start">2  Gap diagnosis</text>
-<text x="404" y="244" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Stage reach and failure</text>
-<text x="404" y="274" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Condition frequency ρ̂z</text>
-<text x="404" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Failure f̂z and cost κ̂z</text>
-<rect x="724" y="170" width="340" height="200" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
-<text x="744" y="207" fill="#183255" font-size="23" font-weight="600" text-anchor="start">3  Practice planning</text>
-<text x="744" y="244" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">q(z) = ρ̂z · f̂z / κ̂z</text>
-<text x="744" y="274" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Plan ηᵣ and budget Bᵣ</text>
-<text x="744" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Generation and data use</text>
-<rect x="1124" y="170" width="272" height="200" rx="5" fill="#f1eef8" stroke="#7552a5" stroke-width="1.7"/>
-<text x="1144" y="207" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Memory Mᵣ</text>
-<text x="1144" y="244" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Interventions and outcomes</text>
-<text x="1144" y="274" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Policy / data / plan versions</text>
-<text x="1144" y="304" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Costs and uncertainty</text>
-<path d="M324 270 H384" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M664 270 H724" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<text x="694" y="251" fill="#52657b" font-size="18" font-weight="400" text-anchor="middle">Eᵣ</text>
-<path d="M1124 270 H1064" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
-<rect x="724" y="540" width="340" height="200" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="744" y="577" fill="#183255" font-size="23" font-weight="600" text-anchor="start">4  Collect experience</text>
-<text x="744" y="614" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Valid initial state → prefix</text>
-<text x="744" y="644" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Expert continuation + QC</text>
-<text x="744" y="674" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Qualified dataset Dᵣ</text>
-<rect x="384" y="540" width="280" height="200" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
-<text x="404" y="577" fill="#183255" font-size="23" font-weight="600" text-anchor="start">5  Train student</text>
-<text x="404" y="614" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">New data Dᵣ + replay</text>
-<text x="404" y="644" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Fixed learning algorithm</text>
-<text x="404" y="674" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Candidate parameters θ′</text>
-<rect x="44" y="540" width="280" height="200" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="64" y="577" fill="#183255" font-size="23" font-weight="600" text-anchor="start">6  Validate update</text>
-<text x="64" y="614" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Validation tasks V</text>
-<text x="64" y="644" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Task gain and retention</text>
-<text x="64" y="674" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Accept or retain policy</text>
-<path d="M894 370 V540" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<text x="915" y="482" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">practice plan</text>
-<path d="M724 640 H664" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M384 640 H324" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M184 540 V370" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
-<text x="205" y="451" fill="#087f75" font-size="19" font-weight="400" text-anchor="start">next-round policy</text>
-<text x="205" y="482" fill="#087f75" font-size="24" font-weight="600" text-anchor="start">πᵣ₊₁</text>
-<rect x="1124" y="480" width="272" height="260" rx="5" fill="#fcf8f1" stroke="#94601b" stroke-width="1.7" stroke-dasharray="8 6"/>
-<text x="1144" y="518" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Plan adjustment</text>
-<text x="1144" y="558" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Compare candidate plans</text>
-<text x="1144" y="590" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Retain supported changes</text>
-<text x="1144" y="622" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Bounded options and cost</text>
-<text x="1144" y="654" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Extra analysis (§4.6)</text>
-<path d="M1260 370 V480" fill="none" stroke="#94601b" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-amber)" stroke-dasharray="8 6"/>
-<path d="M1124 590 H1092 V415 H1000 V370" fill="none" stroke="#94601b" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-amber)" stroke-dasharray="8 6"/>
-<text x="1015" y="447" fill="#94601b" font-size="21" font-weight="400" text-anchor="start">ηᵣ₊₁</text>
-<path d="M184 740 V803 H1416 V400 H1260 V370" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
-<rect x="386" y="781" width="710" height="42" rx="3" fill="white" stroke="white" stroke-width="1.7"/>
-<text x="741" y="810" fill="#7552a5" font-size="20" font-weight="500" text-anchor="middle">Learning feedback Fᵣ: task changes, retention and cost</text>
-<text x="44" y="850" fill="#94601b" font-size="19" font-weight="400" text-anchor="start">Dashed: bounded adjustment; B1–B3 keep their predefined recipes.</text>
-<text x="44" y="883" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Repeat within the budget; evaluate frozen students on sealed tests after the loop.</text>
-</g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img"><title>Feedback-driven policy self-improvement</title><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#426281"/></marker></defs><rect width="1440" height="900" fill="white"/><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#172c47}.title{font-size:28px;font-weight:700}.head{font-size:23px;font-weight:650}.body{font-size:20px}.small{font-size:18px;fill:#506781}</style>
+<text x="40" y="47" class="title" text-anchor="start">Feedback-driven policy self-improvement</text>
+<text x="40" y="82" class="small" text-anchor="start">Student updates and bounded plan revision use two feedback streams</text>
+<rect x="40" y="120" width="390" height="165" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
+<text x="60" y="155" class="head" text-anchor="start">Current student execution</text>
+<text x="60" y="190" class="body" text-anchor="start">Fixed collection pool C and inputs</text>
+<text x="60" y="219" class="body" text-anchor="start">Commands, motion, events, failures</text>
+<text x="60" y="248" class="body" text-anchor="start">Eᵣ: current execution diagnosis</text>
+<rect x="490" y="120" width="910" height="165" rx="12" fill="#e9f7f2" stroke="#adbdcf" stroke-width="1.5"/>
+<text x="510" y="155" class="head" text-anchor="start">SparkMentor: bounded practice decisions</text>
+<text x="510" y="190" class="body" text-anchor="start">Inputs: Eᵣ, permitted feedback/memory, current plan ηᵣ, remaining budget</text>
+<text x="510" y="219" class="body" text-anchor="start">Actions: takeover event, local/full demonstration mix, preset replay</text>
+<text x="510" y="248" class="body" text-anchor="start">Fixed B3 | Rule revision | Current agent | History agent</text>
+<polyline points="430,201 480,201" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="40" y="350" width="390" height="165" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
+<text x="60" y="385" class="head" text-anchor="start">Academy: execute practice</text>
+<text x="60" y="420" class="body" text-anchor="start">Legal physical prefix → fixed expert</text>
+<text x="60" y="449" class="body" text-anchor="start">Timing, action and outcome checks</text>
+<text x="60" y="478" class="body" text-anchor="start">Outputs: qualified data and cost</text>
+<rect x="490" y="350" width="390" height="165" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
+<text x="510" y="385" class="head" text-anchor="start">Train candidate students</text>
+<text x="510" y="420" class="body" text-anchor="start">Same parent state and accepted data</text>
+<text x="510" y="449" class="body" text-anchor="start">Shared optimizer and training steps</text>
+<text x="510" y="478" class="body" text-anchor="start">Isolate and charge every branch</text>
+<rect x="940" y="350" width="460" height="165" rx="12" fill="#fff5e5" stroke="#adbdcf" stroke-width="1.5"/>
+<text x="960" y="385" class="head" text-anchor="start">Development evaluation and gate</text>
+<text x="960" y="420" class="body" text-anchor="start">V: full-task gains and retention</text>
+<text x="960" y="449" class="body" text-anchor="start">Paired starts, fixed scoring and gate</text>
+<text x="960" y="478" class="body" text-anchor="start">Fᵣ: learning feedback; no V samples</text>
+<polyline points="940,285 940,317 235,317 235,340" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="430,430 480,430" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="880,430 930,430" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="40" y="580" width="840" height="155" rx="12" fill="#e9f7f2" stroke="#adbdcf" stroke-width="1.5"/>
+<text x="60" y="615" class="head" text-anchor="start">Intervention memory Mᵣ₊₁</text>
+<text x="60" y="650" class="body" text-anchor="start">Parent → plan → data → candidate → evaluation → decision → cost</text>
+<text x="60" y="679" class="body" text-anchor="start">Rule and history agent share evidence; current agent sees latest F</text>
+<text x="60" y="708" class="body" text-anchor="start">Rejection preserves evidence and spend for the next allowed check</text>
+<rect x="940" y="580" width="460" height="155" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
+<text x="960" y="615" class="head" text-anchor="start">Retained state for next round</text>
+<text x="960" y="650" class="body" text-anchor="start">Accept: commit θ, training state, data, η</text>
+<text x="960" y="679" class="body" text-anchor="start">Reject: keep parent and current plan</text>
+<text x="960" y="708" class="body" text-anchor="start">Attempts, spend and collection RNG advance</text>
+<polyline points="1170,515 1170,570" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="940,657 890,657" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="460,580 460,303 675,303 675,295" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="475" y="560" class="small" text-anchor="start">Write Fᵣ and all attempts to memory</text>
+<polyline points="1400,655 1420,655 1420,105 235,105 235,110" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="40" y="800" class="small" text-anchor="start">Fixed: student interface, expert, low-level control, optimizer, task weights and acceptance</text>
+<text x="40" y="836" class="small" text-anchor="start">Every diagnosis, failure, branch and retest is charged; reflection text is not a learning gain</text>
+<text x="40" y="872" class="small" text-anchor="start">Sealed T and final physical-real tests are outside the loop and never guide revision</text></svg>

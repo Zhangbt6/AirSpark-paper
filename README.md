@@ -2,10 +2,10 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current manuscript: v0.20 — A Simulated Academy for Self-Improving Aerial Manipulation
+- Current manuscript: v0.21 — A Simulated Academy for Self-Improving Aerial Manipulation
 - Paper structure: abstract, introduction, related work, method, experiments, discussion, conclusion, references, appendix.
 - Evaluation: native AM-Bench return testing and paired real-scene experiments; stage-evidence-driven practice and bounded policy improvement.
-- Earlier designs: `versions/v0.19/index.html`, `versions/v0.18/index.html`, `versions/v0.17/index.html`, `versions/v0.15.1/index.html`, `versions/v0.15/index.html`, `versions/v0.14/index.html`, `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
+- Earlier designs: `versions/v0.20/index.html`, `versions/v0.19/index.html`, `versions/v0.18/index.html`, `versions/v0.17/index.html`, `versions/v0.15.1/index.html`, `versions/v0.15/index.html`, `versions/v0.14/index.html`, `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
 - v0.13 specifies process-condition selection, physical prefixes, expert-only action supervision, C/V/T separation, and shared-tool collection controls. It adds Fly-by-Code, RialTo, MimicGen and MuJoCo; updates bibliographic metadata and exports BibTeX. No new experimental results are claimed.
 - v0.14 retains two contributions, unifies the paper name SparkMentor, distinguishes program refinement from parameter learning, and adds 11 verified formal publications. It strengthens the shared-tool recovery baseline and documents source-selection decisions in the appendix. Historical snapshots and engine interfaces are unchanged.
 - v0.15 foregrounds the academy platform, separates shared infrastructure, SparkMentor orchestration and interchangeable practice methods, and adds platform reliability evaluation using the main experiment tasks. The appendix includes a 10-slide group-meeting outline for 2026-10-20; this is not a finished deck. No new implementation or experimental completion is claimed.
@@ -14,7 +14,7 @@ Public discussion website for the AirSpark research paper. This repository conta
 
 ## Update
 
-Edit `index.html` (abstract), `chapters.js` (chapters), `style.css`, and `app.js`. Commit and push to `codex/paper-website`; GitHub Pages publishes the branch root automatically. Preserve version snapshots under `versions/` and use relative asset links for project-site compatibility.
+Current authoring source is the local CVPR_Airspark manuscript project: paired English LaTeX / Chinese HTML chapters share references, figures, and protocol. Use its sync/check export before publication; do not independently edit generated `index.html` and `chapters.js`. Commit only reviewed static exports to `codex/paper-website`; GitHub Pages publishes the branch root automatically. Preserve version snapshots under `versions/` and use relative asset links for project-site compatibility.
 
 Maintain source metadata in `references-data.js`; `citations.js` renders references and backlinks. Insert `<cite data-ref="source-key"></cite>` next to a supported claim; multiple keys are space separated. The website uses numeric citations with author-sorted entries. Run `node scripts/build-references.mjs` after metadata edits to regenerate `references.bib`. The final submission's official author kit controls BibTeX ordering and formatting. The inspected public CVPR template is still labeled 2026; do not label this website as a validated CVPR 2027 template.
 
@@ -54,3 +54,12 @@ Retains the academy positioning, both contributions, all existing figures and th
 ## v0.20 — executable research protocol and manuscript editing
 
 Preserves the academy and feedback-driven policy self-improvement contributions and method scope. Adds Algorithm 1, an empirical acceptance rule, a state transition table, and a pilot/freeze configuration table with a downloadable JSON template. Rejected candidates do not overwrite accepted training state or silently add replay data; cost, attempts and memory persist. Uses population objective J_D, distinguishes capability c from acquisition cost kappa, and spells out condition counting and sparse coverage. Explicit labels distinguish B3 and the current/history-feedback adaptation variants. Compresses the abstract and principle explanation; implementation priorities remain available in a collapsible block. Feedback Systems is now a 2021 second-edition book entry. Figure 2 symbols, Figure 3 deployment note and Figure A3 target role are synchronized. Full v0.19 is archived; `#revision-v020` lists changes. Numeric parameters remain pilot-pending; this is a research protocol, not a claim that rollout/training code or results are complete.
+
+
+## v0.21 — align the main claim with main evidence
+
+Retains the academy platform and feedback-driven policy self-improvement contributions. The main study compares fixed B3, deterministic plan revision, current-feedback agent revision, and history-informed agent revision on at least two distinct tasks with one student backend and at least three ordered intervention opportunities. Rule and history-agent decisions share evidence, history, tools, actions and resource caps; all tested branches and rejections are charged. B1/B2 support focused allocation analysis.
+
+At least one main task crosses native/academy collection with coverage/history-informed revision, addressing the value of academy data over direct native collection. Parent provenance, native task/robot/action/scoring correspondence, practical effects, power/precision and sample counts must be frozen after pilots. Report absolute changes from B0 as well as matched-budget contrasts. Physical-real testing means a frozen student runs on actual hardware, with real-scene appearance reconstruction and explicit physical/robot registration. A different embodiment requires a matching parent and separately charged minimal loop. No quantitative result is asserted.
+
+Figures 2 and 3 and the shared JSON protocol are updated. To rebuild current figures, run the original generators/localization/feedback builder, then `python scripts/build-study-figures-v021.py` before PNG export; earlier generators otherwise overwrite the new diagrams. Current bilingual bundle: `figures/AirSpark-Figures-v0.21.zip`. Full v0.20 is archived; `#revision-v021` lists exact changes.
