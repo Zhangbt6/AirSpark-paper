@@ -1,33 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img"><title>实验流程与独立验证</title><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#426281"/></marker></defs><rect width="1440" height="1000" fill="white"/><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#172c47}.title{font-size:28px;font-weight:700}.head{font-size:23px;font-weight:650}.body{font-size:20px}.small{font-size:18px;fill:#506781}</style>
-<text x="40" y="47" class="title" text-anchor="start">实验流程与独立验证</text>
-<rect x="40" y="85" width="1360" height="130" rx="12" fill="#fff5e5" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="60" y="120" class="head" text-anchor="start">先导门：冻结任务、本体、父代与统计方案</text>
-<text x="60" y="155" class="body" text-anchor="start">原生环境 ID／控制器／动作／观测／成功判据；B0 数据、训练状态与模型哈希</text>
-<text x="60" y="184" class="body" text-anchor="start">核验跨环境对应与真实本体；确定实际效应、seed、回合数、预算与候选选项</text>
-<polyline points="720,215 720,245" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="40" y="255" width="1360" height="170" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="60" y="290" class="head" text-anchor="start">主比较：至少两个不同任务 · 一个学生后端 · 至少三次有序干预</text>
-<text x="60" y="325" class="body" text-anchor="start">B0 冻结父代（零增量成本参照）</text>
-<text x="60" y="354" class="body" text-anchor="start">B3 固定方案 ｜ B3+adapt-rule ｜ B3+adapt-current ｜ B3+adapt-history</text>
-<text x="60" y="383" class="body" text-anchor="start">同动作空间、工具、验收与资源上限；被拒候选与额外训练全部计费</text>
-<rect x="40" y="465" width="1360" height="140" rx="12" fill="#e9f7f2" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="60" y="500" class="head" text-anchor="start">来源对照：至少一个主任务的 2 × 2，复用学院主方法</text>
-<text x="60" y="535" class="body" text-anchor="start">原生 AM-Bench / AirSpark  ×  B1 覆盖 / B3+adapt-history 历史修订</text>
-<text x="60" y="564" class="body" text-anchor="start">同一 B0、匹配部署合同与采集预算；差异解释为完整数据来源的作用</text>
-<polyline points="720,425 720,455" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<polyline points="720,605 720,635 350,635 350,665" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<polyline points="720,635 1090,635 1090,665" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="40" y="675" width="650" height="200" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="60" y="710" class="head" text-anchor="start">冻结学生：AM-Bench 原生回测</text>
-<text x="60" y="745" class="body" text-anchor="start">未修改的任务、机器人与评分合同</text>
-<text x="60" y="774" class="body" text-anchor="start">封存初态 T；禁止反馈进入闭环</text>
-<text x="60" y="803" class="body" text-anchor="start">不匹配设置单列为衍生实验</text>
-<text x="60" y="832" class="body" text-anchor="start">相对 B0 变化 + 同源／跨源差值</text>
-<rect x="750" y="675" width="650" height="200" rx="12" fill="#fff5e5" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="770" y="710" class="head" text-anchor="start">冻结学生：物理实机执行</text>
-<text x="770" y="745" class="body" text-anchor="start">3DGS 外观 + 显式物理／机器人配准</text>
-<text x="770" y="774" class="body" text-anchor="start">B0 / 最强固定或规则基线 / 历史方法</text>
-<text x="770" y="803" class="body" text-anchor="start">本体不同须匹配父代并单列重跑成本</text>
-<text x="770" y="832" class="body" text-anchor="start">对应场景与预留物体／布局分别报告</text>
-<text x="40" y="926" class="small" text-anchor="start">H1：可靠监督与成本　　H2：同预算修订收益　　H3：原生与真实检验分别成立</text>
-<text x="40" y="967" class="small" text-anchor="start">示意图为预定研究协议；任务对应、统计规模与定量结果仍待先导验证</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img"><title>学院、闭环学习与外部检验</title><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#426281"/></marker></defs><rect width="1440" height="1000" fill="white"/><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#172c47}.title{font-size:28px;font-weight:700}.head{font-size:23px;font-weight:650}.body{font-size:20px}.small{font-size:18px;fill:#506781}</style>
+<text x="40" y="46" class="title">学院、反馈学习与外部检验</text>
+<g><rect x="40" y="82" width="1360" height="135" rx="12" fill="#fff5e5" stroke="#aabbd0" stroke-width="1.5"/>
+<text x="62" y="117" class="head">先导：核验任务与部署合同，冻结学习协议</text>
+<text x="62" y="153" class="body">至少两个任务，一个学生后端；记录 B0 数据、训练配方与 checkpoint</text>
+<text x="62" y="183" class="body">核验专家、真实本体与配准；根据实测成本确定轮次、独立学习链和预算</text>
+</g>
+<g><rect x="40" y="250" width="1360" height="145" rx="12" fill="#e9f7f2" stroke="#aabbd0" stroke-width="1.5"/>
+<text x="62" y="285" class="head">E1 · 学院设施：可控练习、可靠监督与实际成本</text>
+<text x="62" y="321" class="body">复用主实验日志：时序、跟踪、复位、专家产出、标签一致性与恢复</text>
+<text x="62" y="351" class="body">一个任务：原生 AM-Bench B1 vs 学院 B1，固定流程与预算一致</text>
+</g>
+<g><rect x="40" y="430" width="1360" height="200" rx="12" fill="#eaf3ff" stroke="#aabbd0" stroke-width="1.5"/>
+<text x="62" y="465" class="head">E2 · 多轮反馈学习：完整闭环是否优于固定流程？</text>
+<text x="62" y="501" class="body">主表：B0 冻结初始策略 ｜ B1 固定覆盖采集训练 ｜ AirSpark 完整反馈闭环</text>
+<text x="62" y="531" class="body">共用设施、专家、训练配方与验收；同干预调度、资源上限和配对随机种子</text>
+<text x="62" y="561" class="body">一次决策选一个方案，采集训练一次，再与父代比较；按完整学习链统计</text>
+<text x="62" y="591" class="body">代表任务归因：固定过程方案、规则修订、当前反馈与历史反馈</text>
+</g>
+<polyline points="720,630 720,675 365,675 365,705" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="720,675 1075,675 1075,705" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<g><rect x="40" y="715" width="650" height="200" rx="12" fill="#eaf3ff" stroke="#aabbd0" stroke-width="1.5"/>
+<text x="62" y="750" class="head">E3 · 冻结学生：AM-Bench 原生任务</text>
+<text x="62" y="786" class="body">未修改的任务、本体、动作与评分合同</text>
+<text x="62" y="816" class="body">B0 / B1 / 完整 AirSpark</text>
+<text x="62" y="846" class="body">相对初始策略的变化与同预算组间差值</text>
+<text x="62" y="876" class="body">合同不匹配则单列衍生设置</text>
+</g>
+<g><rect x="750" y="715" width="650" height="200" rx="12" fill="#fff5e5" stroke="#aabbd0" stroke-width="1.5"/>
+<text x="772" y="750" class="head">E3 · 冻结学生：物理实机任务</text>
+<text x="772" y="786" class="body">真实扫描、3DGS 外观与显式物理配准</text>
+<text x="772" y="816" class="body">先核验本体与部署兼容，再定比较范围</text>
+<text x="772" y="846" class="body">对应场景与预留物体／布局分别报告</text>
+<text x="772" y="876" class="body">不使用 Mentor 临场纠错</text>
+</g>
+<text x="40" y="958" class="small">封存测试与正式实机测试不向闭环回流；图示为研究设计，具体规模与结果待验证</text></svg>

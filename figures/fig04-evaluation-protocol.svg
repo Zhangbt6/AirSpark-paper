@@ -1,33 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img"><title>Study design and independent evaluation</title><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#426281"/></marker></defs><rect width="1440" height="1000" fill="white"/><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#172c47}.title{font-size:28px;font-weight:700}.head{font-size:23px;font-weight:650}.body{font-size:20px}.small{font-size:18px;fill:#506781}</style>
-<text x="40" y="47" class="title" text-anchor="start">Study design and independent evaluation</text>
-<rect x="40" y="85" width="1360" height="130" rx="12" fill="#fff5e5" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="60" y="120" class="head" text-anchor="start">Pilot gate: freeze task, embodiment, parent and statistical design</text>
-<text x="60" y="155" class="body" text-anchor="start">Native environment / controller / action / observation / success; B0 provenance and hash</text>
-<text x="60" y="184" class="body" text-anchor="start">Audit simulator and real-robot correspondence; fix effect size, seeds, episodes, budget and options</text>
-<polyline points="720,215 720,245" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="40" y="255" width="1360" height="170" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="60" y="290" class="head" text-anchor="start">Main study: ≥2 distinct tasks · one student backend · ≥3 ordered interventions</text>
-<text x="60" y="325" class="body" text-anchor="start">B0 frozen parent (zero incremental cost reference)</text>
-<text x="60" y="354" class="body" text-anchor="start">B3 fixed | B3+adapt-rule | B3+adapt-current | B3+adapt-history</text>
-<text x="60" y="383" class="body" text-anchor="start">Same actions, tools, gate and resource caps; charge rejected candidates and extra training</text>
-<rect x="40" y="465" width="1360" height="140" rx="12" fill="#e9f7f2" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="60" y="500" class="head" text-anchor="start">Source control: 2 × 2 on ≥1 main task; reuse the academy main method</text>
-<text x="60" y="535" class="body" text-anchor="start">Native AM-Bench / AirSpark  ×  B1 coverage / B3+adapt-history revision</text>
-<text x="60" y="564" class="body" text-anchor="start">Same B0, matched deployment contract and collection budget; source effect is a bundle</text>
-<polyline points="720,425 720,455" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<polyline points="720,605 720,635 350,635 350,665" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<polyline points="720,635 1090,635 1090,665" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<rect x="40" y="675" width="650" height="200" rx="12" fill="#eaf3ff" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="60" y="710" class="head" text-anchor="start">Frozen student: native AM-Bench</text>
-<text x="60" y="745" class="body" text-anchor="start">Unmodified task, robot and scoring contract</text>
-<text x="60" y="774" class="body" text-anchor="start">Sealed starts T; no feedback to learning</text>
-<text x="60" y="803" class="body" text-anchor="start">Contract mismatches → derived setting</text>
-<text x="60" y="832" class="body" text-anchor="start">Change from B0 + within/cross-source contrasts</text>
-<rect x="750" y="675" width="650" height="200" rx="12" fill="#fff5e5" stroke="#adbdcf" stroke-width="1.5"/>
-<text x="770" y="710" class="head" text-anchor="start">Frozen student: physical robot</text>
-<text x="770" y="745" class="body" text-anchor="start">3DGS appearance + explicit physics/robot registration</text>
-<text x="770" y="774" class="body" text-anchor="start">B0 / strongest fixed or rule / history method</text>
-<text x="770" y="803" class="body" text-anchor="start">Different body: matched parent and explicit loop cost</text>
-<text x="770" y="832" class="body" text-anchor="start">Separate corresponding scene and held-out layouts</text>
-<text x="40" y="926" class="small" text-anchor="start">H1: reliable supervision and cost    H2: matched-budget revision gains    H3: native and physical-real evidence</text>
-<text x="40" y="967" class="small" text-anchor="start">Proposed protocol; task correspondence, statistical scale and quantitative results remain pilot-dependent</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img"><title>Academy, feedback learning, and external evaluation</title><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#426281"/></marker></defs><rect width="1440" height="1000" fill="white"/><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#172c47}.title{font-size:28px;font-weight:700}.head{font-size:23px;font-weight:650}.body{font-size:20px}.small{font-size:18px;fill:#506781}</style>
+<text x="40" y="46" class="title">Academy, feedback learning, and external evaluation</text>
+<g><rect x="40" y="82" width="1360" height="135" rx="12" fill="#fff5e5" stroke="#aabbd0" stroke-width="1.5"/>
+<text x="62" y="117" class="head">Pilot: verify task/deployment contracts and freeze the learning protocol</text>
+<text x="62" y="153" class="body">At least two tasks, one student backend; record B0 data, training recipe and checkpoint</text>
+<text x="62" y="183" class="body">Verify expert, real embodiment and registration; pilot costs determine rounds, chains and budgets</text>
+</g>
+<g><rect x="40" y="250" width="1360" height="145" rx="12" fill="#e9f7f2" stroke="#aabbd0" stroke-width="1.5"/>
+<text x="62" y="285" class="head">E1 · Academy facilities: controllable practice, supervision reliability and cost</text>
+<text x="62" y="321" class="body">Reuse main-study logs: timing, tracking, resets, expert yield, label consistency and recovery</text>
+<text x="62" y="351" class="body">One task: native AM-Bench B1 vs academy B1, with matched fixed workflow and budget</text>
+</g>
+<g><rect x="40" y="430" width="1360" height="200" rx="12" fill="#eaf3ff" stroke="#aabbd0" stroke-width="1.5"/>
+<text x="62" y="465" class="head">E2 · Multi-round feedback learning: does the complete loop beat a fixed workflow?</text>
+<text x="62" y="501" class="body">Main: B0 frozen initial policy | B1 fixed coverage collection/training | AirSpark complete loop</text>
+<text x="62" y="531" class="body">Shared facilities, expert, training and gate; same intervention schedule, caps and paired seeds</text>
+<text x="62" y="561" class="body">Select one plan, collect/train once, then compare with the parent; analyze complete learning chains</text>
+<text x="62" y="591" class="body">Representative-task attribution: fixed process plan, rule revision, current and historical feedback</text>
+</g>
+<polyline points="720,630 720,675 365,675 365,705" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<polyline points="720,675 1075,675 1075,705" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
+<g><rect x="40" y="715" width="650" height="200" rx="12" fill="#eaf3ff" stroke="#aabbd0" stroke-width="1.5"/>
+<text x="62" y="750" class="head">E3 · Frozen student: native AM-Bench</text>
+<text x="62" y="786" class="body">Unmodified task, robot, action and scoring</text>
+<text x="62" y="816" class="body">B0 / B1 / complete AirSpark</text>
+<text x="62" y="846" class="body">Change from B0 and matched-budget contrasts</text>
+<text x="62" y="876" class="body">Contract mismatch: report a derived setting</text>
+</g>
+<g><rect x="750" y="715" width="650" height="200" rx="12" fill="#fff5e5" stroke="#aabbd0" stroke-width="1.5"/>
+<text x="772" y="750" class="head">E3 · Frozen student: physical robot</text>
+<text x="772" y="786" class="body">Real scan, 3DGS and explicit physics registration</text>
+<text x="772" y="816" class="body">Audit embodiment/deployment before fixing scope</text>
+<text x="772" y="846" class="body">Separate corresponding and held-out conditions</text>
+<text x="772" y="876" class="body">No runtime Mentor correction</text>
+</g>
+<text x="40" y="958" class="small">Sealed and final physical tests never feed back; study scale and quantitative outcomes remain unverified</text></svg>

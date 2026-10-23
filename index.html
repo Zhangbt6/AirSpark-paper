@@ -5,16 +5,16 @@
 <title>AirSpark · 面向空中操作策略自进化的模拟学院 | 论文正文</title>
 <meta name="description" content="面向空中操作策略自进化的模拟学院：高保真视觉与物理交互、主动练习生成、闭环策略改进与真实迁移验证。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23183255'/%3E%3Cpath d='M7 24 16 7l9 17M11 18h10' fill='none' stroke='%2372dbce' stroke-width='3'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css?v=0.20">
+<link rel="stylesheet" href="style.css?v=0.23">
 </head>
 <body>
 <a class="skip" href="#abstract">跳至正文</a>
-<aside><a class="brand" href="#abstract"><span class="mark">A</span><span>AirSpark<small>RESEARCH PAPER</small></span></a><div class="version">论文正文 · v0.22<br>2026.10.23</div><nav aria-label="论文阅读顺序" id="nav"></nav><div class="side-note">空中操作模拟学院<br>模拟学院 · 策略改进 · 真实验证</div><button class="print" onclick="window.print()">打印 / 保存 PDF</button></aside>
+<aside><a class="brand" href="#abstract"><span class="mark">A</span><span>AirSpark<small>RESEARCH PAPER</small></span></a><div class="version">论文正文 · v0.23<br>2026.10.23</div><nav aria-label="论文阅读顺序" id="nav"></nav><div class="side-note">空中操作模拟学院<br>模拟学院 · 策略改进 · 真实验证</div><button class="print" onclick="window.print()">打印 / 保存 PDF</button></aside>
 <div class="main-shell"><header><span>AirSpark / <b id="chapter">摘要</b></span><span class="draft">研究稿</span></header><div class="progress" aria-hidden="true"><div id="progress"></div></div><main id="content"><section id="abstract" data-title="摘要" data-number="—"><div class="eyebrow">AIRSPARK / RESEARCH MANUSCRIPT</div><h1>AirSpark</h1><p class="paper-subtitle">面向空中操作策略自进化的<br>模拟学院</p><p class="english-title">A Simulated Academy for Self-Improving Aerial Manipulation</p><div class="paper-keywords"><span>视觉—物理一致性</span><span>闭环学习基础设施</span><span>策略自进化</span><span>Sim-to-Real 验证</span></div><h2 class="abstract-heading">摘要</h2><div class="paper-copy">
-<p>空中操作策略需要在接近、接触和物体操作之间连续决策。自动化示范生成扩展了经验来源，但成功示范并不必然满足当前策略的学习需求，执行失败也不能直接确定合适的监督起点和经验构成。本文提出 AirSpark，一套面向空中操作策略自进化的模拟学院。学院连接真实场景对应、同步视觉—物理执行、动态交互条件重现、专家监督生成与训练评价，使针对当前学生的学习实验能够重复开展。在此基础上，SparkMentor 结合执行证据与跨轮干预结果，在预定范围内修订监督起点、局部与完整示范构成及经验回放，并依据实际学习响应安排后续练习。学生通过参数更新保留所学能力。研究通过预算匹配的多轮对照、原生与学院数据来源比较，以及冻结策略的原生基准和对应真实任务评价，分别检验经验生成可靠性、反馈修订的学习效用与所得能力的外部有效性。</p>
-</div><p class="manuscript-status">研究稿 v0.22 · 2026.10.23。方法为所提出的系统设计，实验章节给出预定评测协议；定量结果与实机结论尚待实验完成。<a href="#version-history">版本记录</a></p></section>
+<p>空中操作要求视觉动作策略在变化的机载视角下协调飞行、机械臂运动与环境交互。真实任务中的经验获取、环境复位和监督成本，使策略难以围绕自身能力缺口反复练习。本文提出 AirSpark，一套面向空中操作策略自进化的模拟学院。学院结合 UE 视觉渲染与 MuJoCo 动力学，通过场景构建与真实场景配准、可重复任务执行、自动数据采集与标注，以及统一训练和评价接口，支持可追溯的学习过程。在此基础上，SparkMentor 作为 Agent Harness，组织策略执行、交互过程诊断、反馈驱动练习规划、专家监督生成、学生策略更新和学习评估与接纳。执行证据用于发现能力缺口，跨轮记忆与学习反馈用于调整后续练习，学习结果通过参数更新保留于学生策略。研究以学院设施可靠性、同预算下相对固定采集训练流程的学习效用，以及冻结学生的原生 AM-Bench 回测和物理实机执行为三组检验，评价模拟学院能否支持可验证的空中操作能力改进。当前为方法与实验设计，定量结论由后续实验确定。</p>
+</div><p class="manuscript-status">研究稿 v0.23 · 2026.10.23。方法为所提出的系统设计，实验章节给出预定评测协议；定量结果与实机结论尚待实验完成。<a href="#version-history">版本记录</a></p></section>
 
 
 </main><dialog id="figure-dialog" aria-labelledby="figure-dialog-title"><div class="figure-dialog-toolbar"><strong id="figure-dialog-title">论文框图</strong><div><a id="figure-original" target="_blank" rel="noopener">打开原图</a><button type="button" id="figure-close" aria-label="关闭框图">关闭</button></div></div><div class="figure-dialog-body"><img id="figure-dialog-image" alt=""></div></dialog><footer><button id="prev">上一节</button><span id="position"></span><button id="next">下一节</button></footer></div>
-<script src="chapters.js?v=0.20"></script><script src="references-data.js?v=0.20"></script><script src="citations.js?v=0.20"></script><script src="app.js?v=0.20"></script>
+<script src="chapters.js?v=0.23"></script><script src="references-data.js?v=0.23"></script><script src="citations.js?v=0.23"></script><script src="app.js?v=0.23"></script>
 </body></html>

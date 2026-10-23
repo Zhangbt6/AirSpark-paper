@@ -2,7 +2,7 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current manuscript: v0.22 — A Simulated Academy for Self-Improving Aerial Manipulation
+- Current manuscript: v0.23 — A Simulated Academy for Self-Improving Aerial Manipulation
 - Paper structure: abstract, introduction, related work, method, experiments, discussion, conclusion, references, appendix.
 - Evaluation: native AM-Bench return testing and paired real-scene experiments; stage-evidence-driven practice and bounded policy improvement.
 - Earlier designs: `versions/v0.20/index.html`, `versions/v0.19/index.html`, `versions/v0.18/index.html`, `versions/v0.17/index.html`, `versions/v0.15.1/index.html`, `versions/v0.15/index.html`, `versions/v0.14/index.html`, `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
@@ -72,3 +72,10 @@ Figure 2 returns to six numbered stages: policy rollout, interaction diagnosis, 
 The abstract and introduction focus on why generated experience need not improve the current student. Contribution definitions describe facilities and mechanism, with group counts retained in experiments. Fixed experience B3 still reallocates conditions from execution feedback; the current variant retains its current plan/latest feedback and is not memory-free. Frozen physical deployment is distinguished from an unperformed real-failure-return loop. Main comparisons and budgets remain unchanged.
 
 Rebuild the original generators, localization, feedback figure, and v0.21 study figures first, then run `python scripts/build-rsi-figure-v022.py` before PNG export. The current editable bilingual bundle is `figures/AirSpark-Figures-v0.22.zip`. Full v0.21 is archived; `#revision-v022` and `#rsi-module-contract` record changes and module semantics.
+
+
+## v0.23 — academy and feedback-driven aerial policy self-improvement
+
+Restores the academy/platform research objective, with three related-work sections and moving-viewpoint challenges first. Primary study: B0 / fixed coverage workflow B1 / complete AirSpark (canonical ID B3+adapt-history), on at least two tasks and one student backend. Rule/current/history attribution is limited to one representative task. E1 reliability includes a native/academy B1 source pair; a full 2x2 is optional. Every intervention selects one plan and trains at most one candidate against the retained parent. Round counts, chain counts and budgets remain pilot-dependent. No new measured results.
+
+Figure 2 is byte-for-byte unchanged from v0.22. Figure 3 alone is redrawn for E1/E2/E3. For a complete rebuild, run the earlier figure builders, then build-rsi-figure-v022.py, then build-study-figure-v023.py, and finally export-figures.cjs. The v0.23 bundle includes both languages and build sources. The exact public v0.22 site is archived under versions/v0.22/. Source and pairing checks are maintained in the separate local manuscript project; unpublished English manuscript sources are not exported to Pages.
