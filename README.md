@@ -2,7 +2,7 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current Chinese manuscript: v0.29 — A Simulated Academy for Self-Improving Aerial Manipulation
+- Current Chinese manuscript: v0.30 — A Simulated Academy for Self-Improving Aerial Manipulation
 - Paper structure: abstract, introduction, related work, method, experiments, discussion, conclusion, references, appendix.
 - Evaluation: native AM-Bench return testing and paired real-scene experiments; stage-evidence-driven practice and bounded policy improvement.
 - Earlier designs: `versions/v0.20/index.html`, `versions/v0.19/index.html`, `versions/v0.18/index.html`, `versions/v0.17/index.html`, `versions/v0.15.1/index.html`, `versions/v0.15/index.html`, `versions/v0.14/index.html`, `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
@@ -103,3 +103,7 @@ Adopts the user-approved Chinese abstract verbatim. Keeps the aerial dynamic-int
 ## v0.29 — direct academy transition and method/experiment review
 
 The Chinese abstract moves directly from aerial experience gaps and physical trial costs to repeatable practice and feedback-guided improvement. The introduction retains domain infrastructure and related feedback-learning research, without claiming a first RSI paradigm. Both contributions, six-stage method, figures, protocol and experiment definitions are preserved. #rsi-experiment-review maps existing module outputs to E1/E2/E3 and lists unresolved pilot fields; it is not an implementation-completion claim or new study scope. v0.28 is archived; English remains deferred.
+
+## v0.30 — method authority and memory contracts
+
+The Chinese method specifies fixed allocation versus bounded configuration/operation decisions, append-only intervention records and revisable evidence-linked experience, and an explicit Agent decision flow. All attempts update records; unmeasured learning outcomes are not zeros. Memory processing is shared by rule/history variants with independent chains and permission filtering before derivation. The six-stage layout and experiment groups are retained. Chinese Figure 2 is v0.30; English figures and LaTeX remain v0.23. The new memory mechanism is proposed, not previously implemented. Protocol v0.30 is still pilot_pending. Detailed state/configuration tables move to the appendix with stable anchors; v0.29 is archived.

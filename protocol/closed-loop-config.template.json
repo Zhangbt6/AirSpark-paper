@@ -1,8 +1,8 @@
 {
-  "protocol_version": "v0.23",
+  "protocol_version": "v0.30",
   "status": "pilot_pending",
   "frozen": false,
-  "scope": "Research protocol template; not an implemented simulator/trainer or a result.",
+  "scope": "Research protocol template. v0.30 adds proposed memory and decision contracts; implementation and pilot validation remain pending.",
   "method": {
     "group": null,
     "allowed_groups": [
@@ -45,7 +45,23 @@
     "zero_q": "coverage",
     "unknown_cost": "bounded_pilot_or_pause",
     "pilot_attempt_limit": null,
-    "retest_schedule": null
+    "retest_schedule": null,
+    "decision_order": "select_candidate_configuration_and_operation_then_validate_then_fixed_group_allocator",
+    "fixed_rules_by_group": {
+      "B1": "coverage",
+      "B2": "terminal",
+      "B3_family": "process_q"
+    },
+    "agent_may_rewrite_q": false,
+    "cost_estimate_key": [
+      "condition",
+      "practice_configuration",
+      "student_version",
+      "environment_version",
+      "expert_version"
+    ],
+    "unmatched_cost": "bounded_registered_pilot_not_unqualified_reuse",
+    "pause_preserves_task_weights_coverage_obligations_and_evaluation_targets": true
   },
   "collection": {
     "prefix_configuration": null,
@@ -68,9 +84,9 @@
     "read_historical_interventions": null,
     "history_access": {
       "B3": "none_for_revision",
-      "B3+adapt-rule": "same_structured_E_and_full_prior_M_as_history_agent",
-      "B3+adapt-current": "current_E_and_most_recent_F_only_plus_current_plan_and_budget",
-      "B3+adapt-history": "current_E_and_all_prior_interventions"
+      "B3+adapt-rule": "same_memory_pipeline_and_fields_as_history_agent_on_own_independent_chain",
+      "B3+adapt-current": "current_E_latest_available_F_accepted_configuration_and_minimal_operational_state_no_earlier_records_or_derived_knowledge",
+      "B3+adapt-history": "current_E_and_permission_filtered_prior_records_and_revisable_experience_on_own_chain"
     },
     "rule_baseline": {
       "trigger_thresholds": null,
@@ -82,12 +98,96 @@
       "model_version": null,
       "prompt_hash": null,
       "tool_schema_hash": null,
-      "memory_schema": null,
+      "memory_schema": "records_and_revisable_intervention_experience_v030_pending_implementation",
       "decision_sampling": null,
       "per_check_call_cap": null,
-      "same_structured_input_schema_as_rule": true
+      "same_structured_input_schema_as_rule": true,
+      "decision_output": [
+        "candidate_configuration",
+        "operation_and_scope",
+        "evidence_record_ids",
+        "brief_rationale",
+        "phenomenon_to_check"
+      ],
+      "forbidden_changes": [
+        "objective",
+        "scorer",
+        "sealed_tests",
+        "tool_permissions",
+        "resource_caps",
+        "student_inputs",
+        "low_level_controller",
+        "core_prompt",
+        "memory_program"
+      ],
+      "tool_validation": "schema_permissions_versions_evidence_sources_feasibility_budget_not_truth_of_hypothesis"
     },
-    "count_all_attempts_and_rejections": true
+    "count_all_attempts_and_rejections": true,
+    "memory": {
+      "status": "proposed_pending_implementation_and_pilot",
+      "definition": "M_r=(R_r,K_r); calligraphic_K_is_intervention_experience_not_low_level_controller_K",
+      "records": "append_only_all_attempts_corrections_by_new_referencing_entry",
+      "record_fields": [
+        "chain_round_ids",
+        "student_environment_expert_config_versions",
+        "execution_evidence",
+        "plan",
+        "data_manifest_and_QC",
+        "training_and_evaluation",
+        "measurement_status",
+        "acceptance_or_rejection_reason",
+        "cost"
+      ],
+      "knowledge_fields": [
+        "id_and_version",
+        "applicable_conditions_and_versions",
+        "candidate_explanation",
+        "legal_intervention_suggestion",
+        "supporting_and_opposing_record_ids",
+        "evidence_status",
+        "retest_conditions"
+      ],
+      "knowledge_statuses": [
+        "hypothesis",
+        "limited_support",
+        "counterevidence",
+        "invalidated"
+      ],
+      "update_order": "append_actual_records_then_revise_versioned_knowledge_from_observed_evidence",
+      "reject_does_not_rollback_memory": true,
+      "missing_measurement_is_not_counterevidence_or_zero_gain": true,
+      "programs_fixed_within_experiment": true,
+      "pipeline_version_hash": null,
+      "update_prompt_hash": null,
+      "retrieval_configuration": null,
+      "context_limit": null,
+      "source_validation_configuration": null,
+      "permission_filter_before_derivation_and_retrieval": true,
+      "rule_and_history_share_pipeline_not_outcomes": true,
+      "current_excludes_earlier_derived_knowledge": true,
+      "operational_view": "condition_status_expiry_and_registered_retest_status_without_historical_rationale",
+      "record_processing_cost": true,
+      "model_memory_rule_baseline_label": "shared_memory_processing_plus_rule_decision_if_model_used",
+      "attribution_limit": "history_vs_current_measures_whole_memory_not_K_revision_alone_or_general_teaching_improvement"
+    },
+    "operations": {
+      "legal_types": [
+        "execute",
+        "pause_condition",
+        "retest_diagnostics"
+      ],
+      "registered_condition_scope": null,
+      "pause_expiry_and_retest_triggers": null,
+      "diagnostic_retest_sampling_and_stopping_rule": null,
+      "diagnostic_retest_cap": null,
+      "adaptive_diagnostic_order": false,
+      "no_training": "retain_parent_training_state_accepted_data_and_eta_record_evidence_and_actual_cost_gain_unmeasured",
+      "pause_state_location": "existing_operational_ledger_not_accepted_configuration_eta",
+      "retest_result_available": "next_registered_decision",
+      "candidate_evaluation_retest": "executor_only_under_preregistered_sampling_and_stopping_rule_all_results_retained",
+      "agent_may_rescore_until_acceptance": false,
+      "rejected_candidate_reopened_by_rescoring": false
+    }
   },
   "validation": {
     "paired_initial_conditions": null,
@@ -110,11 +210,12 @@
     "accepted_data": "unchanged",
     "candidate_data": "archive_only_no_automatic_replay",
     "plan_version": "retain_current",
-    "memory": "append_all_attempts",
+    "memory": "append_actual_records_then_revise_provenance_linked_experience_with_missingness_preserved",
     "cost": "keep_actual_spend",
     "global_attempt_counter": "advance",
     "global_collection_rng": "advance",
-    "next_revision": "may_use_appended_failure_memory_at_next_registered_check_without_committing_rejected_candidate"
+    "next_revision": "may_use_permission_filtered_updated_memory_at_next_check_without_committing_rejected_student_or_configuration",
+    "operational_state": "validated_pause_and_retest_ledger_persists_under_fixed_expiry_rules_not_candidate_eta"
   },
   "budgets": {
     "collection_worker_time": null,
@@ -128,7 +229,8 @@
     "required": "Resolve applicable null fields, validate split and versions, save a manifest hash before main comparisons.",
     "adaptation_fields": "Required only for the adaptation variants.",
     "measured_results": false,
-    "statistics_and_contracts": "Freeze statistical power/precision design, native task correspondence, parent provenance and real embodiment choice before main comparisons."
+    "statistics_and_contracts": "Freeze statistical power/precision design, native task correspondence, parent provenance and real embodiment choice before main comparisons.",
+    "memory_and_operations": "Validate provenance, permissions before memory derivation, independent chains, pipeline versions, legal operation values and finite stopping rules before adaptation experiments."
   },
   "study_design": {
     "hypotheses": [
@@ -257,18 +359,24 @@
     "new_site_claim_requires_independent_site": true
   },
   "feedback_timing": {
-    "plan_at_round_r": "read_E_r_and_prior_M_r_plus_accepted_eta_r_and_budget",
+    "plan_at_round_r": "read_current_E_and_permission_filtered_prior_M_plus_accepted_eta_and_budget",
     "learning_feedback_F_r": "measured_after_intervention_r_and_stored_in_M_r_plus_1",
     "cannot_read_future_feedback": true,
     "eta": "accepted_experience_configuration_version_not_teacher_weights",
-    "A": "proposed_executable_practice_plan",
-    "mu_g": "fixed_decision_rule_and_information_permissions_for_group_g"
+    "A": "(allocation_b,candidate_configuration_eta_tilde,operation_d)",
+    "mu_g": "fixed_group_decider_selects_candidate_configuration_and_operation_not_q",
+    "eta_tilde": "proposed_configuration_usable_this_attempt_committed_only_with_accepted_student",
+    "allocation_b": "fixed_Alloc_g_after_legal_plan_checks_uses_E_costs_matched_to_configuration_and_operation_budget",
+    "untrained_or_incomplete_comparison": "F_gain_and_retention_unmeasured_not_zero"
   },
   "execution": {
     "plans_selected_per_intervention": 1,
     "max_trained_candidates_per_intervention": 1,
     "comparison_reference": "retained_parent",
     "train_multiple_plans_then_choose": false,
-    "invalid_or_incomplete_attempt": "archive_reject_and_charge_no_free_replacement"
+    "invalid_or_incomplete_attempt": "archive_reject_and_charge_no_free_replacement",
+    "invalid_plan": "archive_reason_charge_actual_work_no_implicit_permission_expansion",
+    "diagnostic_only_attempt": "record_evidence_and_cost_advance_attempt_no_free_replacement_training",
+    "missing_learning_result": "explicit_unmeasured_status"
   }
 }
