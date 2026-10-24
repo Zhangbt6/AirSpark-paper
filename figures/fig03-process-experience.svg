@@ -8,7 +8,7 @@
 <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94601b"/></marker>
 </defs><g font-family="Arial, Helvetica, sans-serif"><rect width="1440" height="100%" fill="white"/>
 <text x="44" y="39" fill="#087f75" font-size="17" font-weight="700" text-anchor="start">AIRSPARK   /   FIGURE A2</text>
-<text x="1396" y="39" fill="#52657b" font-size="16" font-weight="400" text-anchor="end">RESEARCH DESIGN  ·  v0.16</text>
+<text x="1396" y="39" fill="#52657b" font-size="16" font-weight="400" text-anchor="end">RESEARCH DESIGN  ·  v0.33</text>
 <text x="44" y="81" fill="#183255" font-size="31" font-weight="700" text-anchor="start">From execution gaps to trainable experience</text>
 <text x="44" y="112" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">A reference practice method on shared academy tools; the learning benefit remains an experimental question.</text>
 <path d="M44 130 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>

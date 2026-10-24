@@ -1,36 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img"><title>Academy, feedback learning, and external evaluation</title><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#426281"/></marker></defs><rect width="1440" height="1000" fill="white"/><style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;fill:#172c47}.title{font-size:28px;font-weight:700}.head{font-size:23px;font-weight:650}.body{font-size:20px}.small{font-size:18px;fill:#506781}</style>
-<text x="40" y="46" class="title">Academy, feedback learning, and external evaluation</text>
-<g><rect x="40" y="82" width="1360" height="135" rx="12" fill="#fff5e5" stroke="#aabbd0" stroke-width="1.5"/>
-<text x="62" y="117" class="head">Pilot: verify task/deployment contracts and freeze the learning protocol</text>
-<text x="62" y="153" class="body">At least two tasks, one student backend; record B0 data, training recipe and checkpoint</text>
-<text x="62" y="183" class="body">Verify expert, real embodiment and registration; pilot costs determine rounds, chains and budgets</text>
-</g>
-<g><rect x="40" y="250" width="1360" height="145" rx="12" fill="#e9f7f2" stroke="#aabbd0" stroke-width="1.5"/>
-<text x="62" y="285" class="head">E1 · Academy facilities: controllable practice, supervision reliability and cost</text>
-<text x="62" y="321" class="body">Reuse main-study logs: timing, tracking, resets, expert yield, label consistency and recovery</text>
-<text x="62" y="351" class="body">One task: native AM-Bench B1 vs academy B1, with matched fixed workflow and budget</text>
-</g>
-<g><rect x="40" y="430" width="1360" height="200" rx="12" fill="#eaf3ff" stroke="#aabbd0" stroke-width="1.5"/>
-<text x="62" y="465" class="head">E2 · Multi-round feedback learning: does the complete loop beat a fixed workflow?</text>
-<text x="62" y="501" class="body">Main: B0 frozen initial policy | B1 fixed coverage collection/training | AirSpark complete loop</text>
-<text x="62" y="531" class="body">Shared facilities, expert, training and gate; same intervention schedule, caps and paired seeds</text>
-<text x="62" y="561" class="body">Select one plan, collect/train once, then compare with the parent; analyze complete learning chains</text>
-<text x="62" y="591" class="body">Representative-task attribution: fixed process plan, rule revision, current and historical feedback</text>
-</g>
-<polyline points="720,630 720,675 365,675 365,705" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<polyline points="720,675 1075,675 1075,705" fill="none" stroke="#426281" stroke-width="2.5" marker-end="url(#arrow)"/>
-<g><rect x="40" y="715" width="650" height="200" rx="12" fill="#eaf3ff" stroke="#aabbd0" stroke-width="1.5"/>
-<text x="62" y="750" class="head">E3 · Frozen student: native AM-Bench</text>
-<text x="62" y="786" class="body">Unmodified task, robot, action and scoring</text>
-<text x="62" y="816" class="body">B0 / B1 / complete AirSpark</text>
-<text x="62" y="846" class="body">Change from B0 and matched-budget contrasts</text>
-<text x="62" y="876" class="body">Contract mismatch: report a derived setting</text>
-</g>
-<g><rect x="750" y="715" width="650" height="200" rx="12" fill="#fff5e5" stroke="#aabbd0" stroke-width="1.5"/>
-<text x="772" y="750" class="head">E3 · Frozen student: physical robot</text>
-<text x="772" y="786" class="body">Real scan, 3DGS and explicit physics registration</text>
-<text x="772" y="816" class="body">Audit embodiment/deployment before fixing scope</text>
-<text x="772" y="846" class="body">Separate corresponding and held-out conditions</text>
-<text x="772" y="876" class="body">No runtime Mentor correction</text>
-</g>
-<text x="40" y="958" class="small">Sealed and final physical tests never feed back; study scale and quantitative outcomes remain unverified</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img"><title>Experimental design and independent evaluation</title><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#183255"/></marker></defs><rect width="1440" height="1000" fill="white"/><g font-family="Microsoft YaHei,Arial,sans-serif" fill="#183255">
+<text x="40" y="45" font-size="32" font-weight="700">Experimental design and independent evaluation</text>
+<text x="40" y="94" font-size="25" font-weight="700">Benchmark line: FA-Hexa; ACT, DP, π0.5; lemon harvesting and Push Slider</text>
+<rect x="40" y="120" width="400" height="190" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="60" y="160" font-size="26" font-weight="700">Matched initialization</text>
+<text x="60" y="203" font-size="23" font-weight="400">Same student/task parent</text>
+<text x="60" y="237" font-size="23" font-weight="400">Shared task demos and inputs</text>
+<text x="60" y="271" font-size="23" font-weight="400">Architecture-specific pretraining</text>
+<rect x="520" y="120" width="400" height="190" rx="8" fill="#eaf6f2" stroke="#becddd"/>
+<text x="540" y="160" font-size="26" font-weight="700">Budget-matched learning</text>
+<text x="540" y="203" font-size="23" font-weight="400">Initial / fixed / full feedback</text>
+<text x="540" y="237" font-size="23" font-weight="400">3 chains; ≤4 interventions</text>
+<text x="540" y="271" font-size="23" font-weight="400">Collection C; feedback V</text>
+<rect x="1000" y="120" width="400" height="190" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="1020" y="160" font-size="26" font-weight="700">Freeze and evaluate</text>
+<text x="1020" y="203" font-size="23" font-weight="400">Sealed academy pool T</text>
+<text x="1020" y="237" font-size="23" font-weight="400">Native AM-Bench return</text>
+<text x="1020" y="271" font-size="23" font-weight="400">Chain differences and resources</text>
+<path d="M440 215 H510" stroke="#183255" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M920 215 H990" stroke="#183255" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="40" y="370" font-size="25" font-weight="700">Independent real embodiment: DP lemon; no benchmark-policy weight reuse</text>
+<rect x="40" y="400" width="400" height="205" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="60" y="440" font-size="26" font-weight="700">Real-task match / parent</text>
+<text x="60" y="483" font-size="23" font-weight="400">3DGS appearance + physics</text>
+<text x="60" y="517" font-size="23" font-weight="400">Robot / camera / physics match</text>
+<text x="60" y="551" font-size="23" font-weight="400">Real + simulated initial demos</text>
+<rect x="520" y="400" width="400" height="205" rx="8" fill="#eaf6f2" stroke="#becddd"/>
+<text x="540" y="440" font-size="26" font-weight="700">Two full-loop scene sources</text>
+<text x="540" y="483" font-size="23" font-weight="400">Benchmark / reconstructed scene</text>
+<text x="540" y="517" font-size="23" font-weight="400">Same parent, budget, real replay</text>
+<text x="540" y="551" font-size="23" font-weight="400">3 chains per updated group</text>
+<rect x="1000" y="400" width="400" height="205" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="1020" y="440" font-size="26" font-weight="700">Frozen hardware test</text>
+<text x="1020" y="483" font-size="23" font-weight="400">Initial: 1 model × 30 episodes</text>
+<text x="1020" y="517" font-size="23" font-weight="400">Updated: 2 groups × 3 × 10</text>
+<text x="1020" y="551" font-size="23" font-weight="400">90 episodes; no test feedback</text>
+<path d="M440 500 H510" stroke="#183255" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M920 500 H990" stroke="#183255" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="40" y="665" font-size="25" font-weight="700">DP lemon: component attribution and extension</text>
+<rect x="40" y="695" width="660" height="200" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="60" y="735" font-size="26" font-weight="700">Component analysis</text>
+<text x="60" y="778" font-size="23" font-weight="400">Fixed / no revision / rules / current / full</text>
+<text x="60" y="812" font-size="23" font-weight="400">Same tools and caps; separate histories</text>
+<text x="60" y="846" font-size="23" font-weight="400">Reuse primary fixed/full results</text>
+<rect x="740" y="695" width="660" height="200" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="760" y="735" font-size="26" font-weight="700">Cross-initialization experience reuse</text>
+<text x="760" y="778" font-size="23" font-weight="400">Source Kᵢ → paired new-parent target i</text>
+<text x="760" y="812" font-size="23" font-weight="400">Imported / empty experience; both groups train anew</text>
+<text x="760" y="846" font-size="23" font-weight="400">No source weights, trajectories, or sealed information</text>
+<text x="40" y="954" font-size="24" font-weight="400">Facility reliability reuses actual logs; tables and curves remain unmeasured</text>
+</g></svg>

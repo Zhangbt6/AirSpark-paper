@@ -12,7 +12,7 @@
 <text x="62" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Fixed task-group budgets</text>
 <rect x="374" y="150" width="290" height="180" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
 <text x="392" y="187" fill="#183255" font-size="23" font-weight="600" text-anchor="start">SparkMentor  μ</text>
-<text x="392" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Evidence Eᵣ and outcomes Fᵣ</text>
+<text x="392" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Current Eᵣ and available prior F</text>
 <text x="392" y="256" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Intervention memory Mᵣ</text>
 <text x="392" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Choose a practice plan Aᵣ</text>
 <rect x="724" y="150" width="672" height="225" rx="5" fill="#f7f9fc" stroke="#d2dde8" stroke-width="1.7"/>

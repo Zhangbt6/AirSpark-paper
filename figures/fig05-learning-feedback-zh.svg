@@ -12,7 +12,7 @@
 <text x="62" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">固定任务组预算</text>
 <rect x="374" y="150" width="290" height="180" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
 <text x="392" y="187" fill="#183255" font-size="23" font-weight="600" text-anchor="start">SparkMentor  μ</text>
-<text x="392" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">执行证据 Eᵣ 与学习反馈 Fᵣ</text>
+<text x="392" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">当前 Eᵣ 与已获得的学习反馈</text>
 <text x="392" y="256" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">跨轮干预记忆 Mᵣ</text>
 <text x="392" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">选择练习计划 Aᵣ</text>
 <rect x="724" y="150" width="672" height="225" rx="5" fill="#f7f9fc" stroke="#d2dde8" stroke-width="1.7"/>

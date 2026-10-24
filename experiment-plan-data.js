@@ -1,220 +1,370 @@
 window.AIRSPARK_STUDY_PLAN = {
-  "plan_version": "v0.32",
-  "status": "planning_draft_not_frozen_or_measured",
-  "protocol_reference": "closed-loop-config.template.json",
-  "purpose": "Initial task-focused design: aerial academy, feedback policy improvement and reconstructed-scene sim-to-real; later revision allowed.",
-  "task_candidates": [
+  "plan_version": "v0.33",
+  "status": "planning_protocol_not_frozen_or_measured",
+  "date": "2026-10-25",
+  "tasks": [
     "LemonHarvesting",
-    "NDT"
+    "PushSlider"
   ],
-  "representative_task": "LemonHarvesting",
-  "student_priority": "DiffusionPolicy",
-  "planning_defaults": {
-    "seeds": 3,
-    "rounds": 3,
-    "diagnostic": 20,
-    "expert": 50,
-    "validation": 30,
-    "test": 100,
-    "real": 20,
-    "gpuHours": null,
-    "includeComponents": true,
-    "heldoutReal": 0
+  "students": [
+    "ACT",
+    "DP",
+    "pi05_LoRA"
+  ],
+  "resources": {
+    "hardware": "single_RTX_4090",
+    "execution": "serial",
+    "budget_unit": null,
+    "per_round_caps": null,
+    "evaluation_counts": null
+  },
+  "defaults": {
+    "chains": 3,
+    "max_interventions": 4
   },
   "settings": [
     {
-      "id": "main-lemon-fixed",
+      "id": "DP-LemonHarvesting-B1",
+      "student": "DP",
       "task": "LemonHarvesting",
       "group": "B1",
-      "source": "AirSpark_benchmark",
-      "package": "E2",
-      "priority": "required"
+      "name": "固定练习",
+      "tier": 1,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
     },
     {
-      "id": "main-lemon-full",
+      "id": "DP-LemonHarvesting-B3+adapt-history",
+      "student": "DP",
       "task": "LemonHarvesting",
       "group": "B3+adapt-history",
-      "source": "AirSpark_benchmark",
-      "package": "E2",
-      "priority": "required"
+      "name": "AirSpark（完整）",
+      "tier": 1,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
     },
     {
-      "id": "main-ndt-fixed",
-      "task": "NDT",
+      "id": "DP-PushSlider-B1",
+      "student": "DP",
+      "task": "PushSlider",
       "group": "B1",
-      "source": "AirSpark_benchmark",
-      "package": "E2",
-      "priority": "required"
+      "name": "固定练习",
+      "tier": 1,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
     },
     {
-      "id": "main-ndt-full",
-      "task": "NDT",
+      "id": "DP-PushSlider-B3+adapt-history",
+      "student": "DP",
+      "task": "PushSlider",
       "group": "B3+adapt-history",
-      "source": "AirSpark_benchmark",
-      "package": "E2",
-      "priority": "required"
+      "name": "AirSpark（完整）",
+      "tier": 1,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
     },
     {
-      "id": "real-lemon-twin",
+      "id": "pi05_LoRA-LemonHarvesting-B1",
+      "student": "pi05_LoRA",
+      "task": "LemonHarvesting",
+      "group": "B1",
+      "name": "固定练习",
+      "tier": 4,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "pi05_LoRA-LemonHarvesting-B3+adapt-history",
+      "student": "pi05_LoRA",
       "task": "LemonHarvesting",
       "group": "B3+adapt-history",
-      "source": "AirSpark_reconstructed",
-      "package": "E3b",
-      "priority": "required"
+      "name": "AirSpark（完整）",
+      "tier": 4,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
     },
     {
-      "id": "mechanism-lemon-fixed-plan",
+      "id": "pi05_LoRA-PushSlider-B1",
+      "student": "pi05_LoRA",
+      "task": "PushSlider",
+      "group": "B1",
+      "name": "固定练习",
+      "tier": 4,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "pi05_LoRA-PushSlider-B3+adapt-history",
+      "student": "pi05_LoRA",
+      "task": "PushSlider",
+      "group": "B3+adapt-history",
+      "name": "AirSpark（完整）",
+      "tier": 4,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "ACT-LemonHarvesting-B1",
+      "student": "ACT",
+      "task": "LemonHarvesting",
+      "group": "B1",
+      "name": "固定练习",
+      "tier": 5,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "ACT-LemonHarvesting-B3+adapt-history",
+      "student": "ACT",
+      "task": "LemonHarvesting",
+      "group": "B3+adapt-history",
+      "name": "AirSpark（完整）",
+      "tier": 5,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "ACT-PushSlider-B1",
+      "student": "ACT",
+      "task": "PushSlider",
+      "group": "B1",
+      "name": "固定练习",
+      "tier": 5,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "ACT-PushSlider-B3+adapt-history",
+      "student": "ACT",
+      "task": "PushSlider",
+      "group": "B3+adapt-history",
+      "name": "AirSpark（完整）",
+      "tier": 5,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "DP-LemonHarvesting-B3",
+      "student": "DP",
       "task": "LemonHarvesting",
       "group": "B3",
-      "source": "AirSpark_benchmark",
-      "package": "E2a",
-      "priority": "recommended"
+      "name": "AirSpark（无方案修订）",
+      "tier": 2,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
     },
     {
-      "id": "mechanism-lemon-rule",
+      "id": "DP-LemonHarvesting-B3+adapt-rule",
+      "student": "DP",
       "task": "LemonHarvesting",
       "group": "B3+adapt-rule",
-      "source": "AirSpark_benchmark",
-      "package": "E2a",
-      "priority": "recommended"
+      "name": "AirSpark（规则修订）",
+      "tier": 2,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "DP-LemonHarvesting-B3+adapt-current",
+      "student": "DP",
+      "task": "LemonHarvesting",
+      "group": "B3+adapt-current",
+      "name": "AirSpark（无跨轮记忆）",
+      "tier": 2,
+      "line": "benchmark",
+      "parent_contract": "task_student_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "real-DP-lemon-benchmark",
+      "student": "DP",
+      "task": "LemonHarvesting",
+      "group": "B3+adapt-history",
+      "name": "AirSpark-基准场景",
+      "tier": 1,
+      "line": "real_matched_embodiment",
+      "parent_contract": "real_common_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "real-DP-lemon-reconstructed",
+      "student": "DP",
+      "task": "LemonHarvesting",
+      "group": "B3+adapt-history",
+      "name": "AirSpark-重建场景",
+      "tier": 1,
+      "line": "real_matched_embodiment",
+      "parent_contract": "real_common_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "reuse-DP-lemon-imported",
+      "student": "DP",
+      "task": "LemonHarvesting",
+      "group": "B3+adapt-history",
+      "name": "导入源教学经验",
+      "tier": 3,
+      "line": "reuse",
+      "parent_contract": "new_disjoint_demo_parent",
+      "chains": 3,
+      "max_interventions": 4
+    },
+    {
+      "id": "reuse-DP-lemon-empty",
+      "student": "DP",
+      "task": "LemonHarvesting",
+      "group": "B3+adapt-history",
+      "name": "空源教学经验",
+      "tier": 3,
+      "line": "reuse",
+      "parent_contract": "new_disjoint_demo_parent",
+      "chains": 3,
+      "max_interventions": 4
     }
   ],
-  "pilot": {
-    "chains": 1,
-    "max_candidate_training": 2,
-    "separate_from_formal_results": true
+  "totals": {
+    "incremental_settings": 19,
+    "chains": 57,
+    "max_candidate_trainings": 228
   },
-  "counts_at_defaults": {
-    "required_settings": 5,
-    "recommended_settings": 2,
-    "incremental_settings": 7,
-    "independent_learning_chains": 21,
-    "max_intervention_attempts": 63,
-    "max_candidate_training": 63,
-    "diagnostic_rollouts": 1260,
-    "max_expert_attempts": 3150,
-    "max_development_rollouts": 3780,
-    "academy_sealed_rollouts": 3300,
-    "native_sealed_rollouts": 1800,
-    "physical_real_rollouts": 60,
-    "optional_real_addition_at_10_each": 30
+  "excluded_from_training_count": [
+    "initial_policy_training",
+    "pilots",
+    "optional_supplements"
+  ],
+  "native_return": {
+    "line": "benchmark_only",
+    "adds_candidate_training": false,
+    "cost_charged": true
   },
-  "formulas": {
-    "settings": "5+2*includeComponents",
-    "chains": "settings*S",
-    "candidate_upper_bound": "settings*S*R",
-    "diagnostic": "settings*S*R*N_C",
-    "expert_attempt_upper_bound": "settings*S*R*N_expert",
-    "validation_upper_bound": "2*settings*S*R*N_V",
-    "academy_test": "(6+2*includeComponents+3)*S*N_T",
-    "native_test": "6*S*N_T",
-    "physical_real": "3*(N_real_corresponding+N_real_optional_heldout)"
-  },
-  "B0": "No incremental training. Same pinned initial state within each task/paired seed. Record initial acquisition/training provenance and costs separately.",
-  "real": {
-    "task": "LemonHarvesting",
-    "groups": [
-      {
-        "id": "initial",
-        "method": "B0",
-        "source": "common_parent"
-      },
-      {
-        "id": "benchmark",
-        "method": "B3+adapt-history",
-        "source": "benchmark_scene",
-        "reuse": "main_lemon_full"
-      },
-      {
-        "id": "twin",
-        "method": "B3+adapt-history",
-        "source": "reconstructed_scene",
-        "starts_from": "same_parent_as_benchmark_not_improved_benchmark_child"
-      }
+  "reuse": {
+    "source": "three_predeclared_DP_lemon_full_chains",
+    "mapping": "source_i_to_target_i",
+    "treatments": [
+      "imported_K",
+      "empty_K"
     ],
-    "primary_conditions": [
-      "reconstructed_corresponding"
+    "both_train_new_parent": true,
+    "initial_demo_disjoint_from_source": true,
+    "forbidden_imports": [
+      "student_weights",
+      "training_trajectories",
+      "sealed_information"
     ],
-    "optional_conditions": [
-      "held_out_object_or_layout"
-    ],
-    "default_primary_episodes_per_group": 20,
-    "optional_heldout_episodes_per_group_if_enabled": 10,
-    "same_parent_and_matched_collection_training_expert_deployment_contract": true,
-    "episodes_are_total_across_chains": true,
-    "if_embodiment_differs": "Match all three groups to one deployment-compatible initial state and adaptation budget; report extra cost separately."
+    "source_cost_separate": true
   },
-  "statistics": "Pilot-informed precision/power; S=3 is a scheduling starting point, not a sufficiency claim. Independent learning chain is the unit; paired seed identifiers and evaluation starts across methods. Do not treat rollout counts as training replicates. A single pilot chain cannot estimate between-chain training variance; any additional independent pilot chains must be separately scheduled and costed.",
-  "unresolved": [
-    "official task and robot contracts",
-    "B0 provenance and initial-state version",
-    "condition definitions and fixed expert feasibility",
-    "training steps and minimum qualified data",
-    "time_compute_agent_caps",
-    "acceptance_gain_and_retention_thresholds",
-    "retest_sampling_stopping_rules",
-    "pilot_precision_and_chain_count",
-    "physical_embodiment_and_scene_correspondence"
-  ],
-  "result_tables": [
-    "study-settings",
-    "result-facility",
-    "result-source",
-    "result-main",
-    "result-native",
-    "result-real",
-    "result-mechanism",
-    "result-diagnosis",
-    "result-rounds",
-    "study-progress"
-  ],
-  "result_storage": "browser-local only, no server synchronization; manually export and verify before sharing",
-  "results": "all cells intentionally blank",
-  "facility_checks": {
-    "status": "reuse_existing_logs_and_pilot_checks",
-    "separate_validation_matrix_required": false,
-    "metrics": [
-      "synchronization",
-      "tracking",
-      "reset",
-      "expert_yield",
-      "label_quality",
-      "qualified_supervision_cost",
-      "human_intervention",
-      "recovery_records"
-    ]
+  "real_test": {
+    "embodiment": "independent_of_FA_Hexa",
+    "no_benchmark_checkpoint_reuse": true,
+    "initial_models": 1,
+    "initial_episodes": 30,
+    "updated_groups": 2,
+    "chains_per_group": 3,
+    "episodes_per_updated_model": 10,
+    "main_episodes": 90,
+    "heldout_optional": true,
+    "heldout_episodes_per_model": 5,
+    "heldout_total_episodes": 35,
+    "same_fixed_real_replay": true,
+    "real_replay_fraction": null,
+    "new_real_data_after_initialization": false
   },
-  "task_alternatives": [
-    "RotateValve",
-    "PushSlider"
+  "tiers": [
+    {
+      "tier": 0,
+      "name": "先导、接口、扫描配准与初始化",
+      "settings": null,
+      "chains": null,
+      "max_candidate_trainings": null
+    },
+    {
+      "tier": 1,
+      "name": "DP 两任务＋独立本体两组实机线",
+      "settings": 6,
+      "chains": 18,
+      "max_candidate_trainings": 72
+    },
+    {
+      "tier": 2,
+      "name": "DP 柠檬组件",
+      "settings": 3,
+      "chains": 9,
+      "max_candidate_trainings": 36
+    },
+    {
+      "tier": 3,
+      "name": "跨初始化经验复用",
+      "settings": 2,
+      "chains": 6,
+      "max_candidate_trainings": 24
+    },
+    {
+      "tier": 4,
+      "name": "π0.5 两任务",
+      "settings": 4,
+      "chains": 12,
+      "max_candidate_trainings": 48
+    },
+    {
+      "tier": 5,
+      "name": "ACT 两任务",
+      "settings": 4,
+      "chains": 12,
+      "max_candidate_trainings": 48
+    },
+    {
+      "tier": 6,
+      "name": "其他补充实验，单列",
+      "settings": null,
+      "chains": null,
+      "max_candidate_trainings": null
+    }
   ],
-  "optional_stress_task": "CabinetPickPlace",
-  "evaluation_multipliers": {
-    "academy_main_models": 6,
-    "academy_recommended_models": 2,
-    "reconstructed_scene_models": 3,
-    "native_models": 6,
-    "real_groups": 3
-  },
-  "optional_experiments": [
-    "Cabinet stress test",
-    "current_vs_history_feedback",
-    "native_source_fixed_practice",
-    "fixed_practice_reconstructed_scene",
-    "sim_real_exploratory_agreement"
+  "pending": [
+    "task_and_interface_manifests",
+    "C_V_T_sizes",
+    "initial_data_counts",
+    "initial_parent_hashes",
+    "LoRA_configuration",
+    "Agent_configuration",
+    "budget_units_caps",
+    "evaluation_counts",
+    "gain_and_retention_thresholds",
+    "minimum_relevant_effect",
+    "interval_estimand_method",
+    "no_gain_trigger",
+    "real_replay_fraction",
+    "hardware_fault_replacement"
   ],
-  "claims": {
-    "NDT": "official position-hold score; contact force explanations only with measured support",
-    "reconstruction": "overall value of deployment-corresponding scene practice, not isolated 3DGS causality",
-    "memory": "independent gain requires optional current/history comparison",
-    "R3_history_comparison_possible": true
-  },
-  "group_names": {
-    "B0": "初始策略",
-    "B1": "固定练习",
-    "B3": "AirSpark（无方案修订）",
-    "B3+adapt-rule": "AirSpark（规则修订）",
-    "B3+adapt-current": "当前反馈（可选）",
-    "B3+adapt-history": "AirSpark（完整）"
-  }
+  "count_note": "Upper bounds, not a completion commitment. Evaluation costs count; initial training, pilots and optional studies are separate."
 };
