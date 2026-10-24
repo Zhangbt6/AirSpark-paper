@@ -131,3 +131,7 @@ section>h4{font-size:16px;line-height:1.6;margin:30px 0 12px;scroll-margin-top:9
 .study-overview table{min-width:820px}.study-overview td{font-size:12px;line-height:1.8}
 @media(max-width:720px){.study-planner{padding:15px}.study-parameters{grid-template-columns:1fr;gap:12px}.study-counts{grid-template-columns:repeat(2,minmax(0,1fr))}.study-table-heading{font-size:14px}.study-table{margin:24px 0}}
 @media print{.study-planner{background:white;break-inside:auto}.study-toolbar,.study-table-heading button{display:none!important}.study-table .result-input{border:0;padding:0;background:transparent;min-width:0}.study-table table,.study-wide table{min-width:0;width:100%}.study-table th,.study-table td{font-size:8px;padding:5px}.study-parameters input{border:0;padding:0}.study-counts strong{font-size:18px}}
+
+/* v0.32 priority selection. */
+.study-choice{display:flex;align-items:center;gap:9px;margin:16px 0;font-size:13px;color:var(--ink)}
+.study-choice input{width:17px;height:17px;accent-color:#087f75}

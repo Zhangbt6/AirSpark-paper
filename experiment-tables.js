@@ -3,7 +3,7 @@
   'use strict';
   const plan = window.AIRSPARK_STUDY_PLAN;
   if (!plan) return;
-  const storageKey = 'airspark-study-records-v1';
+  const storageKey = 'airspark-study-records-v032';
   const fields = [...document.querySelectorAll('[data-result-field]')];
   const parameters = [...document.querySelectorAll('[data-study-param]')];
   const status = document.getElementById('study-save-status');
@@ -22,7 +22,8 @@
   });
   parameters.forEach(field => {
     const value = state.parameters[field.dataset.studyParam];
-    if (typeof value === 'string') field.value = value;
+    if (field.type === 'checkbox' && typeof value === 'boolean') field.checked = value;
+    else if (typeof value === 'string') field.value = value;
   });
   const n = value => Number(value).toLocaleString('zh-CN', { maximumFractionDigits: 1 });
   function params() {
@@ -30,6 +31,7 @@
     let valid = true;
     parameters.forEach(input => {
       const key = input.dataset.studyParam;
+      if (input.type === 'checkbox') { out[key] = input.checked; return; }
       if (key === 'gpuHours' && input.value.trim() === '') { out[key] = null; return; }
       const value = Number(input.value);
       const ok = input.value.trim() !== '' && Number.isFinite(value)
@@ -47,18 +49,22 @@
   }
   function renderCounts() {
     const p = params();
-    const chains = plan.settings.length * p.seeds;
+    const selected = plan.settings.filter(setting => setting.priority === 'required' || p.includeComponents);
+    const chains = selected.length * p.seeds;
     const attempts = chains * p.rounds;
+    setCount('settings', n(selected.length));
+    setCount('requiredDetail', n(5 * p.seeds) + '条链，最多' + n(5 * p.seeds * p.rounds) + '次训练');
+    setCount('componentDetail', p.includeComponents ? '新增' + n(2 * p.seeds) + '条链，最多' + n(2 * p.seeds * p.rounds) + '次训练' : '暂不纳入排期');
     setCount('chains', n(chains));
     setCount('candidates', '≤' + n(attempts));
-    setCount('real', n(6 * p.real));
+    setCount('real', n(3 * (p.real + p.heldoutReal)));
     setCount('trainingDetail', n(chains) + ' 条链，最多 ' + n(attempts) + ' 个候选');
     setCount('collection', '诊断 ' + n(attempts * p.diagnostic) + ' 回合；专家尝试 ≤' + n(attempts * p.expert) + ' 次');
     setCount('validation', '≤' + n(2 * attempts * p.validation) + ' 回合');
-    setCount('academyTest', n(9 * p.seeds * p.test) + ' 回合');
-    setCount('nativeTest', n(7 * p.seeds * p.test) + ' 回合');
+    setCount('academyTest', n((6 + (p.includeComponents ? 2 : 0) + 3) * p.seeds * p.test) + ' 回合');
+    setCount('nativeTest', n(6 * p.seeds * p.test) + ' 回合');
     setCount('gpu', p.gpuHours === null ? '待先导成本' : '≤' + n(attempts * p.gpuHours) + ' GPU·h');
-    setCount('realDetail', n(6 * p.real) + ' 回合；每组每条件 ' + n(p.real) + ' 回合，跨链均衡分配');
+    setCount('realDetail', n(3 * (p.real + p.heldoutReal)) + '回合；对应布局每组' + n(p.real) + '，预留布局每组' + n(p.heldoutReal));
     const filled = fields.filter(field => field.value.trim()).length;
     if (status) {
       status.textContent = !p.valid ? '排期参数有空项或超出范围；估算暂用默认值，请修正后导出。'
@@ -78,7 +84,7 @@
     save();
   }));
   parameters.forEach(input => input.addEventListener('input', () => {
-    state.parameters[input.dataset.studyParam] = input.value;
+    state.parameters[input.dataset.studyParam] = input.type === 'checkbox' ? input.checked : input.value;
     save();
   }));
   // Preserve user text as data when CSV is opened by spreadsheet applications.
@@ -114,7 +120,7 @@
         rows.push([table.dataset.resultTable, table.dataset.resultTitle, tr.dataset.resultRow, headers[index], value(td)]);
       }));
     });
-    parameters.forEach(input => rows.push(['planning', '未冻结排期参数', input.dataset.studyParam, input.dataset.studyParam, input.value]));
+    parameters.forEach(input => rows.push(['planning', '未冻结排期参数', input.dataset.studyParam, input.dataset.studyParam, input.type === 'checkbox' ? String(input.checked) : input.value]));
     download('AirSpark-study-records-' + plan.plan_version + '.csv', rows);
   });
   const manifest = document.getElementById('export-study-manifest');
@@ -122,7 +128,7 @@
     const p = params();
     if (!p.valid) { if (status) status.textContent = '请先修正排期参数，再导出学习链清单。'; return; }
     const rows = [['排期版本', '状态', '执行包', '设置ID', '任务', '方法', '来源', '配对seed槽位（实际ID待冻结）', '学习链ID', '干预序号', '计划C诊断回合', '计划专家尝试上限', '计划每模型V回合', '父checkpoint', '执行证据ID', '计划ID', '合格监督数', '实际专家尝试数', '候选checkpoint', 'V收益pp', '不确定性', '接纳状态', 'worker小时', 'GPU小时', '记忆修订ID', '负责人', '状态或说明']];
-    plan.settings.forEach(setting => {
+    plan.settings.filter(setting => setting.priority === 'required' || p.includeComponents).forEach(setting => {
       for (let seed = 1; seed <= p.seeds; seed++) {
         const slot = 'seed-slot-' + String(seed).padStart(2, '0');
         const chain = setting.id + '-' + slot;

@@ -2,7 +2,7 @@
 
 Public discussion website for the AirSpark research paper. This repository contains only the static paper-design pages, not the AirSpark simulation source code.
 
-- Current Chinese manuscript: v0.31 — A Simulated Academy for Self-Improving Aerial Manipulation
+- Current Chinese manuscript: v0.32 — A Simulated Academy for Self-Improving Aerial Manipulation
 - Paper structure: abstract, introduction, related work, method, experiments, discussion, conclusion, references, appendix.
 - Evaluation: native AM-Bench return testing and paired real-scene experiments; stage-evidence-driven practice and bounded policy improvement.
 - Earlier designs: `versions/v0.20/index.html`, `versions/v0.19/index.html`, `versions/v0.18/index.html`, `versions/v0.17/index.html`, `versions/v0.15.1/index.html`, `versions/v0.15/index.html`, `versions/v0.14/index.html`, `versions/v0.13/index.html`, `versions/v0.12/index.html`, `versions/v0.11/index.html`, `versions/v0.10/index.html`, `versions/v0.9.1/index.html`, `versions/v0.8/index.html`, `versions/v0.7/index.html` and `versions/v0.6/index.html`
@@ -111,3 +111,7 @@ The Chinese method specifies fixed allocation versus bounded configuration/opera
 ## v0.31 — experiment work packages and blank result templates
 
 Seven work packages unpack the existing pilot/E1/E2/E3 design. Ten blank setup/result/progress tables support local-browser editing and CSV export. A planning calculator counts eight incremental settings, independent learning chains, candidate upper bounds and evaluation episodes; defaults are not frozen or measured. The protocol remains v0.30; experiment-plan-v0.31.json is a separate scheduling draft. Figure assets and method scope are unchanged, English remains deferred, and v0.30 is archived. Browser entries are never automatically sent to GitHub or a server.
+
+## v0.32 — task-focused study and reconstructed-scene practice
+
+Main tasks: LemonHarvesting and NDT candidate; Cabinet is optional. Required: four main incremental settings plus one reconstructed-scene full-loop setting. Recommended: fixed-plan and rule revisions on lemon. At S=3/R=3 the selected seven settings form21chains/at most63candidate updates; only required settings form15chains/45updates. Physical real compares common initial, benchmark-scene full loop and reconstructed-scene full loop:60primary episodes, optional30held-out episodes. Native source and current/history analyses are optional. Same-parent/resource matching and blank data status retained. Protocol and plan are v0.32; English stays deferred. Browser records use a separate v0.32 namespace; v0.31 records remain available in its archive.

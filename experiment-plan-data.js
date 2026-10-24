@@ -1,11 +1,11 @@
 window.AIRSPARK_STUDY_PLAN = {
-  "plan_version": "v0.31",
+  "plan_version": "v0.32",
   "status": "planning_draft_not_frozen_or_measured",
   "protocol_reference": "closed-loop-config.template.json",
-  "purpose": "Make existing E1/E2/E3 executable and expose blank result templates; no new method or comparison group.",
+  "purpose": "Initial task-focused design: aerial academy, feedback policy improvement and reconstructed-scene sim-to-real; later revision allowed.",
   "task_candidates": [
     "LemonHarvesting",
-    "CabinetPickPlace"
+    "NDT"
   ],
   "representative_task": "LemonHarvesting",
   "student_priority": "DiffusionPolicy",
@@ -17,64 +17,66 @@ window.AIRSPARK_STUDY_PLAN = {
     "validation": 30,
     "test": 100,
     "real": 20,
-    "gpuHours": null
+    "gpuHours": null,
+    "includeComponents": true,
+    "heldoutReal": 0
   },
   "settings": [
     {
-      "id": "main-lemon-b1",
+      "id": "main-lemon-fixed",
       "task": "LemonHarvesting",
       "group": "B1",
-      "source": "AirSpark",
-      "package": "E2"
+      "source": "AirSpark_benchmark",
+      "package": "E2",
+      "priority": "required"
     },
     {
       "id": "main-lemon-full",
       "task": "LemonHarvesting",
       "group": "B3+adapt-history",
-      "source": "AirSpark",
-      "package": "E2"
+      "source": "AirSpark_benchmark",
+      "package": "E2",
+      "priority": "required"
     },
     {
-      "id": "main-cabinet-b1",
-      "task": "CabinetPickPlace",
+      "id": "main-ndt-fixed",
+      "task": "NDT",
       "group": "B1",
-      "source": "AirSpark",
-      "package": "E2"
+      "source": "AirSpark_benchmark",
+      "package": "E2",
+      "priority": "required"
     },
     {
-      "id": "main-cabinet-full",
-      "task": "CabinetPickPlace",
+      "id": "main-ndt-full",
+      "task": "NDT",
       "group": "B3+adapt-history",
-      "source": "AirSpark",
-      "package": "E2"
+      "source": "AirSpark_benchmark",
+      "package": "E2",
+      "priority": "required"
     },
     {
-      "id": "mechanism-lemon-b3",
+      "id": "real-lemon-twin",
+      "task": "LemonHarvesting",
+      "group": "B3+adapt-history",
+      "source": "AirSpark_reconstructed",
+      "package": "E3b",
+      "priority": "required"
+    },
+    {
+      "id": "mechanism-lemon-fixed-plan",
       "task": "LemonHarvesting",
       "group": "B3",
-      "source": "AirSpark",
-      "package": "E2a"
+      "source": "AirSpark_benchmark",
+      "package": "E2a",
+      "priority": "recommended"
     },
     {
       "id": "mechanism-lemon-rule",
       "task": "LemonHarvesting",
       "group": "B3+adapt-rule",
-      "source": "AirSpark",
-      "package": "E2a"
-    },
-    {
-      "id": "mechanism-lemon-current",
-      "task": "LemonHarvesting",
-      "group": "B3+adapt-current",
-      "source": "AirSpark",
-      "package": "E2a"
-    },
-    {
-      "id": "source-lemon-native-b1",
-      "task": "LemonHarvesting",
-      "group": "B1",
-      "source": "native_AMBench",
-      "package": "E1b"
+      "source": "AirSpark_benchmark",
+      "package": "E2a",
+      "priority": "recommended"
     }
   ],
   "pilot": {
@@ -83,43 +85,64 @@ window.AIRSPARK_STUDY_PLAN = {
     "separate_from_formal_results": true
   },
   "counts_at_defaults": {
-    "incremental_settings": 8,
-    "independent_learning_chains": 24,
-    "max_intervention_attempts": 72,
-    "max_candidate_training": 72,
-    "diagnostic_rollouts": 1440,
-    "max_expert_attempts": 3600,
-    "max_development_rollouts": 4320,
-    "academy_sealed_rollouts": 2700,
-    "native_sealed_rollouts": 2100,
-    "physical_real_rollouts": 120
+    "required_settings": 5,
+    "recommended_settings": 2,
+    "incremental_settings": 7,
+    "independent_learning_chains": 21,
+    "max_intervention_attempts": 63,
+    "max_candidate_training": 63,
+    "diagnostic_rollouts": 1260,
+    "max_expert_attempts": 3150,
+    "max_development_rollouts": 3780,
+    "academy_sealed_rollouts": 3300,
+    "native_sealed_rollouts": 1800,
+    "physical_real_rollouts": 60,
+    "optional_real_addition_at_10_each": 30
   },
   "formulas": {
-    "chains": "8*S",
-    "candidate_upper_bound": "8*S*R",
-    "diagnostic": "8*S*R*N_C",
-    "expert_attempt_upper_bound": "8*S*R*N_expert",
-    "validation_upper_bound": "2*8*S*R*N_V",
-    "academy_test": "9*S*N_T",
-    "native_test": "7*S*N_T",
-    "physical_real": "3*2*N_real_total_per_group_condition"
+    "settings": "5+2*includeComponents",
+    "chains": "settings*S",
+    "candidate_upper_bound": "settings*S*R",
+    "diagnostic": "settings*S*R*N_C",
+    "expert_attempt_upper_bound": "settings*S*R*N_expert",
+    "validation_upper_bound": "2*settings*S*R*N_V",
+    "academy_test": "(6+2*includeComponents+3)*S*N_T",
+    "native_test": "6*S*N_T",
+    "physical_real": "3*(N_real_corresponding+N_real_optional_heldout)"
   },
   "B0": "No incremental training. Same pinned initial state within each task/paired seed. Record initial acquisition/training provenance and costs separately.",
   "real": {
     "task": "LemonHarvesting",
     "groups": [
-      "B0",
-      "B1",
-      "B3+adapt-history"
+      {
+        "id": "initial",
+        "method": "B0",
+        "source": "common_parent"
+      },
+      {
+        "id": "benchmark",
+        "method": "B3+adapt-history",
+        "source": "benchmark_scene",
+        "reuse": "main_lemon_full"
+      },
+      {
+        "id": "twin",
+        "method": "B3+adapt-history",
+        "source": "reconstructed_scene",
+        "starts_from": "same_parent_as_benchmark_not_improved_benchmark_child"
+      }
     ],
-    "conditions": [
-      "reconstructed_corresponding",
+    "primary_conditions": [
+      "reconstructed_corresponding"
+    ],
+    "optional_conditions": [
       "held_out_object_or_layout"
     ],
-    "episodes_per_group_condition_is_total_across_chains": true,
-    "balance_chain_assignment_with_same_pattern_across_groups": true,
-    "reuse_checkpoints_requires_verified_embodiment_and_deployment_contract": true,
-    "if_not_compatible": "Plan matching parent and minimum corresponding learning comparisons with separate training and cost before claiming transfer."
+    "default_primary_episodes_per_group": 20,
+    "optional_heldout_episodes_per_group_if_enabled": 10,
+    "same_parent_and_matched_collection_training_expert_deployment_contract": true,
+    "episodes_are_total_across_chains": true,
+    "if_embodiment_differs": "Match all three groups to one deployment-compatible initial state and adaptation budget; report extra cost separately."
   },
   "statistics": "Pilot-informed precision/power; S=3 is a scheduling starting point, not a sufficiency claim. Independent learning chain is the unit; paired seed identifiers and evaluation starts across methods. Do not treat rollout counts as training replicates. A single pilot chain cannot estimate between-chain training variance; any additional independent pilot chains must be separately scheduled and costed.",
   "unresolved": [
@@ -148,20 +171,50 @@ window.AIRSPARK_STUDY_PLAN = {
   "result_storage": "browser-local only, no server synchronization; manually export and verify before sharing",
   "results": "all cells intentionally blank",
   "facility_checks": {
-    "status": "planning_draft",
-    "tasks": 2,
-    "control_clip_types_per_task": 5,
-    "repeats_per_clip": 3,
-    "paired_control_clips_total": 30,
-    "resets_per_task": 20,
-    "resets_total": 40,
-    "recovery_cases": [
-      "after_collection",
-      "after_training",
-      "at_evaluation_commit_boundary"
-    ],
-    "recovery_checks_total": 3,
-    "recovery_reuses_pilot_artifacts_where_possible": true,
-    "legal_clip_definitions_and_tolerances": "freeze_in_S0"
+    "status": "reuse_existing_logs_and_pilot_checks",
+    "separate_validation_matrix_required": false,
+    "metrics": [
+      "synchronization",
+      "tracking",
+      "reset",
+      "expert_yield",
+      "label_quality",
+      "qualified_supervision_cost",
+      "human_intervention",
+      "recovery_records"
+    ]
+  },
+  "task_alternatives": [
+    "RotateValve",
+    "PushSlider"
+  ],
+  "optional_stress_task": "CabinetPickPlace",
+  "evaluation_multipliers": {
+    "academy_main_models": 6,
+    "academy_recommended_models": 2,
+    "reconstructed_scene_models": 3,
+    "native_models": 6,
+    "real_groups": 3
+  },
+  "optional_experiments": [
+    "Cabinet stress test",
+    "current_vs_history_feedback",
+    "native_source_fixed_practice",
+    "fixed_practice_reconstructed_scene",
+    "sim_real_exploratory_agreement"
+  ],
+  "claims": {
+    "NDT": "official position-hold score; contact force explanations only with measured support",
+    "reconstruction": "overall value of deployment-corresponding scene practice, not isolated 3DGS causality",
+    "memory": "independent gain requires optional current/history comparison",
+    "R3_history_comparison_possible": true
+  },
+  "group_names": {
+    "B0": "初始策略",
+    "B1": "固定练习",
+    "B3": "AirSpark（无方案修订）",
+    "B3+adapt-rule": "AirSpark（规则修订）",
+    "B3+adapt-current": "当前反馈（可选）",
+    "B3+adapt-history": "AirSpark（完整）"
   }
 };

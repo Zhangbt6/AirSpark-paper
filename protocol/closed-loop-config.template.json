@@ -1,8 +1,8 @@
 {
-  "protocol_version": "v0.30",
+  "protocol_version": "v0.32",
   "status": "pilot_pending",
   "frozen": false,
-  "scope": "Research protocol template. v0.30 adds proposed memory and decision contracts; implementation and pilot validation remain pending.",
+  "scope": "Research protocol template. v0.32 schedules lemon/NDT candidates and reconstructed-scene real transfer; parameters and implementation remain pending.",
   "method": {
     "group": null,
     "allowed_groups": [
@@ -245,10 +245,8 @@
       "B3+adapt-history"
     ],
     "supporting_groups": [
-      "B2",
       "B3",
-      "B3+adapt-rule",
-      "B3+adapt-current"
+      "B3+adapt-rule"
     ],
     "student_backends_required": 1,
     "primary_contrasts": [
@@ -269,7 +267,6 @@
       "groups": [
         "B3",
         "B3+adapt-rule",
-        "B3+adapt-current",
         "B3+adapt-history"
       ],
       "canonical_contrasts": [
@@ -280,14 +277,16 @@
         [
           "B3+adapt-history",
           "B3+adapt-rule"
-        ],
-        [
-          "B3+adapt-history",
-          "B3+adapt-current"
         ]
       ]
     },
-    "shared_incremental_group_schedule_and_caps": true
+    "shared_incremental_group_schedule_and_caps": true,
+    "optional_attribution_groups": [
+      "B2",
+      "B3+adapt-current"
+    ],
+    "history_contrast_status": "optional_not_required_by_current_schedule",
+    "required_reconstructed_scene_training_settings": 1
   },
   "statistics": {
     "minimum_relevant_effect": null,
@@ -307,13 +306,13 @@
     "official_source_commit": "60bf5b73041df4eab571f7d9f0a297aeecbf2e0d",
     "task_candidates": [
       "LemonHarvesting",
-      "CabinetPickPlace"
+      "NDT"
     ],
     "runtime_correspondence_verified": false,
     "task_contract_manifest": null,
     "B0_data_and_training_provenance": null,
     "checkpoint_hash": null,
-    "minimum_source_control_main_tasks": 1,
+    "minimum_source_control_main_tasks": 0,
     "source_control": {
       "sources": [
         "native_AMBench",
@@ -322,7 +321,8 @@
       "strategies": [
         "B1"
       ],
-      "optional_extension": "2x2_sources_by_B1_and_full_loop_only_if_budget_allows"
+      "optional_extension": "2x2_sources_by_B1_and_full_loop_only_if_budget_allows",
+      "status": "optional"
     },
     "changed_contract_label": "derived_setting",
     "report_absolute_and_relative_changes": true,
@@ -347,16 +347,23 @@
     "reconstruction_and_physical_registration_manifest": null,
     "if_embodiment_differs": "audit_compatibility_and_resources_then_declare_matching_parent_and_minimal_corresponding_task_comparison_with_separate_cost_or_limit_claim_to_demo",
     "groups": [
-      "B0",
-      "B1",
-      "B3+adapt-history"
+      "initial",
+      "benchmark_scene_full",
+      "reconstructed_scene_full"
     ],
     "runtime_Mentor_correction": false,
     "evaluation_scene_splits": [
-      "reconstructed_corresponding",
-      "held_out_object_or_layout"
+      "reconstructed_corresponding"
     ],
-    "new_site_claim_requires_independent_site": true
+    "new_site_claim_requires_independent_site": true,
+    "group_methods": {
+      "initial": "B0",
+      "benchmark_scene_full": "B3+adapt-history",
+      "reconstructed_scene_full": "B3+adapt-history"
+    },
+    "same_parent_and_matched_incremental_budget": true,
+    "primary_scene": "reconstructed_corresponding",
+    "optional_scene": "held_out_object_or_layout"
   },
   "feedback_timing": {
     "plan_at_round_r": "read_current_E_and_permission_filtered_prior_M_plus_accepted_eta_and_budget",
@@ -378,5 +385,6 @@
     "invalid_plan": "archive_reason_charge_actual_work_no_implicit_permission_expansion",
     "diagnostic_only_attempt": "record_evidence_and_cost_advance_attempt_no_free_replacement_training",
     "missing_learning_result": "explicit_unmeasured_status"
-  }
+  },
+  "study_plan_reference": "experiment-plan-v0.32.json"
 }
