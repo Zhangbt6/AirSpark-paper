@@ -229,14 +229,16 @@
     "F_timing": "only_after_training_and_V_evaluation_for_future_plans"
   },
   "acceptance": {
-    "Valid": true,
-    "Complete": true,
-    "WithinBudget": true,
     "gain_threshold": null,
     "retention_tolerances": null,
     "minimum_relevant_effect": null,
     "evaluation_precision": null,
-    "empirical_not_guarantee": true
+    "empirical_not_guarantee": true,
+    "required_checks": [
+      "Valid",
+      "Complete",
+      "WithinBudget"
+    ]
   },
   "state": {
     "accepted": [

@@ -22,7 +22,7 @@
   function persist(){try{localStorage.setItem(key,JSON.stringify(saved));status.textContent='已保存到本机；未回写论文。';}catch(_){status.textContent='本机存储不可用，请导出保留记录。';}}
   const fields=['status','artifact_parent','candidate_trainings','gpu_hours','sealed_SR_notes'];
   for(const s of plan.settings){for(let i=1;i<=s.chains;i++){
-    const id=`${s.id}/chain-${i}`,record=saved[id]||(saved[id]={});const row=el('tr');row.append(el('td',`${s.student} · ${s.task} · ${s.name} / ${i}`));
+    const id=`${s.id}/chain-${i}`,record=saved[id]||(saved[id]={status:'未开始'});const row=el('tr');row.append(el('td',`${s.student} · ${s.task} · ${s.name} / ${i}`));
     for(const f of fields){const td=el('td');let input;
       if(f==='status'){input=el('select');for(const v of ['未开始','先导待登记','执行中','完成','中断','暂缓']){const o=el('option',v);o.value=v;input.append(o);}input.value=record[f]||'未开始';}
       else {input=el('input');input.value=record[f]??'';input.placeholder='—';if(['candidate_trainings','gpu_hours'].includes(f)){input.type='number';input.min='0';input.step=f==='candidate_trainings'?'1':'0.1';if(f==='candidate_trainings')input.max='4';}}
