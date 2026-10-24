@@ -165,6 +165,49 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <section id="experiments" data-title="实验" data-number="4">
 <div class="eyebrow">EXPERIMENTS</div><h2>4. 实验</h2>
 <p class="experiment-status">本节为预定实验协议；具体任务合同、干预轮次、样本量和预算由先导核验后冻结，尚无定量结果。</p>
+<h3 id="study-plan" data-nav="实验总览与填表" data-number="4.0">4.0 实验总览与结果模板</h3>
+<p>实验按三条证据链组织：E1 检验学院是否可靠地产生可用监督，E2 检验反馈闭环是否改善学生，E3 检验冻结后的能力是否在原生基准与真实任务中保留。下列 7 个执行包分解已有实验与先导，不增加方法或对照组。模型与日志尽量复用；所有结果栏保持空白。</p>
+<div class="table-wrap study-overview"><table><caption>执行包、目的、工作量与交付表。</caption><thead><tr><th>执行包</th><th>实验目的与做法</th><th>任务／新增工作</th><th>需要交付</th></tr></thead><tbody>
+<tr><td>P0 · 先导与接口验收</td><td>先锁定机器人、输入动作、专家、评分和数据划分，跑通采集—训练—重载—接纳；测得单轮成本与评价波动。</td><td>柠檬优先，1 条独立先导链，最多 2 次候选训练；PressButton 仅在需要时作工具检查。先导不进入正式结果。</td><td><a href="#study-settings">S0 设置</a>、<a href="#study-progress">R9 进度</a></td></tr>
+<tr><td>E1a · 学院设施</td><td>检查同步、控制、复位、监督质量与恢复是否可靠，支撑平台贡献。</td><td>2 个主任务；日志复用，另预留 30 段配对控制、40 次复位及 3 项恢复检查；无新增学习链。</td><td><a href="#result-facility">R1 设施</a></td></tr>
+<tr><td>E1b · 数据来源对照</td><td>原生 AM-Bench 与学院都采用固定 B1 流程，在相同外部协议评价，检查学院生成经验的效用与成本。</td><td>柠檬 1 个任务；学院 B1 复用主实验，只增加原生 B1 的 S 条学习链。</td><td><a href="#result-source">R2 来源</a></td></tr>
+<tr><td>E2 · 主实验</td><td>B0／固定 B1／完整 AirSpark，检验绝对能力改进及相对固定流程的增量收益。</td><td>2 任务；每任务 2 个增量组，各 S 条链、最多 R 次干预。B0 不做增量训练。</td><td><a href="#result-main">R3 主结果</a>、<a href="#result-rounds">R8 跨轮记录</a></td></tr>
+<tr><td>E2a · 机制归因</td><td>在一个代表任务比较固定过程方案、规则修订、当前反馈与完整历史闭环，解释哪些环节有用。</td><td>柠檬优先；完整闭环与 B1 复用，只增加 B3、规则、当前 3 个组，共 3S 条链。</td><td><a href="#result-mechanism">R6 归因</a>、<a href="#result-diagnosis">R7 阶段证据</a></td></tr>
+<tr><td>E3a · 原生基准回测</td><td>冻结学生，在未改原生 AM-Bench 中独立测试，检查改进是否保留。</td><td>2 任务，复用主实验 B0／B1／完整闭环及来源对照模型；不再训练。</td><td><a href="#result-native">R4 原生回测</a></td></tr>
+<tr><td>E3b · 物理实机</td><td>仿真练习后的冻结学生执行对应真实任务，比较 B0／B1／完整闭环。</td><td>先做柠檬：重建对应场景＋预留物体／布局，2 个条件集；同本体时复用模型，兼容性先验收。</td><td><a href="#result-real">R5 实机</a></td></tr>
+</tbody></table></div>
+<div class="study-planner" id="study-workload"><h4>工作量草案</h4>
+<p>以下数值用于排期，<b>尚未冻结，也不是已完成实验</b>。可调整参数查看工作量；正式设置须依据 P0 成本、方差及希望检测的差值确定。S=3 只是排期起点，不代表统计证据必然充分；一条先导链不能估计独立训练链之间的方差，若需扩展先导，应单列成本。</p>
+<div class="study-parameters">
+<label>每设置独立学习链 S<input type="number" min="1" max="50" step="1" value="3" data-study-param="seeds"></label>
+<label>每链最大干预次数 R<input type="number" min="1" max="30" step="1" value="3" data-study-param="rounds"></label>
+<label>每轮 C 诊断回合<input type="number" min="1" max="10000" step="1" value="20" data-study-param="diagnostic"></label>
+<label>每轮专家采集尝试上限<input type="number" min="1" max="10000" step="1" value="50" data-study-param="expert"></label>
+<label>每模型／轮 V 评价回合<input type="number" min="1" max="10000" step="1" value="30" data-study-param="validation"></label>
+<label>每模型／任务／链 T 回合<input type="number" min="1" max="10000" step="1" value="100" data-study-param="test"></label>
+<label>实机每组／条件集总回合<input type="number" min="1" max="1000" step="1" value="20" data-study-param="real"></label>
+<label>先导测得每候选 GPU 小时<input type="number" min="0.001" max="1000" step="0.1" data-study-param="gpuHours" placeholder="先导后填写"></label>
+</div>
+<div class="study-counts" aria-live="polite">
+<div><strong>8</strong><span>需增量训练的设置</span></div><div><strong data-study-count="chains">24</strong><span>正式独立学习链</span></div><div><strong data-study-count="candidates">≤72</strong><span>正式候选训练上限</span></div><div><strong data-study-count="real">120</strong><span>物理实机评价回合</span></div>
+</div>
+<div class="table-wrap"><table><caption>数量口径与资源估算；拒绝、无训练、复验和故障均按实际计费。</caption><thead><tr><th>项目</th><th>计算口径</th><th>当前排期值</th></tr></thead><tbody>
+<tr><td>增量训练设置</td><td>主实验 2任务×2组＝4；机制新增3；原生来源新增1。</td><td>8 个设置（B0 不计增量训练）</td></tr>
+<tr><td>独立学习链／候选</td><td>8S 条链；每链最多 R 次干预，每次至多训练一个候选。</td><td data-study-count="trainingDetail">24 条链，最多 72 个候选</td></tr>
+<tr><td>采集侧</td><td>8SR × C 诊断数；8SR × 专家尝试上限。合格数据量仍需实测。</td><td data-study-count="collection">诊断 1440 回合；专家尝试 ≤3600 次</td></tr>
+<tr><td>开发评价 V</td><td>最多 2×8SR×每模型回合数；可复用相同父代记录，无训练不执行候选评价。</td><td data-study-count="validation">≤4320 回合</td></tr>
+<tr><td>学院封存 T</td><td>(2任务×3主组＋1任务×3新增归因组)×S×N_T；只评 B0 和最终保留学生。</td><td data-study-count="academyTest">2700 回合</td></tr>
+<tr><td>原生封存 T</td><td>(2任务×3主组＋1来源新增组)×S×N_T；来源对照复用学院 B1 原生回测。</td><td data-study-count="nativeTest">2100 回合</td></tr>
+<tr><td>设施专项检查</td><td>每任务 5 类合法控制片段×3 重复；每任务复位20次；一个任务采集／训练／评价提交边界各检查恢复1次。</td><td>30 段控制＋40 次复位＋3 项恢复；恢复尽量复用先导产物。</td></tr>
+<tr><td>GPU 时间</td><td>候选上限×先导测得 GPU 小时；不含 B0 获取、推理、排队及其他开销。</td><td data-study-count="gpu">待先导成本</td></tr>
+<tr><td>实机</td><td>3组×2条件集×每组条件回合数；每个条件集内按 S 条链均衡分配，组间保持相同分配。</td><td data-study-count="realDetail">120 回合，默认每组每条件 20 回合</td></tr>
+</tbody></table></div>
+<p class="caption">上限 72 个候选对应 8 个设置的 24 条多轮学习链，并非 72 个独立实验。另留 P0 最多 2 次候选训练。初始策略获取／训练、固定设施检查和实机适配单列，不隐藏在增量预算内。若本体不同，实机线先建立匹配父代及最小对照，训练与成本另行核算；当前复用估算须重算。</p>
+<p class="caption">每候选训练步数、合格数据下限、工时与算力上限、接纳阈值及复验停止规则由先导后冻结。专家次数上限不等于已获得的合格示范数；各组仍须匹配工时／算力等资源约束。V 曲线用于学习过程分析，正式主结果来自隔离 T；不默认逐轮重复封存测试。</p>
+</div>
+<div class="study-toolbar"><button type="button" id="export-all-results">导出全部填表 CSV</button><button type="button" id="export-study-manifest">导出排期与学习链 CSV</button><a href="protocol/experiment-plan-v0.31.json" download>实验计划 JSON</a><a href="protocol/experiment-results-blank-v0.31.csv" download>空白表 CSV</a><a href="protocol/learning-chain-ledger-draft-v0.31.csv" download>默认排期 CSV</a><span id="study-save-status" role="status">结果仅保存在本机浏览器，不会自动发布或同步给组员。</span></div>
+<p class="caption">下方共 10 份设置、结果与执行记录模板。待填表示尚无数据；百分比报告完整成功数／有效回合数及不确定性。正式数据建议来自可追溯日志，网页用于整理与导出；共享前先导出文件并核对。</p>
+
 <div class="table-wrap" id="hypotheses"><table><caption>三个研究问题及对应证据。</caption><thead><tr><th>问题与假设</th><th>实验</th><th>不支持条件</th></tr></thead><tbody>
 <tr><td>H1：学院能否支持可控练习与可靠监督？</td><td>E1 · §4.2：设施可靠性、监督产出与成本；一个任务的原生／学院固定补采对照。</td><td>执行或标签超出冻结容差、产出不足以训练，则先修复设施；不能解释为学生能力缺口。</td></tr>
 <tr><td>H2：反馈自进化是否比固定采集训练流程更有效？</td><td>E2 · §4.3：B0 / B1 / 完整 AirSpark 的同预算多轮比较；§4.6 为代表任务归因。</td><td>完整闭环未表现出具有实际意义的优势，或区间过宽，则相应主张不成立或证据不足；主表本身不证明每个组件均有效。</td></tr>
@@ -175,13 +218,184 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p>B0 使用锁定官方训练路径和合格原生数据，记录数据、配置、脚本、seed 和 checkpoint 哈希；公开权重只有在实际资产和任务匹配后才使用。所有增量组从同一初始学习状态出发。C/V/T 按父任务、物体和布局隔离，派生数据跨引擎继承归属，T 不向规划和训练提供反馈。</p>
 <p>主指标是完整任务成功率，阶段到达与转换结果、耗时、人工接管和安全终止用于解释。以<b>完整独立学习链</b>为统计单位，各组共用配对随机种子与评价初态；不能将同一链中的轮次或同一模型的 rollout 当作独立训练重复。先导后冻结实际意义差值、独立链数量、V/T 回合数与不确定性方案，逐任务报告均值和区间；有限 seed 不自动构成充分统计证据。</p>
 <details class="editorial-note" id="implementation-order"><summary>先导顺序与范围控制（执行细节）</summary><p>优先核验主任务与实机本体、接口和可用专家。使用具有飞行动力学的 PressButton 打通采集—训练—重载—评分；它是功能先导，不代替柠檬主任务。实测单次干预成本后，再确定有限轮次、完整独立学习链和预算。多轮设置须允许早先学习结果影响后续规划；拒绝占用一次干预机会。具体数值留待下一步实验讨论，不预填为已运行配置。<a href="#submission-plan">提交前冻结节点</a>。</p></details>
+<div class="study-table " id="study-settings"><div class="study-table-heading"><b>S0 · 实验设置与先导冻结</b><button type="button" data-export-table="study-settings">导出本表 CSV</button></div>
+<div class="table-wrap"><table data-result-table="study-settings" data-result-title="S0 · 实验设置与先导冻结"><thead><tr>
+<th>设置项</th>
+<th>柠檬任务</th>
+<th>第二任务：Cabinet 候选</th>
+</tr></thead><tbody>
+<tr data-result-row="task">
+<td>原生环境 ID／版本</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.task.1" aria-label="S0 · 实验设置与先导冻结 task 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.task.2" aria-label="S0 · 实验设置与先导冻结 task 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="embodiment">
+<td>机器人、控制器、相机与动作合同</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.embodiment.1" aria-label="S0 · 实验设置与先导冻结 embodiment 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.embodiment.2" aria-label="S0 · 实验设置与先导冻结 embodiment 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="student">
+<td>学生后端／初始 checkpoint／训练来源</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.student.1" aria-label="S0 · 实验设置与先导冻结 student 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.student.2" aria-label="S0 · 实验设置与先导冻结 student 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="history">
+<td>视觉历史、本体字段、动作块</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.history.1" aria-label="S0 · 实验设置与先导冻结 history 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.history.2" aria-label="S0 · 实验设置与先导冻结 history 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="expert">
+<td>专家版本、适用状态及接管候选</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.expert.1" aria-label="S0 · 实验设置与先导冻结 expert 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.expert.2" aria-label="S0 · 实验设置与先导冻结 expert 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="stages">
+<td>阶段定义、事件谓词与完整成功</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.stages.1" aria-label="S0 · 实验设置与先导冻结 stages 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.stages.2" aria-label="S0 · 实验设置与先导冻结 stages 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="split">
+<td>C／V／T 清单与隔离规则</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.split.1" aria-label="S0 · 实验设置与先导冻结 split 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.split.2" aria-label="S0 · 实验设置与先导冻结 split 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="train">
+<td>每候选步数／优化器／回放选项</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.train.1" aria-label="S0 · 实验设置与先导冻结 train 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.train.2" aria-label="S0 · 实验设置与先导冻结 train 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="data">
+<td>合格数据下限／质检规则</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.data.1" aria-label="S0 · 实验设置与先导冻结 data 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.data.2" aria-label="S0 · 实验设置与先导冻结 data 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="budget">
+<td>工时、算力、Agent 与复验上限</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.budget.1" aria-label="S0 · 实验设置与先导冻结 budget 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.budget.2" aria-label="S0 · 实验设置与先导冻结 budget 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="accept">
+<td>收益门槛 δJ／保留容差 ε／样本量</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.accept.1" aria-label="S0 · 实验设置与先导冻结 accept 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.accept.2" aria-label="S0 · 实验设置与先导冻结 accept 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="statistics">
+<td>独立链 S／轮次 R／区间与精度方案</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.statistics.1" aria-label="S0 · 实验设置与先导冻结 statistics 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.statistics.2" aria-label="S0 · 实验设置与先导冻结 statistics 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="alignment">
+<td>原生回测与实机兼容核验</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.alignment.1" aria-label="S0 · 实验设置与先导冻结 alignment 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.alignment.2" aria-label="S0 · 实验设置与先导冻结 alignment 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="freeze">
+<td>负责人／冻结日期／配置哈希</td>
+<td><input class="result-input" type="text" data-result-field="study-settings.freeze.1" aria-label="S0 · 实验设置与先导冻结 freeze 柠檬任务" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-settings.freeze.2" aria-label="S0 · 实验设置与先导冻结 freeze 第二任务：Cabinet 候选" placeholder="待填" autocomplete="off"></td>
+</tr>
+</tbody></table></div>
+<p class="caption">第二任务须核验专家、任务定义与训练路径后确定；选项不符时，在正式采集前替换并冻结。S0 的空项未完成时，排期草案不能当作已冻结实验配置。</p>
+</div>
 <h3 id="platform-evaluation" data-nav="E1 学院设施" data-number="4.2">4.2 E1：学院设施与监督可靠性</h3>
 <p>从主实验日志提取观测—动作时间偏差、命令跟踪误差、复位偏差、条件命中、专家延续产出、标签一致性、每份合格监督成本及人工介入。以相机配准、配对控制响应和任务接触事件检验视觉—物理对应，保留所有未命中、失败与质检拒绝的分母。<cite data-ref="aerial-bench sim-benchmark"></cite> 一项任务核验产物提交后的中断恢复、版本一致与重复计费；这些设施指标与学生任务成功分开报告。</p>
+<div class="study-table " id="result-facility"><div class="study-table-heading"><b>R1 · 学院设施与监督可靠性</b><button type="button" data-export-table="result-facility">导出本表 CSV</button></div>
+<div class="table-wrap"><table data-result-table="result-facility" data-result-title="R1 · 学院设施与监督可靠性"><thead><tr>
+<th>指标</th>
+<th>单位与分母</th>
+<th>柠檬结果</th>
+<th>第二任务结果</th>
+</tr></thead><tbody>
+<tr data-result-row="sync">
+<td>观测—动作时间偏差 P95</td>
+<td>ms；有效同步样本数需记录</td>
+<td><input class="result-input" type="text" data-result-field="result-facility.sync.2" aria-label="R1 · 学院设施与监督可靠性 sync 柠檬结果" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-facility.sync.3" aria-label="R1 · 学院设施与监督可靠性 sync 第二任务结果" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="tracking">
+<td>命令跟踪位置误差 P95</td>
+<td>m；登记配对控制记录</td>
+<td><input class="result-input" type="text" data-result-field="result-facility.tracking.2" aria-label="R1 · 学院设施与监督可靠性 tracking 柠檬结果" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-facility.tracking.3" aria-label="R1 · 学院设施与监督可靠性 tracking 第二任务结果" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="reset">
+<td>复位偏差 P95／成功率</td>
+<td>m；成功复位／全部复位</td>
+<td><input class="result-input" type="text" data-result-field="result-facility.reset.2" aria-label="R1 · 学院设施与监督可靠性 reset 柠檬结果" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-facility.reset.3" aria-label="R1 · 学院设施与监督可靠性 reset 第二任务结果" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="hit">
+<td>条件命中率</td>
+<td>命中／全部前缀尝试</td>
+<td><input class="result-input" type="text" data-result-field="result-facility.hit.2" aria-label="R1 · 学院设施与监督可靠性 hit 柠檬结果" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-facility.hit.3" aria-label="R1 · 学院设施与监督可靠性 hit 第二任务结果" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="quality">
+<td>合格专家监督产出</td>
+<td>合格延续／全部采集尝试</td>
+<td><input class="result-input" type="text" data-result-field="result-facility.quality.2" aria-label="R1 · 学院设施与监督可靠性 quality 柠檬结果" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-facility.quality.3" aria-label="R1 · 学院设施与监督可靠性 quality 第二任务结果" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="label">
+<td>时间／标签一致性通过率</td>
+<td>通过／全部质检项，附抽检清单</td>
+<td><input class="result-input" type="text" data-result-field="result-facility.label.2" aria-label="R1 · 学院设施与监督可靠性 label 柠檬结果" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-facility.label.3" aria-label="R1 · 学院设施与监督可靠性 label 第二任务结果" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="cost">
+<td>每份合格监督实际成本</td>
+<td>worker-min／合格延续；算力另列</td>
+<td><input class="result-input" type="text" data-result-field="result-facility.cost.2" aria-label="R1 · 学院设施与监督可靠性 cost 柠檬结果" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-facility.cost.3" aria-label="R1 · 学院设施与监督可靠性 cost 第二任务结果" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="recovery">
+<td>恢复与版本检查</td>
+<td>通过项／预登记检查项；重复计费次数</td>
+<td><input class="result-input" type="text" data-result-field="result-facility.recovery.2" aria-label="R1 · 学院设施与监督可靠性 recovery 柠檬结果" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-facility.recovery.3" aria-label="R1 · 学院设施与监督可靠性 recovery 第二任务结果" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="human">
+<td>人工干预与平台异常</td>
+<td>介入次数／全部尝试；故障另标</td>
+<td><input class="result-input" type="text" data-result-field="result-facility.human.2" aria-label="R1 · 学院设施与监督可靠性 human 柠檬结果" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-facility.human.3" aria-label="R1 · 学院设施与监督可靠性 human 第二任务结果" placeholder="待填" autocomplete="off"></td>
+</tr>
+</tbody></table></div>
+<p class="caption">优先复用正式采集日志。设施专项草案：两个任务各5类合法控制片段×3次、各20次复位；一个任务分别检查采集完成、训练完成和评价提交边界的恢复，共3项，复用先导产物。合法片段与容差在 S0 登记；中断恢复用故障注入检查。P95 需同时保留样本量与原始分布。设施通过不等于模型成功率提高。</p>
+</div>
 <div class="table-wrap" id="source-control"><table><caption>一个主任务的最小来源对照：共用 B0 与固定 B1 流程。</caption><thead><tr><th>补采来源</th><th>保持一致</th><th>测量</th></tr></thead><tbody>
 <tr><td>原生 AM-Bench 固定覆盖补采</td><td rowspan="2">部署合同、因素范围、专家能力、采集预算、训练配方和验收。</td><td rowspan="2">合格监督产出与成本，以及更新学生在同一外部协议下的表现。</td></tr>
 <tr><td>AirSpark 固定覆盖补采</td></tr>
 </tbody></table></div>
 <p>该对照评价学院相对于原生环境的数据生成效用。学院 B1 复用主实验结果，比较反映数据来源的总体作用；未匹配因素单独披露，渲染与物理求解器的独立作用不由此推断。原生／学院 × 固定／反馈的 2×2 设计作为可选扩展。平台价值由可靠性、成本和任务效用共同评价，不预设学院在每个原生任务都更优。</p>
+<div class="study-table " id="result-source"><div class="study-table-heading"><b>R2 · 相同流程的数据来源对照</b><button type="button" data-export-table="result-source">导出本表 CSV</button></div>
+<div class="table-wrap"><table data-result-table="result-source" data-result-title="R2 · 相同流程的数据来源对照"><thead><tr>
+<th>来源／流程</th>
+<th>实际采集工时</th>
+<th>合格数／尝试数</th>
+<th>候选训练 GPU·h</th>
+<th>原生 T 成功率与区间</th>
+<th>相对 B0 变化 pp</th>
+</tr></thead><tbody>
+<tr data-result-row="native-b1">
+<td>原生 AM-Bench · 固定 B1</td>
+<td><input class="result-input" type="text" data-result-field="result-source.native-b1.1" aria-label="R2 · 相同流程的数据来源对照 native-b1 实际采集工时" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-source.native-b1.2" aria-label="R2 · 相同流程的数据来源对照 native-b1 合格数／尝试数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-source.native-b1.3" aria-label="R2 · 相同流程的数据来源对照 native-b1 候选训练 GPU·h" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-source.native-b1.4" aria-label="R2 · 相同流程的数据来源对照 native-b1 原生 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-source.native-b1.5" aria-label="R2 · 相同流程的数据来源对照 native-b1 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="academy-b1">
+<td>AirSpark · 固定 B1（复用）</td>
+<td><input class="result-input" type="text" data-result-field="result-source.academy-b1.1" aria-label="R2 · 相同流程的数据来源对照 academy-b1 实际采集工时" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-source.academy-b1.2" aria-label="R2 · 相同流程的数据来源对照 academy-b1 合格数／尝试数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-source.academy-b1.3" aria-label="R2 · 相同流程的数据来源对照 academy-b1 候选训练 GPU·h" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-source.academy-b1.4" aria-label="R2 · 相同流程的数据来源对照 academy-b1 原生 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-source.academy-b1.5" aria-label="R2 · 相同流程的数据来源对照 academy-b1 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+</tr>
+</tbody></table></div>
+<p class="caption">一个主任务、同一 B0 和预算合同；各 S 条链。两行均在同一原生封存协议评价；学院 B1 不重复训练。报告来源总体作用，不将差异单独归因于 UE 渲染或 MuJoCo。</p>
+</div>
 <h3 id="comparison" data-nav="E2 反馈自进化" data-number="4.3">4.3 E2：同预算多轮策略改进</h3>
 <p>主比较检验完整反馈闭环相对于固定采集训练流程的学习效用。至少两个任务共享初始策略、学生接口与历史窗口、专家、低层控制、训练配方、任务组权重和接纳标准。B1 也可在学习者到达状态生成专家延续，与完整方法共用相同采集和恢复设施；其条件覆盖、监督起点、示范构成及回放安排在实验前固定，不根据跨轮学习结果修订。<cite data-ref="dagger dart sirius"></cite></p>
 <div class="table-wrap"><table><caption>主表实验组。规范 ID 保留，网页名称明确其研究角色。</caption><thead><tr><th>实验组</th><th>采集与更新流程</th><th>角色</th></tr></thead><tbody>
@@ -191,8 +405,184 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 </tbody></table></div>
 <p>各增量组使用相同干预调度和资源上限；每次尝试确认一个计划；满足采集与训练条件时至多训练一个候选，再与保留父代比较。诊断或暂缓等无训练尝试同样记录并计费。诊断、复验、失败、复位、质检、被拒训练、开发评价、记忆处理和 Agent 调用均计入实际开销；资源分别设上限并报告实际使用。B0 作为零增量训练成本的初始参照。主要比较为完整闭环相对 B1 的完整任务收益，并报告两组各自相对 B0 的绝对变化和随累计资源变化的学习曲线。能力提升以相对 B0 的绝对变化衡量，方法优势以相对 B1 的差值衡量。</p>
 <p>以整条学习链进行配对分析。拒绝或未完成的尝试均保留在学习链与成本中，不能只统计接纳轮次或最优 seed；缺失评价与实际失败分别记录。详细资源登记、恢复和统计字段见方法状态表、附录与配置模板。</p>
+<div class="study-table " id="result-main"><div class="study-table-heading"><b>R3 · 主实验：最终完整任务表现</b><button type="button" data-export-table="result-main">导出本表 CSV</button></div>
+<div class="table-wrap"><table data-result-table="result-main" data-result-title="R3 · 主实验：最终完整任务表现"><thead><tr>
+<th>任务</th>
+<th>方法</th>
+<th>学院 T 成功率与区间</th>
+<th>相对 B0 变化 pp</th>
+<th>相对 B1 差值 pp／区间</th>
+<th>采集 worker·h</th>
+<th>训练 GPU·h</th>
+</tr></thead><tbody>
+<tr data-result-row="lemon-b0">
+<td>柠檬</td>
+<td>B0 · 初始冻结</td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-b0.2" aria-label="R3 · 主实验：最终完整任务表现 lemon-b0 学院 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-b0.3" aria-label="R3 · 主实验：最终完整任务表现 lemon-b0 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-b0.4" aria-label="R3 · 主实验：最终完整任务表现 lemon-b0 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-b0.5" aria-label="R3 · 主实验：最终完整任务表现 lemon-b0 采集 worker·h" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-b0.6" aria-label="R3 · 主实验：最终完整任务表现 lemon-b0 训练 GPU·h" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="lemon-b1">
+<td>柠檬</td>
+<td>B1 · 固定流程</td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-b1.2" aria-label="R3 · 主实验：最终完整任务表现 lemon-b1 学院 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-b1.3" aria-label="R3 · 主实验：最终完整任务表现 lemon-b1 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-b1.4" aria-label="R3 · 主实验：最终完整任务表现 lemon-b1 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-b1.5" aria-label="R3 · 主实验：最终完整任务表现 lemon-b1 采集 worker·h" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-b1.6" aria-label="R3 · 主实验：最终完整任务表现 lemon-b1 训练 GPU·h" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="lemon-full">
+<td>柠檬</td>
+<td>AirSpark · 完整闭环</td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-full.2" aria-label="R3 · 主实验：最终完整任务表现 lemon-full 学院 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-full.3" aria-label="R3 · 主实验：最终完整任务表现 lemon-full 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-full.4" aria-label="R3 · 主实验：最终完整任务表现 lemon-full 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-full.5" aria-label="R3 · 主实验：最终完整任务表现 lemon-full 采集 worker·h" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.lemon-full.6" aria-label="R3 · 主实验：最终完整任务表现 lemon-full 训练 GPU·h" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="cabinet-b0">
+<td>第二任务</td>
+<td>B0 · 初始冻结</td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-b0.2" aria-label="R3 · 主实验：最终完整任务表现 cabinet-b0 学院 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-b0.3" aria-label="R3 · 主实验：最终完整任务表现 cabinet-b0 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-b0.4" aria-label="R3 · 主实验：最终完整任务表现 cabinet-b0 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-b0.5" aria-label="R3 · 主实验：最终完整任务表现 cabinet-b0 采集 worker·h" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-b0.6" aria-label="R3 · 主实验：最终完整任务表现 cabinet-b0 训练 GPU·h" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="cabinet-b1">
+<td>第二任务</td>
+<td>B1 · 固定流程</td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-b1.2" aria-label="R3 · 主实验：最终完整任务表现 cabinet-b1 学院 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-b1.3" aria-label="R3 · 主实验：最终完整任务表现 cabinet-b1 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-b1.4" aria-label="R3 · 主实验：最终完整任务表现 cabinet-b1 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-b1.5" aria-label="R3 · 主实验：最终完整任务表现 cabinet-b1 采集 worker·h" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-b1.6" aria-label="R3 · 主实验：最终完整任务表现 cabinet-b1 训练 GPU·h" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="cabinet-full">
+<td>第二任务</td>
+<td>AirSpark · 完整闭环</td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-full.2" aria-label="R3 · 主实验：最终完整任务表现 cabinet-full 学院 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-full.3" aria-label="R3 · 主实验：最终完整任务表现 cabinet-full 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-full.4" aria-label="R3 · 主实验：最终完整任务表现 cabinet-full 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-full.5" aria-label="R3 · 主实验：最终完整任务表现 cabinet-full 采集 worker·h" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-main.cabinet-full.6" aria-label="R3 · 主实验：最终完整任务表现 cabinet-full 训练 GPU·h" placeholder="待填" autocomplete="off"></td>
+</tr>
+</tbody></table></div>
+<p class="caption">每行汇总 S 条独立学习链并保留逐链结果；空白不代表 0。B0 增量采集训练结构上为零，初始策略成本单列。完整闭环对 B1 是主比较，二者对 B0 衡量绝对改进。最终模型采用链结束时保留学生，不依据 T 选最优轮次／seed。</p>
+</div>
+<div class="study-table study-wide" id="result-rounds"><div class="study-table-heading"><b>R8 · 单条学习链的干预记录（示例填写区）</b><button type="button" data-export-table="result-rounds">导出本表 CSV</button></div>
+<div class="table-wrap"><table data-result-table="result-rounds" data-result-title="R8 · 单条学习链的干预记录（示例填写区）"><thead><tr>
+<th>干预</th>
+<th>执行证据／父代 ID</th>
+<th>计划与经验来源</th>
+<th>合格数／尝试</th>
+<th>V 收益 pp／不确定性</th>
+<th>接纳状态／新学生 ID</th>
+<th>资源／记忆修订 ID</th>
+</tr></thead><tbody>
+<tr data-result-row="r1">
+<td>第 1 次</td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r1.1" aria-label="R8 · 单条学习链的干预记录（示例填写区） r1 执行证据／父代 ID" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r1.2" aria-label="R8 · 单条学习链的干预记录（示例填写区） r1 计划与经验来源" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r1.3" aria-label="R8 · 单条学习链的干预记录（示例填写区） r1 合格数／尝试" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r1.4" aria-label="R8 · 单条学习链的干预记录（示例填写区） r1 V 收益 pp／不确定性" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r1.5" aria-label="R8 · 单条学习链的干预记录（示例填写区） r1 接纳状态／新学生 ID" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r1.6" aria-label="R8 · 单条学习链的干预记录（示例填写区） r1 资源／记忆修订 ID" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="r2">
+<td>第 2 次</td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r2.1" aria-label="R8 · 单条学习链的干预记录（示例填写区） r2 执行证据／父代 ID" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r2.2" aria-label="R8 · 单条学习链的干预记录（示例填写区） r2 计划与经验来源" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r2.3" aria-label="R8 · 单条学习链的干预记录（示例填写区） r2 合格数／尝试" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r2.4" aria-label="R8 · 单条学习链的干预记录（示例填写区） r2 V 收益 pp／不确定性" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r2.5" aria-label="R8 · 单条学习链的干预记录（示例填写区） r2 接纳状态／新学生 ID" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r2.6" aria-label="R8 · 单条学习链的干预记录（示例填写区） r2 资源／记忆修订 ID" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="r3">
+<td>第 3 次</td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r3.1" aria-label="R8 · 单条学习链的干预记录（示例填写区） r3 执行证据／父代 ID" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r3.2" aria-label="R8 · 单条学习链的干预记录（示例填写区） r3 计划与经验来源" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r3.3" aria-label="R8 · 单条学习链的干预记录（示例填写区） r3 合格数／尝试" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r3.4" aria-label="R8 · 单条学习链的干预记录（示例填写区） r3 V 收益 pp／不确定性" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r3.5" aria-label="R8 · 单条学习链的干预记录（示例填写区） r3 接纳状态／新学生 ID" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-rounds.r3.6" aria-label="R8 · 单条学习链的干预记录（示例填写区） r3 资源／记忆修订 ID" placeholder="待填" autocomplete="off"></td>
+</tr>
+</tbody></table></div>
+<p class="caption">此处展示一条代表学习链的格式，完整 8S×R 记录用“导出排期与学习链 CSV”生成。无训练或评价不全时填写未测量及原因；专家产出、学生收益与经验修订分别记录。学习曲线来自 V 并注明开发性质，T 不参与选方案。</p>
+</div>
 <h3 id="external" data-nav="E3 原生基准" data-number="4.4">4.4 E3：冻结学生的 AM-Bench 原生回测</h3>
 <p>闭环结束后冻结 B0、B1 与完整方法的保存学生，在未修改的 AM-Bench 任务、部署和评分协议中回测。原生封存初态不用于练习选择，阶段指标不能替代完整成功。报告相对 B0 的变化及完整方法与 B1 的差值和不确定性；数据来源对照见 §4.2。跨引擎域差可能削弱收益，需要分析，但不能自动据此宣称学习有效。若合同不匹配，结果单列为衍生实验。</p>
+<div class="study-table " id="result-native"><div class="study-table-heading"><b>R4 · 冻结学生的原生 AM-Bench 回测</b><button type="button" data-export-table="result-native">导出本表 CSV</button></div>
+<div class="table-wrap"><table data-result-table="result-native" data-result-title="R4 · 冻结学生的原生 AM-Bench 回测"><thead><tr>
+<th>任务</th>
+<th>模型来源</th>
+<th>原生 T 成功数／回合数</th>
+<th>成功率与区间</th>
+<th>相对 B0 变化 pp</th>
+<th>checkpoint／合同核验</th>
+<th>相对 B1 差值 pp／区间</th>
+</tr></thead><tbody>
+<tr data-result-row="lemon-b0">
+<td>柠檬</td>
+<td>B0 · 初始冻结</td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-b0.2" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-b0 原生 T 成功数／回合数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-b0.3" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-b0 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-b0.4" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-b0 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-b0.5" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-b0 checkpoint／合同核验" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-b0.6" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-b0 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td></tr>
+<tr data-result-row="lemon-b1">
+<td>柠檬</td>
+<td>B1 · 固定流程</td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-b1.2" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-b1 原生 T 成功数／回合数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-b1.3" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-b1 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-b1.4" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-b1 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-b1.5" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-b1 checkpoint／合同核验" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-b1.6" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-b1 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td></tr>
+<tr data-result-row="lemon-full">
+<td>柠檬</td>
+<td>AirSpark · 完整闭环</td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-full.2" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-full 原生 T 成功数／回合数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-full.3" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-full 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-full.4" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-full 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-full.5" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-full checkpoint／合同核验" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-full.6" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-full 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td></tr>
+<tr data-result-row="cabinet-b0">
+<td>第二任务</td>
+<td>B0 · 初始冻结</td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-b0.2" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-b0 原生 T 成功数／回合数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-b0.3" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-b0 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-b0.4" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-b0 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-b0.5" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-b0 checkpoint／合同核验" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-b0.6" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-b0 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td></tr>
+<tr data-result-row="cabinet-b1">
+<td>第二任务</td>
+<td>B1 · 固定流程</td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-b1.2" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-b1 原生 T 成功数／回合数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-b1.3" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-b1 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-b1.4" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-b1 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-b1.5" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-b1 checkpoint／合同核验" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-b1.6" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-b1 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td></tr>
+<tr data-result-row="cabinet-full">
+<td>第二任务</td>
+<td>AirSpark · 完整闭环</td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-full.2" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-full 原生 T 成功数／回合数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-full.3" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-full 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-full.4" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-full 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-full.5" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-full checkpoint／合同核验" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.cabinet-full.6" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 cabinet-full 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td></tr>
+<tr data-result-row="lemon-native-source">
+<td>柠檬</td>
+<td>原生来源固定 B1（来源对照）</td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-native-source.2" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-native-source 原生 T 成功数／回合数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-native-source.3" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-native-source 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-native-source.4" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-native-source 相对 B0 变化 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-native-source.5" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-native-source checkpoint／合同核验" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-native.lemon-native-source.6" aria-label="R4 · 冻结学生的原生 AM-Bench 回测 lemon-native-source 相对 B1 差值 pp／区间" placeholder="待填" autocomplete="off"></td></tr>
+</tbody></table></div>
+<p class="caption">复用 R3／R2 的最终 checkpoint，无新增训练。原生 T 与采集 C、开发 V 隔离，评分及任务合同不变。合同修改时标记衍生设置，不混报原生结果。</p>
+</div>
 <figure class="paper-figure diagram-figure" id="figure-3"><span id="figure-4" aria-hidden="true"></span>
 <div class="diagram-heading"><b>图 3 · 实验流程</b><span>研究设计示意</span></div>
 <button class="diagram-open" type="button" data-figure-src="figures/fig04-evaluation-protocol-zh.svg?v=0.23" data-figure-title="图 3 · 实验流程" aria-label="放大图 3：实验流程"><img src="figures/fig04-evaluation-protocol-zh.svg?v=0.23" alt="图 3. E1 复用日志检验学院设施，并在一个任务比较原生与学院的固定补采；E2 在至少两个任务比较 B0、固定流程 B1 与完整闭环，代表任务解释机制；E3 冻结学生后分别进行原生 AM-Bench 与物理实机检验。" width="1440" height="1000" loading="lazy"></button>
@@ -203,10 +593,264 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <p>Real-to-Sim-to-Real 在本文指真实场景扫描与 3DGS 外观重建、显式碰撞及交互资产与机器人配准、仿真内学习，再由冻结学生在物理实机执行。3DGS 不负责接触求解；重建场景内的仿真成绩不能代替实机结果。</p>
 <p>在主任务冻结前检查本体与动作接口兼容程度，优先共用部署合同。若实机必须使用不同本体，明确匹配初始策略、适配数据与成本，另立对应任务的最小 B0/B1/完整闭环比较；是否开展及其范围由先导资源与可对应性决定，不能将不同本体成绩混作同一原生 checkpoint 的直接迁移。不要求把全部归因实验重复到真机；若只能执行演示，明确不能支持定量迁移主张。</p>
 <p>各组共用标定、控制、适配与真实数据预算，测试中不使用 Mentor 临场纠错。使用配对初态与随机化执行顺序，报告完整成功、阶段结果、耗时、接管及安全终止。对应重建场景与预留物体／布局分别报告，独立新场地才支持新场景泛化。正式实机测试反馈不进入训练或方案选择；本版不由有限轮次推出长期持续改进。</p>
+<div class="study-table " id="result-real"><div class="study-table-heading"><b>R5 · 对应物理实机的冻结策略评价</b><button type="button" data-export-table="result-real">导出本表 CSV</button></div>
+<div class="table-wrap"><table data-result-table="result-real" data-result-title="R5 · 对应物理实机的冻结策略评价"><thead><tr>
+<th>条件集</th>
+<th>方法</th>
+<th>成功数／实际回合</th>
+<th>成功率与区间</th>
+<th>任务时间 s</th>
+<th>接管／安全终止</th>
+<th>模型／场景版本</th>
+</tr></thead><tbody>
+<tr data-result-row="matched-b0">
+<td>重建对应真实场景</td>
+<td>B0 · 初始冻结</td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-b0.2" aria-label="R5 · 对应物理实机的冻结策略评价 matched-b0 成功数／实际回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-b0.3" aria-label="R5 · 对应物理实机的冻结策略评价 matched-b0 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-b0.4" aria-label="R5 · 对应物理实机的冻结策略评价 matched-b0 任务时间 s" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-b0.5" aria-label="R5 · 对应物理实机的冻结策略评价 matched-b0 接管／安全终止" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-b0.6" aria-label="R5 · 对应物理实机的冻结策略评价 matched-b0 模型／场景版本" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="matched-b1">
+<td>重建对应真实场景</td>
+<td>B1 · 固定流程</td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-b1.2" aria-label="R5 · 对应物理实机的冻结策略评价 matched-b1 成功数／实际回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-b1.3" aria-label="R5 · 对应物理实机的冻结策略评价 matched-b1 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-b1.4" aria-label="R5 · 对应物理实机的冻结策略评价 matched-b1 任务时间 s" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-b1.5" aria-label="R5 · 对应物理实机的冻结策略评价 matched-b1 接管／安全终止" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-b1.6" aria-label="R5 · 对应物理实机的冻结策略评价 matched-b1 模型／场景版本" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="matched-full">
+<td>重建对应真实场景</td>
+<td>AirSpark · 完整闭环</td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-full.2" aria-label="R5 · 对应物理实机的冻结策略评价 matched-full 成功数／实际回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-full.3" aria-label="R5 · 对应物理实机的冻结策略评价 matched-full 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-full.4" aria-label="R5 · 对应物理实机的冻结策略评价 matched-full 任务时间 s" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-full.5" aria-label="R5 · 对应物理实机的冻结策略评价 matched-full 接管／安全终止" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.matched-full.6" aria-label="R5 · 对应物理实机的冻结策略评价 matched-full 模型／场景版本" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="heldout-b0">
+<td>预留物体／布局</td>
+<td>B0 · 初始冻结</td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-b0.2" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-b0 成功数／实际回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-b0.3" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-b0 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-b0.4" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-b0 任务时间 s" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-b0.5" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-b0 接管／安全终止" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-b0.6" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-b0 模型／场景版本" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="heldout-b1">
+<td>预留物体／布局</td>
+<td>B1 · 固定流程</td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-b1.2" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-b1 成功数／实际回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-b1.3" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-b1 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-b1.4" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-b1 任务时间 s" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-b1.5" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-b1 接管／安全终止" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-b1.6" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-b1 模型／场景版本" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="heldout-full">
+<td>预留物体／布局</td>
+<td>AirSpark · 完整闭环</td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-full.2" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-full 成功数／实际回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-full.3" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-full 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-full.4" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-full 任务时间 s" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-full.5" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-full 接管／安全终止" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-real.heldout-full.6" aria-label="R5 · 对应物理实机的冻结策略评价 heldout-full 模型／场景版本" placeholder="待填" autocomplete="off"></td>
+</tr>
+</tbody></table></div>
+<p class="caption">优先一个柠檬真实任务。默认每行计划 20 回合、两条件集共 120 回合；这是每组条件集的总数，非每 seed 20 次。按链均衡分配并配对初态／随机执行顺序，记录每条链分母。人工接管不能记自主成功，硬件故障与策略失败分别报告。实机测试反馈不回流。</p>
+</div>
 <h3 id="ablation" data-nav="代表任务机制分析" data-number="4.6">4.6 代表任务的机制归因与边界</h3>
 <p id="teaching-analysis">在一个代表任务上，复用完整方法，再加入固定过程方案 B3、规则式修订 <code>B3+adapt-rule</code> 和当前反馈 <code>B3+adapt-current</code>。B3 仍按新执行反馈分配条件，固定的是经验生成和使用方案；规则组与历史 Agent 使用相同结构化历史、工具、动作和单候选预算；当前组读取 E、最近一次可用 F、当前配置与必要运行状态，不读取更早记录及其派生经验，因此不是完全无记忆。规则／历史组共用记忆构建、摘要与检索程序，但各组只读取自己的学习链；若共享程序使用模型，规则组称为“共享记忆处理＋规则决策”，不称纯无模型系统。</p>
 <p>完整方法对固定 B3 检验进一步修订计划的作用，对规则组检验超出预定规则的增量，对当前组检验整套跨轮记忆（较早记录及其派生经验）的增量作用；该比较不能单独归因于 𝒦 的修订，也不能证明通用教学能力随轮次提高。B2 终态分配与局部／完整示范构成作为可选补充分析，不展开全组合；这些对照不构成 EmbodiRSI 的复现。<cite data-ref="embodirsi"></cite> 复用日志串联证据、方案、监督产出、学习结果和拒绝成本，包含无收益或被拒案例；单任务分析的结论限定于对应设置，不替代多任务主表。</p>
 <p>学生观测和任务物理限制需要单独核查；未验证的滑移／载荷现象不写成已支持能力。反思文本、工具次数和专家成功均不是学生收益。开发池重复使用可能导致选择偏差，经验接纳不保证封存任务逐轮提高；3DGS 的独立学习增益需另作外观消融。本文不宣称导师网络训练、无限递归改进或收敛保证。</p>
+<div class="study-table study-wide" id="result-mechanism"><div class="study-table-heading"><b>R6 · 代表任务的机制归因</b><button type="button" data-export-table="result-mechanism">导出本表 CSV</button></div>
+<div class="table-wrap"><table data-result-table="result-mechanism" data-result-title="R6 · 代表任务的机制归因"><thead><tr>
+<th>方法</th>
+<th>练习配置</th>
+<th>决策信息</th>
+<th>学院 T 成功率与区间</th>
+<th>相对完整方法差值 pp</th>
+<th>实际总资源</th>
+</tr></thead><tbody>
+<tr data-result-row="b1">
+<td>B1 · 固定覆盖流程</td>
+<td>固定</td>
+<td>无计划修订</td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.b1.3" aria-label="R6 · 代表任务的机制归因 b1 学院 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.b1.4" aria-label="R6 · 代表任务的机制归因 b1 相对完整方法差值 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.b1.5" aria-label="R6 · 代表任务的机制归因 b1 实际总资源" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="b3">
+<td>B3 · 固定过程方案</td>
+<td>固定；条件分配随 E</td>
+<td>无方案修订</td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.b3.3" aria-label="R6 · 代表任务的机制归因 b3 学院 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.b3.4" aria-label="R6 · 代表任务的机制归因 b3 相对完整方法差值 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.b3.5" aria-label="R6 · 代表任务的机制归因 b3 实际总资源" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="rule">
+<td>规则式修订</td>
+<td>规则选合法配置</td>
+<td>完整同类历史</td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.rule.3" aria-label="R6 · 代表任务的机制归因 rule 学院 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.rule.4" aria-label="R6 · 代表任务的机制归因 rule 相对完整方法差值 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.rule.5" aria-label="R6 · 代表任务的机制归因 rule 实际总资源" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="current">
+<td>当前反馈 Agent</td>
+<td>Agent 选合法配置</td>
+<td>E＋最近 F＋当前状态</td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.current.3" aria-label="R6 · 代表任务的机制归因 current 学院 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.current.4" aria-label="R6 · 代表任务的机制归因 current 相对完整方法差值 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.current.5" aria-label="R6 · 代表任务的机制归因 current 实际总资源" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="full">
+<td>完整 AirSpark（复用）</td>
+<td>Agent 选合法配置</td>
+<td>历史记录＋可修订经验</td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.full.3" aria-label="R6 · 代表任务的机制归因 full 学院 T 成功率与区间" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.full.4" aria-label="R6 · 代表任务的机制归因 full 相对完整方法差值 pp" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-mechanism.full.5" aria-label="R6 · 代表任务的机制归因 full 实际总资源" placeholder="待填" autocomplete="off"></td>
+</tr>
+</tbody></table></div>
+<p class="caption">一个任务；B1 和完整闭环复用，新增 3 个训练组。完整方法对 B3／规则／当前分别检验计划修订、决策方式与整体跨轮记忆。规则和历史共用记忆程序，各链独立；本表不能独证可修订经验优于原始记录。</p>
+</div>
+<div class="study-table " id="result-diagnosis"><div class="study-table-heading"><b>R7 · 阶段证据与失败分布</b><button type="button" data-export-table="result-diagnosis">导出本表 CSV</button></div>
+<div class="table-wrap"><table data-result-table="result-diagnosis" data-result-title="R7 · 阶段证据与失败分布"><thead><tr>
+<th>方法</th>
+<th>阶段（以任务合同为准）</th>
+<th>到达数／全部回合</th>
+<th>到达后失败数／到达数</th>
+<th>主要现象／日志 ID</th>
+</tr></thead><tbody>
+<tr data-result-row="b1-stage1">
+<td>固定 B1</td>
+<td>接近／到达目标区</td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage1.2" aria-label="R7 · 阶段证据与失败分布 b1-stage1 到达数／全部回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage1.3" aria-label="R7 · 阶段证据与失败分布 b1-stage1 到达后失败数／到达数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage1.4" aria-label="R7 · 阶段证据与失败分布 b1-stage1 主要现象／日志 ID" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="b1-stage2">
+<td>固定 B1</td>
+<td>任务交互</td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage2.2" aria-label="R7 · 阶段证据与失败分布 b1-stage2 到达数／全部回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage2.3" aria-label="R7 · 阶段证据与失败分布 b1-stage2 到达后失败数／到达数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage2.4" aria-label="R7 · 阶段证据与失败分布 b1-stage2 主要现象／日志 ID" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="b1-stage3">
+<td>固定 B1</td>
+<td>后续推进</td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage3.2" aria-label="R7 · 阶段证据与失败分布 b1-stage3 到达数／全部回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage3.3" aria-label="R7 · 阶段证据与失败分布 b1-stage3 到达后失败数／到达数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage3.4" aria-label="R7 · 阶段证据与失败分布 b1-stage3 主要现象／日志 ID" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="b1-stage4">
+<td>固定 B1</td>
+<td>完整终态</td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage4.2" aria-label="R7 · 阶段证据与失败分布 b1-stage4 到达数／全部回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage4.3" aria-label="R7 · 阶段证据与失败分布 b1-stage4 到达后失败数／到达数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.b1-stage4.4" aria-label="R7 · 阶段证据与失败分布 b1-stage4 主要现象／日志 ID" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="full-stage1">
+<td>完整 AirSpark</td>
+<td>接近／到达目标区</td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage1.2" aria-label="R7 · 阶段证据与失败分布 full-stage1 到达数／全部回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage1.3" aria-label="R7 · 阶段证据与失败分布 full-stage1 到达后失败数／到达数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage1.4" aria-label="R7 · 阶段证据与失败分布 full-stage1 主要现象／日志 ID" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="full-stage2">
+<td>完整 AirSpark</td>
+<td>任务交互</td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage2.2" aria-label="R7 · 阶段证据与失败分布 full-stage2 到达数／全部回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage2.3" aria-label="R7 · 阶段证据与失败分布 full-stage2 到达后失败数／到达数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage2.4" aria-label="R7 · 阶段证据与失败分布 full-stage2 主要现象／日志 ID" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="full-stage3">
+<td>完整 AirSpark</td>
+<td>后续推进</td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage3.2" aria-label="R7 · 阶段证据与失败分布 full-stage3 到达数／全部回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage3.3" aria-label="R7 · 阶段证据与失败分布 full-stage3 到达后失败数／到达数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage3.4" aria-label="R7 · 阶段证据与失败分布 full-stage3 主要现象／日志 ID" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="full-stage4">
+<td>完整 AirSpark</td>
+<td>完整终态</td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage4.2" aria-label="R7 · 阶段证据与失败分布 full-stage4 到达数／全部回合" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage4.3" aria-label="R7 · 阶段证据与失败分布 full-stage4 到达后失败数／到达数" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="result-diagnosis.full-stage4.4" aria-label="R7 · 阶段证据与失败分布 full-stage4 主要现象／日志 ID" placeholder="待填" autocomplete="off"></td>
+</tr>
+</tbody></table></div>
+<p class="caption">复用代表任务的学院 T 测试轨迹，仅在冻结后分析；阶段名称须由 S0 的真实任务事件映射。未到达阶段不能算该阶段失败。训练时的诊断来自 C，不能把本表封存轨迹送回 Mentor；不新增训练或 rollout。</p>
+</div>
+<details class="editorial-note" id="study-assignment"><summary>执行分工与排期记录</summary><div class="study-table " id="study-progress"><div class="study-table-heading"><b>R9 · 实验执行分工与完成清单</b><button type="button" data-export-table="study-progress">导出本表 CSV</button></div>
+<div class="table-wrap"><table data-result-table="study-progress" data-result-title="R9 · 实验执行分工与完成清单"><thead><tr>
+<th>执行包</th>
+<th>负责人</th>
+<th>运行设备／分支</th>
+<th>前置条件</th>
+<th>状态／计划日期</th>
+<th>产物路径／验收记录</th>
+</tr></thead><tbody>
+<tr data-result-row="P0">
+<td>P0 先导</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.P0.1" aria-label="R9 · 实验执行分工与完成清单 P0 负责人" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.P0.2" aria-label="R9 · 实验执行分工与完成清单 P0 运行设备／分支" placeholder="待填" autocomplete="off"></td>
+<td>学生与专家可用</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.P0.4" aria-label="R9 · 实验执行分工与完成清单 P0 状态／计划日期" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.P0.5" aria-label="R9 · 实验执行分工与完成清单 P0 产物路径／验收记录" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="E1a">
+<td>E1a 设施</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E1a.1" aria-label="R9 · 实验执行分工与完成清单 E1a 负责人" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E1a.2" aria-label="R9 · 实验执行分工与完成清单 E1a 运行设备／分支" placeholder="待填" autocomplete="off"></td>
+<td>固定合同与配对检查清单</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E1a.4" aria-label="R9 · 实验执行分工与完成清单 E1a 状态／计划日期" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E1a.5" aria-label="R9 · 实验执行分工与完成清单 E1a 产物路径／验收记录" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="E1b">
+<td>E1b 来源</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E1b.1" aria-label="R9 · 实验执行分工与完成清单 E1b 负责人" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E1b.2" aria-label="R9 · 实验执行分工与完成清单 E1b 运行设备／分支" placeholder="待填" autocomplete="off"></td>
+<td>原生／学院任务对应已核验</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E1b.4" aria-label="R9 · 实验执行分工与完成清单 E1b 状态／计划日期" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E1b.5" aria-label="R9 · 实验执行分工与完成清单 E1b 产物路径／验收记录" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="E2">
+<td>E2 主实验</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E2.1" aria-label="R9 · 实验执行分工与完成清单 E2 负责人" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E2.2" aria-label="R9 · 实验执行分工与完成清单 E2 运行设备／分支" placeholder="待填" autocomplete="off"></td>
+<td>P0 后冻结设置、种子与资源</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E2.4" aria-label="R9 · 实验执行分工与完成清单 E2 状态／计划日期" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E2.5" aria-label="R9 · 实验执行分工与完成清单 E2 产物路径／验收记录" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="E2a">
+<td>E2a 归因</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E2a.1" aria-label="R9 · 实验执行分工与完成清单 E2a 负责人" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E2a.2" aria-label="R9 · 实验执行分工与完成清单 E2a 运行设备／分支" placeholder="待填" autocomplete="off"></td>
+<td>同工具、选项、记忆权限</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E2a.4" aria-label="R9 · 实验执行分工与完成清单 E2a 状态／计划日期" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E2a.5" aria-label="R9 · 实验执行分工与完成清单 E2a 产物路径／验收记录" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="E3a">
+<td>E3a 原生回测</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E3a.1" aria-label="R9 · 实验执行分工与完成清单 E3a 负责人" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E3a.2" aria-label="R9 · 实验执行分工与完成清单 E3a 运行设备／分支" placeholder="待填" autocomplete="off"></td>
+<td>学习链结束并冻结模型／测试</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E3a.4" aria-label="R9 · 实验执行分工与完成清单 E3a 状态／计划日期" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E3a.5" aria-label="R9 · 实验执行分工与完成清单 E3a 产物路径／验收记录" placeholder="待填" autocomplete="off"></td>
+</tr>
+<tr data-result-row="E3b">
+<td>E3b 实机</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E3b.1" aria-label="R9 · 实验执行分工与完成清单 E3b 负责人" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E3b.2" aria-label="R9 · 实验执行分工与完成清单 E3b 运行设备／分支" placeholder="待填" autocomplete="off"></td>
+<td>场景、通信、动作与本体对应验收</td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E3b.4" aria-label="R9 · 实验执行分工与完成清单 E3b 状态／计划日期" placeholder="待填" autocomplete="off"></td>
+<td><input class="result-input" type="text" data-result-field="study-progress.E3b.5" aria-label="R9 · 实验执行分工与完成清单 E3b 产物路径／验收记录" placeholder="待填" autocomplete="off"></td>
+</tr>
+</tbody></table></div>
+<p class="caption">按包安排负责人；状态可填未开始／进行中／待修复／已验收。先导和开发可以迭代，封存测试在方案与 checkpoint 清单冻结后执行。</p>
+</div></details>
 </section>
 
 <section id="discussion" data-title="讨论与局限" data-number="5">
@@ -426,9 +1070,10 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td><a href="versions/v0.27/index.html">v0.27</a></td><td>空中能力挑战 → 自进化与仿真学习机会 → 模拟学院。</td><td>凝练摘要，补齐引言承接，预算回归实验约束；技术方案不变。<a href="#revision-v027">修改与一致性核查</a></td></tr>
 <tr><td><a href="versions/v0.28/index.html">v0.28</a></td><td>冻结空中能力挑战、反馈学习机会、模拟学院与独立验证主线。</td><td>采用确认的简化摘要，补齐引言两条因果关系，核查全文设计。<a href="#revision-v028">本轮修改</a> · <a href="#narrative-contract">主线与全文核查</a></td></tr>
 <tr><td><a href="versions/v0.29/index.html">v0.29</a></td><td>摘要从空中挑战直接引出学院；引言承接领域设施与反馈学习。</td><td>过渡句局部精修，保留两项贡献、六步闭环与实验；增加方法—实验核对入口。<a href="#revision-v029">本轮修改</a> · <a href="#rsi-experiment-review">RSI 核对</a></td></tr>
-<tr><td>v0.30 · 当前</td><td>完善计划权限、双类记忆与 Agent 决策过程。</td><td>保留两项贡献、六步闭环与实验组；细化拒绝／复验处理和记忆公平性。<a href="#revision-v030">修改说明</a></td></tr>
+<tr><td><a href="versions/v0.30/index.html">v0.30</a></td><td>完善计划权限、双类记忆与 Agent 决策过程。</td><td>保留两项贡献、六步闭环与实验组；细化拒绝／复验处理和记忆公平性。<a href="#revision-v030">修改说明</a></td></tr>
+<tr><td>v0.31 · 当前</td><td>实验执行包、工作量草案与结果填表。</td><td>7 个执行包、10 份模板；复用既有组与模型，先导后冻结。<a href="#study-plan">实验总览</a></td></tr>
 </tbody></table></div>
-<p>本轮 v0.30 见<a href="#revision-v030">方法核查</a>；此前 v0.29 见<a href="#revision-v029">修改与核查</a>；此前 v0.28 见<a href="#revision-v028">修改与核查</a>；此前 v0.27 见<a href="#revision-v027">修改与核查</a>；此前 v0.26 见<a href="#revision-v026">修改记录</a>；此前 v0.25 见<a href="#revision-v025">逐句对照</a>；此前 v0.24 见<a href="#revision-v024">修改对照</a>；此前 v0.23 见<a href="#revision-v023">修改对照</a>；此前 v0.22 见<a href="#revision-v022">修改对照</a>；此前 v0.21 见<a href="#revision-v021">修改对照</a>；此前 v0.20 的修改见<a href="#revision-v020">修改对照</a>。v0.14 起统一论文中的 SparkMentor 命名，工程中的旧 sparkclaw 路径暂作兼容名称。v0.15 完善平台、编排与方法的层次；v0.15.1 补充 2026-10-19 的 RPG 核查，保留其他文献原核查日期。v0.18 的变更见<a href="#revision-v018">前轮修改对照</a>；v0.19 见<a href="#revision-v019">前轮修改对照</a>。本轮未迁移工程接口，也未新增实验结果。</p>
+<p>本轮 v0.31 见<a href="#revision-v031">实验安排</a>；此前 v0.30 见<a href="#revision-v030">方法核查</a>；此前 v0.29 见<a href="#revision-v029">修改与核查</a>；此前 v0.28 见<a href="#revision-v028">修改与核查</a>；此前 v0.27 见<a href="#revision-v027">修改与核查</a>；此前 v0.26 见<a href="#revision-v026">修改记录</a>；此前 v0.25 见<a href="#revision-v025">逐句对照</a>；此前 v0.24 见<a href="#revision-v024">修改对照</a>；此前 v0.23 见<a href="#revision-v023">修改对照</a>；此前 v0.22 见<a href="#revision-v022">修改对照</a>；此前 v0.21 见<a href="#revision-v021">修改对照</a>；此前 v0.20 的修改见<a href="#revision-v020">修改对照</a>。v0.14 起统一论文中的 SparkMentor 命名，工程中的旧 sparkclaw 路径暂作兼容名称。v0.15 完善平台、编排与方法的层次；v0.15.1 补充 2026-10-19 的 RPG 核查，保留其他文献原核查日期。v0.18 的变更见<a href="#revision-v018">前轮修改对照</a>；v0.19 见<a href="#revision-v019">前轮修改对照</a>。本轮未迁移工程接口，也未新增实验结果。</p>
 </details>
 
 <details class="editorial-note" id="revision-v018"><summary>v0.18 修改对照：保留主线，补充闭环机制</summary>
@@ -547,7 +1192,8 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <details class="editorial-note" id="revision-v028"><summary>v0.28 · 确认摘要、固定主线与全文核查</summary>
 <p>逐字采用用户确认的简化摘要。引言只调整动态交互挑战、执行偏差与分阶段诊断三处表述；两项贡献逐字保留。方法、公式、六步框图、候选接纳与拒绝状态、配置模板、实验组及文献均不变。核查结果见<a href="#narrative-contract">主线与全文对应</a>。v0.27 已归档；英文 LaTeX 与 PDF 继续暂缓。</p>
 </details>
-<details class="editorial-note" id="rsi-experiment-review"><summary>RSI 方法与实验核对入口（研究设计，参数待定）</summary>
+<details class="editorial-note" id="rsi-experiment-review"><summary>RSI 方法与实验核对入口（附可执行实验清单）</summary>
+<p>具体实验目的、复用关系、排期数量及待填表已整理到<a href="#study-plan">§4.0 实验总览</a>；<a href="protocol/experiment-plan-v0.31.json" download>实验计划 JSON</a>是未冻结的排期草案，方法协议仍为 v0.30。两者区分方法合同与数量计划。</p>
 <p>当前论文与配置模板定义的是待执行的研究协议，protocol_version 更新为 v0.30、状态仍为 pilot_pending；新增记忆机制及权限处理尚待实现验收。叙事底稿已稳定，任务合同、具体参数及实现完成度仍需分别确认，本轮不将其自动冻结。</p>
 <div class="table-wrap"><table><thead><tr><th>六步闭环</th><th>本轮需要核对的输入与产物</th><th>对应验证</th></tr></thead><tbody>
 <tr><td>1. 学生执行</td><td>固定学生、观测历史、动作语义与低层控制，在 C 执行；输出同步观测、命令、运动和事件记录。</td><td>E1 时序、跟踪与复位；E2 各组共享执行接口。</td></tr>
@@ -577,5 +1223,6 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td>配置／实现状态</td><td>协议更新至 v0.30，仍 pilot_pending、未冻结；记录权限、复验与记忆字段，不填造参数或实验结果。</td></tr>
 </tbody></table></div>
 <p>对原建议的三项收紧：记忆是有来源的可反驳建议；配置变化不能无条件沿用旧采集成本；诊断复验、固定开发补测与无训练状态分开，防止评分择优及虚构零收益。摘要正文、贡献、实验数量与统计目标保持原样。下一轮据此确定具体任务、可执行干预、参数与预算。</p></details>
+<details class="editorial-note" id="revision-v031"><summary>v0.31 · 实验执行与待填结果</summary><p>将已有 E1/E2/E3 与先导拆为 7 个执行包，正文增加 10 份设置、结果及执行模板。主实验仍为两个任务、一个学生后端，归因与来源对照各一个任务；完整方法和固定 B1 尽量复用。提供可调排期：默认 S=3、R=3 时，8 个增量设置＝24 条学习链、至多 72 次正式候选训练；先导最多 2 次另计。数量为计划，统计精度及资源须经先导确认。原生回测复用冻结模型；同本体假设下实机草案共 120 回合，接口不兼容须单列适配与学习成本。空白结果可本机填写并导出 CSV，不自动发布。中文方法、两项贡献、图、文献和英文稿未改，v0.30 已归档。</p></details>
 </section>
 `);
