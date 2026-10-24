@@ -3,7 +3,7 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <div class="eyebrow">INTRODUCTION</div><h2>1. 引言</h2>
 <p>空中操作将机器人的作业范围扩展至地面平台难以到达的三维空间，为自主抓取、运输与接触作业提供了新的可能。视觉动作策略需要应对运动引起的机载观测变化，以及飞行基座、机械臂与环境之间的动力学耦合。操作结果不仅取决于相对位姿，还受到接近速度与接触时机的影响，策略因而需要在动态观测下协调空间对齐、运动状态与交互时序。<cite data-ref="aerial-survey aerial-bench aerial-sliding"></cite> 近期空中操作基准与视觉语言动作模型建立了相应的训练和评价流程，为学习型空中操作提供了研究基础。<cite data-ref="ambench airvla"></cite></p>
 <p>可靠的任务执行依赖于接近、接触及后续操作阶段的协同。学生策略产生的动作会改变后续访问的状态分布，执行偏差可能使其进入既有示范覆盖不足的运动与接触状态，影响后续阶段衔接和完整任务表现。<cite data-ref="dagger"></cite> 示范覆盖不足与已覆盖条件下的学习不足均可能形成能力缺口。反馈学习将执行诊断、经验生成与更新评价相联系，以当前策略表现确定候选练习，并通过更新后的完整任务表现检验学习收益。然而，真实试验中的环境复位、监督获取与重复评价具有较高成本，限制了这一过程的规模化开展。<cite data-ref="autonomous-cost"></cite></p>
-<p>反馈驱动的机器人自改进与真实—仿真—真实学习，为空中策略的迭代改进提供了互补途径。交互式模仿学习、部署纠正与近期具身自改进方法利用策略反馈组织数据采集和参数更新。<cite data-ref="sirius embodirsi enpire"></cite> 自动示范生成扩展了训练经验来源，数字孪生与 Real-to-Sim-to-Real 方法则连接仿真练习和真实部署。<cite data-ref="mimicgen robotwin rialto robosplat"></cite> 本文研究如何将这些能力组织为空中操作的可重复学习过程，使任务相关的视觉—物理交互、监督生成及多轮更新在统一设施上运行。模型、数据、环境与 Harness 的系统划分为这一组织方式提供了参考。<cite data-ref="agentic-robots-survey"></cite></p>
+<p>空中操作基准与仿真平台为任务执行、数据采集和策略训练提供了基础。<cite data-ref="ambench aerial-gym"></cite> 自动示范生成扩展了训练经验来源，数字孪生与真实—仿真—真实学习进一步连接仿真练习与真实部署。<cite data-ref="mimicgen robotwin rialto robosplat"></cite> 交互式模仿学习、部署纠正与近期具身自改进研究利用策略反馈组织采集和参数更新。<cite data-ref="dagger sirius embodirsi enpire"></cite> 本文研究如何在可控的空中交互环境中，依据当前策略的执行表现及已有训练的实际效果组织多轮学习，并以完整任务能力的变化检验后续练习安排的作用。模型、数据、环境与 Harness 的系统划分为这一组织方式提供了参考。<cite data-ref="agentic-robots-survey"></cite></p>
 <p>为此，本文提出 <b>AirSpark，一套面向空中操作策略自进化的模拟学院</b>。学院以 UE 渲染和 MuJoCo 动力学为基础，通过统一的任务、观测、动作与运行记录接口，集成场景配置、可重复执行、专家监督生成及训练评价。3DGS 场景外观与显式物理资产、相机和机器人配准共同建立真实任务对应。共享接口支持不同练习方法的执行、追溯与受控比较，使平台同时承担经验生成和学习实验基础设施的职责。</p>
 <p>AirSpark 通过 SparkMentor 组织反馈驱动的多轮策略改进。SparkMentor 是结合工具、状态管理与跨轮记忆的 Agent Harness：分阶段执行诊断提供候选能力缺口，练习规划调用学院设施生成监督，训练更新学生参数，学习评价形成后续计划修订的依据。跨轮干预记忆关联方案、数据、模型、评价与成本，为后续决策提供历史证据。执行反馈与学习反馈分别作用于练习选择和方案修订，所得能力通过更新后学生策略的独立执行予以检验。</p>
 <p>评测围绕设施可靠性、闭环学习效用与外部有效性展开。主实验以冻结策略为初始参照，在相同采集和训练预算下比较固定采集训练流程与完整 AirSpark 闭环；代表任务进一步分析规则修订、当前反馈和历史反馈的作用。闭环结束后冻结学生，在原生 AM-Bench 及对应物理实机中评价完整任务表现。该设计分别检验学院的监督生成能力、反馈学习的增量收益及能力保留与迁移。</p>
@@ -390,9 +390,10 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td><a href="versions/v0.25/index.html">v0.25</a></td><td>空中交互能力要求 → 执行与学习反馈 → 可重复的学院练习。</td><td>精修中文摘要、引言；贡献、方法、实验和英文不变。<a href="#revision-v025">逐句对照</a></td></tr>
 <tr><td><a href="versions/v0.26/index.html">v0.26</a></td><td>正式论文语体：问题、系统方法与验证。</td><td>精简中文摘要与引言，统一相关工作、方法概述、实验与讨论措辞；贡献与技术协议不变。<a href="#revision-v026">本轮修改</a></td></tr>
 <tr><td><a href="versions/v0.27/index.html">v0.27</a></td><td>空中能力挑战 → 自进化与仿真学习机会 → 模拟学院。</td><td>凝练摘要，补齐引言承接，预算回归实验约束；技术方案不变。<a href="#revision-v027">修改与一致性核查</a></td></tr>
-<tr><td>v0.28 · 当前</td><td>冻结空中能力挑战、反馈学习机会、模拟学院与独立验证主线。</td><td>采用确认的简化摘要，补齐引言两条因果关系，核查全文设计。<a href="#revision-v028">本轮修改</a> · <a href="#narrative-contract">主线与全文核查</a></td></tr>
+<tr><td><a href="versions/v0.28/index.html">v0.28</a></td><td>冻结空中能力挑战、反馈学习机会、模拟学院与独立验证主线。</td><td>采用确认的简化摘要，补齐引言两条因果关系，核查全文设计。<a href="#revision-v028">本轮修改</a> · <a href="#narrative-contract">主线与全文核查</a></td></tr>
+<tr><td>v0.29 · 当前</td><td>摘要从空中挑战直接引出学院；引言承接领域设施与反馈学习。</td><td>过渡句局部精修，保留两项贡献、六步闭环与实验；增加方法—实验核对入口。<a href="#revision-v029">本轮修改</a> · <a href="#rsi-experiment-review">RSI 核对</a></td></tr>
 </tbody></table></div>
-<p>本轮 v0.28 见<a href="#revision-v028">修改与核查</a>；此前 v0.27 见<a href="#revision-v027">修改与核查</a>；此前 v0.26 见<a href="#revision-v026">修改记录</a>；此前 v0.25 见<a href="#revision-v025">逐句对照</a>；此前 v0.24 见<a href="#revision-v024">修改对照</a>；此前 v0.23 见<a href="#revision-v023">修改对照</a>；此前 v0.22 见<a href="#revision-v022">修改对照</a>；此前 v0.21 见<a href="#revision-v021">修改对照</a>；此前 v0.20 的修改见<a href="#revision-v020">修改对照</a>。v0.14 起统一论文中的 SparkMentor 命名，工程中的旧 sparkclaw 路径暂作兼容名称。v0.15 完善平台、编排与方法的层次；v0.15.1 补充 2026-10-19 的 RPG 核查，保留其他文献原核查日期。v0.18 的变更见<a href="#revision-v018">前轮修改对照</a>；v0.19 见<a href="#revision-v019">前轮修改对照</a>。本轮未迁移工程接口，也未新增实验结果。</p>
+<p>本轮 v0.29 见<a href="#revision-v029">修改与核查</a>；此前 v0.28 见<a href="#revision-v028">修改与核查</a>；此前 v0.27 见<a href="#revision-v027">修改与核查</a>；此前 v0.26 见<a href="#revision-v026">修改记录</a>；此前 v0.25 见<a href="#revision-v025">逐句对照</a>；此前 v0.24 见<a href="#revision-v024">修改对照</a>；此前 v0.23 见<a href="#revision-v023">修改对照</a>；此前 v0.22 见<a href="#revision-v022">修改对照</a>；此前 v0.21 见<a href="#revision-v021">修改对照</a>；此前 v0.20 的修改见<a href="#revision-v020">修改对照</a>。v0.14 起统一论文中的 SparkMentor 命名，工程中的旧 sparkclaw 路径暂作兼容名称。v0.15 完善平台、编排与方法的层次；v0.15.1 补充 2026-10-19 的 RPG 核查，保留其他文献原核查日期。v0.18 的变更见<a href="#revision-v018">前轮修改对照</a>；v0.19 见<a href="#revision-v019">前轮修改对照</a>。本轮未迁移工程接口，也未新增实验结果。</p>
 </details>
 
 <details class="editorial-note" id="revision-v018"><summary>v0.18 修改对照：保留主线，补充闭环机制</summary>
@@ -492,8 +493,9 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <tr><td>证据边界</td><td>执行偏差是候选缺口来源之一；控制故障、观测不足与仿真误差仍分别处理。实验结果尚待完成。</td></tr>
 </tbody></table></div>
 <p>两项贡献、相关工作、实验、讨论、结论、算法公式与图均未改。英文 LaTeX 与 PDF 保持 v0.23，正文措辞待后续同步。v0.26 已归档。</p></details>
-<details class="editorial-note" id="narrative-contract"><summary>固定研究主线与全文对应（v0.28）</summary>
+<details class="editorial-note" id="narrative-contract"><summary>固定研究主线与全文对应（v0.29）</summary>
 <p>论文主线固定为：空中操作的视觉与动态交互挑战 → 当前策略的经验需求及真实重复试验成本 → 反馈自改进与真实—仿真—真实学习机会 → 模拟学院与 SparkMentor → 学生能力改进及独立验证。后续文字与机制细化沿此主线推进；新的参考实现不自动改写研究目标。</p>
+<p>v0.29 的摘要从经验缺口与真实试验成本直接引出可重复练习和多轮改进，不再单列近期 RSI 机会句；领域设施与反馈学习的研究基础仍在引言和相关工作中准确交代。这一写作调整不删除既有机制或相关引用。</p>
 <p>两项贡献仍为“面向空中操作策略学习的模拟学院”和“反馈驱动的空中操作策略自进化框架”。学院提供可重复交互、同步记录、监督生成与训练评价，SparkMentor 作为结合工具、状态和跨轮记忆的 Agent Harness 组织学习；学生训练器更新参数。执行反馈用于选择练习，学习反馈与历史记录用于修订后续计划。本文不训练独立导师网络。</p>
 <div class="table-wrap"><table><thead><tr><th>正文位置</th><th>与主线的对应及本轮处理</th></tr></thead><tbody>
 <tr><td>摘要、引言</td><td>采用用户确认的简化摘要；引言明确相对位姿、接近速度与接触时机影响结果，以及执行偏差可能造成示范覆盖不足。保留已覆盖条件下学习不足等其他原因。</td></tr>
@@ -510,5 +512,24 @@ document.querySelector('#content').insertAdjacentHTML('beforeend',`
 <details class="editorial-note" id="revision-v028"><summary>v0.28 · 确认摘要、固定主线与全文核查</summary>
 <p>逐字采用用户确认的简化摘要。引言只调整动态交互挑战、执行偏差与分阶段诊断三处表述；两项贡献逐字保留。方法、公式、六步框图、候选接纳与拒绝状态、配置模板、实验组及文献均不变。核查结果见<a href="#narrative-contract">主线与全文对应</a>。v0.27 已归档；英文 LaTeX 与 PDF 继续暂缓。</p>
 </details>
+<details class="editorial-note" id="rsi-experiment-review"><summary>RSI 方法与实验核对入口（研究设计，参数待定）</summary>
+<p>当前论文与配置模板定义的是待执行的研究协议，protocol_version 仍为 v0.23、状态为 pilot_pending；这不与网页 v0.29 冲突。叙事底稿已稳定，任务合同、具体参数及实现完成度仍需分别确认，本轮不将其自动冻结。</p>
+<div class="table-wrap"><table><thead><tr><th>六步闭环</th><th>本轮需要核对的输入与产物</th><th>对应验证</th></tr></thead><tbody>
+<tr><td>1. 学生执行</td><td>固定学生、观测历史、动作语义与低层控制，在 C 执行；输出同步观测、命令、运动和事件记录。</td><td>E1 时序、跟踪与复位；E2 各组共享执行接口。</td></tr>
+<tr><td>2. 分阶段诊断</td><td>由阶段到达、转换结果和条件访问形成 E；未到达阶段不直接标为该阶段失败。先分流控制、观测与监督问题。</td><td>E1 标签与事件一致性；E2 失败画像解释，最终仍看完整任务。</td></tr>
+<tr><td>3. 练习规划</td><td>从 E、已有 M、当前配置及剩余资源选择一个 A。条件、监督起点、示范构成和回放选项须列出合法值；本轮 F 尚不可用。</td><td>E2 完整闭环对固定 B1；代表任务的 B3／规则／当前／历史归因。</td></tr>
+<tr><td>4. 专家监督生成</td><td>实际执行合法前缀，再由固定专家延续与质检；只导出合格专家动作，学生前缀不冒充专家标签。</td><td>E1 命中、产出、质量与成本；一个任务的原生／学院 B1 来源对照。</td></tr>
+<tr><td>5. 学生训练</td><td>从保留父状态，使用合格新增数据与接纳回放训练，至多一个候选；学生结构与训练配方固定。</td><td>E2 学习链及资源曲线，包含失败和被拒训练。</td></tr>
+<tr><td>6. 学习评价与接纳</td><td>父代／候选在 V 配对评价，形成 F；通过则接纳，否则保留父状态。所有结果进入下一轮 M；T 不回流。</td><td>E2 多轮学习与能力保持；E3 冻结学生原生基准和实机检验。</td></tr>
+</tbody></table></div>
+<p><b>保持既定比较。</b>主表仍为 B0、固定采集训练 B1、完整 AirSpark（B3+adapt-history），至少两个主任务、一个学生后端。规则修订和当前／历史反馈的增量作用在一个代表任务核对；B2 等扩展不提升为必做矩阵。</p>
+<ol><li><b>先核对任务与学生。</b>柠檬与 Cabinet 仍为候选主任务，Diffusion Policy 为优先路径；锁定本体、动作、相机、历史窗口、父模型来源及原生／实机对应关系。</li>
+<li><b>再核对动态线索与专家。</b>确认速度、时机等条件在学生允许的视觉历史或本体输入中有线索；确认固定专家能从合法前缀到达状态产生合格监督。诊断侧有真值不代表学生可辨识。</li>
+<li><b>列出最小决策表。</b>明确 E 的字段、每个 A 的合法选项、规则触发条件、Agent 模型／提示／工具版本，以及当前组和历史组实际可读取的记忆范围。</li>
+<li><b>用先导冻结训练与接纳。</b>确定每候选训练步数、数据下限、回放选项、配对评价样本量、收益与旧能力容差；不得用事后调阈值挑选接纳结果。</li>
+<li><b>最后确定实验规模。</b>根据单轮成本和方差确定有限轮次、独立学习链和封存回合数；让早先结果有机会影响后续决策。不同本体的真实任务另列对应成本与初始策略。</li></ol>
+<p>以上是对已有方法和配置空项的核对次序，不是新增算法、已经跑通的实现或新增实验承诺。工程完成度需运行证据，后续讨论从任务／学生合同开始。</p>
+</details>
+<details class="editorial-note" id="revision-v029"><summary>v0.29 · 摘要过渡与 RSI 核对准备</summary><p>摘要删去独立的近期 RSI 与 Real-to-Sim-to-Real 机会句，采用“为支持可重复的空中交互练习，并依据策略表现与实际学习效果组织多轮改进”直接引出学院。引言第三段按领域基准与设施、经验生成、反馈学习及本文研究问题组织，保留已有引用。两项贡献、相关工作三节、六步方法、公式、图、实验和协议不变。附录新增核对表与待定项，不将研究协议视为已完成实现。v0.28 已归档；英文 LaTeX 与 PDF 继续暂缓同步。</p></details>
 </section>
 `);
