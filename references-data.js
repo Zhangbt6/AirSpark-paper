@@ -1247,15 +1247,15 @@ const paperReferences = {
     ],
     "year": "2023",
     "venue": "Transactions on Machine Learning Research",
-    "url": "https://openreview.net/forum?id=vsCpILiWHu",
+    "url": "https://openreview.net/pdf/2a72d6fcd3472bdf5725a3e011fe30f7ad1c46e0.pdf",
     "note": "正式 PDF 页首标注 Published in TMLR (12/2023)，采用正式 Generalist 标题，不沿用早期 Foundation 标题；作者机构页亦登记 TMLR。模型生成数据进入后续训练是自改进先例，不等于无限轮次提升。",
     "entryType": "article",
     "type": "期刊论文",
     "verified": "2026-10-25",
     "links": [
       [
-        "正式 PDF",
-        "https://openreview.net/pdf?id=vsCpILiWHu"
+        "正式 PDF（作者机构所链）",
+        "https://openreview.net/pdf/2a72d6fcd3472bdf5725a3e011fe30f7ad1c46e0.pdf"
       ],
       [
         "作者机构发表页",
