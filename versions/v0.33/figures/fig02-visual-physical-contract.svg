@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1020" viewBox="0 0 1440 1020" role="img" aria-labelledby="title desc">
+<title id="title">One execution, aligned visual and physical evidence</title><desc id="desc">Appearance, collision geometry and control share entity identities, coordinates and time.. Proposed research design, not measured results.</desc>
+<defs>
+<marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183255"/></marker>
+<marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087f75"/></marker>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#215cce"/></marker>
+<marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7552a5"/></marker>
+<marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94601b"/></marker>
+</defs><g font-family="Arial, Helvetica, sans-serif"><rect width="1440" height="100%" fill="white"/>
+<text x="44" y="39" fill="#087f75" font-size="17" font-weight="700" text-anchor="start">AIRSPARK   /   FIGURE A1</text>
+<text x="1396" y="39" fill="#52657b" font-size="16" font-weight="400" text-anchor="end">RESEARCH DESIGN  ·  v0.33</text>
+<text x="44" y="81" fill="#183255" font-size="31" font-weight="700" text-anchor="start">One execution, aligned visual and physical evidence</text>
+<text x="44" y="112" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Appearance, collision geometry and control share entity identities, coordinates and time.</text>
+<path d="M44 130 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="44" y="160" width="304" height="216" rx="14" fill="#eaf6f3" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M62 184 v24" stroke="#087f75" stroke-width="4"/>
+<text x="76" y="204" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Scene appearance</text>
+<text x="68" y="243" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Multi-view scene capture</text>
+<text x="68" y="274" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">3DGS static appearance</text>
+<text x="68" y="305" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Camera calibration</text>
+<rect x="44" y="448" width="304" height="231" rx="14" fill="#f1eef8" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M62 472 v24" stroke="#7552a5" stroke-width="4"/>
+<text x="76" y="492" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Physical assets</text>
+<text x="68" y="531" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Collision geometry</text>
+<text x="68" y="562" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Movable objects + joints</text>
+<text x="68" y="593" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Mass, friction and actuation</text>
+<text x="68" y="624" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Task semantics</text>
+<rect x="407" y="160" width="420" height="216" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M425 184 v24" stroke="#215cce" stroke-width="4"/>
+<text x="439" y="204" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Unreal Engine</text>
+<text x="431" y="243" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Render model-facing RGB</text>
+<text x="431" y="274" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Calibrated camera and occlusion</text>
+<text x="431" y="305" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Place dynamic assets from poses</text>
+<rect x="407" y="448" width="420" height="231" rx="14" fill="#f1eef8" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M425 472 v24" stroke="#7552a5" stroke-width="4"/>
+<text x="439" y="492" fill="#183255" font-size="24" font-weight="700" text-anchor="start">MuJoCo</text>
+<text x="431" y="531" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Floating base + arm dynamics</text>
+<text x="431" y="562" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Contact, slip and load transfer</text>
+<text x="431" y="593" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Controller and actuator state</text>
+<text x="431" y="624" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Explicit task reset</text>
+<rect x="906" y="160" width="490" height="216" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M924 184 v24" stroke="#215cce" stroke-width="4"/>
+<text x="938" y="204" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Observation adapter</text>
+<text x="930" y="243" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Coordinate, entity and time alignment</text>
+<text x="930" y="274" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">RGB history + permitted proprioception</text>
+<text x="930" y="305" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Deployment-matched input whitelist</text>
+<rect x="906" y="448" width="490" height="231" rx="14" fill="#eaf6f3" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M924 472 v24" stroke="#087f75" stroke-width="4"/>
+<text x="938" y="492" fill="#183255" font-size="24" font-weight="700" text-anchor="start">Policy and execution adapter</text>
+<text x="930" y="531" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Student πθ  OR  fixed collection expert</text>
+<text x="930" y="562" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Reference frame, units and control rate</text>
+<text x="930" y="593" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Low-level controller → actuation</text>
+<text x="930" y="624" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Mark action source and takeover time</text>
+<path d="M348 266 H407" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<path d="M348 554 H407" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<path d="M827 266 H906" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<path d="M906 554 H827" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)"/>
+<path d="M620 448 V376" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<text x="635" y="416" fill="#7552a5" font-size="18" font-weight="400" text-anchor="start">object poses</text>
+<path d="M827 489 H865 V340 H906" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<text x="875" y="432" fill="#7552a5" font-size="17" font-weight="400" text-anchor="start">state</text>
+<path d="M1151 376 V448" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<text x="1170" y="417" fill="#215cce" font-size="18" font-weight="400" text-anchor="start">observations</text>
+<rect x="44" y="750" width="1352" height="191" rx="14" fill="#f6f8fb" stroke="#d2dde8" stroke-width="1.7"/>
+<path d="M62 774 v24" stroke="#087f75" stroke-width="4"/>
+<text x="76" y="794" fill="#183255" font-size="26" font-weight="700" text-anchor="start">A synchronized execution record</text>
+<text x="68" y="833" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">RGB · issued actions · realized motion · contact events · action provenance · task outcome · actual cost</text>
+<text x="68" y="864" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Privileged diagnostics and expert labels stay on the collection / evaluation side.</text>
+<text x="68" y="895" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">Export only permitted student inputs; 3DGS appearance does not replace contact physics.</text>
+<path d="M202 679 V750" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" stroke-dasharray="8 6"/>
+<path d="M620 679 V750" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" stroke-dasharray="8 6"/>
+<path d="M1151 679 V750" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" stroke-dasharray="8 6"/>
+<path d="M44 971 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="44" y="998" fill="#52657b" font-size="16" font-weight="400" text-anchor="start">AirSpark  ·  A Simulated Academy for Self-Improving Aerial Manipulation</text>
+<text x="1396" y="998" fill="#52657b" font-size="14" font-weight="400" text-anchor="end">SCHEMATIC / NOT TO SCALE</text>
+</g></svg>

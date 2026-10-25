@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1000" viewBox="0 0 1440 1000" role="img"><title>实验设计与独立验证</title><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#183255"/></marker></defs><rect width="1440" height="1000" fill="white"/><g font-family="Microsoft YaHei,Arial,sans-serif" fill="#183255">
+<text x="40" y="45" font-size="32" font-weight="700">实验设计与独立验证</text>
+<text x="40" y="94" font-size="25" font-weight="700">基准线：FA-Hexa；ACT、DP、π0.5；柠檬采摘与 Push Slider</text>
+<rect x="40" y="120" width="400" height="190" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="60" y="160" font-size="26" font-weight="700">共同初始化</text>
+<text x="60" y="203" font-size="23" font-weight="400">同学生、同任务共享父代</text>
+<text x="60" y="237" font-size="23" font-weight="400">共享初始示范与输入权限</text>
+<text x="60" y="271" font-size="23" font-weight="400">各架构初始化单独登记</text>
+<rect x="520" y="120" width="400" height="190" rx="8" fill="#eaf6f2" stroke="#becddd"/>
+<text x="540" y="160" font-size="26" font-weight="700">预算匹配的多轮学习</text>
+<text x="540" y="203" font-size="23" font-weight="400">初始策略／固定练习／完整闭环</text>
+<text x="540" y="237" font-size="23" font-weight="400">每组 3 链，最多 4 次干预</text>
+<text x="540" y="271" font-size="23" font-weight="400">采集 C；开发反馈 V</text>
+<rect x="1000" y="120" width="400" height="190" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="1020" y="160" font-size="26" font-weight="700">冻结与独立评价</text>
+<text x="1020" y="203" font-size="23" font-weight="400">学院内封存测试 T</text>
+<text x="1020" y="237" font-size="23" font-weight="400">原生 AM-Bench 对应任务</text>
+<text x="1020" y="271" font-size="23" font-weight="400">报告逐链差值与实际资源</text>
+<path d="M440 215 H510" stroke="#183255" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M920 215 H990" stroke="#183255" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="40" y="370" font-size="25" font-weight="700">独立本体实机线：DP 柠檬；不复用基准策略权重</text>
+<rect x="40" y="400" width="400" height="205" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="60" y="440" font-size="26" font-weight="700">真实任务对应与父代</text>
+<text x="60" y="483" font-size="23" font-weight="400">3DGS 外观＋显式物理资产</text>
+<text x="60" y="517" font-size="23" font-weight="400">真实本体、相机与物理配准</text>
+<text x="60" y="551" font-size="23" font-weight="400">真实＋仿真示范初始化</text>
+<rect x="520" y="400" width="400" height="205" rx="8" fill="#eaf6f2" stroke="#becddd"/>
+<text x="540" y="440" font-size="26" font-weight="700">两种场景的完整闭环</text>
+<text x="540" y="483" font-size="23" font-weight="400">基准场景／重建场景练习</text>
+<text x="540" y="517" font-size="23" font-weight="400">同父代、预算与真实回放比例</text>
+<text x="540" y="551" font-size="23" font-weight="400">两个更新组各 3 条链</text>
+<rect x="1000" y="400" width="400" height="205" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="1020" y="440" font-size="26" font-weight="700">冻结后实机主测试</text>
+<text x="1020" y="483" font-size="23" font-weight="400">初始：1 模型 × 30 回合</text>
+<text x="1020" y="517" font-size="23" font-weight="400">更新：2 组 × 3 模型 × 10</text>
+<text x="1020" y="551" font-size="23" font-weight="400">总计 90 回合；测试不回流</text>
+<path d="M440 500 H510" stroke="#183255" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M920 500 H990" stroke="#183255" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="40" y="665" font-size="25" font-weight="700">DP 柠檬的机制与扩展评价</text>
+<rect x="40" y="695" width="660" height="200" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="60" y="735" font-size="26" font-weight="700">组件分析</text>
+<text x="60" y="778" font-size="23" font-weight="400">固定／无修订／规则／无跨轮记忆／完整</text>
+<text x="60" y="812" font-size="23" font-weight="400">共享工具、信息权限与资源；历史各自独立</text>
+<text x="60" y="846" font-size="23" font-weight="400">固定练习与完整方法复用主实验结果</text>
+<rect x="740" y="695" width="660" height="200" rx="8" fill="#f1f5fb" stroke="#becddd"/>
+<text x="760" y="735" font-size="26" font-weight="700">跨初始化的教学经验复用</text>
+<text x="760" y="778" font-size="23" font-weight="400">来源链 i 的冻结经验 → 对应新父代链 i</text>
+<text x="760" y="812" font-size="23" font-weight="400">导入经验／空经验；两组都重新训练</text>
+<text x="760" y="846" font-size="23" font-weight="400">不导入源权重、训练轨迹或封存信息</text>
+<text x="40" y="954" font-size="24" font-weight="400">设施可靠性复用实际日志；表格和曲线待填，不预设学习或迁移效果</text>
+</g></svg>

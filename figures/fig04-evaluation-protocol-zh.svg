@@ -26,7 +26,7 @@
 <text x="60" y="551" font-size="23" font-weight="400">真实＋仿真示范初始化</text>
 <rect x="520" y="400" width="400" height="205" rx="8" fill="#eaf6f2" stroke="#becddd"/>
 <text x="540" y="440" font-size="26" font-weight="700">两种场景的完整闭环</text>
-<text x="540" y="483" font-size="23" font-weight="400">基准场景／重建场景练习</text>
+<text x="540" y="483" font-size="23" font-weight="400">常规仿真／重建场景练习</text>
 <text x="540" y="517" font-size="23" font-weight="400">同父代、预算与真实回放比例</text>
 <text x="540" y="551" font-size="23" font-weight="400">两个更新组各 3 条链</text>
 <rect x="1000" y="400" width="400" height="205" rx="8" fill="#f1f5fb" stroke="#becddd"/>

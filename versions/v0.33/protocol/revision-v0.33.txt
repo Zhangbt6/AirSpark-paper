@@ -1,0 +1,147 @@
+AirSpark v0.33 统一修订记录 · 2026-10-25
+
+审核结论
+无须用户另行选择的实质异议，按提供的统一说明执行。核查官方滑块代码：5% 行程与终点关节阈值不直接检测接触。OpenPI 官方实现支持 JAX LoRA 路线，不能假定 PyTorch LoRA 可用；4090 实际容量及耗时仍先导验证。
+
+逐项修改
+1. 保持模拟学院＋反馈自进化两项贡献，摘要与引言仅同步实验范围，不另换动机；相关工作仍三节。
+2. 正文采用论文结构与描述性组名，表格为“—”；排期、计算器、台账与 CSV 导出独立为 protocol.html。
+3. 明确 A=(b,η̃,d)、已接纳 η、两类反馈时序、ℛ/𝒦、每轮经验更新及单候选接纳回退。解释和建议均可修订；原始事实不可改。
+4. 主任务为柠檬／Push Slider；三学生九行主表合入原生回测；DP 两任务曲线预留位置，未画虚构数据。
+5. DP 柠檬五组组件分析复用主实验固定／完整结果；来源三链预先对应新父代三链，带／空经验均重新训练。跨初始化复用仅扩展。
+6. 实机单独本体、仿真模型、初始化和部署合同；共同父代，真实回放比例相同固定且不补采真实数据。90 主回合；可选 35 回合另列。
+7. 19 增量设置、57 链、最多 228 训练，为上限；单4090分层串行。初始化／先导／补充单列，无效尝试和评价照常计费。
+8. 同步英文正文、表格、图注和附录；方法图保留六步布局，评测图区分基准与独立实机路线。归档 v0.32，保留旧锚点。
+
+先导后仍须登记，未擅填
+任务与接口实际版本／哈希；C/V/T 清单及数量；诊断和评价回合；各学生初始示范和训练路径；独立实机真实／仿真初始示范与成本；预算单位、各阶段上限及耗时；合法 η 和条件范围；覆盖／探索及暂缓／复验规则；训练／回放／LoRA；Agent版本、温度、提示、记忆检索；δ/ε、最小有意义收益及估计精度；区间对象和算法；无收益触发；真实回放比例；故障补测与安全规则。
+
+未开展采集、训练或实机测试，不填结果，不宣称已实现完备运行。完整编译、引用、静态导出、计数和浏览器显示检查是文稿验证，不是方法效果验证。
+
+验证完成
+完整五步 LaTeX/BibTeX 编译及 PDF 渲染：15 页工作稿（含参考文献和附录），无未定义引用和 overfull；官方模板未修改。静态检查核对 43 条文献、36 个中英文实际引用键、章节锚点和图路径。浏览器确认主实验九行、组件五行、无正文编辑控件，独立手册显示 57 行台账，所有层级合计 19／57／228；主实机90、可选35计算一致。参数仍未冻结，这些检查不证明方法效果。
+
+实际修改／新增文件（相对本地论文仓库；website/ 为自动导出，不提交）
+README.md
+figures/AirSpark-Figures-v0.33.zip
+figures/FIGURE-NOTES-v0.33.txt
+figures/fig02-rsi-method-zh.png
+figures/fig02-rsi-method-zh.svg
+figures/fig02-rsi-method.png
+figures/fig02-rsi-method.svg
+figures/fig02-visual-physical-contract-zh.png
+figures/fig02-visual-physical-contract-zh.svg
+figures/fig02-visual-physical-contract.png
+figures/fig02-visual-physical-contract.svg
+figures/fig03-process-experience-zh.png
+figures/fig03-process-experience-zh.svg
+figures/fig03-process-experience.png
+figures/fig03-process-experience.svg
+figures/fig04-evaluation-protocol-zh.png
+figures/fig04-evaluation-protocol-zh.svg
+figures/fig04-evaluation-protocol.png
+figures/fig04-evaluation-protocol.svg
+figures/fig05-learning-feedback-zh.png
+figures/fig05-learning-feedback-zh.svg
+figures/fig05-learning-feedback.png
+figures/fig05-learning-feedback.svg
+main.tex
+protocol/closed-loop-config.template.json
+protocol/experiment-plan-v0.33.json
+protocol/experiment-results-blank-v0.33.csv
+protocol/learning-chain-ledger-v0.33.csv
+protocol/revision-v0.33.txt
+scripts/build-rsi-figure-v033.py
+scripts/build-study-figure-v033.py
+sections/00_abstract.tex
+sections/00_abstract.zh.html
+sections/01_introduction.tex
+sections/01_introduction.zh.html
+sections/02_related_work.tex
+sections/02_related_work.zh.html
+sections/03_method.tex
+sections/03_method.zh.html
+sections/04_experiments.tex
+sections/04_experiments.zh.html
+sections/05_discussion.tex
+sections/05_discussion.zh.html
+sections/06_conclusion.tex
+sections/06_conclusion.zh.html
+sections/08_appendix.tex
+sections/08_appendix.zh.html
+sync-map.json
+sync-state.json
+web-src/README.md
+web-src/experiment-plan-data.js
+web-src/experiment-tables.js
+web-src/index.template.html
+web-src/protocol-manual.js
+web-src/protocol.html
+web-src/style.css
+
+完整归档文件（仅修正归档后历史相对链接）
+web-src/versions/v0.32/.nojekyll
+web-src/versions/v0.32/README.md
+web-src/versions/v0.32/app.js
+web-src/versions/v0.32/chapters.js
+web-src/versions/v0.32/citations.js
+web-src/versions/v0.32/experiment-plan-data.js
+web-src/versions/v0.32/experiment-tables.js
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.16.1.zip
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.16.2.zip
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.16.zip
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.17.zip
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.18.zip
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.19.zip
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.20.zip
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.21.zip
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.22.zip
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.23.zip
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.30.zip
+web-src/versions/v0.32/figures/AirSpark-Figures-v0.32.zip
+web-src/versions/v0.32/figures/FIGURE-NOTES-v0.30.txt
+web-src/versions/v0.32/figures/FIGURE-NOTES-v0.32.txt
+web-src/versions/v0.32/figures/FIGURE-NOTES.txt
+web-src/versions/v0.32/figures/fig01-academy-overview-zh.png
+web-src/versions/v0.32/figures/fig01-academy-overview-zh.svg
+web-src/versions/v0.32/figures/fig01-academy-overview.png
+web-src/versions/v0.32/figures/fig01-academy-overview.svg
+web-src/versions/v0.32/figures/fig02-rsi-method-zh.png
+web-src/versions/v0.32/figures/fig02-rsi-method-zh.svg
+web-src/versions/v0.32/figures/fig02-rsi-method.png
+web-src/versions/v0.32/figures/fig02-rsi-method.svg
+web-src/versions/v0.32/figures/fig02-visual-physical-contract-zh.png
+web-src/versions/v0.32/figures/fig02-visual-physical-contract-zh.svg
+web-src/versions/v0.32/figures/fig02-visual-physical-contract.png
+web-src/versions/v0.32/figures/fig02-visual-physical-contract.svg
+web-src/versions/v0.32/figures/fig03-process-experience-zh.png
+web-src/versions/v0.32/figures/fig03-process-experience-zh.svg
+web-src/versions/v0.32/figures/fig03-process-experience.png
+web-src/versions/v0.32/figures/fig03-process-experience.svg
+web-src/versions/v0.32/figures/fig04-evaluation-protocol-zh.png
+web-src/versions/v0.32/figures/fig04-evaluation-protocol-zh.svg
+web-src/versions/v0.32/figures/fig04-evaluation-protocol.png
+web-src/versions/v0.32/figures/fig04-evaluation-protocol.svg
+web-src/versions/v0.32/figures/fig05-learning-feedback-zh.png
+web-src/versions/v0.32/figures/fig05-learning-feedback-zh.svg
+web-src/versions/v0.32/figures/fig05-learning-feedback.png
+web-src/versions/v0.32/figures/fig05-learning-feedback.svg
+web-src/versions/v0.32/index.html
+web-src/versions/v0.32/protocol/closed-loop-config.template.json
+web-src/versions/v0.32/protocol/experiment-plan-v0.31.json
+web-src/versions/v0.32/protocol/experiment-plan-v0.32.json
+web-src/versions/v0.32/protocol/experiment-results-blank-v0.31.csv
+web-src/versions/v0.32/protocol/experiment-results-blank-v0.32.csv
+web-src/versions/v0.32/protocol/learning-chain-ledger-draft-v0.31.csv
+web-src/versions/v0.32/protocol/learning-chain-ledger-draft-v0.32.csv
+web-src/versions/v0.32/references-data.js
+web-src/versions/v0.32/references.bib
+web-src/versions/v0.32/scripts/build-feedback-figure.py
+web-src/versions/v0.32/scripts/build-figures.py
+web-src/versions/v0.32/scripts/build-references.mjs
+web-src/versions/v0.32/scripts/build-rsi-figure-v022.py
+web-src/versions/v0.32/scripts/build-study-figure-v023.py
+web-src/versions/v0.32/scripts/build-study-figures-v021.py
+web-src/versions/v0.32/scripts/export-figures.cjs
+web-src/versions/v0.32/scripts/localize-figures.py
+web-src/versions/v0.32/style.css

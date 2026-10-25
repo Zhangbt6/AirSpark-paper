@@ -1,5 +1,5 @@
 window.AIRSPARK_STUDY_PLAN = {
-  "plan_version": "v0.33",
+  "plan_version": "v0.33.1",
   "status": "planning_protocol_not_frozen_or_measured",
   "date": "2026-10-25",
   "tasks": [
@@ -208,7 +208,7 @@ window.AIRSPARK_STUDY_PLAN = {
       "student": "DP",
       "task": "LemonHarvesting",
       "group": "B3+adapt-history",
-      "name": "AirSpark-基准场景",
+      "name": "AirSpark-常规仿真场景",
       "tier": 1,
       "line": "real_matched_embodiment",
       "parent_contract": "real_common_parent",
@@ -292,12 +292,20 @@ window.AIRSPARK_STUDY_PLAN = {
     "chains_per_group": 3,
     "episodes_per_updated_model": 10,
     "main_episodes": 90,
-    "heldout_optional": true,
-    "heldout_episodes_per_model": 5,
-    "heldout_total_episodes": 35,
     "same_fixed_real_replay": true,
     "real_replay_fraction": null,
-    "new_real_data_after_initialization": false
+    "new_real_data_after_initialization": false,
+    "real_scene": "self_built_lemon_harvesting_not_required_to_match_AMBench_layout",
+    "standard_simulation_scene_source": null,
+    "initial_demonstrations_status": "not_prepared",
+    "initial_sim_demonstration_source": null,
+    "initial_demo_composition": null,
+    "additional_unseen_layout_test": {
+      "status": "not_scheduled",
+      "episodes": null
+    },
+    "evaluation_scope": "deployment_in_self_built_scene_not_unseen_layout_generalization",
+    "data_isolation": "pre_registered_demonstration_development_test_episodes_and_starts_no_test_feedback"
   },
   "tiers": [
     {

@@ -1,0 +1,357 @@
+﻿表ID,表名,行ID,字段,值
+study-settings,S0 · 实验设置与先导冻结,task,设置项,原生环境 ID／版本
+study-settings,S0 · 实验设置与先导冻结,task,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,task,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,embodiment,设置项,机器人、控制器、相机与动作合同
+study-settings,S0 · 实验设置与先导冻结,embodiment,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,embodiment,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,student,设置项,学生后端／初始 checkpoint／训练来源
+study-settings,S0 · 实验设置与先导冻结,student,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,student,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,history,设置项,视觉历史、本体字段、动作块
+study-settings,S0 · 实验设置与先导冻结,history,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,history,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,expert,设置项,专家版本、适用状态及接管候选
+study-settings,S0 · 实验设置与先导冻结,expert,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,expert,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,stages,设置项,阶段定义、事件谓词与完整成功
+study-settings,S0 · 实验设置与先导冻结,stages,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,stages,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,split,设置项,C／V／T 清单与隔离规则
+study-settings,S0 · 实验设置与先导冻结,split,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,split,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,train,设置项,每候选步数／优化器／回放选项
+study-settings,S0 · 实验设置与先导冻结,train,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,train,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,data,设置项,合格数据下限／质检规则
+study-settings,S0 · 实验设置与先导冻结,data,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,data,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,budget,设置项,工时、算力、Agent 与复验上限
+study-settings,S0 · 实验设置与先导冻结,budget,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,budget,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,accept,设置项,收益门槛 δJ／保留容差 ε／样本量
+study-settings,S0 · 实验设置与先导冻结,accept,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,accept,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,statistics,设置项,独立链 S／轮次 R／区间与精度方案
+study-settings,S0 · 实验设置与先导冻结,statistics,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,statistics,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,alignment,设置项,原生回测与实机兼容核验
+study-settings,S0 · 实验设置与先导冻结,alignment,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,alignment,第二任务：Cabinet 候选,
+study-settings,S0 · 实验设置与先导冻结,freeze,设置项,负责人／冻结日期／配置哈希
+study-settings,S0 · 实验设置与先导冻结,freeze,柠檬任务,
+study-settings,S0 · 实验设置与先导冻结,freeze,第二任务：Cabinet 候选,
+result-facility,R1 · 学院设施与监督可靠性,sync,指标,观测—动作时间偏差 P95
+result-facility,R1 · 学院设施与监督可靠性,sync,单位与分母,ms；有效同步样本数需记录
+result-facility,R1 · 学院设施与监督可靠性,sync,柠檬结果,
+result-facility,R1 · 学院设施与监督可靠性,sync,第二任务结果,
+result-facility,R1 · 学院设施与监督可靠性,tracking,指标,命令跟踪位置误差 P95
+result-facility,R1 · 学院设施与监督可靠性,tracking,单位与分母,m；登记配对控制记录
+result-facility,R1 · 学院设施与监督可靠性,tracking,柠檬结果,
+result-facility,R1 · 学院设施与监督可靠性,tracking,第二任务结果,
+result-facility,R1 · 学院设施与监督可靠性,reset,指标,复位偏差 P95／成功率
+result-facility,R1 · 学院设施与监督可靠性,reset,单位与分母,m；成功复位／全部复位
+result-facility,R1 · 学院设施与监督可靠性,reset,柠檬结果,
+result-facility,R1 · 学院设施与监督可靠性,reset,第二任务结果,
+result-facility,R1 · 学院设施与监督可靠性,hit,指标,条件命中率
+result-facility,R1 · 学院设施与监督可靠性,hit,单位与分母,命中／全部前缀尝试
+result-facility,R1 · 学院设施与监督可靠性,hit,柠檬结果,
+result-facility,R1 · 学院设施与监督可靠性,hit,第二任务结果,
+result-facility,R1 · 学院设施与监督可靠性,quality,指标,合格专家监督产出
+result-facility,R1 · 学院设施与监督可靠性,quality,单位与分母,合格延续／全部采集尝试
+result-facility,R1 · 学院设施与监督可靠性,quality,柠檬结果,
+result-facility,R1 · 学院设施与监督可靠性,quality,第二任务结果,
+result-facility,R1 · 学院设施与监督可靠性,label,指标,时间／标签一致性通过率
+result-facility,R1 · 学院设施与监督可靠性,label,单位与分母,通过／全部质检项，附抽检清单
+result-facility,R1 · 学院设施与监督可靠性,label,柠檬结果,
+result-facility,R1 · 学院设施与监督可靠性,label,第二任务结果,
+result-facility,R1 · 学院设施与监督可靠性,cost,指标,每份合格监督实际成本
+result-facility,R1 · 学院设施与监督可靠性,cost,单位与分母,worker-min／合格延续；算力另列
+result-facility,R1 · 学院设施与监督可靠性,cost,柠檬结果,
+result-facility,R1 · 学院设施与监督可靠性,cost,第二任务结果,
+result-facility,R1 · 学院设施与监督可靠性,recovery,指标,恢复与版本检查
+result-facility,R1 · 学院设施与监督可靠性,recovery,单位与分母,通过项／预登记检查项；重复计费次数
+result-facility,R1 · 学院设施与监督可靠性,recovery,柠檬结果,
+result-facility,R1 · 学院设施与监督可靠性,recovery,第二任务结果,
+result-facility,R1 · 学院设施与监督可靠性,human,指标,人工干预与平台异常
+result-facility,R1 · 学院设施与监督可靠性,human,单位与分母,介入次数／全部尝试；故障另标
+result-facility,R1 · 学院设施与监督可靠性,human,柠檬结果,
+result-facility,R1 · 学院设施与监督可靠性,human,第二任务结果,
+result-source,R2 · 相同流程的数据来源对照,native-b1,来源／流程,原生 AM-Bench · 固定 B1
+result-source,R2 · 相同流程的数据来源对照,native-b1,实际采集工时,
+result-source,R2 · 相同流程的数据来源对照,native-b1,合格数／尝试数,
+result-source,R2 · 相同流程的数据来源对照,native-b1,候选训练 GPU·h,
+result-source,R2 · 相同流程的数据来源对照,native-b1,原生 T 成功率与区间,
+result-source,R2 · 相同流程的数据来源对照,native-b1,相对 B0 变化 pp,
+result-source,R2 · 相同流程的数据来源对照,academy-b1,来源／流程,AirSpark · 固定 B1（复用）
+result-source,R2 · 相同流程的数据来源对照,academy-b1,实际采集工时,
+result-source,R2 · 相同流程的数据来源对照,academy-b1,合格数／尝试数,
+result-source,R2 · 相同流程的数据来源对照,academy-b1,候选训练 GPU·h,
+result-source,R2 · 相同流程的数据来源对照,academy-b1,原生 T 成功率与区间,
+result-source,R2 · 相同流程的数据来源对照,academy-b1,相对 B0 变化 pp,
+result-main,R3 · 主实验：最终完整任务表现,lemon-b0,任务,柠檬
+result-main,R3 · 主实验：最终完整任务表现,lemon-b0,方法,B0 · 初始冻结
+result-main,R3 · 主实验：最终完整任务表现,lemon-b0,学院 T 成功率与区间,
+result-main,R3 · 主实验：最终完整任务表现,lemon-b0,相对 B0 变化 pp,
+result-main,R3 · 主实验：最终完整任务表现,lemon-b0,相对 B1 差值 pp／区间,
+result-main,R3 · 主实验：最终完整任务表现,lemon-b0,采集 worker·h,
+result-main,R3 · 主实验：最终完整任务表现,lemon-b0,训练 GPU·h,
+result-main,R3 · 主实验：最终完整任务表现,lemon-b1,任务,柠檬
+result-main,R3 · 主实验：最终完整任务表现,lemon-b1,方法,B1 · 固定流程
+result-main,R3 · 主实验：最终完整任务表现,lemon-b1,学院 T 成功率与区间,
+result-main,R3 · 主实验：最终完整任务表现,lemon-b1,相对 B0 变化 pp,
+result-main,R3 · 主实验：最终完整任务表现,lemon-b1,相对 B1 差值 pp／区间,
+result-main,R3 · 主实验：最终完整任务表现,lemon-b1,采集 worker·h,
+result-main,R3 · 主实验：最终完整任务表现,lemon-b1,训练 GPU·h,
+result-main,R3 · 主实验：最终完整任务表现,lemon-full,任务,柠檬
+result-main,R3 · 主实验：最终完整任务表现,lemon-full,方法,AirSpark · 完整闭环
+result-main,R3 · 主实验：最终完整任务表现,lemon-full,学院 T 成功率与区间,
+result-main,R3 · 主实验：最终完整任务表现,lemon-full,相对 B0 变化 pp,
+result-main,R3 · 主实验：最终完整任务表现,lemon-full,相对 B1 差值 pp／区间,
+result-main,R3 · 主实验：最终完整任务表现,lemon-full,采集 worker·h,
+result-main,R3 · 主实验：最终完整任务表现,lemon-full,训练 GPU·h,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b0,任务,第二任务
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b0,方法,B0 · 初始冻结
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b0,学院 T 成功率与区间,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b0,相对 B0 变化 pp,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b0,相对 B1 差值 pp／区间,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b0,采集 worker·h,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b0,训练 GPU·h,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b1,任务,第二任务
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b1,方法,B1 · 固定流程
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b1,学院 T 成功率与区间,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b1,相对 B0 变化 pp,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b1,相对 B1 差值 pp／区间,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b1,采集 worker·h,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-b1,训练 GPU·h,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-full,任务,第二任务
+result-main,R3 · 主实验：最终完整任务表现,cabinet-full,方法,AirSpark · 完整闭环
+result-main,R3 · 主实验：最终完整任务表现,cabinet-full,学院 T 成功率与区间,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-full,相对 B0 变化 pp,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-full,相对 B1 差值 pp／区间,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-full,采集 worker·h,
+result-main,R3 · 主实验：最终完整任务表现,cabinet-full,训练 GPU·h,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r1,干预,第 1 次
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r1,执行证据／父代 ID,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r1,计划与经验来源,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r1,合格数／尝试,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r1,V 收益 pp／不确定性,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r1,接纳状态／新学生 ID,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r1,资源／记忆修订 ID,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r2,干预,第 2 次
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r2,执行证据／父代 ID,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r2,计划与经验来源,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r2,合格数／尝试,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r2,V 收益 pp／不确定性,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r2,接纳状态／新学生 ID,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r2,资源／记忆修订 ID,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r3,干预,第 3 次
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r3,执行证据／父代 ID,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r3,计划与经验来源,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r3,合格数／尝试,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r3,V 收益 pp／不确定性,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r3,接纳状态／新学生 ID,
+result-rounds,R8 · 单条学习链的干预记录（示例填写区）,r3,资源／记忆修订 ID,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b0,任务,柠檬
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b0,模型来源,B0 · 初始冻结
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b0,原生 T 成功数／回合数,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b0,成功率与区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b0,相对 B0 变化 pp,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b0,checkpoint／合同核验,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b0,相对 B1 差值 pp／区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b1,任务,柠檬
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b1,模型来源,B1 · 固定流程
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b1,原生 T 成功数／回合数,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b1,成功率与区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b1,相对 B0 变化 pp,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b1,checkpoint／合同核验,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-b1,相对 B1 差值 pp／区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-full,任务,柠檬
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-full,模型来源,AirSpark · 完整闭环
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-full,原生 T 成功数／回合数,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-full,成功率与区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-full,相对 B0 变化 pp,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-full,checkpoint／合同核验,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-full,相对 B1 差值 pp／区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b0,任务,第二任务
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b0,模型来源,B0 · 初始冻结
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b0,原生 T 成功数／回合数,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b0,成功率与区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b0,相对 B0 变化 pp,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b0,checkpoint／合同核验,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b0,相对 B1 差值 pp／区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b1,任务,第二任务
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b1,模型来源,B1 · 固定流程
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b1,原生 T 成功数／回合数,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b1,成功率与区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b1,相对 B0 变化 pp,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b1,checkpoint／合同核验,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-b1,相对 B1 差值 pp／区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-full,任务,第二任务
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-full,模型来源,AirSpark · 完整闭环
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-full,原生 T 成功数／回合数,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-full,成功率与区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-full,相对 B0 变化 pp,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-full,checkpoint／合同核验,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,cabinet-full,相对 B1 差值 pp／区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-native-source,任务,柠檬
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-native-source,模型来源,原生来源固定 B1（来源对照）
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-native-source,原生 T 成功数／回合数,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-native-source,成功率与区间,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-native-source,相对 B0 变化 pp,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-native-source,checkpoint／合同核验,
+result-native,R4 · 冻结学生的原生 AM-Bench 回测,lemon-native-source,相对 B1 差值 pp／区间,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b0,条件集,重建对应真实场景
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b0,方法,B0 · 初始冻结
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b0,成功数／实际回合,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b0,成功率与区间,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b0,任务时间 s,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b0,接管／安全终止,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b0,模型／场景版本,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b1,条件集,重建对应真实场景
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b1,方法,B1 · 固定流程
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b1,成功数／实际回合,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b1,成功率与区间,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b1,任务时间 s,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b1,接管／安全终止,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-b1,模型／场景版本,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-full,条件集,重建对应真实场景
+result-real,R5 · 对应物理实机的冻结策略评价,matched-full,方法,AirSpark · 完整闭环
+result-real,R5 · 对应物理实机的冻结策略评价,matched-full,成功数／实际回合,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-full,成功率与区间,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-full,任务时间 s,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-full,接管／安全终止,
+result-real,R5 · 对应物理实机的冻结策略评价,matched-full,模型／场景版本,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b0,条件集,预留物体／布局
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b0,方法,B0 · 初始冻结
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b0,成功数／实际回合,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b0,成功率与区间,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b0,任务时间 s,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b0,接管／安全终止,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b0,模型／场景版本,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b1,条件集,预留物体／布局
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b1,方法,B1 · 固定流程
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b1,成功数／实际回合,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b1,成功率与区间,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b1,任务时间 s,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b1,接管／安全终止,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-b1,模型／场景版本,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-full,条件集,预留物体／布局
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-full,方法,AirSpark · 完整闭环
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-full,成功数／实际回合,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-full,成功率与区间,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-full,任务时间 s,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-full,接管／安全终止,
+result-real,R5 · 对应物理实机的冻结策略评价,heldout-full,模型／场景版本,
+result-mechanism,R6 · 代表任务的机制归因,b1,方法,B1 · 固定覆盖流程
+result-mechanism,R6 · 代表任务的机制归因,b1,练习配置,固定
+result-mechanism,R6 · 代表任务的机制归因,b1,决策信息,无计划修订
+result-mechanism,R6 · 代表任务的机制归因,b1,学院 T 成功率与区间,
+result-mechanism,R6 · 代表任务的机制归因,b1,相对完整方法差值 pp,
+result-mechanism,R6 · 代表任务的机制归因,b1,实际总资源,
+result-mechanism,R6 · 代表任务的机制归因,b3,方法,B3 · 固定过程方案
+result-mechanism,R6 · 代表任务的机制归因,b3,练习配置,固定；条件分配随 E
+result-mechanism,R6 · 代表任务的机制归因,b3,决策信息,无方案修订
+result-mechanism,R6 · 代表任务的机制归因,b3,学院 T 成功率与区间,
+result-mechanism,R6 · 代表任务的机制归因,b3,相对完整方法差值 pp,
+result-mechanism,R6 · 代表任务的机制归因,b3,实际总资源,
+result-mechanism,R6 · 代表任务的机制归因,rule,方法,规则式修订
+result-mechanism,R6 · 代表任务的机制归因,rule,练习配置,规则选合法配置
+result-mechanism,R6 · 代表任务的机制归因,rule,决策信息,完整同类历史
+result-mechanism,R6 · 代表任务的机制归因,rule,学院 T 成功率与区间,
+result-mechanism,R6 · 代表任务的机制归因,rule,相对完整方法差值 pp,
+result-mechanism,R6 · 代表任务的机制归因,rule,实际总资源,
+result-mechanism,R6 · 代表任务的机制归因,current,方法,当前反馈 Agent
+result-mechanism,R6 · 代表任务的机制归因,current,练习配置,Agent 选合法配置
+result-mechanism,R6 · 代表任务的机制归因,current,决策信息,E＋最近 F＋当前状态
+result-mechanism,R6 · 代表任务的机制归因,current,学院 T 成功率与区间,
+result-mechanism,R6 · 代表任务的机制归因,current,相对完整方法差值 pp,
+result-mechanism,R6 · 代表任务的机制归因,current,实际总资源,
+result-mechanism,R6 · 代表任务的机制归因,full,方法,完整 AirSpark（复用）
+result-mechanism,R6 · 代表任务的机制归因,full,练习配置,Agent 选合法配置
+result-mechanism,R6 · 代表任务的机制归因,full,决策信息,历史记录＋可修订经验
+result-mechanism,R6 · 代表任务的机制归因,full,学院 T 成功率与区间,
+result-mechanism,R6 · 代表任务的机制归因,full,相对完整方法差值 pp,
+result-mechanism,R6 · 代表任务的机制归因,full,实际总资源,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage1,方法,固定 B1
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage1,阶段（以任务合同为准）,接近／到达目标区
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage1,到达数／全部回合,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage1,到达后失败数／到达数,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage1,主要现象／日志 ID,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage2,方法,固定 B1
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage2,阶段（以任务合同为准）,任务交互
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage2,到达数／全部回合,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage2,到达后失败数／到达数,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage2,主要现象／日志 ID,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage3,方法,固定 B1
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage3,阶段（以任务合同为准）,后续推进
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage3,到达数／全部回合,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage3,到达后失败数／到达数,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage3,主要现象／日志 ID,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage4,方法,固定 B1
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage4,阶段（以任务合同为准）,完整终态
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage4,到达数／全部回合,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage4,到达后失败数／到达数,
+result-diagnosis,R7 · 阶段证据与失败分布,b1-stage4,主要现象／日志 ID,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage1,方法,完整 AirSpark
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage1,阶段（以任务合同为准）,接近／到达目标区
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage1,到达数／全部回合,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage1,到达后失败数／到达数,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage1,主要现象／日志 ID,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage2,方法,完整 AirSpark
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage2,阶段（以任务合同为准）,任务交互
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage2,到达数／全部回合,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage2,到达后失败数／到达数,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage2,主要现象／日志 ID,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage3,方法,完整 AirSpark
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage3,阶段（以任务合同为准）,后续推进
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage3,到达数／全部回合,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage3,到达后失败数／到达数,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage3,主要现象／日志 ID,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage4,方法,完整 AirSpark
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage4,阶段（以任务合同为准）,完整终态
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage4,到达数／全部回合,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage4,到达后失败数／到达数,
+result-diagnosis,R7 · 阶段证据与失败分布,full-stage4,主要现象／日志 ID,
+study-progress,R9 · 实验执行分工与完成清单,P0,执行包,P0 先导
+study-progress,R9 · 实验执行分工与完成清单,P0,负责人,
+study-progress,R9 · 实验执行分工与完成清单,P0,运行设备／分支,
+study-progress,R9 · 实验执行分工与完成清单,P0,前置条件,学生与专家可用
+study-progress,R9 · 实验执行分工与完成清单,P0,状态／计划日期,
+study-progress,R9 · 实验执行分工与完成清单,P0,产物路径／验收记录,
+study-progress,R9 · 实验执行分工与完成清单,E1a,执行包,E1a 设施
+study-progress,R9 · 实验执行分工与完成清单,E1a,负责人,
+study-progress,R9 · 实验执行分工与完成清单,E1a,运行设备／分支,
+study-progress,R9 · 实验执行分工与完成清单,E1a,前置条件,固定合同与配对检查清单
+study-progress,R9 · 实验执行分工与完成清单,E1a,状态／计划日期,
+study-progress,R9 · 实验执行分工与完成清单,E1a,产物路径／验收记录,
+study-progress,R9 · 实验执行分工与完成清单,E1b,执行包,E1b 来源
+study-progress,R9 · 实验执行分工与完成清单,E1b,负责人,
+study-progress,R9 · 实验执行分工与完成清单,E1b,运行设备／分支,
+study-progress,R9 · 实验执行分工与完成清单,E1b,前置条件,原生／学院任务对应已核验
+study-progress,R9 · 实验执行分工与完成清单,E1b,状态／计划日期,
+study-progress,R9 · 实验执行分工与完成清单,E1b,产物路径／验收记录,
+study-progress,R9 · 实验执行分工与完成清单,E2,执行包,E2 主实验
+study-progress,R9 · 实验执行分工与完成清单,E2,负责人,
+study-progress,R9 · 实验执行分工与完成清单,E2,运行设备／分支,
+study-progress,R9 · 实验执行分工与完成清单,E2,前置条件,P0 后冻结设置、种子与资源
+study-progress,R9 · 实验执行分工与完成清单,E2,状态／计划日期,
+study-progress,R9 · 实验执行分工与完成清单,E2,产物路径／验收记录,
+study-progress,R9 · 实验执行分工与完成清单,E2a,执行包,E2a 归因
+study-progress,R9 · 实验执行分工与完成清单,E2a,负责人,
+study-progress,R9 · 实验执行分工与完成清单,E2a,运行设备／分支,
+study-progress,R9 · 实验执行分工与完成清单,E2a,前置条件,同工具、选项、记忆权限
+study-progress,R9 · 实验执行分工与完成清单,E2a,状态／计划日期,
+study-progress,R9 · 实验执行分工与完成清单,E2a,产物路径／验收记录,
+study-progress,R9 · 实验执行分工与完成清单,E3a,执行包,E3a 原生回测
+study-progress,R9 · 实验执行分工与完成清单,E3a,负责人,
+study-progress,R9 · 实验执行分工与完成清单,E3a,运行设备／分支,
+study-progress,R9 · 实验执行分工与完成清单,E3a,前置条件,学习链结束并冻结模型／测试
+study-progress,R9 · 实验执行分工与完成清单,E3a,状态／计划日期,
+study-progress,R9 · 实验执行分工与完成清单,E3a,产物路径／验收记录,
+study-progress,R9 · 实验执行分工与完成清单,E3b,执行包,E3b 实机
+study-progress,R9 · 实验执行分工与完成清单,E3b,负责人,
+study-progress,R9 · 实验执行分工与完成清单,E3b,运行设备／分支,
+study-progress,R9 · 实验执行分工与完成清单,E3b,前置条件,场景、通信、动作与本体对应验收
+study-progress,R9 · 实验执行分工与完成清单,E3b,状态／计划日期,
+study-progress,R9 · 实验执行分工与完成清单,E3b,产物路径／验收记录,

@@ -26,7 +26,7 @@
 <text x="60" y="551" font-size="23" font-weight="400">Real + simulated initial demos</text>
 <rect x="520" y="400" width="400" height="205" rx="8" fill="#eaf6f2" stroke="#becddd"/>
 <text x="540" y="440" font-size="26" font-weight="700">Two full-loop scene sources</text>
-<text x="540" y="483" font-size="23" font-weight="400">Benchmark / reconstructed scene</text>
+<text x="540" y="483" font-size="23" font-weight="400">Standard / reconstructed scene</text>
 <text x="540" y="517" font-size="23" font-weight="400">Same parent, budget, real replay</text>
 <text x="540" y="551" font-size="23" font-weight="400">3 chains per updated group</text>
 <rect x="1000" y="400" width="400" height="205" rx="8" fill="#f1f5fb" stroke="#becddd"/>
