@@ -1,4 +1,4 @@
-// Verified source metadata. Run node scripts/build-references.mjs after edits.
+// Shared publication metadata; see docs/05_reference-audit-v0.34.txt for evidence scope.
 const paperReferences = {
   "aerial-survey": {
     "title": "Past, Present, and Future of Aerial Robotic Manipulators",
@@ -167,11 +167,15 @@ const paperReferences = {
     "title": "ENPIRE: Agentic Robot Policy Self-Improvement in the Real World",
     "type": "预印本",
     "url": "https://arxiv.org/abs/2606.19980v2",
-    "note": "研究 harness 与真实机器人改进。作者实验室页面及 arXiv 备注 CoRL 2026；本轮未取得正式会录条目，保留 arXiv v2，不补造卷页。 v2 第 3.2、3.4 节涉及训练方法修订与研究经验复用。",
+    "note": "按 v2 §3.2、§3.4 核对：工具化真实机器人实验、梯度策略改进、训练方案修订及经验迁移；不能说其仅改执行代码或没有记忆。作者及 arXiv 标 CoRL 2026，未取得正式会录，保留 arXiv v2。",
     "links": [
       [
-        "项目与评测说明",
-        "https://enpire-research.github.io/"
+        "作者项目",
+        "https://research.nvidia.com/labs/gear/enpire/"
+      ],
+      [
+        "方法全文",
+        "https://arxiv.org/html/2606.19980v2"
       ],
       [
         "作者实验室发表记录",
@@ -325,8 +329,8 @@ const paperReferences = {
     "title": "Guiding Data Collection via Factored Scaling Curves",
     "type": "预印本",
     "url": "https://arxiv.org/abs/2505.07728v1",
-    "note": "因素化数据收益指导采集；保留为扩展阅读。本轮未取得主会正式条目，不将 workshop 展示等同主会发表。",
-    "verified": "2026-10-18",
+    "note": "因子化缩放曲线估计不同环境因素上的数据—性能关系，用于定向采集；正文仅引用此机制。未取得正式主会条目，保持 arXiv v1；workshop 展示不等同主会录用。AirSpark 未实现或声称使用 FSC 分配器。",
+    "verified": "2026-10-25",
     "authors": [
       "Zha, Lihan",
       "Badithela, Apurva",
@@ -740,7 +744,7 @@ const paperReferences = {
     "sortKey": "Collins, Jack | McVicar, Jessie | Wedlock, David | Brown, Ross | Howard, David | Leitner, Jurgen | 2020 | sim-benchmark"
   },
   "sirius": {
-    "title": "Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment",
+    "title": "Robot learning on the job: Human-in-the-loop autonomy and learning during deployment",
     "authors": [
       "Liu, Huihan",
       "Nasiriany, Soroush",
@@ -748,15 +752,24 @@ const paperReferences = {
       "Bao, Zhiyao",
       "Zhu, Yuke"
     ],
-    "year": "2023",
-    "venue": "Robotics: Science and Systems XIX",
-    "url": "https://www.roboticsproceedings.org/rss19/p005.html",
-    "note": "Sirius：部署、人工介入、样本加权与策略更新；正式 RSS 会录。",
-    "entryType": "inproceedings",
-    "type": "会议论文",
-    "verified": "2026-10-18",
-    "doi": "10.15607/RSS.2023.XIX.005",
-    "sortKey": "Liu, Huihan | Nasiriany, Soroush | Zhang, Lance | Bao, Zhiyao | Zhu, Yuke | 2023 | sirius"
+    "year": "2025",
+    "venue": "The International Journal of Robotics Research",
+    "url": "https://doi.org/10.1177/02783649241273901",
+    "note": "Sirius：部署中的人工接管、训练样本加权与策略更新。使用 IJRR 2025 卷期版；2024 在线与 RSS 2023 原版分别登记，不重复计为两项独立方法。",
+    "entryType": "article",
+    "type": "期刊论文",
+    "verified": "2026-10-25",
+    "links": [
+      [
+        "RSS 2023 原版",
+        "https://www.roboticsproceedings.org/rss19/p005.html"
+      ]
+    ],
+    "doi": "10.1177/02783649241273901",
+    "pages": "1727--1742",
+    "volume": "44",
+    "number": "10-11",
+    "sortKey": "Liu, Huihan | Nasiriany, Soroush | Zhang, Lance | Bao, Zhiyao | Zhu, Yuke | 2025 | sirius"
   },
   "thrifty": {
     "title": "ThriftyDAgger: Budget-Aware Novelty and Risk Gating for Interactive Imitation Learning",
@@ -916,7 +929,7 @@ const paperReferences = {
     "version": "v1",
     "url": "https://arxiv.org/abs/2610.02204v1",
     "verified": "2026-10-19",
-    "note": "RPG：数据集引导的仿真练习、跨任务技能库与系统提示修订、冻结后的真实部署；模型权重不更新。2026-10-01 公开 v1，本轮未核得正式会录；官方项目页仍标注 Code coming soon。",
+    "note": "按 v1 摘要及 §III 核对：从数据集构造仿真练习，依据执行诊断修订共享技能库和系统提示，验证后保留；模型权重保持固定。未核得正式会录，保留预印本；不缩写成只改一次任务程序。",
     "links": [
       [
         "论文全文",
@@ -1078,7 +1091,7 @@ const paperReferences = {
     "entryType": "misc",
     "type": "综述预印本",
     "eprint": "2610.20442",
-    "version": "1",
+    "version": "v1",
     "url": "https://arxiv.org/abs/2610.20442v1",
     "links": [
       [
@@ -1089,5 +1102,437 @@ const paperReferences = {
     "note": "2026-10-14 公开的综述 v1；本轮核查未列正式会议或期刊发表信息。按模型、数据、环境和 Harness 四个功能域组织 Agentic Robotics，兼顾任务执行与能力发展。用于系统背景与功能边界，不作为 AirSpark 方法原创性、学习增益或收敛的证明。",
     "verified": "2026-10-23",
     "sortKey": "Qin, Chonghan | Wu, Dongming | Feng, Kaituo | Wang, Jiaxu | Yu, Xinlei | Sun, Peiwen | Fan, Yijia | He, Xilin | Chen, Bingao | Lian, Weitong | Ji, Ryan | Ren, Wenqi | Hu, Xiaobin | Lin, Dahua | Jiang, Yu-Gang | Yue, Xiangyu | 2026 | agentic-robots-survey"
+  },
+  "flying-hand": {
+    "title": "Flying Hand: End-Effector-Centric Framework for Versatile Aerial Manipulation Teleoperation and Policy Learning",
+    "authors": [
+      "He, Guanqi",
+      "Guo, Xiaofeng",
+      "Tang, Luyi",
+      "Zhang, Yuanhang",
+      "Mousaei, Mohammadreza",
+      "Xu, Jiahe",
+      "Geng, Junyi",
+      "Scherer, Sebastian",
+      "Shi, Guanya"
+    ],
+    "year": "2025",
+    "venue": "Robotics: Science and Systems XXI",
+    "url": "https://www.roboticsproceedings.org/rss21/p130.html",
+    "note": "正式 RSS 2025 会录与摘要核查。末端中心接口连接全身 MPC、遥操作与模仿学习；不把高层接口或空中策略学习视为 AirSpark 首创。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [],
+    "doi": "10.15607/RSS.2025.XXI.130",
+    "sortKey": "He, Guanqi | Guo, Xiaofeng | Tang, Luyi | Zhang, Yuanhang | Mousaei, Mohammadreza | Xu, Jiahe | Geng, Junyi | Scherer, Sebastian | Shi, Guanya | 2025 | flying-hand"
+  },
+  "umi-on-air": {
+    "title": "UMI-on-Air: Embodiment-Aware Guidance for Embodiment-Agnostic Visuomotor Policies",
+    "authors": [
+      "Gupta, Harsh",
+      "Guo, Xiaofeng",
+      "Ha, Huy",
+      "Pan, Chuer",
+      "Cao, Muqing",
+      "Lee, Dongjae",
+      "Scherer, Sebastian",
+      "Song, Shuran",
+      "Shi, Guanya"
+    ],
+    "year": "2026",
+    "venue": "2026 IEEE International Conference on Robotics and Automation (ICRA)",
+    "url": "https://arxiv.org/abs/2510.02614v3",
+    "note": "ICRA 2026 官方日程、论文 v3 摘要及 §III-C/§IV-B 核查。控制器跟踪代价梯度在推理时引导扩散采样；含真实柠檬采摘。不是多轮参数训练或学院闭环；不据同名任务声称协议相同。未核得 DOI 与页码，不填。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [
+      [
+        "官方会议程序",
+        "https://ras.papercept.net/conferences/conferences/ICRA26/program/ICRA26_ContentListWeb_4.html"
+      ],
+      [
+        "方法与任务全文",
+        "https://arxiv.org/html/2510.02614v3"
+      ],
+      [
+        "项目",
+        "https://umi-on-air.github.io/"
+      ]
+    ],
+    "sortKey": "Gupta, Harsh | Guo, Xiaofeng | Ha, Huy | Pan, Chuer | Cao, Muqing | Lee, Dongjae | Scherer, Sebastian | Song, Shuran | Shi, Guanya | 2026 | umi-on-air"
+  },
+  "pld": {
+    "title": "Self-Improving Vision-Language-Action Models with Data Generation via Residual RL",
+    "authors": [
+      "Xiao, Wenli",
+      "Lin, Haotian",
+      "Peng, Andy",
+      "Xue, Haoru",
+      "He, Tairan",
+      "Xie, Yuqi",
+      "Hu, Fengyuan",
+      "Wu, Jimmy",
+      "Luo, Zhengyi",
+      "Fan, Linxi",
+      "Shi, Guanya",
+      "Zhu, Yuke"
+    ],
+    "year": "2026",
+    "venue": "International Conference on Learning Representations",
+    "url": "https://openreview.net/forum?id=eUGoqrZ6Ea",
+    "note": "ICLR 2026 官方目录及作者方法页核查。训练残差专家，混合 rollout 采集学生分布相关的纠正经验，再以 SFT 更新 VLA；与本文参数学习直接相关。未据摘要复核其全部实验与数值。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [
+      [
+        "ICLR 2026 官方目录",
+        "https://iclr.cc/Downloads/2026"
+      ],
+      [
+        "方法说明",
+        "https://wenlixiao.com/self-improve-VLA-PLD"
+      ],
+      [
+        "预印本",
+        "https://arxiv.org/abs/2511.00091"
+      ]
+    ],
+    "sortKey": "Xiao, Wenli | Lin, Haotian | Peng, Andy | Xue, Haoru | He, Tairan | Xie, Yuqi | Hu, Fengyuan | Wu, Jimmy | Luo, Zhengyi | Fan, Linxi | Shi, Guanya | Zhu, Yuke | 2026 | pld"
+  },
+  "robocat": {
+    "title": "RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation",
+    "authors": [
+      "Bousmalis, Konstantinos",
+      "Vezzani, Giulia",
+      "Rao, Dushyant",
+      "Devin, Coline",
+      "Lee, Alex X.",
+      "Bauza, Maria",
+      "Davchev, Todor",
+      "Zhou, Yuxiang",
+      "Gupta, Agrim",
+      "Raju, Akhil",
+      "Laurens, Antoine",
+      "Fantacci, Claudio",
+      "Dalibard, Valentin",
+      "Zambelli, Martina",
+      "Martins, Murilo F.",
+      "Pevceviciute, Rugile",
+      "Blokzijl, Michiel",
+      "Denil, Misha",
+      "Batchelor, Nathan",
+      "Lampe, Thomas",
+      "Parisotto, Emilio",
+      "Zolna, Konrad",
+      "Reed, Scott",
+      "Colmenarejo, Sergio Gomez",
+      "Scholz, Jon",
+      "Abdolmaleki, Abbas",
+      "Groth, Oliver",
+      "Regli, Jean-Baptiste",
+      "Sushkov, Oleg",
+      "Rothorl, Tom",
+      "Chen, Jose Enrique",
+      "Aytar, Yusuf",
+      "Barker, Dave",
+      "Ortiz, Joy",
+      "Riedmiller, Martin",
+      "Springenberg, Jost Tobias",
+      "Hadsell, Raia",
+      "Nori, Francesco",
+      "Heess, Nicolas"
+    ],
+    "year": "2023",
+    "venue": "Transactions on Machine Learning Research",
+    "url": "https://openreview.net/forum?id=vsCpILiWHu",
+    "note": "正式 PDF 页首标注 Published in TMLR (12/2023)，采用正式 Generalist 标题，不沿用早期 Foundation 标题；作者机构页亦登记 TMLR。模型生成数据进入后续训练是自改进先例，不等于无限轮次提升。",
+    "entryType": "article",
+    "type": "期刊论文",
+    "verified": "2026-10-25",
+    "links": [
+      [
+        "正式 PDF",
+        "https://openreview.net/pdf?id=vsCpILiWHu"
+      ],
+      [
+        "作者机构发表页",
+        "https://deepmind.google/research/publications/35829/"
+      ]
+    ],
+    "sortKey": "Bousmalis, Konstantinos | Vezzani, Giulia | Rao, Dushyant | Devin, Coline | Lee, Alex X. | Bauza, Maria | Davchev, Todor | Zhou, Yuxiang | Gupta, Agrim | Raju, Akhil | Laurens, Antoine | Fantacci, Claudio | Dalibard, Valentin | Zambelli, Martina | Martins, Murilo F. | Pevceviciute, Rugile | Blokzijl, Michiel | Denil, Misha | Batchelor, Nathan | Lampe, Thomas | Parisotto, Emilio | Zolna, Konrad | Reed, Scott | Colmenarejo, Sergio Gomez | Scholz, Jon | Abdolmaleki, Abbas | Groth, Oliver | Regli, Jean-Baptiste | Sushkov, Oleg | Rothorl, Tom | Chen, Jose Enrique | Aytar, Yusuf | Barker, Dave | Ortiz, Joy | Riedmiller, Martin | Springenberg, Jost Tobias | Hadsell, Raia | Nori, Francesco | Heess, Nicolas | 2023 | robocat"
+  },
+  "soar": {
+    "title": "Autonomous Improvement of Instruction Following Skills via Foundation Models",
+    "authors": [
+      "Zhou, Zhiyuan",
+      "Atreya, Pranav",
+      "Lee, Abraham",
+      "Walke, Homer Rich",
+      "Mees, Oier",
+      "Levine, Sergey"
+    ],
+    "year": "2025",
+    "venue": "Conference on Robot Learning",
+    "url": "https://proceedings.mlr.press/v270/zhou25b.html",
+    "note": "正式 CoRL 2024 会录，PMLR 于 2025 出版。以 VLM 引导自主经验采集与评价，并学习改进指令执行；不是仅推理时反思。正文依据会录摘要，不引用未复核数值。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [],
+    "volume": "270",
+    "pages": "4805--4825",
+    "series": "Proceedings of Machine Learning Research",
+    "sortKey": "Zhou, Zhiyuan | Atreya, Pranav | Lee, Abraham | Walke, Homer Rich | Mees, Oier | Levine, Sergey | 2025 | soar"
+  },
+  "robogen": {
+    "title": "RoboGen: Towards Unleashing Infinite Data for Automated Robot Learning via Generative Simulation",
+    "authors": [
+      "Wang, Yufei",
+      "Xian, Zhou",
+      "Chen, Feng",
+      "Wang, Tsun-Hsuan",
+      "Wang, Yian",
+      "Fragkiadaki, Katerina",
+      "Erickson, Zackory",
+      "Held, David",
+      "Gan, Chuang"
+    ],
+    "year": "2024",
+    "venue": "International Conference on Machine Learning",
+    "url": "https://proceedings.mlr.press/v235/wang24cc.html",
+    "note": "正式 ICML 2024 会录与摘要核查。提出任务、生成场景与监督、选择学习方式并学习策略；不将这些通用环节的连接视为 AirSpark 独创。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [],
+    "volume": "235",
+    "pages": "51936--51983",
+    "series": "Proceedings of Machine Learning Research",
+    "sortKey": "Wang, Yufei | Xian, Zhou | Chen, Feng | Wang, Tsun-Hsuan | Wang, Yian | Fragkiadaki, Katerina | Erickson, Zackory | Held, David | Gan, Chuang | 2024 | robogen"
+  },
+  "pi05": {
+    "title": "π0.5: A Vision-Language-Action Model with Open-World Generalization",
+    "authors": [
+      "Black, Kevin",
+      "Brown, Noah",
+      "Darpinian, James",
+      "Dhabalia, Karan",
+      "Driess, Danny",
+      "Esmail, Adnan",
+      "Equi, Michael Robert",
+      "Finn, Chelsea",
+      "Fusai, Niccolo",
+      "Galliker, Manuel Y.",
+      "Ghosh, Dibya",
+      "Groom, Lachy",
+      "Hausman, Karol",
+      "ichter, brian",
+      "Jakubczak, Szymon",
+      "Jones, Tim",
+      "Ke, Liyiming",
+      "LeBlanc, Devin",
+      "Levine, Sergey",
+      "Li-Bell, Adrian",
+      "Mothukuri, Mohith",
+      "Nair, Suraj",
+      "Pertsch, Karl",
+      "Ren, Allen Z.",
+      "Shi, Lucy Xiaoyang",
+      "Smith, Laura",
+      "Springenberg, Jost Tobias",
+      "Stachowicz, Kyle",
+      "Tanner, James",
+      "Vuong, Quan",
+      "Walke, Homer",
+      "Walling, Anna",
+      "Wang, Haohuan",
+      "Yu, Lili",
+      "Zhilinsky, Ury"
+    ],
+    "year": "2025",
+    "venue": "Conference on Robot Learning",
+    "url": "https://proceedings.mlr.press/v305/black25a.html",
+    "note": "π0.5 原始模型论文，正式 CoRL 2025，PMLR 305:17–40。OpenPI 仅为实现来源；本论文的单卡 LoRA 路线是待先导核验的实验设计，不是原文硬件保证。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [
+      [
+        "实现",
+        "https://github.com/Physical-Intelligence/openpi"
+      ]
+    ],
+    "volume": "305",
+    "pages": "17--40",
+    "series": "Proceedings of Machine Learning Research",
+    "sortKey": "Black, Kevin | Brown, Noah | Darpinian, James | Dhabalia, Karan | Driess, Danny | Esmail, Adnan | Equi, Michael Robert | Finn, Chelsea | Fusai, Niccolo | Galliker, Manuel Y. | Ghosh, Dibya | Groom, Lachy | Hausman, Karol | ichter, brian | Jakubczak, Szymon | Jones, Tim | Ke, Liyiming | LeBlanc, Devin | Levine, Sergey | Li-Bell, Adrian | Mothukuri, Mohith | Nair, Suraj | Pertsch, Karl | Ren, Allen Z. | Shi, Lucy Xiaoyang | Smith, Laura | Springenberg, Jost Tobias | Stachowicz, Kyle | Tanner, James | Vuong, Quan | Walke, Homer | Walling, Anna | Wang, Haohuan | Yu, Lili | Zhilinsky, Ury | 2025 | pi05"
+  },
+  "splatsim": {
+    "title": "SplatSim: Zero-Shot Sim2Real Transfer of RGB Manipulation Policies Using Gaussian Splatting",
+    "authors": [
+      "Qureshi, M. Nomaan",
+      "Garg, Sparsh",
+      "Yandun, Francisco",
+      "Held, David",
+      "Kantor, George",
+      "Silwal, Abhisesh"
+    ],
+    "year": "2025",
+    "venue": "2025 IEEE International Conference on Robotics and Automation (ICRA)",
+    "url": "https://doi.org/10.1109/icra55743.2025.11128339",
+    "note": "ICRA 2025 正式 DOI 元数据与作者项目摘要核查。GS 渲染层结合已有物理仿真用于 RGB 策略迁移；不将 3DGS 外观等同接触物理。正式登记页码 6502–6509，不使用预排目录页码。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [
+      [
+        "项目与任务",
+        "https://splatsim.github.io/"
+      ]
+    ],
+    "doi": "10.1109/icra55743.2025.11128339",
+    "pages": "6502--6509",
+    "sortKey": "Qureshi, M. Nomaan | Garg, Sparsh | Yandun, Francisco | Held, David | Kantor, George | Silwal, Abhisesh | 2025 | splatsim"
+  },
+  "aerial-learning-review": {
+    "title": "Learning-Based Methods for Aerial Manipulation: A Focused Review",
+    "authors": [
+      "Zeng, Chao",
+      "Li, Zhan",
+      "Yang, Yipeng",
+      "Liu, Cunjia",
+      "Yang, Chenguang"
+    ],
+    "year": "2026",
+    "venue": "IEEE/ASME Transactions on Mechatronics",
+    "url": "https://doi.org/10.1109/tmech.2025.3625915",
+    "note": "TMech 正式期刊卷期 31(2), 2270–2287 (2026)，早期发表信息为 2025；不以 DOI 年份代替卷期年份。核查出版社登记与作者机构记录，仅用于学习型空中操作综述性背景。",
+    "entryType": "article",
+    "type": "期刊论文",
+    "verified": "2026-10-25",
+    "links": [
+      [
+        "作者机构发表记录",
+        "https://publications.lboro.ac.uk/publications/all/collated/ttcl3.html"
+      ]
+    ],
+    "doi": "10.1109/tmech.2025.3625915",
+    "pages": "2270--2287",
+    "volume": "31",
+    "number": "2",
+    "sortKey": "Zeng, Chao | Li, Zhan | Yang, Yipeng | Liu, Cunjia | Yang, Chenguang | 2026 | aerial-learning-review"
+  },
+  "hg-dagger": {
+    "title": "HG-DAgger: Interactive Imitation Learning with Human Experts",
+    "authors": [
+      "Kelly, Michael",
+      "Sidrane, Chelsea",
+      "Driggs-Campbell, Katherine",
+      "Kochenderfer, Mykel J."
+    ],
+    "year": "2019",
+    "venue": "2019 International Conference on Robotics and Automation (ICRA)",
+    "url": "https://doi.org/10.1109/icra.2019.8793698",
+    "note": "ICRA 2019 正式 DOI 元数据；专家决定接管并聚合交互监督。本文只引用这一机制，不借其结果证明自主导师收益。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [],
+    "doi": "10.1109/icra.2019.8793698",
+    "pages": "8077--8083",
+    "sortKey": "Kelly, Michael | Sidrane, Chelsea | Driggs-Campbell, Katherine | Kochenderfer, Mykel J. | 2019 | hg-dagger"
+  },
+  "airsim": {
+    "title": "AirSim: High-Fidelity Visual and Physical Simulation for Autonomous Vehicles",
+    "authors": [
+      "Shah, Shital",
+      "Dey, Debadeepta",
+      "Lovett, Chris",
+      "Kapoor, Ashish"
+    ],
+    "year": "2018",
+    "venue": "Field and Service Robotics",
+    "url": "https://doi.org/10.1007/978-3-319-67361-5_40",
+    "note": "FSR 2017 会议；Springer 正式章引用年份为 2018（2017-11-03 online）。基于 UE 的视觉与物理仿真先例，不声称其没有物理；本文聚焦空中接触学习设施。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [],
+    "doi": "10.1007/978-3-319-67361-5_40",
+    "pages": "621--635",
+    "volume": "5",
+    "series": "Springer Proceedings in Advanced Robotics",
+    "sortKey": "Shah, Shital | Dey, Debadeepta | Lovett, Chris | Kapoor, Ashish | 2018 | airsim"
+  },
+  "demogen": {
+    "title": "DemoGen: Synthetic Demonstration Generation for Data-Efficient Visuomotor Policy Learning",
+    "authors": [
+      "Xue, Zhengrong",
+      "Deng, Shuying",
+      "Chen, Zhenyang",
+      "Wang, Yixuan",
+      "Yuan, Zhecheng",
+      "Xu, Huazhe"
+    ],
+    "year": "2025",
+    "venue": "Robotics: Science and Systems XXI",
+    "url": "https://www.roboticsproceedings.org/rss21/p157.html",
+    "note": "正式 RSS 2025 会录与摘要核查。动作适配与 3D 点云编辑生成增强示范；不表述成重新执行接触动力学。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [],
+    "doi": "10.15607/RSS.2025.XXI.157",
+    "sortKey": "Xue, Zhengrong | Deng, Shuying | Chen, Zhenyang | Wang, Yixuan | Yuan, Zhecheng | Xu, Huazhe | 2025 | demogen"
+  },
+  "reflexion": {
+    "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "authors": [
+      "Shinn, Noah",
+      "Cassano, Federico",
+      "Gopinath, Ashwin",
+      "Narasimhan, Karthik",
+      "Yao, Shunyu"
+    ],
+    "year": "2023",
+    "venue": "Advances in Neural Information Processing Systems",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/1b44b878bb782e6954cd888628510e90-Abstract-Conference.html",
+    "note": "NeurIPS 2023 正式会录摘要。用语言化反馈与情节记忆改进后续 Agent 决策，不更新模型权重；仅作为记忆组织先例，不证明机器人学生训练收益。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [],
+    "volume": "36",
+    "sortKey": "Shinn, Noah | Cassano, Federico | Gopinath, Ashwin | Narasimhan, Karthik | Yao, Shunyu | 2023 | reflexion"
+  },
+  "lora": {
+    "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+    "authors": [
+      "Hu, Edward J.",
+      "Shen, Yelong",
+      "Wallis, Phillip",
+      "Allen-Zhu, Zeyuan",
+      "Li, Yuanzhi",
+      "Wang, Shean",
+      "Wang, Lu",
+      "Chen, Weizhu"
+    ],
+    "year": "2022",
+    "venue": "International Conference on Learning Representations",
+    "url": "https://openreview.net/forum?id=nZeVKeeFYf9",
+    "note": "ICLR 2022 正式论文。低秩可训练增量；不以其原文证明 π0.5 在 RTX 4090 的可行性。",
+    "entryType": "inproceedings",
+    "type": "会议论文",
+    "verified": "2026-10-25",
+    "links": [
+      [
+        "正式 PDF",
+        "https://openreview.net/pdf?id=nZeVKeeFYf9"
+      ]
+    ],
+    "sortKey": "Hu, Edward J. | Shen, Yelong | Wallis, Phillip | Allen-Zhu, Zeyuan | Li, Yuanzhi | Wang, Shean | Wang, Lu | Chen, Weizhu | 2022 | lora"
   }
 };

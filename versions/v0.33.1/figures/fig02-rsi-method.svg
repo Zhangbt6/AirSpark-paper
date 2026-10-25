@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="950" viewBox="0 0 1640 950" role="img" aria-labelledby="title desc">
+<title id="title">Policy self-improvement through execution and learning feedback</title>
+<desc id="desc">Six stages: policy rollout, interaction diagnosis, feedback-guided practice planning, expert supervision generation, student policy update, learning evaluation and acceptance. Learning feedback enters intervention memory for subsequent planning.</desc>
+<defs>
+<marker id="arrow-main" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#183255"/></marker>
+<marker id="arrow-exec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#087f75"/></marker>
+<marker id="arrow-memory" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7552a5"/></marker>
+</defs><rect width="1640" height="950" fill="white"/>
+<g font-family="Microsoft YaHei,Noto Sans CJK SC,Arial,sans-serif" fill="#183255">
+<text x="45" y="45" font-size="31" font-weight="700" fill="#183255" text-anchor="start">Policy self-improvement through execution and learning feedback</text>
+<text x="45" y="84" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">A six-stage learning cycle; intervention history supports subsequent practice revision</text>
+<rect x="45" y="165" width="335" height="235" rx="7" fill="#eef4fd" stroke="#c9d5e2" stroke-width="1.8"/>
+<text x="64" y="208" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">1</text>
+<text x="96" y="208" font-size="27" font-weight="650" fill="#183255" text-anchor="start">Policy rollout</text>
+<text x="66" y="284" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Student π<tspan baseline-shift="sub" font-size="75%">θᵣ</tspan>; task pool C</text>
+<text x="66" y="319" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Observations and actions</text>
+<text x="66" y="354" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Motion and task outcomes</text>
+<rect x="440" y="165" width="335" height="235" rx="7" fill="white" stroke="#c9d5e2" stroke-width="1.8"/>
+<text x="459" y="208" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">2</text>
+<text x="491" y="208" font-size="27" font-weight="650" fill="#183255" text-anchor="start">Stage-wise</text>
+<text x="491" y="239" font-size="27" font-weight="650" fill="#183255" text-anchor="start">diagnosis</text>
+<text x="461" y="284" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Stage reach / failure</text>
+<text x="461" y="319" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Observability / feasibility</text>
+<text x="461" y="354" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Frequency, failure and cost</text>
+<rect x="845" y="165" width="355" height="235" rx="7" fill="#eaf6f3" stroke="#087f75" stroke-width="1.8"/>
+<text x="864" y="208" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">3</text>
+<text x="896" y="208" font-size="27" font-weight="650" fill="#183255" text-anchor="start">Feedback-guided</text>
+<text x="896" y="239" font-size="27" font-weight="650" fill="#183255" text-anchor="start">practice planning</text>
+<text x="866" y="284" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Fixed allocator → bᵣ</text>
+<text x="866" y="319" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Choose practice η̃ᵣ</text>
+<text x="866" y="354" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Execute / defer / retest dᵣ</text>
+<rect x="845" y="520" width="355" height="235" rx="7" fill="white" stroke="#c9d5e2" stroke-width="1.8"/>
+<text x="864" y="563" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">4</text>
+<text x="896" y="563" font-size="27" font-weight="650" fill="#183255" text-anchor="start">Expert supervision</text>
+<text x="896" y="594" font-size="27" font-weight="650" fill="#183255" text-anchor="start">generation</text>
+<text x="866" y="639" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Legal physical prefixes</text>
+<text x="866" y="674" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Fixed expert continuation</text>
+<text x="866" y="709" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Check and export labels</text>
+<rect x="440" y="520" width="335" height="235" rx="7" fill="#eef4fd" stroke="#c9d5e2" stroke-width="1.8"/>
+<text x="459" y="563" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">5</text>
+<text x="491" y="563" font-size="27" font-weight="650" fill="#183255" text-anchor="start">Student policy</text>
+<text x="491" y="594" font-size="27" font-weight="650" fill="#183255" text-anchor="start">update</text>
+<text x="461" y="639" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Qualified data + replay</text>
+<text x="461" y="674" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Fixed learning algorithm</text>
+<text x="461" y="709" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Train from the plan</text>
+<rect x="45" y="520" width="335" height="235" rx="7" fill="#f4f7fa" stroke="#c9d5e2" stroke-width="1.8"/>
+<text x="64" y="563" font-size="25" font-weight="700" fill="#087f75" text-anchor="start">6</text>
+<text x="96" y="563" font-size="27" font-weight="650" fill="#183255" text-anchor="start">Learning evaluation</text>
+<text x="96" y="594" font-size="27" font-weight="650" fill="#183255" text-anchor="start">and acceptance</text>
+<text x="66" y="639" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">V: parent / candidate</text>
+<text x="66" y="674" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Task gains / retention</text>
+<text x="66" y="709" font-size="24" font-weight="400" fill="#52657b" text-anchor="start">Accept or retain parent</text>
+<path d="M380 282 H430" fill="none" stroke="#183255" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-main)"/>
+<path d="M775 282 H835" fill="none" stroke="#087f75" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-exec)"/>
+<text x="805" y="255" font-size="24" font-weight="600" fill="#087f75" text-anchor="middle">Eᵣ</text>
+<path d="M1022 400 V510" fill="none" stroke="#183255" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-main)"/>
+<text x="1042" y="459" font-size="20" font-weight="400" fill="#087f75" text-anchor="start">Aᵣ = (bᵣ, η̃ᵣ, dᵣ)</text>
+<path d="M845 637 H785" fill="none" stroke="#183255" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-main)"/>
+<text x="810" y="611" font-size="23" font-weight="400" fill="#52657b" text-anchor="middle">Dᵣ</text>
+<path d="M440 637 H390" fill="none" stroke="#183255" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-main)"/>
+<text x="412" y="611" font-size="24" font-weight="400" fill="#52657b" text-anchor="middle">θ′</text>
+<path d="M212 520 V410" fill="none" stroke="#183255" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-main)"/>
+<text x="230" y="453" font-size="23" font-weight="400" fill="#087f75" text-anchor="start">Retained policy</text>
+<text x="230" y="486" font-size="24" font-weight="600" fill="#087f75" text-anchor="start">π<tspan baseline-shift="sub" font-size="75%">θᵣ₊₁</tspan></text>
+<rect x="1260" y="165" width="335" height="590" rx="7" fill="#f3f0f8" stroke="#7552a5" stroke-width="1.8"/>
+<text x="1280" y="208" font-size="27" font-weight="650" fill="#183255" text-anchor="start">Intervention memory</text>
+<text x="1280" y="251" font-size="26" font-weight="600" fill="#7552a5" text-anchor="start">Mᵣ = (ℛᵣ, 𝒦ᵣ)</text>
+<text x="1280" y="310" font-size="24" font-weight="600" fill="#7552a5" text-anchor="start">ℛ: append-only records</text>
+<text x="1280" y="350" font-size="23" font-weight="400" fill="#52657b" text-anchor="start">Versions, plans and costs</text>
+<text x="1280" y="387" font-size="23" font-weight="400" fill="#52657b" text-anchor="start">Accept / reject / missing</text>
+<text x="1280" y="455" font-size="24" font-weight="600" fill="#7552a5" text-anchor="start">𝒦: revisable experience</text>
+<text x="1280" y="495" font-size="23" font-weight="400" fill="#52657b" text-anchor="start">Explanations / suggestions</text>
+<text x="1280" y="532" font-size="23" font-weight="400" fill="#52657b" text-anchor="start">Scope, evidence and retests</text>
+<text x="1280" y="617" font-size="23" font-weight="600" fill="#7552a5" text-anchor="start">Record, then revise</text>
+<text x="1280" y="655" font-size="23" font-weight="400" fill="#7552a5" text-anchor="start">Success / rejection retained</text>
+<text x="1280" y="691" font-size="23" font-weight="400" fill="#7552a5" text-anchor="start">Permitted next-round view</text>
+<path d="M1260 282 H1210" fill="none" stroke="#7552a5" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-memory)"/>
+<text x="1230" y="255" font-size="20" font-weight="400" fill="#7552a5" text-anchor="middle">History</text>
+<path d="M212 755 V815 H1428 V765" fill="none" stroke="#7552a5" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-memory)"/>
+<rect x="340" y="790" width="770" height="45" fill="white"/>
+<text x="725" y="821" font-size="24" font-weight="500" fill="#7552a5" text-anchor="middle">Learning feedback Fᵣ: task gains, retention and actual cost</text>
+<text x="45" y="888" font-size="23" font-weight="400" fill="#52657b" text-anchor="start">Round r: Eᵣ and prior Mᵣ → practice Aᵣ → student update → Fᵣ stored in Mᵣ₊₁</text>
+<text x="45" y="930" font-size="23" font-weight="400" fill="#52657b" text-anchor="start">Frozen tests outside the loop: benchmark and embodiment-specific real lines; no test feedback</text>
+</g></svg>
