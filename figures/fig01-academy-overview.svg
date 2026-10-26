@@ -49,9 +49,9 @@
 <text x="756" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Data checks and export</text>
 <text x="756" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Measure acquisition cost</text>
 <rect x="1082" y="409" width="314" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="1102" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Learning tools</text>
+<text x="1102" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Train and evaluate</text>
 <text x="1102" y="483" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Train and reload policies</text>
-<text x="1102" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Run validation and tests</text>
+<text x="1102" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Diagnose / validate / test</text>
 <text x="1102" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Track data and checkpoints</text>
 <rect x="44" y="615" width="1352" height="56" rx="4" fill="#183255" stroke="#183255" stroke-width="1.7"/>
 <text x="720" y="651" fill="white" font-size="23" font-weight="500" text-anchor="middle">Shared interfaces: execute / collect / label / train / evaluate / record</text>

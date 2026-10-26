@@ -50,9 +50,9 @@
 <text x="756" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">数据质检与导出</text>
 <text x="756" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">统计实际采集成本</text>
 <rect x="1082" y="409" width="314" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7" />
-<text x="1102" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">训练与评价工具</text>
+<text x="1102" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">训练与统一评测</text>
 <text x="1102" y="483" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">策略训练与模型加载</text>
-<text x="1102" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">开发验收与独立测试</text>
+<text x="1102" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">诊断／更新验证／冻结测试</text>
 <text x="1102" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">数据及模型版本管理</text>
 <rect x="44" y="615" width="1352" height="56" rx="4" fill="#183255" stroke="#183255" stroke-width="1.7" />
 <text x="720" y="651" fill="white" font-size="23" font-weight="500" text-anchor="middle">共享接口：执行 / 采集 / 标注 / 训练 / 评价 / 记录</text>

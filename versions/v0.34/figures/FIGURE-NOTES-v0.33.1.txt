@@ -1,0 +1,9 @@
+v0.33, 2026-10-25. Conceptual research diagrams, no measured outcomes.
+Figure 1: academy overview (existing architecture retained).
+Figure 2: six-stage feedback method; fixed allocator, candidate plan, both memory types, accepted/rejected outcomes; bilingual synchronization.
+Figure 3: benchmark and independent-real lines; DP components and cross-initialization reuse.
+Figures 4-5: neutral learning-curve and case placeholders in manuscript, not fabricated plots.
+Appendix figures A1-A3 retain execution, supervision and feedback details.
+Generate current Figure 2 and 3 with build-rsi-figure-v033.py / build-study-figure-v033.py; export PNGs using export-figures.cjs.
+
+Real-scene clarification: physical lemon scene is self-built, not an AM-Bench replica. Figure3 compares standard simulation with scene-reconstructed practice. Initial data pending; no additional held-out-layout schedule.
