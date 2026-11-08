@@ -1,8 +1,8 @@
 (() => {
-  const plan=window.AIRSPARK_STUDY_PLAN, key='airspark-protocol-v033';
+  const plan=window.AIRSPARK_STUDY_PLAN, key='airspark-protocol-v036';
   let saved={}; const status=document.querySelector('#save-status');
   try {saved=JSON.parse(localStorage.getItem(key)||'{}');}catch(_){status.textContent='无法读取旧本机记录；请检查浏览器存储。';}
-  const selected=new Set([1]);
+  const selected=new Set([1,2,3]);
   const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
   const tiers=document.querySelector('#tiers');
   for(const t of plan.tiers){
@@ -25,12 +25,12 @@
     const id=`${s.id}/chain-${i}`,record=saved[id]||(saved[id]={status:'未开始'});const row=el('tr');row.append(el('td',`${s.student} · ${s.task} · ${s.name} / ${i}`));
     for(const f of fields){const td=el('td');let input;
       if(f==='status'){input=el('select');for(const v of ['未开始','先导待登记','执行中','完成','中断','暂缓']){const o=el('option',v);o.value=v;input.append(o);}input.value=record[f]||'未开始';}
-      else {input=el('input');input.value=record[f]??'';input.placeholder='—';if(['candidate_trainings','gpu_hours'].includes(f)){input.type='number';input.min='0';input.step=f==='candidate_trainings'?'1':'0.1';if(f==='candidate_trainings')input.max='4';}}
+      else {input=el('input');input.value=record[f]??'';input.placeholder='—';if(['candidate_trainings','gpu_hours'].includes(f)){input.type='number';input.min='0';input.step=f==='candidate_trainings'?'1':'0.1';if(f==='candidate_trainings')input.max=String(s.max_interventions);}}
       input.setAttribute('aria-label',`${id} ${f}`);input.addEventListener('change',()=>{record[f]=input.value;persist();});td.append(input);row.append(td);
     }ledger.append(row);
   }}
   function download(name,body,type){const url=URL.createObjectURL(new Blob([body],{type}));const a=el('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
   function cell(v){return '"'+String(v??'').replaceAll('"','""')+'"';}
-  document.querySelector('#export-ledger').addEventListener('click',()=>{const lines=[['chain_id',...fields].map(cell).join(',')];for(const [id,r]of Object.entries(saved))lines.push([id,...fields.map(f=>r[f])].map(cell).join(','));download('AirSpark-learning-chains-v0.33.1.csv','\ufeff'+lines.join('\r\n'),'text/csv;charset=utf-8');});
-  document.querySelector('#export-records').addEventListener('click',()=>download('AirSpark-local-records-v0.33.1.json',JSON.stringify({version:'v0.33.1',status:'local_unreviewed',records:saved},null,2),'application/json'));
+  document.querySelector('#export-ledger').addEventListener('click',()=>{const lines=[['chain_id',...fields].map(cell).join(',')];for(const [id,r]of Object.entries(saved))lines.push([id,...fields.map(f=>r[f])].map(cell).join(','));download('AirSpark-learning-chains-v0.36.csv','\ufeff'+lines.join('\r\n'),'text/csv;charset=utf-8');});
+  document.querySelector('#export-records').addEventListener('click',()=>download('AirSpark-local-records-v0.36.json',JSON.stringify({version:'v0.36',status:'local_unreviewed',records:saved},null,2),'application/json'));
 })();

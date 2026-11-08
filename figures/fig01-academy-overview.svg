@@ -1,74 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="870" viewBox="0 0 1440 870" role="img" aria-labelledby="title desc">
-<title id="title">AirSpark academy platform</title><desc id="desc">Simulation, experience generation, and policy learning share the same execution interfaces.. Proposed research design, not measured results.</desc>
-<defs>
-<marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183255"/></marker>
-<marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087f75"/></marker>
-<marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#215cce"/></marker>
-<marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7552a5"/></marker>
-<marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94601b"/></marker>
-</defs><g font-family="Arial, Helvetica, sans-serif"><rect width="1440" height="100%" fill="white"/>
-<text x="44" y="45" fill="#183255" font-size="29" font-weight="700" text-anchor="start">AirSpark academy platform</text>
-<text x="44" y="82" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Simulation, experience generation, and policy learning share the same execution interfaces.</text>
-<rect x="44" y="135" width="420" height="160" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7"/>
-<text x="64" y="172" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Visual simulation</text>
-<text x="64" y="209" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">UE rendering and calibrated cameras</text>
-<text x="64" y="239" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">RGB, depth and semantic observations</text>
-<text x="64" y="269" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">3DGS scene appearance</text>
-<rect x="510" y="135" width="420" height="160" rx="5" fill="#f1eef8" stroke="#7552a5" stroke-width="1.7"/>
-<text x="530" y="172" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Physical simulation</text>
-<text x="530" y="209" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">MuJoCo flight and arm dynamics</text>
-<text x="530" y="239" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Contact, slip and payload changes</text>
-<text x="530" y="269" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Explicit collision and movable assets</text>
-<rect x="976" y="135" width="420" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="996" y="172" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Scenes and tasks</text>
-<text x="996" y="209" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Objects, layouts and initial conditions</text>
-<text x="996" y="239" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Task definitions and success criteria</text>
-<text x="996" y="269" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Real-scene and benchmark alignment</text>
-<rect x="44" y="325" width="1352" height="48" rx="4" fill="#f6f8fb" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="720" y="356" fill="#183255" font-size="22" font-weight="500" text-anchor="middle">Shared coordinates, timestamps and entity identities</text>
-<path d="M254 295 V325" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M720 295 V325" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M1186 295 V325" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M202 373 V409" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M548 373 V409" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M894 373 V409" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M1240 373 V409" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<rect x="44" y="409" width="316" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="64" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Task execution</text>
-<text x="64" y="483" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Reset and parameterize tasks</text>
-<text x="64" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Run policies and controllers</text>
-<text x="64" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Replay valid physical prefixes</text>
-<rect x="390" y="409" width="316" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="410" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Execution records</text>
-<text x="410" y="483" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Synchronize observations</text>
-<text x="410" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Record actions and motion</text>
-<text x="410" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Label stages and events</text>
-<rect x="736" y="409" width="316" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="756" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Supervision tools</text>
-<text x="756" y="483" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Expert demonstrations</text>
-<text x="756" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Data checks and export</text>
-<text x="756" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Measure acquisition cost</text>
-<rect x="1082" y="409" width="314" height="160" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="1102" y="446" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Train and evaluate</text>
-<text x="1102" y="483" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Train and reload policies</text>
-<text x="1102" y="513" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Diagnose / validate / test</text>
-<text x="1102" y="543" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Track data and checkpoints</text>
-<rect x="44" y="615" width="1352" height="56" rx="4" fill="#183255" stroke="#183255" stroke-width="1.7"/>
-<text x="720" y="651" fill="white" font-size="23" font-weight="500" text-anchor="middle">Shared interfaces: execute / collect / label / train / evaluate / record</text>
-<path d="M202 615 V569" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M548 615 V569" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M894 615 V569" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M1240 615 V569" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<rect x="44" y="730" width="420" height="100" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7"/>
-<text x="64" y="767" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Student policies</text>
-<text x="64" y="804" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">ACT / Diffusion Policy / VLA</text>
-<rect x="510" y="730" width="420" height="100" rx="5" fill="white" stroke="#d2dde8" stroke-width="1.7"/>
-<text x="530" y="767" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Collection experts</text>
-<text x="530" y="804" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Fixed expert policy or controller</text>
-<rect x="976" y="730" width="420" height="100" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
-<text x="996" y="767" fill="#183255" font-size="23" font-weight="600" text-anchor="start">SparkMentor / RSI</text>
-<text x="996" y="804" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">Select practice and organize rounds</text>
-<path d="M254 730 V671" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M720 730 V671" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-<path d="M1186 730 V671" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)"/>
-</g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img"><title>AirSpark: a simulated academy for aerial manipulation</title><defs><marker id="navy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#183255"/></marker><marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#087f75"/></marker><marker id="purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7552a5"/></marker></defs><rect width="1600" height="960" fill="white"/>
+<text x="60" y="66" fill="#183255" font-size="36" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark: a simulated academy for aerial manipulation</text>
+<text x="60" y="109" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Repeatable interaction, expert supervision, and policy learning share execution tools.</text>
+<rect x="60" y="166" width="465" height="173" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="60" y="188" width="5" height="30" fill="#087f75"/>
+<text x="84" y="213" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Tasks and scenes</text>
+<text x="84" y="254" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Lemon harvesting / Slider pushing</text>
+<text x="84" y="286" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Initial states and legal practice conditions</text>
+<text x="84" y="318" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Reconstruction and physical registration</text>
+<rect x="565" y="166" width="465" height="173" rx="14" fill="#eef5ff" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="565" y="188" width="5" height="30" fill="#087f75"/>
+<text x="589" y="213" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Unreal Engine vision</text>
+<text x="589" y="254" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Deployment-matched cameras / RGB</text>
+<text x="589" y="286" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Onboard views, occlusion, appearance</text>
+<text x="589" y="318" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">3DGS static scene appearance</text>
+<rect x="1070" y="166" width="470" height="173" rx="14" fill="#f4f0fa" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="1070" y="188" width="5" height="30" fill="#7552a5"/>
+<text x="1094" y="213" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">MuJoCo interaction physics</text>
+<text x="1094" y="254" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Flying-base and arm motion</text>
+<text x="1094" y="286" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Contact, loads, interactive objects</text>
+<text x="1094" y="318" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Collision geometry / control response</text>
+<path d="M292 339 L292 382" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<path d="M797 339 L797 382" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<path d="M1305 339 L1305 382" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<rect x="60" y="385" width="1480" height="72" rx="14" fill="#183255" stroke="#183255" stroke-width="1.6"/>
+<text x="105" y="431" fill="white" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Shared identities, coordinates, and time: observations → commands → motion → task events</text>
+<path d="M230 457 L230 507" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<rect x="60" y="510" width="340" height="160" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="60" y="532" width="5" height="30" fill="#087f75"/>
+<text x="84" y="557" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Execute and reset</text>
+<text x="84" y="598" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Registered starts / resets</text>
+<text x="84" y="630" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Policy rollout / valid prefixes</text>
+<path d="M610 457 L610 507" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<rect x="440" y="510" width="340" height="160" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="440" y="532" width="5" height="30" fill="#087f75"/>
+<text x="464" y="557" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Record and diagnose</text>
+<text x="464" y="598" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">RGB / state / contact</text>
+<text x="464" y="630" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Stages, failures, action provenance</text>
+<path d="M990 457 L990 507" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<rect x="820" y="510" width="340" height="160" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="820" y="532" width="5" height="30" fill="#087f75"/>
+<text x="844" y="557" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Collect and qualify</text>
+<text x="844" y="598" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Condition-specific full demos</text>
+<text x="844" y="630" fill="#55677b" font-size="20" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Admitted suffixes / label masks</text>
+<path d="M1370 457 L1370 507" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<rect x="1200" y="510" width="340" height="160" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="1200" y="532" width="5" height="30" fill="#087f75"/>
+<text x="1224" y="557" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Train and evaluate</text>
+<text x="1224" y="598" fill="#55677b" font-size="20" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Weight warm-start / fixed steps</text>
+<text x="1224" y="630" fill="#55677b" font-size="20" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">C diagnose / V validate / T test</text>
+<rect x="60" y="725" width="1480" height="135" rx="14" fill="#eff8f6" stroke="#b9dad2" stroke-width="1.6"/>
+<text x="86" y="768" fill="#087f75" font-size="27" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Shared learning interfaces</text>
+<text x="86" y="811" fill="#183255" font-size="24" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">DP student executes and learns     |     Experts supervise     |     SparkMentor plans and records</text>
+<path d="M800 725 L800 675" fill="none" stroke="#087f75" stroke-width="3" marker-end="url(#teal)"/>
+<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.36  ·  Method illustration / 方法示意</text></svg>

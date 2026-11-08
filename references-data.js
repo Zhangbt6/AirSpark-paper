@@ -212,9 +212,9 @@ const paperReferences = {
   "embodirsi": {
     "title": "EmbodiRSI: Recursive Self-Improvement for Data-Efficient Robot Adaptation",
     "type": "预印本",
-    "url": "https://arxiv.org/abs/2609.38905v3",
-    "note": "v3 包含监测、CEC、ADC 及优势条件化训练；失败集中度是采集启发式，不估计配置特定学习收益。直接学习型近邻；按预印本引用，B2 不是其复现。",
-    "verified": "2026-10-19",
+    "url": "https://arxiv.org/abs/2609.38905v4",
+    "note": "v4（2026-10-29）：CEC、ADC与策略更新；主实验包括两轮改进、匹配保留轨迹数量的静态采集对照，以及微调前后实机评价。数据预算不等于完整采集或计算成本，组件独立消融未完成。按预印本引用，本文规则对照不是其复现。",
+    "verified": "2026-11-08",
     "authors": [
       "Lang, Haoran",
       "Lu, Haotao",
@@ -230,7 +230,7 @@ const paperReferences = {
     "entryType": "misc",
     "eprint": "2609.38905",
     "venue": "arXiv",
-    "version": "v3",
+    "version": "v4",
     "sortKey": "Lang, Haoran | Lu, Haotao | Sang, Shiyu | Luo, Haoyang | Chen, Guo | Li, Qun | Yu, Jingyi | Shi, Ye | Wang, Jingya | 2026 | embodirsi"
   },
   "rsi-anything": {

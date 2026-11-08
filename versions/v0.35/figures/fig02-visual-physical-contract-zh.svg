@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1020" viewBox="0 0 1440 1020" role="img" aria-labelledby="title desc">
+<title id="title">一次执行，对齐视觉与物理证据</title><desc id="desc">场景外观、碰撞几何与控制链路共享实体标识、坐标系和时间基准。 本图为研究设计示意，非实测结果。</desc>
+<defs>
+<marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#183255" /></marker>
+<marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087f75" /></marker>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#215cce" /></marker>
+<marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7552a5" /></marker>
+<marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#94601b" /></marker>
+</defs><g font-family="Microsoft YaHei, Noto Sans CJK SC, Arial, sans-serif"><rect width="1440" height="100%" fill="white" />
+<text x="44" y="39" fill="#087f75" font-size="17" font-weight="700" text-anchor="start">AIRSPARK / 图 A1</text>
+<text x="1396" y="39" fill="#52657b" font-size="16" font-weight="400" text-anchor="end">研究设计 · v0.33</text>
+<text x="44" y="81" fill="#183255" font-size="31" font-weight="700" text-anchor="start">一次执行，对齐视觉与物理证据</text>
+<text x="44" y="112" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">场景外观、碰撞几何与控制链路共享实体标识、坐标系和时间基准。</text>
+<path d="M44 130 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="44" y="160" width="304" height="216" rx="14" fill="#eaf6f3" stroke="#d2dde8" stroke-width="1.7" />
+<path d="M62 184 v24" stroke="#087f75" stroke-width="4" />
+<text x="76" y="204" fill="#183255" font-size="24" font-weight="700" text-anchor="start">场景外观</text>
+<text x="68" y="243" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">多视角场景采集</text>
+<text x="68" y="274" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">3DGS 静态外观</text>
+<text x="68" y="305" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">相机标定</text>
+<rect x="44" y="448" width="304" height="231" rx="14" fill="#f1eef8" stroke="#d2dde8" stroke-width="1.7" />
+<path d="M62 472 v24" stroke="#7552a5" stroke-width="4" />
+<text x="76" y="492" fill="#183255" font-size="24" font-weight="700" text-anchor="start">显式物理资产</text>
+<text x="68" y="531" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">碰撞几何</text>
+<text x="68" y="562" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">可动物体与关节</text>
+<text x="68" y="593" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">质量、摩擦与驱动参数</text>
+<text x="68" y="624" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">任务语义</text>
+<rect x="407" y="160" width="420" height="216" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7" />
+<path d="M425 184 v24" stroke="#215cce" stroke-width="4" />
+<text x="439" y="204" fill="#183255" font-size="24" font-weight="700" text-anchor="start">UE 视觉渲染</text>
+<text x="431" y="243" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">渲染模型实际接收的 RGB</text>
+<text x="431" y="274" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">标定相机与动态遮挡</text>
+<text x="431" y="305" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">按物理位姿更新动态资产</text>
+<rect x="407" y="448" width="420" height="231" rx="14" fill="#f1eef8" stroke="#d2dde8" stroke-width="1.7" />
+<path d="M425 472 v24" stroke="#7552a5" stroke-width="4" />
+<text x="439" y="492" fill="#183255" font-size="24" font-weight="700" text-anchor="start">MuJoCo 物理仿真</text>
+<text x="431" y="531" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">飞行基座与机械臂动力学</text>
+<text x="431" y="562" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">接触、滑移与载荷转换</text>
+<text x="431" y="593" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">控制器与执行器状态</text>
+<text x="431" y="624" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">明确的任务复位机制</text>
+<rect x="906" y="160" width="490" height="216" rx="14" fill="#eef4fd" stroke="#d2dde8" stroke-width="1.7" />
+<path d="M924 184 v24" stroke="#215cce" stroke-width="4" />
+<text x="938" y="204" fill="#183255" font-size="24" font-weight="700" text-anchor="start">观测适配器</text>
+<text x="930" y="243" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">坐标、实体与时间对齐</text>
+<text x="930" y="274" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">RGB 历史 + 允许的本体状态</text>
+<text x="930" y="305" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">与部署一致的输入白名单</text>
+<rect x="906" y="448" width="490" height="231" rx="14" fill="#eaf6f3" stroke="#d2dde8" stroke-width="1.7" />
+<path d="M924 472 v24" stroke="#087f75" stroke-width="4" />
+<text x="938" y="492" fill="#183255" font-size="24" font-weight="700" text-anchor="start">策略与执行适配器</text>
+<text x="930" y="531" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">学生策略 πθ 或固定采集专家</text>
+<text x="930" y="562" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">统一参考系、单位与控制周期</text>
+<text x="930" y="593" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">底层控制器 → 实际驱动</text>
+<text x="930" y="624" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">标记动作来源与专家接管时刻</text>
+<path d="M348 266 H407" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
+<path d="M348 554 H407" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)" />
+<path d="M827 266 H906" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" />
+<path d="M906 554 H827" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-teal)" />
+<path d="M620 448 V376" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)" />
+<text x="635" y="416" fill="#7552a5" font-size="18" font-weight="400" text-anchor="start">物体位姿</text>
+<path d="M827 489 H865 V340 H906" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)" />
+<text x="875" y="432" fill="#7552a5" font-size="17" font-weight="400" text-anchor="start">状态</text>
+<path d="M1151 376 V448" fill="none" stroke="#215cce" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)" />
+<text x="1170" y="417" fill="#215cce" font-size="18" font-weight="400" text-anchor="start">观测</text>
+<rect x="44" y="750" width="1352" height="191" rx="14" fill="#f6f8fb" stroke="#d2dde8" stroke-width="1.7" />
+<path d="M62 774 v24" stroke="#087f75" stroke-width="4" />
+<text x="76" y="794" fill="#183255" font-size="26" font-weight="700" text-anchor="start">统一时间线上的执行记录</text>
+<text x="68" y="833" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">RGB · 策略命令 · 实际运动 · 接触事件 · 动作来源 · 任务结果 · 实测成本</text>
+<text x="68" y="864" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">特权诊断与专家标签保留在采集和评价侧。</text>
+<text x="68" y="895" fill="#52657b" font-size="22" font-weight="400" text-anchor="start">学生输入按白名单导出；3DGS 外观不替代接触物理。</text>
+<path d="M202 679 V750" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" stroke-dasharray="8 6" />
+<path d="M620 679 V750" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" stroke-dasharray="8 6" />
+<path d="M1151 679 V750" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-ink)" stroke-dasharray="8 6" />
+<path d="M44 971 H1396" fill="none" stroke="#d2dde8" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+<text x="44" y="998" fill="#52657b" font-size="16" font-weight="400" text-anchor="start">AirSpark · 面向空中操作策略自进化的模拟学院</text>
+<text x="1396" y="998" fill="#52657b" font-size="14" font-weight="400" text-anchor="end">机制示意 / 非按比例绘制</text>
+</g></svg>
