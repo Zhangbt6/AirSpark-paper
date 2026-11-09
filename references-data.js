@@ -1,4 +1,4 @@
-// Shared publication metadata; see docs/05_reference-audit-v0.34.txt for evidence scope.
+// Shared reference metadata; web-only additions in v0.43.
 const paperReferences = {
   "aerial-survey": {
     "title": "Past, Present, and Future of Aerial Robotic Manipulators",
@@ -1534,5 +1534,85 @@ const paperReferences = {
       ]
     ],
     "sortKey": "Hu, Edward J. | Shen, Yelong | Wallis, Phillip | Allen-Zhu, Zeyuan | Li, Yuanzhi | Wang, Shean | Wang, Lu | Chen, Weizhu | 2022 | lora"
+  },
+  "domain-randomization": {
+    "title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",
+    "type": "论文公开稿",
+    "url": "https://arxiv.org/abs/1703.06907",
+    "note": "视觉域随机化与真实迁移基础工作；引用作者公开版，未以本次无法访问的出版商页面补写会录字段。",
+    "links": [
+      [
+        "作者原文",
+        "https://arxiv.org/pdf/1703.06907"
+      ]
+    ],
+    "verified": "2026-11-09",
+    "authors": [
+      "Tobin, Josh",
+      "Fong, Rachel",
+      "Ray, Alex",
+      "Schneider, Jonas",
+      "Zaremba, Wojciech",
+      "Abbeel, Pieter"
+    ],
+    "year": "2017",
+    "venue": "arXiv",
+    "entryType": "misc",
+    "eprint": "1703.06907",
+    "version": "1",
+    "sortKey": "Tobin, Josh | Fong, Rachel | 2017 | domain-randomization"
+  },
+  "active-domain-randomization": {
+    "title": "Active Domain Randomization",
+    "type": "会议论文",
+    "url": "https://proceedings.mlr.press/v100/mehta20a.html",
+    "note": "基于策略执行差异学习环境参数采样。年份按PMLR官方书目信息2020，区别于2019年预印本。",
+    "links": [
+      [
+        "正式全文",
+        "https://proceedings.mlr.press/v100/mehta20a/mehta20a.pdf"
+      ]
+    ],
+    "verified": "2026-11-09",
+    "authors": [
+      "Mehta, Bhairav",
+      "Diaz, Manfred",
+      "Golemo, Florian",
+      "Pal, Christopher J.",
+      "Paull, Liam"
+    ],
+    "year": "2020",
+    "venue": "Proceedings of the Conference on Robot Learning",
+    "entryType": "inproceedings",
+    "volume": "100",
+    "series": "Proceedings of Machine Learning Research",
+    "pages": "1162--1176",
+    "publisher": "PMLR",
+    "sortKey": "Mehta, Bhairav | Diaz, Manfred | 2020 | active-domain-randomization"
+  },
+  "gs-ir": {
+    "title": "GS-IR: 3D Gaussian Splatting for Inverse Rendering",
+    "type": "会议论文",
+    "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Liang_GS-IR_3D_Gaussian_Splatting_for_Inverse_Rendering_CVPR_2024_paper.html",
+    "note": "逆渲染估计几何、材质与照明，用于界定外观近似与可重光照的区别。",
+    "links": [
+      [
+        "作者公开版",
+        "https://arxiv.org/abs/2311.16473"
+      ]
+    ],
+    "verified": "2026-11-09",
+    "authors": [
+      "Liang, Zhihao",
+      "Zhang, Qi",
+      "Feng, Ying",
+      "Shan, Ying",
+      "Jia, Kui"
+    ],
+    "year": "2024",
+    "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "entryType": "inproceedings",
+    "pages": "21644--21653",
+    "sortKey": "Liang, Zhihao | Zhang, Qi | 2024 | gs-ir"
   }
 };
