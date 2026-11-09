@@ -1,0 +1,194 @@
+{
+  "version": "v0.37",
+  "status": "metric_contract_run_binding_pending",
+  "checked_source_commit": "8ce7b21412b20ebb5bc784a9f8bc7a9ac155bf22",
+  "source_checked_date": "2026-11-09",
+  "evaluation_unit": {
+    "primary": "one frozen policy and registered task/initial-state manifest",
+    "planned_core_N": 50,
+    "counts": [
+      "N_planned",
+      "N_executed",
+      "N_scoreable",
+      "N_infrastructure_invalid",
+      "N_not_run",
+      "N_replacements"
+    ],
+    "policy_timeout_or_safety_stop": "scoreable_failure",
+    "missing_score_evidence": "unknown_and_gate_failure_not_zero",
+    "infrastructure_replacement": "pre_registered_rule_keep_original_attempt"
+  },
+  "complete_success": {
+    "formula": "sum(S_e) / N_scoreable",
+    "S_e": "registered task outcome at fixed evaluation time AND no policy safety stop before that time",
+    "lemon_source_field": "task_truth.source_task_success",
+    "lemon_platform_field": "task_truth.task_success",
+    "platform_version": "placement_release_latched_v2",
+    "criterion_version_required": true,
+    "terminal_time_rule": null,
+    "record_ever_success_separately": true,
+    "legacy_unversioned": "use only after explicit identity check; never silently substitute fields",
+    "slider": "verified source joint endpoint criterion; fixture/threshold bound at pilot"
+  },
+  "stages": {
+    "source_rule": "lemon_ue_stages_v2",
+    "reach_formula": "N_reached_i / N_with_observable_stage_i",
+    "conditional_formula": "N_ordered_i_then_j / N_reached_i_with_observable_transition_ij",
+    "report_unknowns": true,
+    "zero_denominator": "null",
+    "ordering": "preserve raw events; require i before j for transitions; audit inconsistent traces",
+    "timestamps": "simulation time, actual recorded substeps; no assumed universal sample rate",
+    "lemon": [
+      {
+        "id": "approach",
+        "rule": "tip-to-lemon distance <= 0.15 m"
+      },
+      {
+        "id": "contact",
+        "rule": "two distinct finger bodies above 0.05 N normal force at a recorded substep"
+      },
+      {
+        "id": "grasp_detach",
+        "rule": "wall_joint_detached true"
+      },
+      {
+        "id": "transport",
+        "rule": "detached AND lemon-container distance <= 0.30 m"
+      },
+      {
+        "id": "place",
+        "rule": "lemon_in_container true"
+      },
+      {
+        "id": "release_stable",
+        "rule": "see stability entry"
+      }
+    ],
+    "slider": {
+      "status": "proposed_event_contract_not_runtime_verified",
+      "events": [
+        "approach_with_registered_geometry_threshold",
+        "measured_robot_handle_contact",
+        "source_engagement_travel",
+        "source_endpoint"
+      ],
+      "approach_threshold_m": null,
+      "contact_force_threshold_N": null,
+      "engagement": "5 percent of registered source goal travel; not a direct contact sensor",
+      "contact_gap_tolerance_s": null
+    }
+  },
+  "stability": {
+    "window_s": 2.0,
+    "anchor": "registered first task-success event; store source/platform anchors separately",
+    "execution_during_window": "same registered continuation for all groups; physical time must advance",
+    "deadline": "task success deadline unchanged; post-success observation is a secondary protocol",
+    "source_checks": [
+      "detached",
+      "lemon remains in container",
+      "finger_contacts == 0"
+    ],
+    "base_position_excursion_m": 0.02,
+    "base_rotation_excursion_deg": 5.0,
+    "gripper_width_range_m": 0.001,
+    "base_position_measure": "max norm(p(t)-p(anchor))",
+    "base_rotation_measure": "max 2*acos(abs(dot(q(t),q(anchor)))) in degrees, normalized quaternions",
+    "gripper_measure": "max(width)-min(width), no added full-open requirement",
+    "all_trials_metric": "N_stable / N_scoreable only when stability observability complete; otherwise not_estimable with coverage count",
+    "conditional_metric": "N_stable / N_successes_with_complete_window",
+    "censoring": "report no full two-second window or missing fields separately; never silently score as stable failure"
+  },
+  "safety": {
+    "formula": "N_policy_safety_stop / N_scoreable",
+    "scope": "registered lab protection, not physical safety certification",
+    "wall_monitor_reference": {
+      "sample_hz": 600,
+      "readout_hz": 120,
+      "force_N_duration_s": [
+        [
+          10,
+          0.25
+        ],
+        [
+          50,
+          0.05
+        ]
+      ],
+      "accumulator": "contiguous threshold exceedance, reset when force drops",
+      "applicability": "verified FA-Hexa monitor only; bind binary/configuration at runtime"
+    },
+    "other_reasons": [
+      "attitude_limit",
+      "IK_failure",
+      "other_collision",
+      "other_registered_reason"
+    ],
+    "all_thresholds": "same across groups; versioned"
+  },
+  "supervision": {
+    "unique_unit": "expert control timesteps keyed by (source_episode_id,timestep); count each once",
+    "quantity": [
+      "qualified_unique_expert_steps",
+      "qualified_expert_duration_s",
+      "eligible_training_windows"
+    ],
+    "yield": "qualified_expert_attempts / all_started_expert_attempts including failures and QA rejection",
+    "student_prefix_target": false,
+    "chunk_eligibility": "all action targets in valid expert interval, aligned observations",
+    "duplicate_lineage": "resampling or replay does not create new supervision",
+    "note": "episode/unique-step/window counts all reported; quantity alone cannot establish per-sample learning value"
+  },
+  "cost": {
+    "events": "unique job_id and attempt_id with parent/model/round/stage identities",
+    "job_elapsed": "sum exclusive leaf-stage attempt durations; aggregate parent receipts link to children and are not summed again",
+    "study_makespan": "last_finish_UTC-first_start_UTC within registered resource schedule",
+    "do_not_sum_overlapping_jobs_as_makespan": true,
+    "gpu_hours": "sum duration_s * GPU_count over unique allocation IDs/intervals; child jobs referencing the same allocation are not counted again",
+    "gpu_utilization": "separate optional telemetry",
+    "api": [
+      "model_version",
+      "calls",
+      "input_tokens",
+      "cached_tokens_if_available",
+      "output_tokens",
+      "retries",
+      "charged_cost",
+      "pricing_timestamp"
+    ],
+    "human_minutes": "sum recorded intervention duration by type",
+    "initialization_cost": "separate",
+    "retained_failure_cost": "included",
+    "unknown_measurement": "null",
+    "allocation_identity_required": true
+  },
+  "facilities": {
+    "sync": "image acquisition timestamp minus paired state timestamp plus capture/physics-step identity; separate command scheduled-to-applied latency",
+    "tracking_position": "norm of measured vs active/interpolated command at same time/frame/tool point; time-weighted RMSE and per-episode P95",
+    "tracking_orientation": "2*acos(abs(dot(q_measured,q_command))) with normalized quaternions",
+    "reset": "valid reset attempts / all started reset attempts; duration includes failed attempts",
+    "replay": "state residuals at handover with frame/velocity/controller-history checks; candidate limits registered"
+  },
+  "statistics": {
+    "per_model": "k/N; optional Wilson 95 percent interval with binomial assumptions",
+    "across_chains": "mean, min-max, paired per-chain method differences conditional on common parent; n=3",
+    "paired_effect": "100*(SR_full_chain-SR_fixed_chain) percentage points",
+    "task_aggregate": "equal task weighting only if explicitly reported; show each task",
+    "retention": "pre_registered development start strata, no hidden extra-task claim",
+    "sim_real": "descriptive model-paired values; n=7, unequal real counts, no general predictive claim"
+  },
+  "pending_runtime_bindings": [
+    "source/platform scoring identity",
+    "terminal sampling and stopping behavior",
+    "stability continuation/observation availability",
+    "slider stage sensor definitions",
+    "GPU/resource inventory",
+    "training warm-start verification",
+    "collection and training budgets",
+    "acceptance thresholds"
+  ],
+  "source_files": [
+    "src/airspark/benchmarks/ambench/lemon_criteria.py",
+    "src/airspark/benchmarks/ambench/lemon_stages.py",
+    "Unreal/tools/airspark_manipulation_bridge/fahexa/ue_baseline_v1/wall_monitor.py"
+  ]
+}

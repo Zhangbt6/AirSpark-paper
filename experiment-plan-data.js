@@ -1,10 +1,11 @@
 window.AIRSPARK_STUDY_PLAN = {
-  "plan_version": "v0.37",
-  "status": "scope_fixed_pilot_parameters_pending",
+  "plan_version": "v0.38",
+  "status": "three_task_scope_fixed_runtime_validation_pending",
   "date": "2026-11-09",
   "tasks": [
     "LemonHarvesting",
-    "PushSlider"
+    "PushSlider",
+    "PressButton"
   ],
   "students": [
     "DP"
@@ -73,6 +74,30 @@ window.AIRSPARK_STUDY_PLAN = {
       "parent_contract": "task_common_parent"
     },
     {
+      "id": "DP-PressButton-fixed",
+      "student": "DP",
+      "task": "PressButton",
+      "group": "fixed",
+      "name": "固定练习",
+      "tier": 1,
+      "line": "benchmark",
+      "chains": 3,
+      "max_interventions": 2,
+      "parent_contract": "task_common_parent"
+    },
+    {
+      "id": "DP-PressButton-full",
+      "student": "DP",
+      "task": "PressButton",
+      "group": "full",
+      "name": "完整方法",
+      "tier": 1,
+      "line": "benchmark",
+      "chains": 3,
+      "max_interventions": 2,
+      "parent_contract": "task_common_parent"
+    },
+    {
       "id": "DP-LemonHarvesting-rule",
       "student": "DP",
       "task": "LemonHarvesting",
@@ -122,11 +147,11 @@ window.AIRSPARK_STUDY_PLAN = {
     }
   ],
   "totals": {
-    "incremental_settings": 8,
-    "chains": 24,
-    "max_candidate_trainings": 48,
-    "benchmark_sealed_models": 20,
-    "benchmark_sealed_episodes": 1000,
+    "incremental_settings": 10,
+    "chains": 30,
+    "max_candidate_trainings": 60,
+    "benchmark_sealed_models": 27,
+    "benchmark_sealed_episodes": 1350,
     "real_sim_models": 7,
     "real_sim_episodes": 210,
     "real_episodes": 90
@@ -134,10 +159,10 @@ window.AIRSPARK_STUDY_PLAN = {
   "tiers": [
     {
       "tier": 1,
-      "name": "DP 两任务主对照",
-      "settings": 4,
-      "chains": 12,
-      "max_candidate_trainings": 24
+      "name": "DP 三任务主对照",
+      "settings": 6,
+      "chains": 18,
+      "max_candidate_trainings": 36
     },
     {
       "tier": 2,
@@ -199,7 +224,8 @@ window.AIRSPARK_STUDY_PLAN = {
       "tracking"
     ],
     "supervision_unit": "unique_expert_timesteps_and_duration_plus_eligible_windows",
-    "lemon_platform": "task_truth.task_success / placement_release_latched_v2 separately"
+    "lemon_platform": "task_truth.task_success / placement_release_latched_v2 separately",
+    "press_button_primary": "registered source PressButton goal predicate; runtime field/threshold binding pending"
   },
   "splits": {
     "C_count": null,
@@ -242,18 +268,19 @@ window.AIRSPARK_STUDY_PLAN = {
     "agent_model_prompt_and_permissions",
     "gpu_count_and_measured_runtime",
     "real_data_and_start_blocks",
-    "qualified_suffix_registry"
+    "qualified_suffix_registry",
+    "press_button_UE_task_expert_and_data_validation",
+    "press_button_parent_and_native_criterion_binding"
   ],
   "count_note": "Training upper bounds exclude initial training, pilots, diagnostics, development, collection and optional tests.",
-  "metrics_contract": "protocol/metrics-v0.37.json",
-  "third_task_candidate": {
+  "metrics_contract": "protocol/metrics-v0.38.json",
+  "press_button": {
     "task": "PressButton",
-    "status": "candidate_not_activated",
+    "status": "included_in_primary_scope_UE_validation_pending",
     "interaction_class": "instantaneous_contact",
     "native_source": "https://github.com/ambench/ambench",
     "UE_verified": false,
     "existing_evidence": "legacy/research/receipts/phase1_pressbutton_20261014.json; native only",
-    "readiness_deadline_suggestion_Beijing": "2026-11-10 12:00",
     "readiness": [
       "UE physical task and verified criterion",
       "expert and data QA",
@@ -268,19 +295,9 @@ window.AIRSPARK_STUDY_PLAN = {
       "fixed",
       "full"
     ],
-    "added_settings": 2,
-    "added_chains": 6,
-    "added_max_candidate_trainings": 12,
-    "added_sealed_models": 7,
-    "added_sealed_episodes": 350,
-    "activated_totals": {
-      "incremental_settings": 10,
-      "chains": 30,
-      "max_candidate_trainings": 60,
-      "benchmark_sealed_episodes": 1350,
-      "real_sim_episodes": 210,
-      "real_episodes": 90
-    },
-    "decision_basis": "readiness_and_resources_before_primary_results_not_test_gain"
+    "scope_authorization": "user_2026-11-09",
+    "native_criterion_binding": null,
+    "primary_test_models": 7,
+    "primary_test_episodes": 350
   }
 };

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc"><title id="title">Learning as a feedback process</title><desc id="desc">Targets support reporting and planned checks; group budgets and the baseline selector remain fixed.</desc><defs>
+<marker id="a-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#183255"/></marker>
+<marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#087f75"/></marker>
+<marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7552a5"/></marker>
+</defs><g font-family="Arial, Helvetica, sans-serif"><rect width="1440" height="810" fill="white"/>
+<text x="44" y="46" fill="#183255" font-size="29" font-weight="700" text-anchor="start">Learning as a feedback process</text>
+<text x="44" y="83" fill="#52657b" font-size="21" font-weight="400" text-anchor="start">Fixed objectives, measured capabilities, bounded interventions and verified updates.</text>
+<rect x="44" y="150" width="270" height="180" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7"/>
+<text x="62" y="187" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Reference objectives</text>
+<text x="62" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Report targets c*</text>
+<text x="62" y="256" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Task groups and retention</text>
+<text x="62" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Fixed task-group budgets</text>
+<rect x="374" y="150" width="290" height="180" rx="5" fill="#eaf6f3" stroke="#087f75" stroke-width="1.7"/>
+<text x="392" y="187" fill="#183255" font-size="23" font-weight="600" text-anchor="start">SparkMentor  μ</text>
+<text x="392" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Current Eᵣ and available prior F</text>
+<text x="392" y="256" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Intervention memory Mᵣ</text>
+<text x="392" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Choose a practice plan Aᵣ</text>
+<rect x="724" y="150" width="672" height="225" rx="5" fill="#f7f9fc" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="742" y="187" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Academy execution and student learning  U</text>
+<text x="742" y="225" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Physical prefix → expert data → quality checks</text>
+<text x="742" y="256" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Train the student: xᵣ → candidate x′ᵣ₊₁</text>
+<text x="742" y="287" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">ACT / DP / VLA; fixed deployment interface</text>
+<text x="742" y="318" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Actual execution, with sampling and optimization variability</text>
+<path d="M314 235H374" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-ink)"/>
+<path d="M664 235H724" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<text x="694" y="218" fill="#087f75" font-size="20" font-weight="500" text-anchor="middle">Aᵣ</text>
+<rect x="44" y="475" width="350" height="175" rx="5" fill="#f1eef8" stroke="#7552a5" stroke-width="1.7"/>
+<text x="62" y="512" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Feedback memory</text>
+<text x="62" y="550" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Eᵣ: current rollout evidence (C)</text>
+<text x="62" y="581" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Fᵣ: learning response (V)</text>
+<text x="62" y="612" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Plans, outcomes and costs</text>
+<rect x="520" y="475" width="350" height="175" rx="5" fill="#f7f9fc" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="538" y="512" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Compare and retain</text>
+<text x="538" y="550" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Candidate versus parent</text>
+<text x="538" y="581" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Validate or keep current student</text>
+<text x="538" y="612" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Predefined stopping rules</text>
+<rect x="970" y="475" width="426" height="175" rx="5" fill="#eef4fd" stroke="#215cce" stroke-width="1.7"/>
+<text x="988" y="512" fill="#183255" font-size="23" font-weight="600" text-anchor="start">Development measurement  Hᵥ</text>
+<text x="988" y="550" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Fixed tasks and scoring protocol</text>
+<text x="988" y="581" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Capability estimates and uncertainty</text>
+<text x="988" y="612" fill="#52657b" font-size="19" font-weight="400" text-anchor="start">Task gains, retention and cost</text>
+<path d="M1183 375V475" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-ink)"/>
+<path d="M970 560H870" fill="none" stroke="#183255" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-ink)"/>
+<text x="920" y="540" fill="#52657b" font-size="16" font-weight="400" text-anchor="middle">readout</text>
+<path d="M520 560H394" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-purple)"/>
+<text x="457" y="540" fill="#7552a5" font-size="16" font-weight="400" text-anchor="middle">Fᵣ + decision</text>
+<path d="M219 475V405H519V330" fill="none" stroke="#7552a5" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-purple)"/>
+<text x="300" y="394" fill="#7552a5" font-size="19" font-weight="400" text-anchor="start">feedback + memory</text>
+<path d="M695 475V420H900V375" fill="none" stroke="#087f75" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a-teal)"/>
+<text x="730" y="409" fill="#087f75" font-size="18" font-weight="400" text-anchor="start">next learning state</text>
+<text x="44" y="693" fill="#52657b" font-size="20" font-weight="400" text-anchor="start">U is an executed learning process; H is a measurement, not an outcome predictor.</text>
+<rect x="44" y="722" width="1352" height="48" rx="5" fill="#f7f9fc" stroke="#d2dde8" stroke-width="1.7"/>
+<text x="62" y="753" fill="#183255" font-size="20" font-weight="400" text-anchor="start">Sealed testing T: freeze the student → native benchmark and real tasks; no feedback to this loop.</text>
+<text x="44" y="799" fill="#52657b" font-size="16" font-weight="400" text-anchor="start">Targets support reporting and planned checks; group budgets and the baseline selector remain fixed.</text>
+</g></svg>

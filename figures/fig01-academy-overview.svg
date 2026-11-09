@@ -4,7 +4,7 @@
 <rect x="60" y="166" width="465" height="173" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
 <rect x="60" y="188" width="5" height="30" fill="#087f75"/>
 <text x="84" y="213" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Tasks and scenes</text>
-<text x="84" y="254" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Lemon harvesting / Slider pushing</text>
+<text x="84" y="254" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Lemon / Slider / Button</text>
 <text x="84" y="286" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Initial states and legal practice conditions</text>
 <text x="84" y="318" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Reconstruction and physical registration</text>
 <rect x="565" y="166" width="465" height="173" rx="14" fill="#eef5ff" stroke="#d7e1ec" stroke-width="1.6"/>
@@ -52,4 +52,4 @@
 <text x="86" y="768" fill="#087f75" font-size="27" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Shared learning interfaces</text>
 <text x="86" y="811" fill="#183255" font-size="24" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">DP student executes and learns     |     Experts supervise     |     SparkMentor plans and records</text>
 <path d="M800 725 L800 675" fill="none" stroke="#087f75" stroke-width="3" marker-end="url(#teal)"/>
-<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.37  ·  Method illustration / 方法示意</text></svg>
+<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.38  ·  Method illustration / 方法示意</text></svg>

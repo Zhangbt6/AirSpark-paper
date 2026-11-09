@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AirSpark · 面向空中操作策略自进化的模拟学院 | 论文正文</title>
+<meta name="description" content="面向空中操作策略自进化的模拟学院：高保真视觉与物理交互、主动练习生成、闭环策略改进与真实迁移验证。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23183255'/%3E%3Cpath d='M7 24 16 7l9 17M11 18h10' fill='none' stroke='%2372dbce' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css?v=0.35">
+</head>
+<body>
+<a class="skip" href="#abstract">跳至正文</a>
+<aside><a class="brand" href="#abstract"><span class="mark">A</span><span>AirSpark<small>RESEARCH PAPER</small></span></a><div class="version">论文正文 · v0.37<br>2026.11.09</div><nav aria-label="论文阅读顺序" id="nav"></nav><div class="side-note">空中操作模拟学院<br>模拟学院 · 策略改进 · 真实验证</div><button class="print" onclick="window.print()">打印 / 保存 PDF</button></aside>
+<div class="main-shell"><header><span>AirSpark / <b id="chapter">摘要</b></span><span class="draft">研究稿</span></header><div class="progress" aria-hidden="true"><div id="progress"></div></div><main id="content"><section id="abstract" data-title="摘要" data-number="—"><p class="manuscript-status">研究设计 v0.37 · 主实验范围确定；先导参数与实验结果分别登记。</p><div class="eyebrow">AIRSPARK / RESEARCH MANUSCRIPT</div><h1>AirSpark</h1><p class="paper-subtitle">面向空中操作策略自进化的<br>模拟学院</p><p class="english-title">A Simulated Academy for Self-Improving Aerial Manipulation</p><div class="paper-keywords"><span>空中交互仿真</span><span>反馈驱动学习</span><span>跨轮记忆</span><span>真实部署</span></div><h2 class="abstract-heading">摘要</h2><div class="paper-copy">
+<p>空中操作策略需要在运动的机载视角下协调接近、抓持与接触运动。飞行基座、机械臂与环境的动态交互使后续动作同时依赖相对位姿、运动状态与接触时机，而在真实系统上重复获取相关经验和专家监督成本较高。本文提出 AirSpark，一套面向空中操作策略自进化的模拟学院。学院结合 Unreal Engine 渲染与 MuJoCo 动力学，提供任务配置、同步记录、可重复执行、专家数据生成、训练和评测工具，并通过真实场景重建与物理资产配准支持对应任务的仿真练习。SparkMentor 根据当前执行的阶段性困难及已有学习结果，提出受约束的练习条件分配与采集计划，调用学院工具更新学生策略，并将干预结果写入跨轮记忆。本文以摘柠檬和推滑块两项任务中的 Diffusion Policy 为主要学生，比较初始策略、固定练习与反馈学习，分析规则分配和跨轮记忆的作用，并在真实摘柠檬场景检验冻结策略的部署表现。定量结论由独立测试确定。</p></div></section>
+
+
+</main><dialog id="figure-dialog" aria-labelledby="figure-dialog-title"><div class="figure-dialog-toolbar"><strong id="figure-dialog-title">论文框图</strong><div><a id="figure-original" target="_blank" rel="noopener">打开原图</a><button type="button" id="figure-close" aria-label="关闭框图">关闭</button></div></div><div class="figure-dialog-body"><img id="figure-dialog-image" alt=""></div></dialog><footer><button id="prev">上一节</button><span id="position"></span><button id="next">下一节</button></footer></div>
+<script src="chapters.js?v=0.35"></script><script src="references-data.js?v=0.35"></script><script src="citations.js?v=0.35"></script><script src="app.js?v=0.35"></script>
+</body></html>

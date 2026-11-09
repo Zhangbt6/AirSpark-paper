@@ -4,7 +4,7 @@
 <rect x="60" y="166" width="465" height="173" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
 <rect x="60" y="188" width="5" height="30" fill="#087f75"/>
 <text x="84" y="213" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">任务与场景</text>
-<text x="84" y="254" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">摘柠檬 · 推滑块</text>
+<text x="84" y="254" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">摘柠檬 · 推滑块 · 按按钮</text>
 <text x="84" y="286" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">初态、对象与合法练习条件</text>
 <text x="84" y="318" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">真实场景重建与物理资产配准</text>
 <rect x="565" y="166" width="465" height="173" rx="14" fill="#eef5ff" stroke="#d7e1ec" stroke-width="1.6"/>
@@ -52,4 +52,4 @@
 <text x="86" y="768" fill="#087f75" font-size="27" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">共享学习接口</text>
 <text x="86" y="811" fill="#183255" font-size="24" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">学生 DP 执行与更新      |      专家提供监督      |      SparkMentor 分配练习与保存干预记忆</text>
 <path d="M800 725 L800 675" fill="none" stroke="#087f75" stroke-width="3" marker-end="url(#teal)"/>
-<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.37  ·  Method illustration / 方法示意</text></svg>
+<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.38  ·  Method illustration / 方法示意</text></svg>

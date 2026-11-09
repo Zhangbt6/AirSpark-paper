@@ -1,0 +1,139 @@
+{
+  "protocol_version": "v0.37",
+  "status": "pilot_registration_required",
+  "frozen": false,
+  "implementation_verified": false,
+  "method": {
+    "full": "Mentor_proposes_condition_proportions_and_registered_options",
+    "rule": "visitation_times_conditional_failure_over_qualified_cost",
+    "validator": [
+      "feasibility",
+      "normalization",
+      "coverage_floor",
+      "condition_caps",
+      "budget"
+    ],
+    "history_ablation": "current_diagnosis_latest_available_learning_feedback_and_runtime_only",
+    "task_score_controller_inputs": "fixed"
+  },
+  "training": {
+    "initialization": "retained_parent_registered_weights",
+    "optimizer": "reinitialized_per_candidate",
+    "learning_rate_schedule": "reinitialized_per_candidate",
+    "steps_per_candidate": null,
+    "replay_rule": null,
+    "exact_training_state_resume": false,
+    "runtime_warm_start_verified": false,
+    "verified_previous_run_mode": "fresh_training_as_of_remote_8ce7b214"
+  },
+  "supervision": {
+    "primary": "condition_specific_complete_expert",
+    "optional": "validated_physical_prefix_expert_suffix",
+    "minimum_pilot_attempts_per_condition": 10,
+    "minimum_qualified_fraction": 0.7,
+    "expert_mask_and_chunk_boundaries": true,
+    "same_registry_for_all_groups": true
+  },
+  "splits": {
+    "C_count": null,
+    "V_count": null,
+    "T_per_task": 50,
+    "pre_registered_manifests": true,
+    "actual_state_overlap_check": true,
+    "test_feedback": false
+  },
+  "metrics": {
+    "lemon_primary": "task_truth.source_task_success at registered evaluation time",
+    "lemon_secondary": [
+      "ever_success",
+      "platform_latched_success",
+      "two_second_stability"
+    ],
+    "slider_primary": "source_endpoint_threshold",
+    "diagnostics": [
+      "stage_reach",
+      "conditional_stage_pass",
+      "safety_stop",
+      "contact",
+      "tracking"
+    ],
+    "supervision_unit": "unique_expert_timesteps_and_duration_plus_eligible_windows",
+    "lemon_platform": "task_truth.task_success / placement_release_latched_v2 separately"
+  },
+  "real": {
+    "common_parent": true,
+    "same_reconstructed_scene": true,
+    "initial_models": 1,
+    "initial_episodes": 30,
+    "updated_groups": 2,
+    "chains_per_group": 3,
+    "episodes_per_updated_model": 10,
+    "main_episodes": 90,
+    "sim_episodes_per_model": 30,
+    "total_sim_episodes": 210,
+    "matched_start_blocks": true,
+    "runtime_mentor_correction": false,
+    "initial_real_data_and_replay": null,
+    "optional_standard_scene_control_real_episodes": 30
+  },
+  "versions": {
+    "code": null,
+    "expert": null,
+    "parent": null,
+    "score": null,
+    "binary": null
+  },
+  "acceptance": {
+    "task_gain": null,
+    "safety_and_retention": null
+  },
+  "budget": {
+    "attempts_per_round": null,
+    "train_steps": null,
+    "actual_costs_required": true
+  },
+  "agent": {
+    "model": null,
+    "core_prompt_hash": null,
+    "retrieval": null
+  },
+  "legacy_configuration": "protocol/closed-loop-config-v0.35.archive.json",
+  "metrics_contract": "protocol/metrics-v0.37.json",
+  "third_task": {
+    "task": "PressButton",
+    "status": "candidate_not_activated",
+    "interaction_class": "instantaneous_contact",
+    "native_source": "https://github.com/ambench/ambench",
+    "UE_verified": false,
+    "existing_evidence": "legacy/research/receipts/phase1_pressbutton_20261014.json; native only",
+    "readiness_deadline_suggestion_Beijing": "2026-11-10 12:00",
+    "readiness": [
+      "UE physical task and verified criterion",
+      "expert and data QA",
+      "observation/action alignment",
+      "train reload and rollout smoke",
+      "resource schedule including all tests"
+    ],
+    "chains_per_updated_method": 3,
+    "max_interventions": 2,
+    "methods": [
+      "initial",
+      "fixed",
+      "full"
+    ],
+    "added_settings": 2,
+    "added_chains": 6,
+    "added_max_candidate_trainings": 12,
+    "added_sealed_models": 7,
+    "added_sealed_episodes": 350,
+    "activated_totals": {
+      "incremental_settings": 10,
+      "chains": 30,
+      "max_candidate_trainings": 60,
+      "benchmark_sealed_episodes": 1350,
+      "real_sim_episodes": 210,
+      "real_episodes": 90
+    },
+    "decision_basis": "readiness_and_resources_before_primary_results_not_test_gain"
+  }
+}
