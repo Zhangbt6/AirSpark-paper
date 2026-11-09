@@ -1,0 +1,19 @@
+{
+  "version": "v0.44",
+  "scope": "Chinese website prose only",
+  "experimental_protocol": "v0.42 unchanged",
+  "English": "unchanged; alignment pending",
+  "changes": [
+    "move execution preparation, pilot thresholds, submission dates and artwork history to manual",
+    "retain two contributions and short-horizon memory boundary",
+    "formal practice plan uses w and eta; tool-control d retained in manual",
+    "align experiment overview with subsection order",
+    "add transfer condition-library row and factual hardware description"
+  ],
+  "pending_facts": [
+    "R0 dataset source and size",
+    "real-data replay use and ratio",
+    "actual robot and task camera parameters"
+  ],
+  "artwork": "Chinese existing diagrams retained; v3 bilingual artwork delegated to drawing workflow"
+}
