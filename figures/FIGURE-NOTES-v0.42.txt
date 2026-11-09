@@ -1,0 +1,1 @@
+v0.42: experiment design update only. E2/E3 unchanged; transfer uses full method only. 54 candidate trainings, 1350 benchmark tests, 630 reconstructed-simulator checkpoint tests, 180 physical trials. R1 physical optional +90. Generic system/method drawings retained; v3 artist copies remain local and await condition-panel refresh. All results pending.

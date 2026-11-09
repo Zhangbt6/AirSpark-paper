@@ -1,0 +1,353 @@
+{
+  "protocol_version": "v0.33.1",
+  "status": "pilot_pending",
+  "frozen": false,
+  "implementation_verified": false,
+  "source": "user unified revision v0.33, 2026-10-25",
+  "scope": "Two contributions, six-stage bounded feedback policy improvement; no measured results.",
+  "method": {
+    "group": null,
+    "allowed_groups": [
+      "B0",
+      "B1",
+      "B3",
+      "B3+adapt-rule",
+      "B3+adapt-current",
+      "B3+adapt-history"
+    ],
+    "plan_fields": [
+      "b_fixed_allocation",
+      "eta_candidate",
+      "operation"
+    ],
+    "accepted_configuration_commit": "only_with_accepted_candidate",
+    "group_task_weights": null,
+    "forbidden_changes": [
+      "task",
+      "score",
+      "sealed_test",
+      "student_inputs",
+      "low_level_controller",
+      "tool_permissions",
+      "resource_caps",
+      "arbitrary_code_or_core_prompt"
+    ]
+  },
+  "versions": {
+    "environment": null,
+    "benchmark_source": null,
+    "robot": null,
+    "expert": null,
+    "student": null,
+    "checkpoint": null,
+    "training_recipe_hash": null,
+    "split_manifest": null
+  },
+  "task_contract": {
+    "primary": [
+      "LemonHarvesting",
+      "PushSlider"
+    ],
+    "benchmark_robot": "FA-Hexa",
+    "benchmark_action": "EE_targets",
+    "benchmark_controller": "IK-PID",
+    "native_contract_check": [
+      "task",
+      "embodiment",
+      "observations",
+      "actions",
+      "controller",
+      "scoring"
+    ],
+    "mismatch_label": "derived_setting",
+    "slider_engaged_travel_fraction": 0.05,
+    "slider_pushed": "official_joint_endpoint_threshold",
+    "official_predicates_are_contact_measurements": false,
+    "diagnostic_contact_metrics": [
+      "duration",
+      "disengagement_count",
+      "base_attitude_error"
+    ],
+    "training_friction_range": null,
+    "same_range_across_methods": true,
+    "native_test_official_configuration": true
+  },
+  "students": {
+    "ACT": {
+      "initialization": null,
+      "training": null
+    },
+    "DP": {
+      "initialization": null,
+      "training": null
+    },
+    "pi05_LoRA": {
+      "backend": "OpenPI_JAX_LoRA_planned",
+      "backend_version": null,
+      "initialization": "multitask_then_single_task",
+      "language": "fixed_task_instruction",
+      "adapter_rank": null,
+      "target_modules": null,
+      "same_parent_candidate_adapter": true,
+      "peak_memory_GB": null,
+      "initial_data_and_compute_separate": true,
+      "full_finetuning_claim": false
+    }
+  },
+  "splits": {
+    "dimensions": [
+      "objects",
+      "layouts",
+      "initial_states"
+    ],
+    "C": {
+      "count": null,
+      "use": [
+        "diagnosis",
+        "supervision"
+      ]
+    },
+    "V": {
+      "count": null,
+      "use": [
+        "feedback",
+        "acceptance"
+      ],
+      "trajectories_train": false
+    },
+    "T": {
+      "count": null,
+      "after_freeze": true,
+      "feedback": false
+    }
+  },
+  "diagnostics": {
+    "episodes_per_round": null,
+    "predicates": null,
+    "transition_windows": null,
+    "minimum_condition_count": null,
+    "counting": "first_entry_per_condition_per_episode",
+    "downstream_unreached": "insufficient_evidence",
+    "smoothing": "none"
+  },
+  "allocation": {
+    "priority": "visitation_times_conditional_failure_over_qualified_cost",
+    "gain_predictor": false,
+    "fixed_program": true,
+    "coverage_fraction": null,
+    "exploration_fraction": null,
+    "tie_order": null,
+    "eligible_set_changed_by_legal_deferral": true,
+    "unknown_cost": "bounded_pilot",
+    "zero_yield": "undefined_cost_then_pilot_or_defer",
+    "all_zero_q": "coverage",
+    "cost_version_match_required": true
+  },
+  "practice": {
+    "takeover_options": null,
+    "demonstration_composition_options": null,
+    "replay_options": null,
+    "physical_prefix": true,
+    "student_prefix_is_expert_target": false,
+    "expert_only_action_chunks": true,
+    "quality_thresholds": null,
+    "minimum_qualified_data": null
+  },
+  "agent": {
+    "model_version": null,
+    "temperature": null,
+    "core_prompt_hash": null,
+    "memory_program_hash": null,
+    "retrieval": null,
+    "permissions_hash": null,
+    "fixed_during_main": true,
+    "output_fields": [
+      "legal_option",
+      "evidence_ids",
+      "brief_rationale",
+      "phenomenon_to_check"
+    ],
+    "decision_randomness_in_chain": true,
+    "calls_charged": true
+  },
+  "memory": {
+    "definition": [
+      "R_append_only",
+      "K_revisable"
+    ],
+    "R_fields": [
+      "versions",
+      "E",
+      "plan",
+      "data_QC",
+      "training_evaluation",
+      "decision_reasons",
+      "cost"
+    ],
+    "K_fields": [
+      "applicability",
+      "candidate_explanation",
+      "suggested_intervention",
+      "supporting_and_opposing_records",
+      "status",
+      "retest_conditions"
+    ],
+    "K_revisable_fields": [
+      "explanation",
+      "suggestion",
+      "applicability",
+      "evidence_status"
+    ],
+    "update_each_round_including_success": true,
+    "rejection_still_updates": true,
+    "facts_immutable": true,
+    "no_gain_trigger_threshold": null,
+    "no_gain_requires_valid_complete_training_and_evaluation": true,
+    "rule_and_full_shared_memory_processing": true,
+    "histories_independent": true,
+    "current_view": [
+      "current_E",
+      "latest_available_F",
+      "accepted_eta",
+      "necessary_runtime_state"
+    ],
+    "current_forbids": [
+      "older_R",
+      "K_derived_from_older_R"
+    ],
+    "audit_log_is_not_decision_access": true
+  },
+  "execution": {
+    "chains_per_setting": 3,
+    "max_interventions_per_chain": 4,
+    "max_trained_candidates_per_intervention": 1,
+    "no_old_new_dual_branch": true,
+    "paired_parent_seed_eval_starts": true,
+    "resources": null,
+    "per_stage_caps": null,
+    "no_training_effect": "unmeasured",
+    "F_timing": "only_after_training_and_V_evaluation_for_future_plans"
+  },
+  "acceptance": {
+    "gain_threshold": null,
+    "retention_tolerances": null,
+    "minimum_relevant_effect": null,
+    "evaluation_precision": null,
+    "empirical_not_guarantee": true,
+    "required_checks": [
+      "Valid",
+      "Complete",
+      "WithinBudget"
+    ]
+  },
+  "state": {
+    "accepted": [
+      "commit_theta_psi",
+      "commit_qualified_data",
+      "commit_eta_candidate"
+    ],
+    "rejected": [
+      "restore_parent_theta_psi",
+      "retain_accepted_data",
+      "retain_eta"
+    ],
+    "always_persist": [
+      "append_R",
+      "revise_K_from_actual_evidence",
+      "actual_costs",
+      "attempt_count",
+      "advancing_collection_rng"
+    ],
+    "missing_effect_not_zero": true,
+    "candidate_data_replay_on_rejection": false
+  },
+  "statistics": {
+    "independent_unit": "complete_learning_chain",
+    "report": [
+      "per_chain",
+      "paired_differences",
+      "mean_paired_difference",
+      "direction_consistency"
+    ],
+    "significance_tests": false,
+    "interval_estimand": null,
+    "interval_method": null,
+    "evaluation_episodes_are_training_replicates": false
+  },
+  "cost_and_recovery": {
+    "units": null,
+    "caps": null,
+    "include": [
+      "collection",
+      "reset",
+      "QC",
+      "training",
+      "invalid_attempts",
+      "retest",
+      "evaluation",
+      "agent_calls",
+      "human_intervention"
+    ],
+    "completed_identical_artifact_charged_once": true,
+    "retry_limits": null,
+    "recovery": "hashes_completion_markers_ledger",
+    "fault_vs_policy_failure_separate": true
+  },
+  "reuse": {
+    "source": "three_predeclared_DP_lemon_full_chains",
+    "mapping": "source_i_to_target_i",
+    "treatments": [
+      "imported_K",
+      "empty_K"
+    ],
+    "both_train_new_parent": true,
+    "initial_demo_disjoint_from_source": true,
+    "forbidden_imports": [
+      "student_weights",
+      "training_trajectories",
+      "sealed_information"
+    ],
+    "source_cost_separate": true
+  },
+  "real": {
+    "embodiment": "independent_of_FA_Hexa",
+    "no_benchmark_checkpoint_reuse": true,
+    "initial_models": 1,
+    "initial_episodes": 30,
+    "updated_groups": 2,
+    "chains_per_group": 3,
+    "episodes_per_updated_model": 10,
+    "main_episodes": 90,
+    "same_fixed_real_replay": true,
+    "real_replay_fraction": null,
+    "new_real_data_after_initialization": false,
+    "initial_real_demos": null,
+    "initial_sim_demos": null,
+    "initial_training_cost": null,
+    "real_demo_layouts_excluded_from_test": null,
+    "parent_selection": "pilot_only",
+    "starts": "paired_randomly_interleaved",
+    "hardware_fault_rule": null,
+    "policy_safety_stop_excluded": false,
+    "mentor_runtime_correction": false,
+    "test_feedback": false,
+    "claim": "bundled_deployment_utility_and_practice_scene_difference",
+    "real_scene": "self_built_lemon_harvesting_not_required_to_match_AMBench_layout",
+    "standard_simulation_scene_source": null,
+    "initial_demonstrations_status": "not_prepared",
+    "initial_sim_demonstration_source": null,
+    "initial_demo_composition": null,
+    "additional_unseen_layout_test": {
+      "status": "not_scheduled",
+      "episodes": null
+    },
+    "evaluation_scope": "deployment_in_self_built_scene_not_unseen_layout_generalization",
+    "data_isolation": "pre_registered_demonstration_development_test_episodes_and_starts_no_test_feedback",
+    "episode_start_manifests": null
+  },
+  "supplementary": [
+    "Cabinet",
+    "native_vs_academy_data",
+    "fixed_practice_reconstructed_scene"
+  ]
+}

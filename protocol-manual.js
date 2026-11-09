@@ -31,6 +31,6 @@
   }}
   function download(name,body,type){const url=URL.createObjectURL(new Blob([body],{type}));const a=el('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
   function cell(v){return '"'+String(v??'').replaceAll('"','""')+'"';}
-  document.querySelector('#export-ledger').addEventListener('click',()=>{const lines=[['chain_id',...fields].map(cell).join(',')];for(const [id,r]of Object.entries(saved))lines.push([id,...fields.map(f=>r[f])].map(cell).join(','));download('AirSpark-learning-chains-v0.40.csv','\ufeff'+lines.join('\r\n'),'text/csv;charset=utf-8');});
-  document.querySelector('#export-records').addEventListener('click',()=>download('AirSpark-local-records-v0.40.json',JSON.stringify({version:'v0.40',status:'local_unreviewed',records:saved},null,2),'application/json'));
+  document.querySelector('#export-ledger').addEventListener('click',()=>{const lines=[['chain_id',...fields].map(cell).join(',')];for(const [id,r]of Object.entries(saved))lines.push([id,...fields.map(f=>r[f])].map(cell).join(','));download('AirSpark-learning-chains-v0.42.csv','\ufeff'+lines.join('\r\n'),'text/csv;charset=utf-8');});
+  document.querySelector('#export-records').addEventListener('click',()=>download('AirSpark-local-records-v0.42.json',JSON.stringify({version:'v0.42',status:'local_unreviewed',records:saved},null,2),'application/json'));
 })();

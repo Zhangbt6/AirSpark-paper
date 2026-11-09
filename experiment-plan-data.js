@@ -1,6 +1,6 @@
 window.AIRSPARK_STUDY_PLAN = {
-  "plan_version": "v0.40",
-  "status": "three_task_scope_fixed_runtime_validation_pending",
+  "plan_version": "v0.42",
+  "status": "approved_design_runtime_bindings_pending",
   "date": "2026-11-09",
   "tasks": [
     "LemonHarvesting",
@@ -122,23 +122,11 @@ window.AIRSPARK_STUDY_PLAN = {
       "parent_contract": "lemon_common_parent"
     },
     {
-      "id": "real-DP-lemon-fixed",
-      "student": "DP",
-      "task": "LemonHarvesting",
-      "group": "fixed",
-      "name": "重建场景＋固定练习",
-      "tier": 2,
-      "line": "real_matched_embodiment",
-      "chains": 3,
-      "max_interventions": 2,
-      "parent_contract": "real_common_parent"
-    },
-    {
       "id": "real-DP-lemon-full",
       "student": "DP",
       "task": "LemonHarvesting",
       "group": "full",
-      "name": "重建场景＋完整方法",
+      "name": "重建场景完整方法：三类条件迁移",
       "tier": 2,
       "line": "real_matched_embodiment",
       "chains": 3,
@@ -147,14 +135,15 @@ window.AIRSPARK_STUDY_PLAN = {
     }
   ],
   "totals": {
-    "incremental_settings": 10,
-    "chains": 30,
-    "max_candidate_trainings": 60,
+    "incremental_settings": 9,
+    "chains": 27,
+    "max_candidate_trainings": 54,
     "benchmark_sealed_models": 27,
     "benchmark_sealed_episodes": 1350,
     "real_sim_models": 7,
-    "real_sim_episodes": 210,
-    "real_episodes": 90
+    "real_sim_episodes": 630,
+    "real_episodes": 180,
+    "real_optional_R1_episodes": 90
   },
   "tiers": [
     {
@@ -166,10 +155,10 @@ window.AIRSPARK_STUDY_PLAN = {
     },
     {
       "tier": 2,
-      "name": "重建场景实机固定／完整对照",
-      "settings": 2,
-      "chains": 6,
-      "max_candidate_trainings": 12
+      "name": "重建场景完整方法与三类条件迁移",
+      "settings": 1,
+      "chains": 3,
+      "max_candidate_trainings": 6
     },
     {
       "tier": 3,
@@ -242,20 +231,72 @@ window.AIRSPARK_STUDY_PLAN = {
     "test_feedback": false
   },
   "real_test": {
+    "status": "approved_design_not_runtime_verified",
+    "task": "LemonHarvesting",
     "common_parent": true,
     "same_reconstructed_scene": true,
-    "initial_models": 1,
-    "initial_episodes": 30,
-    "updated_groups": 2,
-    "chains_per_group": 3,
-    "episodes_per_updated_model": 10,
-    "main_episodes": 90,
-    "sim_episodes_per_model": 30,
-    "total_sim_episodes": 210,
+    "methods": [
+      "full"
+    ],
+    "initial_checkpoint": "R0",
+    "sim_checkpoints": [
+      "R0",
+      "R1",
+      "R2"
+    ],
+    "real_primary_checkpoints": [
+      "R0",
+      "R2"
+    ],
+    "real_optional_checkpoint": "R1",
+    "chains": 3,
+    "max_interventions": 2,
+    "max_candidate_trainings": 6,
+    "checkpoint_slots": {
+      "R0": 1,
+      "R1": 3,
+      "R2": 3
+    },
+    "conditions": [
+      "nominal",
+      "illumination_shift",
+      "partial_occlusion"
+    ],
+    "conditions_evaluated_separately": true,
+    "initial_real_trials_per_condition": 30,
+    "R2_real_trials_per_chain_per_condition": 10,
+    "real_trials_per_condition": 60,
+    "main_episodes": 180,
+    "sim_trials_per_checkpoint_slot_per_condition": 30,
+    "total_sim_episodes": 630,
+    "optional_R1_real_episodes": 90,
     "matched_start_blocks": true,
+    "chain_to_block_mapping": "same registered 10-start block per chain; common 30-start set across conditions",
+    "practice_conditions": [
+      "target_pose",
+      "illumination",
+      "partial_occlusion"
+    ],
+    "scope_of_conditions": "transfer line only; three-task benchmark and ablation unchanged",
+    "practice_development_test_configurations_disjoint": true,
+    "generalization_claim": "held-out configurations, not unseen disturbance types",
+    "occluder_constraint": "partial visual obstruction outside arm motion/contact path; physical feasibility checked",
+    "freeze_all_checkpoints_before_real_tests": true,
+    "sealed_results_not_returned_to_Mentor": true,
     "runtime_mentor_correction": false,
+    "localization": "motion_capture",
+    "record_each_trial": [
+      "motion_capture_quality",
+      "controller_tracking",
+      "safety_stop",
+      "camera_configuration",
+      "condition_manifest"
+    ],
+    "illumination_implementation": "pending; register any background appearance approximation; no claim of physically correct relighting",
+    "lighting_and_occlusion_ranges": null,
     "initial_real_data_and_replay": null,
-    "optional_standard_scene_control_real_episodes": 30
+    "report": "absolute k/N and chain results by condition; nominal-to-shift drop is secondary",
+    "claim_boundary": "retained improvement and transfer; no physical-world superiority over fixed practice or isolated lighting-curriculum causal claim"
   },
   "extensions": [
     "ACT_lemon",
@@ -263,7 +304,10 @@ window.AIRSPARK_STUDY_PLAN = {
     "cross_initialization_experience_reuse",
     "standard_scene_full_control",
     "offline_multi_LLM_planning_comparison",
-    "retrospective_sealed_learning_curve"
+    "retrospective_sealed_learning_curve",
+    "reconstructed_fixed_practice_sim_only_6_trainings",
+    "real_R1_90_trials",
+    "combined_illumination_and_occlusion"
   ],
   "pending": [
     "parent_and_data_hashes",
@@ -278,10 +322,14 @@ window.AIRSPARK_STUDY_PLAN = {
     "real_data_and_start_blocks",
     "qualified_suffix_registry",
     "press_button_UE_task_expert_and_data_validation",
-    "press_button_parent_and_native_criterion_binding"
+    "press_button_parent_and_native_criterion_binding",
+    "transfer_condition_manifests",
+    "transfer_illumination_approximation_and_camera_settings",
+    "occluder_asset_registration",
+    "transfer_checkpoint_freeze_manifest"
   ],
   "count_note": "Training upper bounds exclude initial training, pilots, diagnostics, development, collection and optional tests.",
-  "metrics_contract": "protocol/metrics-v0.40.json",
+  "metrics_contract": "protocol/metrics-v0.42.json",
   "press_button": {
     "task": "PressButton",
     "status": "included_in_primary_scope_UE_validation_pending",

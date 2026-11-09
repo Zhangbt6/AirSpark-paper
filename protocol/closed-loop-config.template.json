@@ -1,5 +1,5 @@
 {
-  "protocol_version": "v0.40",
+  "protocol_version": "v0.42",
   "status": "pilot_registration_required",
   "frozen": false,
   "implementation_verified": false,
@@ -105,7 +105,7 @@
     "retrieval": null
   },
   "legacy_configuration": "protocol/closed-loop-config-v0.35.archive.json",
-  "metrics_contract": "protocol/metrics-v0.40.json",
+  "metrics_contract": "protocol/metrics-v0.42.json",
   "press_button": {
     "task": "PressButton",
     "status": "included_in_primary_scope_UE_validation_pending",
@@ -153,5 +153,73 @@
     "implementation": "fresh Mentor context per round; no historical summaries through tool results or runtime metadata",
     "scope": "history can first affect the second practice decision; not evidence of long-term memory benefits",
     "same_parent_tools_budget_training_and_acceptance": true
+  },
+  "real_test": {
+    "status": "approved_design_not_runtime_verified",
+    "task": "LemonHarvesting",
+    "common_parent": true,
+    "same_reconstructed_scene": true,
+    "methods": [
+      "full"
+    ],
+    "initial_checkpoint": "R0",
+    "sim_checkpoints": [
+      "R0",
+      "R1",
+      "R2"
+    ],
+    "real_primary_checkpoints": [
+      "R0",
+      "R2"
+    ],
+    "real_optional_checkpoint": "R1",
+    "chains": 3,
+    "max_interventions": 2,
+    "max_candidate_trainings": 6,
+    "checkpoint_slots": {
+      "R0": 1,
+      "R1": 3,
+      "R2": 3
+    },
+    "conditions": [
+      "nominal",
+      "illumination_shift",
+      "partial_occlusion"
+    ],
+    "conditions_evaluated_separately": true,
+    "initial_real_trials_per_condition": 30,
+    "R2_real_trials_per_chain_per_condition": 10,
+    "real_trials_per_condition": 60,
+    "main_episodes": 180,
+    "sim_trials_per_checkpoint_slot_per_condition": 30,
+    "total_sim_episodes": 630,
+    "optional_R1_real_episodes": 90,
+    "matched_start_blocks": true,
+    "chain_to_block_mapping": "same registered 10-start block per chain; common 30-start set across conditions",
+    "practice_conditions": [
+      "target_pose",
+      "illumination",
+      "partial_occlusion"
+    ],
+    "scope_of_conditions": "transfer line only; three-task benchmark and ablation unchanged",
+    "practice_development_test_configurations_disjoint": true,
+    "generalization_claim": "held-out configurations, not unseen disturbance types",
+    "occluder_constraint": "partial visual obstruction outside arm motion/contact path; physical feasibility checked",
+    "freeze_all_checkpoints_before_real_tests": true,
+    "sealed_results_not_returned_to_Mentor": true,
+    "runtime_mentor_correction": false,
+    "localization": "motion_capture",
+    "record_each_trial": [
+      "motion_capture_quality",
+      "controller_tracking",
+      "safety_stop",
+      "camera_configuration",
+      "condition_manifest"
+    ],
+    "illumination_implementation": "pending; register any background appearance approximation; no claim of physically correct relighting",
+    "lighting_and_occlusion_ranges": null,
+    "initial_real_data_and_replay": null,
+    "report": "absolute k/N and chain results by condition; nominal-to-shift drop is secondary",
+    "claim_boundary": "retained improvement and transfer; no physical-world superiority over fixed practice or isolated lighting-curriculum causal claim"
   }
 }

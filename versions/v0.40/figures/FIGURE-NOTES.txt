@@ -1,0 +1,44 @@
+AirSpark paper figures · v0.23 · 2026-10-23
+
+Six-stage method structure and feedback semantics; not a measured outcome or final camera-ready graphic.
+
+图 1. AirSpark 模拟学院平台架构。视觉仿真、物理仿真与场景任务共同支撑任务执行、同步记录、监督生成、训练与评价工具。学生策略、采集专家和 SparkMentor 通过共享接口调用这些能力。图 2 进一步描述运行在学院设施上的策略自进化方法。
+
+图 2. 执行与学习反馈驱动的策略自进化。主循环依次为策略执行、交互过程诊断、反馈驱动练习规划、专家监督生成、学生策略更新和学习评估与接纳。第 r 轮根据执行证据 Eᵣ 与既往干预记录 Mᵣ 生成练习计划 Aᵣ；训练后的学习反馈 Fᵣ 写入 Mᵣ₊₁，供后续规划读取。接纳的学生进入下一轮，未接纳时保留父代；两种结果均进入记忆。封存评价与物理实机最终测试位于学习闭环之外。
+
+图 3. E1 复用日志检验学院设施，并在一个任务比较原生与学院固定补采；E2 至少两个任务比较 B0、固定流程 B1 与完整闭环，代表任务解释机制；E3 冻结学生后进行原生与物理实机检验。
+
+图 A1. 视觉与物理执行细节。3DGS 提供静态场景外观，显式物理资产承担碰撞、接触与载荷；MuJoCo 状态驱动 UE 动态资产。适配器统一坐标、时间和动作语义，并区分学生输入、特权诊断与专家监督。
+
+图 A2. RSI 经验生成步骤的展开。从合法初态实际执行前缀，在目标过程条件上采集专家延续；每条分支是独立的物理执行。前缀提供允许的历史上下文，动作监督仅来自通过质检的专家区间。轨迹为方法示意，非实测结果。
+
+图 A3. 图 2 的反馈原理解释。学习状态 x 与能力测量 ĉ 分开，学习决策 μ 与机器人低层控制 K 分开。U 表示实际采集和训练，H 表示评价测量，未引入学习收益预测器。最终测试不进入反馈闭环。
+
+Figure 2 module names (Chinese / English):
+1 策略执行 / Policy Rollout
+2 交互过程诊断 / Interaction Diagnosis
+3 反馈驱动练习规划 / Feedback-Guided Practice Planning
+4 专家监督生成 / Expert Supervision Generation
+5 学生策略更新 / Student Policy Update
+6 学习评估与接纳 / Learning Evaluation and Acceptance
+跨轮干预记忆 / Intervention Memory
+
+Semantics: E_r and prior M_r guide A_r. Actual generation/training precede F_r.
+F_r and all intervention decisions update M_(r+1) for subsequent planning.
+Accepted or retained parent enters the next round; no final-test feedback returns.
+A is the executable plan; eta is an accepted experience configuration version;
+mu_g is a group-specific fixed decision rule and information permission.
+SparkMentor orchestrates the cycle; its practice decision is highlighted at module 3.
+Generation options guide module 4; replay options guide module 5 via versioned manifests.
+
+Rebuild order (scripts/ and figures/ as sibling folders):
+1. python scripts/build-figures.py
+2. python scripts/localize-figures.py
+3. python scripts/build-feedback-figure.py
+4. python scripts/build-study-figures-v021.py
+5. python scripts/build-rsi-figure-v022.py
+6. python scripts/build-study-figure-v023.py (Figure 3 only; preserve v0.22 Figure 2)
+7. node scripts/export-figures.cjs (requires sharp)
+The v0.22 builder must run last before PNG export, or old builders overwrite Figure 2.
+
+Study v0.23: primary B0 / B1 / complete AirSpark. E1 source pair is native B1 vs academy B1 on one task; 2x2 optional. Every intervention selects one plan and trains at most one candidate. Rule/current/history attribution is representative-task evidence. Numerical schedules and measured results remain pending.
