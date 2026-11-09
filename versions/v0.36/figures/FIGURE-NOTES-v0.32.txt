@@ -1,0 +1,11 @@
+AirSpark figures v0.32 — research design, no results.
+
+Chinese Figure 3 (fig04-evaluation-protocol-zh) updates the existing evaluation
+layout to lemon/NDT candidates, optional source/history studies, and physical
+initial/benchmark-scene/reconstructed-scene comparison. Geometry is preserved.
+Chinese Figure 2 remains the v0.30 method. Other figures and all English assets
+remain v0.23. English is intentionally not synchronized yet.
+
+Editable SVGs and 2x PNGs are included with prior drawing scripts. For the v0.32
+Chinese evaluation update use scripts/update-study-figure-v032.py, then render
+its SVG using sharp at density 144. Do not overwrite it with older generators.

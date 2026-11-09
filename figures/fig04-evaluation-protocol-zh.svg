@@ -55,4 +55,5 @@
 <text x="1104" y="770" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">逐模型报告部署与安全表现</text>
 <path d="M500 738 L545 738" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
 <path d="M1030 738 L1075 738" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
-<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.36  ·  Method illustration / 方法示意</text></svg>
+<text x="60" y="884" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">候选第三任务 PressButton：准入后另加12次训练、350回合测试</text>
+<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.37  ·  Method illustration / 方法示意</text></svg>

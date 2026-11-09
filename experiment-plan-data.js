@@ -1,7 +1,7 @@
 window.AIRSPARK_STUDY_PLAN = {
-  "plan_version": "v0.36",
+  "plan_version": "v0.37",
   "status": "scope_fixed_pilot_parameters_pending",
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "tasks": [
     "LemonHarvesting",
     "PushSlider"
@@ -184,7 +184,7 @@ window.AIRSPARK_STUDY_PLAN = {
     "same_registry_for_all_groups": true
   },
   "metrics": {
-    "lemon_primary": "verified_source_task_final_success_with_version",
+    "lemon_primary": "task_truth.source_task_success at registered evaluation time",
     "lemon_secondary": [
       "ever_success",
       "platform_latched_success",
@@ -198,7 +198,8 @@ window.AIRSPARK_STUDY_PLAN = {
       "contact",
       "tracking"
     ],
-    "supervision_unit": "qualified_expert_action_windows"
+    "supervision_unit": "unique_expert_timesteps_and_duration_plus_eligible_windows",
+    "lemon_platform": "task_truth.task_success / placement_release_latched_v2 separately"
   },
   "splits": {
     "C_count": null,
@@ -243,5 +244,43 @@ window.AIRSPARK_STUDY_PLAN = {
     "real_data_and_start_blocks",
     "qualified_suffix_registry"
   ],
-  "count_note": "Training upper bounds exclude initial training, pilots, diagnostics, development, collection and optional tests."
+  "count_note": "Training upper bounds exclude initial training, pilots, diagnostics, development, collection and optional tests.",
+  "metrics_contract": "protocol/metrics-v0.37.json",
+  "third_task_candidate": {
+    "task": "PressButton",
+    "status": "candidate_not_activated",
+    "interaction_class": "instantaneous_contact",
+    "native_source": "https://github.com/ambench/ambench",
+    "UE_verified": false,
+    "existing_evidence": "legacy/research/receipts/phase1_pressbutton_20261014.json; native only",
+    "readiness_deadline_suggestion_Beijing": "2026-11-10 12:00",
+    "readiness": [
+      "UE physical task and verified criterion",
+      "expert and data QA",
+      "observation/action alignment",
+      "train reload and rollout smoke",
+      "resource schedule including all tests"
+    ],
+    "chains_per_updated_method": 3,
+    "max_interventions": 2,
+    "methods": [
+      "initial",
+      "fixed",
+      "full"
+    ],
+    "added_settings": 2,
+    "added_chains": 6,
+    "added_max_candidate_trainings": 12,
+    "added_sealed_models": 7,
+    "added_sealed_episodes": 350,
+    "activated_totals": {
+      "incremental_settings": 10,
+      "chains": 30,
+      "max_candidate_trainings": 60,
+      "benchmark_sealed_episodes": 1350,
+      "real_sim_episodes": 210,
+      "real_episodes": 90
+    },
+    "decision_basis": "readiness_and_resources_before_primary_results_not_test_gain"
+  }
 };

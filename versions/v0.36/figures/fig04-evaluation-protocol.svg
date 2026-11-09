@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img"><title>Two-task learning, component controls, and real deployment</title><defs><marker id="navy" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#183255"/></marker><marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#087f75"/></marker><marker id="purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#7552a5"/></marker></defs><rect width="1600" height="960" fill="white"/>
+<text x="60" y="66" fill="#183255" font-size="36" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Two-task learning, component controls, and real deployment</text>
+<text x="60" y="109" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Primary scope: DP, three paired chains, two updates.</text>
+<text x="60" y="155" fill="#087f75" font-size="25" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Two-task main study</text>
+<rect x="60" y="170" width="440" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="60" y="192" width="5" height="30" fill="#087f75"/>
+<text x="84" y="217" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Common initial policies</text>
+<text x="84" y="258" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">FA-Hexa / UE + MuJoCo</text>
+<text x="84" y="290" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Lemon harvesting / Slider pushing</text>
+<rect x="550" y="170" width="480" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="550" y="192" width="5" height="30" fill="#087f75"/>
+<text x="574" y="217" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Fixed practice vs Full</text>
+<text x="574" y="258" fill="#55677b" font-size="20" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Per task: 2 methods × 3 chains × 2 updates</text>
+<text x="574" y="290" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Shared tools, budgets, training rules</text>
+<rect x="1080" y="170" width="460" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="1080" y="192" width="5" height="30" fill="#087f75"/>
+<text x="1104" y="217" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Frozen independent tests</text>
+<text x="1104" y="258" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">50 starts/model; 14 models</text>
+<text x="1104" y="290" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">700 sealed test episodes</text>
+<path d="M500 258 L545 258" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<path d="M1030 258 L1075 258" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<text x="60" y="395" fill="#087f75" font-size="25" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Lemon component controls</text>
+<rect x="60" y="410" width="440" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="60" y="432" width="5" height="30" fill="#087f75"/>
+<text x="84" y="457" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Reuse main full-method results</text>
+<text x="84" y="498" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Same lemon parent and conditions</text>
+<text x="84" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Matched resources and training</text>
+<rect x="550" y="410" width="480" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="550" y="432" width="5" height="30" fill="#087f75"/>
+<text x="574" y="457" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Rule allocation / No history</text>
+<text x="574" y="498" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">2 settings × 3 chains × 2 updates</text>
+<text x="574" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Test planning and historical evidence</text>
+<rect x="1080" y="410" width="460" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="1080" y="432" width="5" height="30" fill="#087f75"/>
+<text x="1104" y="457" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Sealed component tests</text>
+<text x="1104" y="498" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">6 models × 50 starts</text>
+<text x="1104" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">300 additional episodes</text>
+<path d="M500 498 L545 498" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<path d="M1030 498 L1075 498" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<text x="60" y="635" fill="#087f75" font-size="25" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Real-to-sim-to-real</text>
+<rect x="60" y="650" width="440" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="60" y="672" width="5" height="30" fill="#087f75"/>
+<text x="84" y="697" fill="#183255" font-size="24" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Matched robot / reconstructed scene</text>
+<text x="84" y="738" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Hardware-specific common parent</text>
+<text x="84" y="770" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Register appearance, cameras, physics</text>
+<rect x="550" y="650" width="480" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="550" y="672" width="5" height="30" fill="#087f75"/>
+<text x="574" y="697" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Reconstructed Fixed vs Full</text>
+<text x="574" y="738" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Same scene; 3 chains × 2 updates each</text>
+<text x="574" y="770" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Same registered real-data rules</text>
+<rect x="1080" y="650" width="460" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
+<rect x="1080" y="672" width="5" height="30" fill="#087f75"/>
+<text x="1104" y="697" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Two-domain tests of 7 models</text>
+<text x="1104" y="738" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">90 real / 210 corresponding sim trials</text>
+<text x="1104" y="770" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Per-model deployment and safety</text>
+<path d="M500 738 L545 738" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<path d="M1030 738 L1075 738" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
+<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.36  ·  Method illustration / 方法示意</text></svg>
