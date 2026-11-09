@@ -27,14 +27,14 @@
 <text x="84" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Matched resources and training</text>
 <rect x="550" y="410" width="480" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
 <rect x="550" y="432" width="5" height="30" fill="#087f75"/>
-<text x="574" y="457" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Rule allocation / No history</text>
-<text x="574" y="498" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">2 settings × 3 chains × 2 updates</text>
-<text x="574" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Test planning and historical evidence</text>
+<text x="574" y="457" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Rule allocation (added)</text>
+<text x="574" y="498" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">1 setting × 3 chains × 2 updates</text>
+<text x="574" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Test Mentor against simple feedback rules</text>
 <rect x="1080" y="410" width="460" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
 <rect x="1080" y="432" width="5" height="30" fill="#087f75"/>
 <text x="1104" y="457" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Sealed component tests</text>
-<text x="1104" y="498" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">6 models × 50 starts</text>
-<text x="1104" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">300 additional episodes</text>
+<text x="1104" y="498" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">3 models × 50 starts</text>
+<text x="1104" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">150 additional episodes</text>
 <path d="M500 498 L545 498" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
 <path d="M1030 498 L1075 498" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
 <text x="60" y="635" fill="#087f75" font-size="25" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Real-to-sim-to-real</text>
@@ -55,5 +55,5 @@
 <text x="1104" y="770" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Per-model deployment and safety</text>
 <path d="M500 738 L545 738" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
 <path d="M1030 738 L1075 738" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
-<text x="60" y="884" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Three-task study + lemon controls: 1,350 sealed episodes / at most 60 incremental trainings</text>
-<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.38  ·  Method illustration / 方法示意</text></svg>
+<text x="60" y="884" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Three-task study + lemon controls: 1,200 sealed episodes / at most 54 incremental trainings</text>
+<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.39  ·  Method illustration / 方法示意</text></svg>

@@ -1,5 +1,5 @@
 window.AIRSPARK_STUDY_PLAN = {
-  "plan_version": "v0.38",
+  "plan_version": "v0.39",
   "status": "three_task_scope_fixed_runtime_validation_pending",
   "date": "2026-11-09",
   "tasks": [
@@ -110,18 +110,6 @@ window.AIRSPARK_STUDY_PLAN = {
       "parent_contract": "lemon_common_parent"
     },
     {
-      "id": "DP-LemonHarvesting-no_history",
-      "student": "DP",
-      "task": "LemonHarvesting",
-      "group": "no_history",
-      "name": "无跨轮记忆",
-      "tier": 3,
-      "line": "ablation",
-      "chains": 3,
-      "max_interventions": 2,
-      "parent_contract": "lemon_common_parent"
-    },
-    {
       "id": "real-DP-lemon-fixed",
       "student": "DP",
       "task": "LemonHarvesting",
@@ -147,11 +135,11 @@ window.AIRSPARK_STUDY_PLAN = {
     }
   ],
   "totals": {
-    "incremental_settings": 10,
-    "chains": 30,
-    "max_candidate_trainings": 60,
-    "benchmark_sealed_models": 27,
-    "benchmark_sealed_episodes": 1350,
+    "incremental_settings": 9,
+    "chains": 27,
+    "max_candidate_trainings": 54,
+    "benchmark_sealed_models": 24,
+    "benchmark_sealed_episodes": 1200,
     "real_sim_models": 7,
     "real_sim_episodes": 210,
     "real_episodes": 90
@@ -173,10 +161,10 @@ window.AIRSPARK_STUDY_PLAN = {
     },
     {
       "tier": 3,
-      "name": "柠檬规则与记忆消融",
-      "settings": 2,
-      "chains": 6,
-      "max_candidate_trainings": 12
+      "name": "柠檬规则分配消融",
+      "settings": 1,
+      "chains": 3,
+      "max_candidate_trainings": 6
     }
   ],
   "training": {
@@ -197,7 +185,7 @@ window.AIRSPARK_STUDY_PLAN = {
       "condition_caps",
       "budget"
     ],
-    "history_ablation": "current_diagnosis_latest_available_learning_feedback_and_runtime_only",
+    "history_ablation": "optional matched three-update study; not a primary group",
     "task_score_controller_inputs": "fixed"
   },
   "supervision": {
@@ -225,7 +213,13 @@ window.AIRSPARK_STUDY_PLAN = {
     ],
     "supervision_unit": "unique_expert_timesteps_and_duration_plus_eligible_windows",
     "lemon_platform": "task_truth.task_success / placement_release_latched_v2 separately",
-    "press_button_primary": "registered source PressButton goal predicate; runtime field/threshold binding pending"
+    "press_button_primary": "registered source PressButton goal predicate; runtime field/threshold binding pending",
+    "main_table": [
+      "complete_success",
+      "key_stage_reach",
+      "qualified_supervision_and_expert_attempts"
+    ],
+    "failure_distribution": "one pre-registered primary failure label per scoreable episode; use success plus mutually exclusive failures for all-episode stacks; retain secondary labels"
   },
   "splits": {
     "C_count": null,
@@ -255,7 +249,10 @@ window.AIRSPARK_STUDY_PLAN = {
     "ACT_lemon",
     "native_return_after_interface_verification",
     "cross_initialization_experience_reuse",
-    "standard_scene_full_control"
+    "standard_scene_full_control",
+    "matched_three_update_memory_ablation",
+    "offline_multi_LLM_planning_comparison",
+    "retrospective_sealed_learning_curve"
   ],
   "pending": [
     "parent_and_data_hashes",
@@ -273,7 +270,7 @@ window.AIRSPARK_STUDY_PLAN = {
     "press_button_parent_and_native_criterion_binding"
   ],
   "count_note": "Training upper bounds exclude initial training, pilots, diagnostics, development, collection and optional tests.",
-  "metrics_contract": "protocol/metrics-v0.38.json",
+  "metrics_contract": "protocol/metrics-v0.39.json",
   "press_button": {
     "task": "PressButton",
     "status": "included_in_primary_scope_UE_validation_pending",
@@ -298,6 +295,20 @@ window.AIRSPARK_STUDY_PLAN = {
     "scope_authorization": "user_2026-11-09",
     "native_criterion_binding": null,
     "primary_test_models": 7,
-    "primary_test_episodes": 350
+    "primary_test_episodes": 350,
+    "readiness_review_Beijing": "2026-11-10",
+    "fallback": "Review UE readiness and parent on development pilots by Nov 10. If zero success, diagnose deployment, expert, and learning first; document any scope change before sealed testing. Zero success is a valid result, not a post-hoc exclusion rule."
+  },
+  "memory_extension": {
+    "status": "optional_not_in_primary_totals",
+    "minimum_updates": 3,
+    "matched_full_comparator_required": true,
+    "note": "Extend the corresponding full-method chains to the same horizon; initial rounds may be reused only if contracts and seeds match. Cost is not simply nine extra trainings."
+  },
+  "learning_curves": {
+    "primary": "paired development pool V; per-chain thin lines and mean bold lines",
+    "sealed_optional": "after all learning decisions freeze, retrospectively evaluate R1 checkpoints; no feedback to learning",
+    "additional_three_task_R1_episodes": 900,
+    "memory_evidence": "qualitative intervention provenance; no causal memory claim without matched ablation"
   }
 };

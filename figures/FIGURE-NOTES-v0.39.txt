@@ -1,0 +1,1 @@
+v0.39: editable bilingual method diagrams. Three primary tasks, rule-only lemon control, real transfer. 54 candidate trainings and 1200 final sealed simulator tests. All measured results pending.

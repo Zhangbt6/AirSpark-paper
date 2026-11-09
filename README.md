@@ -1,13 +1,11 @@
-# AirSpark paper design v0.38
+# AirSpark paper design v0.39
 
-AirSpark: A Simulated Academy for Self-Improving Aerial Manipulation
+三任务DP主实验：初始／固定／完整，更新组各3链×2轮。柠檬仅新增规则分配，固定和完整复用主实验。实机摘柠檬：初始／重建固定／重建完整。
 
-主实验DP，三任务LemonHarvesting、PushSlider、PressButton；各初始／固定练习／完整方法，更新组3链×2轮。柠檬规则与无历史消融，实机摘柠檬初始／重建固定／重建完整。
+9增量设置、27学习链、最多54次候选训练。仿真最终封存24模型×50＝1200回合；实机90，对应仿真210。采集、开发、先导和初始化另计。
 
-10设置、30学习链、最多60次候选训练。仿真封存27模型×50＝1350回合。实机90回合，对应仿真210回合。初始化、采集、开发和先导另计。
+无历史、ACT与离线多LLM比较为可选扩展。记忆定量消融需要完整与无历史均匹配至少三轮，不计入主范围。可选R1封存补测增加900回合。
 
-PressButton正式纳入范围，UE任务、专家、数据与学生执行仍待运行验收；历史原生记录不代表已完成UE实验。
+PressButton于11月10日复核UE、专家、父策略及评分。未根据封存结果调整范围。结果保持未测量。
 
-指标计算metrics.html，执行台账protocol.html，机器方案protocol/experiment-plan-v0.38.json。指标、阶段、成本CSV均在protocol/。当前可编辑图件figures/AirSpark-Figures-v0.38.zip。
-
-独立论文仓库CVPR_Airspark维护英文LaTeX和中文设计。发布仅包含静态网站。英文投稿模板与匿名检查另行完成。旧版保留versions/v0.37。
+协议与指标位于protocol/，执行手册protocol.html，指标说明metrics.html。图件包figures/AirSpark-Figures-v0.39.zip。历史网页versions/v0.38/。

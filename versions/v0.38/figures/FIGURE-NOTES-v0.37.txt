@@ -1,0 +1,3 @@
+v0.37：学院、闭环、监督与实验图。图3加入候选PressButton范围，未计入核心两任务总量。
+指标定义：metrics.html；机器可读合同：protocol/metrics-v0.37.json。
+图件为方法示意，实验画面、曲线与数据待正式记录。

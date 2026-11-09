@@ -52,4 +52,4 @@
 <text x="86" y="768" fill="#087f75" font-size="27" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">Shared learning interfaces</text>
 <text x="86" y="811" fill="#183255" font-size="24" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">DP student executes and learns     |     Experts supervise     |     SparkMentor plans and records</text>
 <path d="M800 725 L800 675" fill="none" stroke="#087f75" stroke-width="3" marker-end="url(#teal)"/>
-<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.38  ·  Method illustration / 方法示意</text></svg>
+<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.39  ·  Method illustration / 方法示意</text></svg>
