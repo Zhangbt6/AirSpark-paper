@@ -1,0 +1,9 @@
+figure,asset,source,required_metadata,status
+fig01,UE third-person + policy RGB + trajectory,synchronized rollout,episode;time;policy;score,pending_actual_frames
+fig02,editable feedback diagram,method v0.40,diagram_version,vector_draft
+fig03,evaluation design,protocol v0.40,split;group;counts,vector_draft
+fig04,R0 R1 R2 curves,development logs,chain;retained_candidate;resource,pending_logs
+fig05,diagnosis to supervision case,complete intervention,episode;plan;QA;paired_validation,pending_actual_frames
+fig06,real + 3DGS + deployment,matched real scene,camera;registration;model;trial,pending_actual_frames
+video,third-person + student camera + stages,main tests,episode;playback_speed;outcome,record_with_tests
+failure-distribution,mutually exclusive primary outcomes,scored episode ledger,model;task;split;denominator;failure_rule,pending_actual_records

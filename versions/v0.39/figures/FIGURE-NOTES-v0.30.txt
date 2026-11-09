@@ -1,0 +1,28 @@
+AirSpark figure bundle v0.30 — research design, no measured results
+
+Chinese Figure 2 (fig02-rsi-method-zh.svg/png) is updated to v0.30.
+It preserves the clockwise six-stage cycle and adds explicit fixed allocation,
+configuration/operation choices, append-only records and revisable experience.
+Untrained attempts retain the student and accepted configuration; outcomes are
+recorded as unmeasured rather than zero learning gain.
+
+Other Chinese figures and all English figures remain the v0.23 assets.
+The English method figure is an earlier design, not a translation of v0.30.
+English LaTeX synchronization remains deferred by the author.
+
+SVG text and geometry are editable. PNG files are exported at 2x resolution.
+To regenerate Chinese Figure 2 only:
+  python scripts/build-rsi-figure-v030.py
+Then render that SVG using sharp with density 144. Do not rerun earlier figure
+builders afterward: they would overwrite this update. Other scripts are
+included for provenance and earlier figures.
+
+Figure 1: Academy platform architecture.
+Figure 2: RSI strategy method (Chinese v0.30; English v0.23).
+Figure 3: Evaluation protocol (fig04-evaluation-protocol).
+Figure A1: Visual/physical execution interfaces.
+Figure A2: Physical prefixes and expert supervision.
+Figure A3: Learning feedback principles; illustrative, no convergence claim.
+
+Memory revision and permissions are proposed contracts pending implementation
+and pilot validation. The bundle is not evidence of experimental completion.

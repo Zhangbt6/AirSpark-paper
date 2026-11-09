@@ -1,0 +1,1 @@
+v0.40 bilingual editable diagrams. Rule and no-history controls: 60 trainings / 1350 sealed episodes. History masking only affects Mentor, preserving weights and data. Two updates test short-horizon feedback. All measured results pending.

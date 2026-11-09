@@ -27,14 +27,14 @@
 <text x="84" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">资源与训练规则一致</text>
 <rect x="550" y="410" width="480" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
 <rect x="550" y="432" width="5" height="30" fill="#087f75"/>
-<text x="574" y="457" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">规则分配（新增）</text>
-<text x="574" y="498" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">1 设置 × 3 链 × 2 轮</text>
-<text x="574" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">检验Agent相对简单规则的增量</text>
+<text x="574" y="457" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">规则分配 / 无跨轮记忆</text>
+<text x="574" y="498" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">2 设置 × 3 链 × 2 轮</text>
+<text x="574" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">分别检验规划与第二轮历史反馈</text>
 <rect x="1080" y="410" width="460" height="175" rx="14" fill="#f5f8fc" stroke="#d7e1ec" stroke-width="1.6"/>
 <rect x="1080" y="432" width="5" height="30" fill="#087f75"/>
 <text x="1104" y="457" fill="#183255" font-size="26" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">组件封存评价</text>
-<text x="1104" y="498" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">3 模型 × 50 初态</text>
-<text x="1104" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">共 150 回合</text>
+<text x="1104" y="498" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">6 模型 × 50 初态</text>
+<text x="1104" y="530" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">共 300 回合</text>
 <path d="M500 498 L545 498" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
 <path d="M1030 498 L1075 498" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
 <text x="60" y="635" fill="#087f75" font-size="25" font-weight="700" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">真实—仿真—真实</text>
@@ -55,5 +55,5 @@
 <text x="1104" y="770" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">逐模型报告部署与安全表现</text>
 <path d="M500 738 L545 738" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
 <path d="M1030 738 L1075 738" fill="none" stroke="#183255" stroke-width="3" marker-end="url(#navy)"/>
-<text x="60" y="884" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">三任务主对照＋柠檬消融：1200回合封存评价；最多54次增量训练</text>
-<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.39  ·  Method illustration / 方法示意</text></svg>
+<text x="60" y="884" fill="#55677b" font-size="22" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">三任务主对照＋柠檬消融：1350回合封存评价；最多60次增量训练</text>
+<text x="60" y="931" fill="#55677b" font-size="18" font-weight="400" font-family="Arial,Microsoft YaHei,Noto Sans CJK SC,sans-serif">AirSpark  ·  v0.40  ·  Method illustration / 方法示意</text></svg>

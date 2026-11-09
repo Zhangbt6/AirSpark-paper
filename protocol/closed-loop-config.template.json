@@ -1,5 +1,5 @@
 {
-  "protocol_version": "v0.39",
+  "protocol_version": "v0.40",
   "status": "pilot_registration_required",
   "frozen": false,
   "implementation_verified": false,
@@ -105,7 +105,7 @@
     "retrieval": null
   },
   "legacy_configuration": "protocol/closed-loop-config-v0.35.archive.json",
-  "metrics_contract": "protocol/metrics-v0.39.json",
+  "metrics_contract": "protocol/metrics-v0.40.json",
   "press_button": {
     "task": "PressButton",
     "status": "included_in_primary_scope_UE_validation_pending",
@@ -131,5 +131,27 @@
     "native_criterion_binding": null,
     "primary_test_models": 7,
     "primary_test_episodes": 350
+  },
+  "memory_ablation": {
+    "status": "primary_lemon_component_control",
+    "chains": 3,
+    "updates": 2,
+    "preserved": [
+      "current policy weights",
+      "cumulative training dataset and replay",
+      "current diagnosis from current policy rollouts",
+      "fixed tool registry and safety constraints",
+      "runtime budget and round index"
+    ],
+    "masked": [
+      "prior execution and evaluation reports",
+      "prior practice plans",
+      "prior learning feedback",
+      "derived historical explanations and recommendations",
+      "prior LLM conversation and retrieval state"
+    ],
+    "implementation": "fresh Mentor context per round; no historical summaries through tool results or runtime metadata",
+    "scope": "history can first affect the second practice decision; not evidence of long-term memory benefits",
+    "same_parent_tools_budget_training_and_acceptance": true
   }
 }
