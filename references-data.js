@@ -1539,7 +1539,7 @@ const paperReferences = {
     "title": "Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World",
     "type": "论文公开稿",
     "url": "https://arxiv.org/abs/1703.06907",
-    "note": "视觉域随机化与真实迁移基础工作；引用作者公开版，未以本次无法访问的出版商页面补写会录字段。",
+    "note": "视觉域随机化与真实迁移的基础工作，链接为作者公开版本。",
     "links": [
       [
         "作者原文",
