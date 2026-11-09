@@ -140,10 +140,10 @@
   },
   "cost": {
     "events": "unique job_id and attempt_id with parent/model/round/stage identities",
-    "job_elapsed": "sum(end_monotonic-start_monotonic) over unique attempt records",
+    "job_elapsed": "sum exclusive leaf-stage attempt durations; aggregate parent receipts link to children and are not summed again",
     "study_makespan": "last_finish_UTC-first_start_UTC within registered resource schedule",
     "do_not_sum_overlapping_jobs_as_makespan": true,
-    "gpu_hours": "sum(allocated_duration_s * allocated_GPU_count)/3600",
+    "gpu_hours": "sum duration_s * GPU_count over unique allocation IDs/intervals; child jobs referencing the same allocation are not counted again",
     "gpu_utilization": "separate optional telemetry",
     "api": [
       "model_version",
@@ -158,7 +158,8 @@
     "human_minutes": "sum recorded intervention duration by type",
     "initialization_cost": "separate",
     "retained_failure_cost": "included",
-    "unknown_measurement": "null"
+    "unknown_measurement": "null",
+    "allocation_identity_required": true
   },
   "facilities": {
     "sync": "image acquisition timestamp minus paired state timestamp plus capture/physics-step identity; separate command scheduled-to-applied latency",
